@@ -58,12 +58,14 @@ const badges = [
 
 const source = sourceUrl(project, effect.id);
 const notes = notesHtml(project, effect.id);
+// Prefer the generated 1200×630 card; fall back to the effect's own preview so the tag never 404s.
+const og = ogImage(project, effect.id) || effect.imageStatic || effect.image || '';
 ---
 
 <Doc
   title={`${effect.title} · ${label} — HoloGPU`}
   description={effect.summary || `${effect.title}, a ${label} effect.`}
-  ogImage={ogImage(project, effect.id)}
+  ogImage={og}
 >
   <article class="effect-page">
     <p class="eyebrow">{label.toUpperCase()} / {effect.id}</p>

@@ -8,7 +8,7 @@ await attach(document.querySelector('.hero')!, gradient, { preset: 'lagoon' });`
 const base = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
-const ogImageUrl = new URL(`${base}images/og/default.jpg`.replace(/^\//, ''), Astro.site).href;
+const ogImageUrl = new URL(`${base}images/og-default.jpg`.replace(/^\//, ''), Astro.site).href;
 ---
 <!doctype html>
 <html lang="en">

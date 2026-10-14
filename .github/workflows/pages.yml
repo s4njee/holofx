@@ -30,6 +30,8 @@ jobs:
         with:
           node-version: 24
       - uses: actions/configure-pages@v5
+      # ffmpeg generates the 1200×630 Open Graph card for each effect (story 5.10).
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
       # Install every project and the site, then build the libraries, labs, catalogue and site.
       - run: npm run bootstrap
       - run: npm run build
