@@ -13,7 +13,10 @@
     "preview": "astro preview --host 127.0.0.1 --port 5188"
   },
   "dependencies": {
-    "astro": "^7.3.8"
+    "@mk7s/hologpu-temple-core": "^0.1.1",
+    "astro": "^7.3.8",
+    "marked": "^18.1.0",
+    "wgpu-matrix": "^3.4.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",

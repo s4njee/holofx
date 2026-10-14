@@ -204,3 +204,167 @@ dialog { border-color: var(--accent); }
 .doc-main code {
   font-family: var(--mono, ui-monospace, monospace);
 }
+
+/* --- Effect demo (story 5.7) ------------------------------------------------------------------- */
+
+.demo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(16rem, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.demo-stage {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border: 1px solid color-mix(in srgb, currentcolor 22%, transparent);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #000;
+}
+
+.demo-stage canvas,
+.demo-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.demo-poster {
+  object-fit: cover;
+}
+
+.demo-poster[hidden] {
+  display: none;
+}
+
+.demo-status {
+  position: absolute;
+  inset: auto 0 0 0;
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.8rem;
+  color: #f0f2f5;
+  background: rgb(0 0 0 / 60%);
+}
+
+.demo-panel {
+  border: 1px solid color-mix(in srgb, currentcolor 22%, transparent);
+  border-radius: 0.5rem;
+  padding: 0.9rem 1rem;
+  max-height: 34rem;
+  overflow: auto;
+}
+
+.demo-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.demo-controls {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.param {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(6rem, 1.2fr);
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--muted, #9a9a94);
+}
+
+.param input[type='range'],
+.param select {
+  width: 100%;
+}
+
+.param input[type='checkbox'] {
+  justify-self: start;
+}
+
+.demo-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.9rem;
+}
+
+.demo-presets .button {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+.snippets {
+  margin: 2rem 0;
+}
+
+.snippet-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.snippet-tabs [aria-selected='true'] {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.snippet-tabs .copy {
+  margin-left: auto;
+}
+
+.snippets pre {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid color-mix(in srgb, currentcolor 22%, transparent);
+  border-radius: 0.5rem;
+  overflow: auto;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.specs dl,
+.doc-main dl {
+  display: grid;
+  grid-template-columns: minmax(8rem, 12rem) minmax(0, 1fr);
+  gap: 0.4rem 1rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+}
+
+.specs dt {
+  color: var(--muted, #9a9a94);
+}
+
+.specs dd {
+  margin: 0;
+}
+
+.effect-notes {
+  margin: 2.5rem 0;
+  border-top: 1px solid color-mix(in srgb, currentcolor 18%, transparent);
+  padding-top: 1.5rem;
+}
+
+.effect-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 720px) {
+  .demo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

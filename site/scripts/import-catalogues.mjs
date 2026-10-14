@@ -28,17 +28,6 @@ const lightImages = {
 
 const catalogues = {};
 
-catalogues.watertemple = readCatalogue('watertemple').effects.map((e) => ({
-  id: e.id,
-  title: e.title,
-  summary: e.summary,
-  tags: e.tags,
-  epic: e.epic,
-  tier: e.tier,
-  status: e.status,
-  image: copyPoster('watertemple', e.id, e.poster),
-}));
-
 catalogues.firetemple = readCatalogue('firetemple').effects.map((e) => ({
   id: e.id,
   title: e.title,
@@ -48,6 +37,19 @@ catalogues.firetemple = readCatalogue('firetemple').effects.map((e) => ({
   tier: e.tier,
   status: e.status,
   image: copyPoster('firetemple', e.id, e.poster),
+  scorecard: e.scorecard ?? null,
+}));
+
+catalogues.watertemple = readCatalogue('watertemple').effects.map((e) => ({
+  id: e.id,
+  title: e.title,
+  summary: e.summary,
+  tags: e.tags,
+  epic: e.epic,
+  tier: e.tier,
+  status: e.status,
+  image: copyPoster('watertemple', e.id, e.poster),
+  scorecard: e.scorecard ?? null,
 }));
 
 catalogues.lighttemple = readCatalogue('lighttemple').experiments.map((e) => ({

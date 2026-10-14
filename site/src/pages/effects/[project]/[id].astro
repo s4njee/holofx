@@ -1,7 +1,10 @@
 ---
-// One page per effect, generated from the catalogue (M5 stories 5.1 and, for the full content, 5.7).
+// One page per effect (M5 story 5.7). The demo mounts the effect through the project's public API
+// — no iframe — and the parameter controls, presets and snippets are generated from the effect
+// itself, so the site is a real consumer of the library.
 import Doc from '../../../layouts/Doc.astro';
 import catalogues from '../../../catalogues.json';
+import { PACKAGES, notesHtml, sourceUrl } from '../../../server/effect-notes.ts';
 
 const labels: Record<string, string> = {
   hologpu: 'HoloGPU',
@@ -10,25 +13,50 @@ const labels: Record<string, string> = {
   lighttemple: 'Light Temple',
 };
 
+type Effect = (typeof catalogues)['hologpu'][number] & {
+  family?: string;
+  epic?: string;
+  scorecard?: Record<string, unknown> | null;
+};
+
 export function getStaticPaths() {
-  const paths: {
-    params: { project: string; id: string };
-    props: { project: string; effect: (typeof catalogues)['hologpu'][number] };
-  }[] = [];
+  const paths: { params: { project: string; id: string }; props: { project: string; effect: Effect } }[] = [];
   for (const [project, effects] of Object.entries(catalogues)) {
     for (const effect of effects) {
-      paths.push({ params: { project, id: effect.id }, props: { project, effect } });
+      paths.push({ params: { project, id: effect.id }, props: { project, effect: effect as Effect } });
     }
   }
   return paths;
 }
 
-const { project, effect } = Astro.props as {
-  project: string;
-  effect: (typeof catalogues)['hologpu'][number];
-};
+const { project, effect } = Astro.props as { project: string; effect: Effect };
 const label = labels[project] ?? project;
+const pkg = PACKAGES[project];
 const lab = `/labs/${project}/`;
+const sc = (effect.scorecard ?? null) as {
+  compute?: boolean;
+  mobile?: string;
+  flash?: string;
+  lightPage?: string;
+  bundleKb?: number;
+  gpuMs?: { device: string; ms: number; resolution?: string }[];
+  features?: { required?: string[]; optional?: string[] };
+  fallback?: string;
+  useCases?: string[];
+} | null;
+
+const badges = [
+  effect.tier && `Tier ${effect.tier}`,
+  effect.status,
+  effect.family ?? (effect.epic ? `Epic ${effect.epic}` : null),
+  sc?.bundleKb != null && `${sc.bundleKb} kB`,
+  sc?.flash && sc.flash !== 'unmeasured' && `Flash: ${sc.flash}`,
+  sc?.gpuMs?.[0] && `${sc.gpuMs[0].ms} ms`,
+  sc?.mobile && sc.mobile !== 'untested' && `Mobile: ${sc.mobile}`,
+].filter(Boolean) as string[];
+
+const source = sourceUrl(project, effect.id);
+const notes = notesHtml(project, effect.id);
 ---
 
 <Doc
@@ -40,14 +68,85 @@ const lab = `/labs/${project}/`;
     <h1>{effect.title}</h1>
     {effect.summary && <p class="effect-summary">{effect.summary}</p>}
 
-    <div class="effect-badges">
-      {effect.tier && <span class="badge">Tier {effect.tier}</span>}
-      {effect.status && <span class="badge">{effect.status}</span>}
-      {'family' in effect && effect.family && <span class="badge">{effect.family}</span>}
-    </div>
+    {badges.length > 0 && (
+      <ul class="effect-badges">
+        {badges.map((badge) => (
+          <li class="badge">{badge}</li>
+        ))}
+      </ul>
+    )}
 
-    {effect.image && (
-      <img class="effect-poster" src={effect.image} alt={`${effect.title} preview`} loading="lazy" />
+    <section
+      class="demo"
+      id="demo"
+      data-project={project}
+      data-id={effect.id}
+      data-fallback={effect.image ?? ''}
+      aria-label={`${effect.title} live demo`}
+    >
+      <div class="demo-stage">
+        <canvas id="demo-canvas" aria-label={`${effect.title} demo`}></canvas>
+        {effect.image && (
+          <img class="demo-poster" id="demo-poster" src={effect.image} alt="" aria-hidden="true" />
+        )}
+        <p class="demo-status" id="demo-status" role="status">Loading the effect…</p>
+      </div>
+      <div class="demo-panel">
+        <div class="demo-panel-head">
+          <span class="eyebrow">PARAMETERS</span>
+          <button class="text-button" type="button" id="demo-close" hidden>Stop demo</button>
+        </div>
+        <div class="demo-controls" id="demo-controls"></div>
+        <div class="demo-presets" id="demo-presets"></div>
+      </div>
+    </section>
+
+    <section class="snippets">
+      <div class="snippet-tabs" id="snippet-tabs" role="tablist">
+        <button class="text-button" type="button" data-format="vanilla" aria-selected="true">Vanilla</button>
+        <button class="text-button" type="button" data-format="element" aria-selected="false">Custom element</button>
+        <button class="text-button" type="button" data-format="react" aria-selected="false">React</button>
+        <button class="text-button copy" type="button" id="snippet-copy">Copy</button>
+      </div>
+      <pre><code id="snippet-code"></code></pre>
+    </section>
+
+    {(sc?.features?.required?.length || sc?.features?.optional?.length || sc?.fallback) && (
+      <section class="specs">
+        <h2>Browser notes</h2>
+        <dl>
+          {sc?.features?.required?.length ? (
+            <>
+              <dt>Requires</dt>
+              <dd>{sc.features.required.join(', ')}</dd>
+            </>
+          ) : null}
+          {sc?.features?.optional?.length ? (
+            <>
+              <dt>Optional</dt>
+              <dd>{sc.features.optional.join(', ')}</dd>
+            </>
+          ) : null}
+          {sc?.lightPage ? (
+            <>
+              <dt>On a light page</dt>
+              <dd>{sc.lightPage}</dd>
+            </>
+          ) : null}
+          {sc?.compute ? (
+            <>
+              <dt>Fallback path</dt>
+              <dd>Needs compute shaders; no WebGL2 path.</dd>
+            </>
+          ) : null}
+          {sc?.fallback ? (
+            <>
+              <dt>Without WebGPU</dt>
+              <dd>{sc.fallback}</dd>
+            </>
+          ) : null}
+        </dl>
+      </section>
     )}
 
     {effect.tags && effect.tags.length > 0 && (
@@ -58,13 +157,174 @@ const lab = `/labs/${project}/`;
       </ul>
     )}
 
-    <p class="effect-note">
-      The live demo, generated parameter table and copy-ready snippets arrive in story 5.7. Until
-      then, open the full lab below.
-    </p>
+    {notes && <section class="effect-notes" set:html={notes} />}
 
-    <p>
-      <a class="button primary" href={lab}>Open the {label} lab <span aria-hidden="true">↗</span></a>
-    </p>
+    <footer class="effect-footer">
+      <a class="button outline" href={lab}>Open the {label} lab <span aria-hidden="true">↗</span></a>
+      {source && (
+        <a class="text-button" href={source} rel="noopener">Read the source <span aria-hidden="true">↗</span></a>
+      )}
+    </footer>
   </article>
 </Doc>
+
+<script>
+  import { createEffect } from '@mk7s/hologpu-core';
+
+  // Every hologpu effect, lazily code-split. Temple effects mount through their own library entry
+  // (see src/effect-runtime.js) once it is wired in.
+  const modules = import.meta.glob('../../../../../hologpu/packages/effects/src/*/index.ts');
+
+  const root = document.getElementById('demo') as HTMLElement | null;
+  if (root) {
+    const project = root.dataset.project!;
+    const id = root.dataset.id!;
+    const canvas = document.getElementById('demo-canvas') as HTMLCanvasElement;
+    const poster = document.getElementById('demo-poster');
+    const status = document.getElementById('demo-status')!;
+    const controls = document.getElementById('demo-controls')!;
+    const presetsEl = document.getElementById('demo-presets')!;
+    const code = document.getElementById('snippet-code')!;
+    const closeButton = document.getElementById('demo-close') as HTMLButtonElement;
+    const copyButton = document.getElementById('snippet-copy') as HTMLButtonElement;
+
+    const pkg = { hologpu: '@mk7s/hologpu', firetemple: '@mk7s/firetemple', watertemple: '@mk7s/watertemple', lighttemple: '@mk7s/lighttemple' }[project] ?? '@mk7s/hologpu';
+    const subpath = project === 'lighttemple' ? `effects/${id}` : `effects/${id}`;
+    let preset = '';
+
+    const snippet = (format: string) => {
+      const presetArg = preset ? `, preset: '${preset}'` : '';
+      if (project !== 'hologpu') {
+        const api = project === 'lighttemple' ? 'mountExperiment' : 'mount';
+        const session = project === 'lighttemple' ? '' : 'const session = await createGpuSession();\n';
+        const sessionArg = project === 'lighttemple' ? 'canvas, factory' : 'session, canvas, effect';
+        return `import { ${api}${project === 'lighttemple' ? '' : ', createGpuSession' } } from '${pkg}';\nimport effect from '${pkg}/${subpath}';\n\n${session}const host = ${api}(${sessionArg});`;
+      }
+      if (format === 'element') {
+        return `<hgpu-field effect="${id}"${preset ? ` preset="${preset}"` : ''}></hgpu-field>\n<script type="module">\n  import '${pkg}/element';\n<\/script>`;
+      }
+      if (format === 'react') {
+        return `import { HoloField } from '@mk7s/hologpu-react';\nimport effect from '${pkg}/${subpath}';\n\nexport function Demo() {\n  return <HoloField effect={effect}${presetArg} />;\n}`;
+      }
+      return `import { createEffect } from '@mk7s/hologpu-core';\nimport effect from '${pkg}/${subpath}';\n\nconst field = await createEffect(document.querySelector('canvas'), effect${presetArg});`;
+    };
+
+    const renderSnippet = (format: string) => {
+      code.textContent = snippet(format);
+    };
+    let format = 'vanilla';
+    renderSnippet(format);
+
+    const tabs = document.getElementById('snippet-tabs')!;
+    tabs.addEventListener('click', (event) => {
+      const button = (event.target as HTMLElement).closest('button[data-format]') as HTMLButtonElement | null;
+      if (!button) return;
+      format = button.dataset.format!;
+      for (const tab of tabs.querySelectorAll('button[data-format]')) {
+        tab.setAttribute('aria-selected', String(tab === button));
+      }
+      renderSnippet(format);
+    });
+    copyButton.addEventListener('click', async () => {
+      await navigator.clipboard?.writeText(code.textContent ?? '');
+      copyButton.textContent = 'Copied';
+      setTimeout(() => (copyButton.textContent = 'Copy'), 1200);
+    });
+
+    if (project !== 'hologpu') {
+      status.textContent = 'Live demos for this project mount through its library entry; open the lab for now.';
+      closeButton.hidden = true;
+    } else {
+      const load = modules[`../../../../../hologpu/packages/effects/src/${id}/index.ts`];
+      if (!load) {
+        status.textContent = 'Effect source not found.';
+      } else {
+        void (async () => {
+          try {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const { default: effect } = (await load()) as { default: any };
+            const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const field: any = await createEffect(canvas, effect, {
+              playing: !reduced,
+              reducedMotion: reduced,
+              dprCap: 1.5,
+              resolutionScale: 0.85,
+            });
+            poster?.setAttribute('hidden', '');
+            status.hidden = true;
+            closeButton.hidden = false;
+            closeButton.addEventListener('click', () => field.pause());
+
+            // Controls generated from the effect's own parameter schema.
+            for (const [name, spec] of Object.entries(effect.params as Record<string, any>)) {
+              const type = spec.type as string;
+              if (!['f32', 'i32', 'u32', 'bool', 'color', 'enum'].includes(type)) continue;
+              const row = document.createElement('label');
+              row.className = 'param';
+              const label = document.createElement('span');
+              label.textContent = spec.description ?? name;
+              row.append(label);
+              const apply = (value: unknown) => {
+                field.params[name] = value;
+                field.invalidate?.();
+              };
+              if (type === 'bool') {
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.checked = Boolean(field.params[name]);
+                input.addEventListener('change', () => apply(input.checked));
+                row.append(input);
+              } else if (type === 'color') {
+                const input = document.createElement('input');
+                input.type = 'color';
+                input.value = String(field.params[name]);
+                input.addEventListener('input', () => apply(input.value));
+                row.append(input);
+              } else if (type === 'enum') {
+                const select = document.createElement('select');
+                for (const option of (spec.options as string[]) ?? []) {
+                  const opt = document.createElement('option');
+                  opt.value = option;
+                  opt.textContent = option;
+                  select.append(opt);
+                }
+                select.value = String(field.params[name]);
+                select.addEventListener('change', () => apply(select.value));
+                row.append(select);
+              } else {
+                const input = document.createElement('input');
+                input.type = 'range';
+                input.min = String(spec.min ?? 0);
+                input.max = String(spec.max ?? 1);
+                input.step = String(spec.step ?? (Number(spec.max ?? 1) - Number(spec.min ?? 0)) / 100);
+                input.value = String(field.params[name]);
+                input.addEventListener('input', () => apply(Number(input.value)));
+                row.append(input);
+              }
+              controls.append(row);
+            }
+
+            for (const name of Object.keys(effect.presets as Record<string, unknown>)) {
+              const button = document.createElement('button');
+              button.type = 'button';
+              button.className = 'button outline';
+              button.textContent = name;
+              button.addEventListener('click', () => {
+                preset = name;
+                const values = (effect.presets as Record<string, Record<string, unknown>>)[name];
+                for (const [key, value] of Object.entries(values)) field.params[key] = value;
+                field.invalidate?.();
+                renderSnippet(format);
+              });
+              presetsEl.append(button);
+            }
+          } catch (error) {
+            status.textContent = 'WebGPU unavailable — showing the fallback preview.';
+            console.info('Effect demo fell back to the poster:', (error as Error).message);
+          }
+        })();
+      }
+    }
+  }
+</script>
