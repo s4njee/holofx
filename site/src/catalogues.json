@@ -9,8 +9,25 @@
       ],
       "epic": "1",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/hello.avif",
       "imageStatic": "/images/animated/watertemple/hello.jpg"
+    },
+    {
+      "id": "crest-sss",
+      "title": "Wave-crest subsurface scattering",
+      "summary": "Big, backlit waves where the tall, thin crests glow green-blue as the sun shines through them. One view- and light-dependent term; proves sss.wgsl.",
+      "tags": [
+        "building-block",
+        "optics",
+        "subsurface",
+        "ocean"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "status": "ready",
+      "image": "/images/animated/watertemple/crest-sss.avif",
+      "imageStatic": "/images/animated/watertemple/crest-sss.jpg"
     },
     {
       "id": "depth-absorption",
@@ -25,6 +42,7 @@
       ],
       "epic": "3",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/depth-absorption.avif",
       "imageStatic": "/images/animated/watertemple/depth-absorption.jpg"
     },
@@ -40,6 +58,7 @@
       ],
       "epic": "3",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/detail-normals.avif",
       "imageStatic": "/images/animated/watertemple/detail-normals.jpg"
     },
@@ -55,6 +74,7 @@
       ],
       "epic": "3",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/flow-map.avif",
       "imageStatic": "/images/animated/watertemple/flow-map.jpg"
     },
@@ -70,6 +90,7 @@
       ],
       "epic": "3",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/fresnel-sky.avif",
       "imageStatic": "/images/animated/watertemple/fresnel-sky.jpg"
     },
@@ -86,6 +107,7 @@
       ],
       "epic": "3",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/hdr-bloom.avif",
       "imageStatic": "/images/animated/watertemple/hdr-bloom.jpg"
     },
@@ -102,6 +124,7 @@
       ],
       "epic": "3",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/reflections.avif",
       "imageStatic": "/images/animated/watertemple/reflections.jpg"
     },
@@ -118,6 +141,7 @@
       ],
       "epic": "3",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/refraction.avif",
       "imageStatic": "/images/animated/watertemple/refraction.jpg"
     },
@@ -134,6 +158,7 @@
       ],
       "epic": "3",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/shore-foam.avif",
       "imageStatic": "/images/animated/watertemple/shore-foam.jpg"
     },
@@ -149,23 +174,27 @@
       ],
       "epic": "3",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/sun-glint.avif",
       "imageStatic": "/images/animated/watertemple/sun-glint.jpg"
     },
     {
-      "id": "crest-sss",
-      "title": "Wave-crest subsurface scattering",
-      "summary": "Big, backlit waves where the tall, thin crests glow green-blue as the sun shines through them. One view- and light-dependent term; proves sss.wgsl.",
+      "id": "caustics",
+      "title": "Procedural caustics",
+      "summary": "The light pattern at the bottom of a pool as a transparent, tileable overlay. Two procedural constructions (warped Voronoi and iterated sine) and a baked one- or two-tap version, compared on cost and look.",
       "tags": [
+        "overlay",
+        "background",
+        "caustics",
         "building-block",
-        "optics",
-        "subsurface",
-        "ocean"
+        "tileable",
+        "comparison"
       ],
-      "epic": "3",
+      "epic": "4",
       "tier": "A",
-      "image": "/images/animated/watertemple/crest-sss.avif",
-      "imageStatic": "/images/animated/watertemple/crest-sss.jpg"
+      "status": "ready",
+      "image": "/images/animated/watertemple/caustics.avif",
+      "imageStatic": "/images/animated/watertemple/caustics.jpg"
     },
     {
       "id": "ink-wash",
@@ -182,26 +211,28 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/ink-wash.avif",
       "imageStatic": "/images/animated/watertemple/ink-wash.jpg"
     },
     {
-      "id": "wave-divider",
-      "title": "Layered wave divider",
-      "summary": "Two to five layers of wave silhouettes with scroll parallax and a foam line, transparent above and filled with the next section’s colour below.",
+      "id": "media-distortion",
+      "title": "Water over image or video",
+      "summary": "Looks at a picture or a video through moving water: baked-normal refraction, a light highlight, optional colour fringing, safe edges and a ripple under the pointer. Drop your own file on it.",
       "tags": [
-        "divider",
-        "overlay",
-        "scroll",
-        "parallax",
-        "sdf",
-        "section-break",
-        "transparent"
+        "image",
+        "video",
+        "refraction",
+        "dispersion",
+        "pointer",
+        "hero",
+        "texture"
       ],
       "epic": "4",
       "tier": "A",
-      "image": "/images/animated/watertemple/wave-divider.avif",
-      "imageStatic": "/images/animated/watertemple/wave-divider.jpg"
+      "status": "ready",
+      "image": "/images/animated/watertemple/media-distortion.avif",
+      "imageStatic": "/images/animated/watertemple/media-distortion.jpg"
     },
     {
       "id": "mist",
@@ -219,6 +250,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/mist.avif",
       "imageStatic": "/images/animated/watertemple/mist.jpg"
     },
@@ -237,25 +269,9 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/pool-floor.avif",
       "imageStatic": "/images/animated/watertemple/pool-floor.jpg"
-    },
-    {
-      "id": "caustics",
-      "title": "Procedural caustics",
-      "summary": "The light pattern at the bottom of a pool as a transparent, tileable overlay. Two procedural constructions (warped Voronoi and iterated sine) and a baked one- or two-tap version, compared on cost and look.",
-      "tags": [
-        "overlay",
-        "background",
-        "caustics",
-        "building-block",
-        "tileable",
-        "comparison"
-      ],
-      "epic": "4",
-      "tier": "A",
-      "image": "/images/animated/watertemple/caustics.avif",
-      "imageStatic": "/images/animated/watertemple/caustics.jpg"
     },
     {
       "id": "puddles",
@@ -272,6 +288,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/puddles.avif",
       "imageStatic": "/images/animated/watertemple/puddles.jpg"
     },
@@ -290,6 +307,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/rain-glass.avif",
       "imageStatic": "/images/animated/watertemple/rain-glass.jpg"
     },
@@ -306,6 +324,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/toon-water.avif",
       "imageStatic": "/images/animated/watertemple/toon-water.jpg"
     },
@@ -323,26 +342,28 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/underwater.avif",
       "imageStatic": "/images/animated/watertemple/underwater.jpg"
     },
     {
-      "id": "media-distortion",
-      "title": "Water over image or video",
-      "summary": "Looks at a picture or a video through moving water: baked-normal refraction, a light highlight, optional colour fringing, safe edges and a ripple under the pointer. Drop your own file on it.",
+      "id": "wave-divider",
+      "title": "Layered wave divider",
+      "summary": "Two to five layers of wave silhouettes with scroll parallax and a foam line, transparent above and filled with the next section’s colour below.",
       "tags": [
-        "image",
-        "video",
-        "refraction",
-        "dispersion",
-        "pointer",
-        "hero",
-        "texture"
+        "divider",
+        "overlay",
+        "scroll",
+        "parallax",
+        "sdf",
+        "section-break",
+        "transparent"
       ],
       "epic": "4",
       "tier": "A",
-      "image": "/images/animated/watertemple/media-distortion.avif",
-      "imageStatic": "/images/animated/watertemple/media-distortion.jpg"
+      "status": "ready",
+      "image": "/images/animated/watertemple/wave-divider.avif",
+      "imageStatic": "/images/animated/watertemple/wave-divider.jpg"
     },
     {
       "id": "pool-3d",
@@ -359,25 +380,9 @@
       ],
       "epic": "5",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/pool-3d.avif",
       "imageStatic": "/images/animated/watertemple/pool-3d.jpg"
-    },
-    {
-      "id": "ripples",
-      "title": "Interactive ripples",
-      "summary": "The classic touch-the-water surface: a 2D wave equation on the GPU, stirred by mouse, pen and fingers, falling rain and a faint idle swell, refracting a backdrop. Runs as render passes or compute passes, same maths.",
-      "tags": [
-        "interactive",
-        "simulation",
-        "pointer",
-        "heightfield",
-        "refraction",
-        "background"
-      ],
-      "epic": "5",
-      "tier": "A",
-      "image": "/images/animated/watertemple/ripples.avif",
-      "imageStatic": "/images/animated/watertemple/ripples.jpg"
     },
     {
       "id": "ripple-caustics",
@@ -393,6 +398,7 @@
       ],
       "epic": "5",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/ripple-caustics.avif",
       "imageStatic": "/images/animated/watertemple/ripple-caustics.jpg"
     },
@@ -411,6 +417,7 @@
       ],
       "epic": "5",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/ripple-dom.avif",
       "imageStatic": "/images/animated/watertemple/ripple-dom.jpg"
     },
@@ -429,8 +436,27 @@
       ],
       "epic": "5",
       "tier": "A",
+      "status": "ready",
       "image": "/images/animated/watertemple/ripple-reactive.avif",
       "imageStatic": "/images/animated/watertemple/ripple-reactive.jpg"
+    },
+    {
+      "id": "ripples",
+      "title": "Interactive ripples",
+      "summary": "The classic touch-the-water surface: a 2D wave equation on the GPU, stirred by mouse, pen and fingers, falling rain and a faint idle swell, refracting a backdrop. Runs as render passes or compute passes, same maths.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "pointer",
+        "heightfield",
+        "refraction",
+        "background"
+      ],
+      "epic": "5",
+      "tier": "A",
+      "status": "ready",
+      "image": "/images/animated/watertemple/ripples.avif",
+      "imageStatic": "/images/animated/watertemple/ripples.jpg"
     },
     {
       "id": "aurora",
@@ -447,6 +473,7 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/aurora.avif",
       "imageStatic": "/images/animated/watertemple/aurora.jpg"
     },
@@ -464,6 +491,7 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/bioluminescent-currents.avif",
       "imageStatic": "/images/animated/watertemple/bioluminescent-currents.jpg"
     },
@@ -481,6 +509,7 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/dichroic-glass.avif",
       "imageStatic": "/images/animated/watertemple/dichroic-glass.jpg"
     },
@@ -498,8 +527,68 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/eclipse-halos.avif",
       "imageStatic": "/images/animated/watertemple/eclipse-halos.jpg"
+    },
+    {
+      "id": "fluid-3d",
+      "title": "Ink in a tank (3D fluid)",
+      "summary": "A drop of ink released in a glass tank of water sinks, rolls up into a vortex ring and breaks into tendrils. A volumetric stable-fluids solve (48 to 96 cells, multigrid pressure, vorticity confinement, MacCormack ink) in compute shaders, drawn by a ray march with coloured absorption and a precomputed light volume. Tap to release a drop, drag to push the water, drag the background to orbit.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "3d",
+        "volumetric",
+        "showpiece",
+        "ink"
+      ],
+      "epic": "6",
+      "tier": "C",
+      "status": "demo",
+      "image": "/images/animated/watertemple/fluid-3d.avif",
+      "imageStatic": "/images/animated/watertemple/fluid-3d.jpg"
+    },
+    {
+      "id": "fluid-dye",
+      "title": "Ink in a stable fluid",
+      "summary": "Drag to push a real incompressible fluid and paint dye that curls into vortices and fades. A stable-fluids solver in compute shaders (advection, pressure projection, vorticity confinement, MacCormack or BFECC), a coarse velocity grid carrying a fine dye grid.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "pointer",
+        "ink",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/animated/watertemple/fluid-dye.avif",
+      "imageStatic": "/images/animated/watertemple/fluid-dye.jpg"
+    },
+    {
+      "id": "fluid-obstacles",
+      "title": "Wind tunnel: flow round obstacles",
+      "summary": "A steady wind carries rows of dye past solid shapes drawn from signed distance fields, or past the real cards and headline of the page. The stable-fluids solver makes the flow go round them: a bluff body sheds an alternating vortex street. Drag a shape to push the water, stir where there is none.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "pointer",
+        "dom",
+        "background",
+        "ink"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/animated/watertemple/fluid-obstacles.avif",
+      "imageStatic": "/images/animated/watertemple/fluid-obstacles.jpg"
     },
     {
       "id": "fluid-warp",
@@ -519,6 +608,7 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/fluid-warp.avif",
       "imageStatic": "/images/animated/watertemple/fluid-warp.jpg"
     },
@@ -534,63 +624,9 @@
       ],
       "epic": "6",
       "tier": "A",
+      "status": "demo",
       "image": "/images/animated/watertemple/game-of-life.avif",
       "imageStatic": "/images/animated/watertemple/game-of-life.jpg"
-    },
-    {
-      "id": "fluid-dye",
-      "title": "Ink in a stable fluid",
-      "summary": "Drag to push a real incompressible fluid and paint dye that curls into vortices and fades. A stable-fluids solver in compute shaders (advection, pressure projection, vorticity confinement, MacCormack or BFECC), a coarse velocity grid carrying a fine dye grid.",
-      "tags": [
-        "interactive",
-        "simulation",
-        "compute",
-        "fluid",
-        "pointer",
-        "ink",
-        "background"
-      ],
-      "epic": "6",
-      "tier": "B",
-      "image": "/images/animated/watertemple/fluid-dye.avif",
-      "imageStatic": "/images/animated/watertemple/fluid-dye.jpg"
-    },
-    {
-      "id": "fluid-3d",
-      "title": "Ink in a tank (3D fluid)",
-      "summary": "A drop of ink released in a glass tank of water sinks, rolls up into a vortex ring and breaks into tendrils. A volumetric stable-fluids solve (48 to 96 cells, multigrid pressure, vorticity confinement, MacCormack ink) in compute shaders, drawn by a ray march with coloured absorption and a precomputed light volume. Tap to release a drop, drag to push the water, drag the background to orbit.",
-      "tags": [
-        "interactive",
-        "simulation",
-        "compute",
-        "fluid",
-        "3d",
-        "volumetric",
-        "showpiece",
-        "ink"
-      ],
-      "epic": "6",
-      "tier": "C",
-      "image": "/images/animated/watertemple/fluid-3d.avif",
-      "imageStatic": "/images/animated/watertemple/fluid-3d.jpg"
-    },
-    {
-      "id": "ink-water",
-      "title": "Ink in water and on paper",
-      "summary": "Paint pigment into a stable-fluids solver and watch it bloom, feather along the paper fibres, pool darker at the edge of a wash and dry. Diffusion, a deposited layer that stays when the water stops, wetness, granulation and subtractive colour on top of the dye solver.",
-      "tags": [
-        "interactive",
-        "simulation",
-        "compute",
-        "fluid",
-        "ink",
-        "watercolour",
-        "paper"
-      ],
-      "epic": "6",
-      "tier": "B",
-      "image": "/images/animated/watertemple/ink-water.avif",
-      "imageStatic": "/images/animated/watertemple/ink-water.jpg"
     },
     {
       "id": "ink-orbit",
@@ -608,8 +644,28 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/ink-orbit.avif",
       "imageStatic": "/images/animated/watertemple/ink-orbit.jpg"
+    },
+    {
+      "id": "ink-water",
+      "title": "Ink in water and on paper",
+      "summary": "Paint pigment into a stable-fluids solver and watch it bloom, feather along the paper fibres, pool darker at the edge of a wash and dry. Diffusion, a deposited layer that stays when the water stops, wetness, granulation and subtractive colour on top of the dye solver.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "ink",
+        "watercolour",
+        "paper"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/animated/watertemple/ink-water.avif",
+      "imageStatic": "/images/animated/watertemple/ink-water.jpg"
     },
     {
       "id": "liquid-chrome",
@@ -625,6 +681,7 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/liquid-chrome.avif",
       "imageStatic": "/images/animated/watertemple/liquid-chrome.jpg"
     },
@@ -642,6 +699,7 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/neon-calligraphy.avif",
       "imageStatic": "/images/animated/watertemple/neon-calligraphy.jpg"
     },
@@ -658,6 +716,7 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/neon-mycelium.avif",
       "imageStatic": "/images/animated/watertemple/neon-mycelium.jpg"
     },
@@ -676,6 +735,7 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/shallow-water.avif",
       "imageStatic": "/images/animated/watertemple/shallow-water.jpg"
     },
@@ -693,59 +753,25 @@
       ],
       "epic": "6",
       "tier": "B",
+      "status": "demo",
       "image": "/images/animated/watertemple/silk-embers.avif",
       "imageStatic": "/images/animated/watertemple/silk-embers.jpg"
     },
     {
-      "id": "fluid-obstacles",
-      "title": "Wind tunnel: flow round obstacles",
-      "summary": "A steady wind carries rows of dye past solid shapes drawn from signed distance fields, or past the real cards and headline of the page. The stable-fluids solver makes the flow go round them: a bluff body sheds an alternating vortex street. Drag a shape to push the water, stir where there is none.",
-      "tags": [
-        "interactive",
-        "simulation",
-        "compute",
-        "fluid",
-        "pointer",
-        "dom",
-        "background",
-        "ink"
-      ],
-      "epic": "6",
-      "tier": "B",
-      "image": "/images/animated/watertemple/fluid-obstacles.avif",
-      "imageStatic": "/images/animated/watertemple/fluid-obstacles.jpg"
-    },
-    {
-      "id": "pbf-2d",
-      "title": "2D position-based fluids",
-      "summary": "A tank of water as particles solved with position-based fluids (Macklin and Mueller): incompressibility is a constraint on positions, relaxed by a few parallel iterations per sub-step, so a big time step cannot blow the water up. A dam break that collapses and sloshes, a stream pouring onto a shelf, a wave-maker, drops falling into a calm pool. Drag to push the water, tap to drop a blob. Colour the particles by speed, by density error (how well the constraint holds) or by neighbour count; change the particle spacing and the same parameters give the same water.",
+      "id": "fluid-surface",
+      "title": "Screen-space fluid surface",
+      "summary": "A cloud of particles turned into a continuous, refracting liquid: sphere impostors, depth smoothing (bilateral against narrow-range), thickness, normals and a composite with absorption, reflection and a sun highlight. Three synthetic sources (a ball that splits and merges, a wave, a pouring stream) stand in for a solver; one control swaps between the finished surface, the bag of marbles it replaces and each intermediate image.",
       "tags": [
         "particles",
-        "simulation",
-        "compute",
-        "fluid",
-        "interactive",
-        "2d"
+        "rendering",
+        "3d",
+        "refraction",
+        "showpiece"
       ],
       "epic": "7",
-      "tier": "B",
-      "image": "/images/catalogues/watertemple/pbf-2d.webp"
-    },
-    {
-      "id": "sph-2d",
-      "title": "2D SPH liquid",
-      "summary": "A tank of water as thousands of particles: weakly compressible smoothed-particle hydrodynamics in compute shaders, drawn as one liquid body (soft blobs, a threshold, a rim, a highlight, refraction) instead of discs. A dam break that collapses and sloshes back, a stream pouring onto a shelf and an obstacle, two zero-gravity blobs that merge under surface tension. Drag to push the water, tap to drop a block of it.",
-      "tags": [
-        "particles",
-        "simulation",
-        "compute",
-        "fluid",
-        "interactive",
-        "2d"
-      ],
-      "epic": "7",
-      "tier": "B",
-      "image": "/images/catalogues/watertemple/sph-2d.webp"
+      "tier": "C",
+      "status": "demo",
+      "image": "/images/catalogues/watertemple/fluid-surface.webp"
     },
     {
       "id": "mpm-3d",
@@ -762,6 +788,7 @@
       ],
       "epic": "7",
       "tier": "C",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/mpm-3d.webp"
     },
     {
@@ -778,7 +805,25 @@
       ],
       "epic": "7",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/particles.webp"
+    },
+    {
+      "id": "pbf-2d",
+      "title": "2D position-based fluids",
+      "summary": "A tank of water as particles solved with position-based fluids (Macklin and Mueller): incompressibility is a constraint on positions, relaxed by a few parallel iterations per sub-step, so a big time step cannot blow the water up. A dam break that collapses and sloshes, a stream pouring onto a shelf, a wave-maker, drops falling into a calm pool. Drag to push the water, tap to drop a blob. Colour the particles by speed, by density error (how well the constraint holds) or by neighbour count; change the particle spacing and the same parameters give the same water.",
+      "tags": [
+        "particles",
+        "simulation",
+        "compute",
+        "fluid",
+        "interactive",
+        "2d"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/watertemple/pbf-2d.webp"
     },
     {
       "id": "pbf-3d",
@@ -795,48 +840,25 @@
       ],
       "epic": "7",
       "tier": "C",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/pbf-3d.webp"
     },
     {
-      "id": "fluid-surface",
-      "title": "Screen-space fluid surface",
-      "summary": "A cloud of particles turned into a continuous, refracting liquid: sphere impostors, depth smoothing (bilateral against narrow-range), thickness, normals and a composite with absorption, reflection and a sun highlight. Three synthetic sources (a ball that splits and merges, a wave, a pouring stream) stand in for a solver; one control swaps between the finished surface, the bag of marbles it replaces and each intermediate image.",
+      "id": "sph-2d",
+      "title": "2D SPH liquid",
+      "summary": "A tank of water as thousands of particles: weakly compressible smoothed-particle hydrodynamics in compute shaders, drawn as one liquid body (soft blobs, a threshold, a rim, a highlight, refraction) instead of discs. A dam break that collapses and sloshes back, a stream pouring onto a shelf and an obstacle, two zero-gravity blobs that merge under surface tension. Drag to push the water, tap to drop a block of it.",
       "tags": [
         "particles",
-        "rendering",
-        "3d",
-        "refraction",
-        "showpiece"
+        "simulation",
+        "compute",
+        "fluid",
+        "interactive",
+        "2d"
       ],
       "epic": "7",
-      "tier": "C",
-      "image": "/images/catalogues/watertemple/fluid-surface.webp"
-    },
-    {
-      "id": "waterline",
-      "title": "Across the waterline",
-      "summary": "A moving wave meniscus separates air and water with underwater tint and attenuation.",
-      "tags": [
-        "3d",
-        "open-water",
-        "shader"
-      ],
-      "epic": "8",
       "tier": "B",
-      "image": "/images/catalogues/watertemple/waterline.webp"
-    },
-    {
-      "id": "shoreline",
-      "title": "Breaking shoreline",
-      "summary": "Shoaling wave crests wash across a sloping beach with depth foam and reflective wet sand.",
-      "tags": [
-        "3d",
-        "open-water",
-        "shader"
-      ],
-      "epic": "8",
-      "tier": "B",
-      "image": "/images/catalogues/watertemple/shoreline.webp"
+      "status": "demo",
+      "image": "/images/catalogues/watertemple/sph-2d.webp"
     },
     {
       "id": "calm-lake",
@@ -849,7 +871,22 @@
       ],
       "epic": "8",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/calm-lake.webp"
+    },
+    {
+      "id": "fft-ocean",
+      "title": "Spectral ocean",
+      "summary": "Three band-limited Phillips cascades, compute inverse FFT and persistent folding foam.",
+      "tags": [
+        "3d",
+        "open-water",
+        "compute"
+      ],
+      "epic": "8",
+      "tier": "C",
+      "status": "demo",
+      "image": "/images/catalogues/watertemple/fft-ocean.webp"
     },
     {
       "id": "gerstner-ocean",
@@ -862,6 +899,7 @@
       ],
       "epic": "8",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/gerstner-ocean.webp"
     },
     {
@@ -875,20 +913,22 @@
       ],
       "epic": "8",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/river.webp"
     },
     {
-      "id": "fft-ocean",
-      "title": "Spectral ocean",
-      "summary": "Three band-limited Phillips cascades, compute inverse FFT and persistent folding foam.",
+      "id": "shoreline",
+      "title": "Breaking shoreline",
+      "summary": "Shoaling wave crests wash across a sloping beach with depth foam and reflective wet sand.",
       "tags": [
         "3d",
         "open-water",
-        "compute"
+        "shader"
       ],
       "epic": "8",
-      "tier": "C",
-      "image": "/images/catalogues/watertemple/fft-ocean.webp"
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/watertemple/shoreline.webp"
     },
     {
       "id": "waterfall",
@@ -901,20 +941,22 @@
       ],
       "epic": "8",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/waterfall.webp"
     },
     {
-      "id": "ui-droplets",
-      "title": "Droplets on UI",
-      "summary": "Condensation droplets grow, coalesce with conserved volume, and slide down a card under gravity.",
+      "id": "waterline",
+      "title": "Across the waterline",
+      "summary": "A moving wave meniscus separates air and water with underwater tint and attenuation.",
       "tags": [
-        "ui",
-        "web-native",
-        "interactive"
+        "3d",
+        "open-water",
+        "shader"
       ],
-      "epic": "9",
+      "epic": "8",
       "tier": "B",
-      "image": "/images/catalogues/watertemple/ui-droplets.webp"
+      "status": "demo",
+      "image": "/images/catalogues/watertemple/waterline.webp"
     },
     {
       "id": "fill-level",
@@ -927,6 +969,7 @@
       ],
       "epic": "9",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/fill-level.webp"
     },
     {
@@ -940,7 +983,22 @@
       ],
       "epic": "9",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/gooey-metaballs.webp"
+    },
+    {
+      "id": "liquid-blob",
+      "title": "Ray-marched liquid blob",
+      "summary": "A three-dimensional smooth metaball lens refracts the environment through an exit surface.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/watertemple/liquid-blob.webp"
     },
     {
       "id": "liquid-buttons",
@@ -953,6 +1011,7 @@
       ],
       "epic": "9",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/liquid-buttons.webp"
     },
     {
@@ -966,6 +1025,7 @@
       ],
       "epic": "9",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/liquid-glass.webp"
     },
     {
@@ -979,6 +1039,7 @@
       ],
       "epic": "9",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/liquid-image-hover.webp"
     },
     {
@@ -992,6 +1053,7 @@
       ],
       "epic": "9",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/liquid-transitions.webp"
     },
     {
@@ -1005,20 +1067,8 @@
       ],
       "epic": "9",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/liquid-typography.webp"
-    },
-    {
-      "id": "liquid-blob",
-      "title": "Ray-marched liquid blob",
-      "summary": "A three-dimensional smooth metaball lens refracts the environment through an exit surface.",
-      "tags": [
-        "ui",
-        "web-native",
-        "interactive"
-      ],
-      "epic": "9",
-      "tier": "B",
-      "image": "/images/catalogues/watertemple/liquid-blob.webp"
     },
     {
       "id": "scroll-water",
@@ -1031,7 +1081,22 @@
       ],
       "epic": "9",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/scroll-water.webp"
+    },
+    {
+      "id": "ui-droplets",
+      "title": "Droplets on UI",
+      "summary": "Condensation droplets grow, coalesce with conserved volume, and slide down a card under gravity.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/watertemple/ui-droplets.webp"
     },
     {
       "id": "water-cursor",
@@ -1044,6 +1109,7 @@
       ],
       "epic": "9",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/water-cursor.webp"
     },
     {
@@ -1058,6 +1124,7 @@
       ],
       "epic": "10",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/bubbles.webp"
     },
     {
@@ -1072,6 +1139,7 @@
       ],
       "epic": "10",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/fogged-glass.webp"
     },
     {
@@ -1086,6 +1154,7 @@
       ],
       "epic": "10",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/watertemple/frost-melt.webp"
     },
     {
@@ -1100,6 +1169,7 @@
       ],
       "epic": "10",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/rain-rings.webp"
     },
     {
@@ -1114,6 +1184,7 @@
       ],
       "epic": "10",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/rain-streaks.webp"
     },
     {
@@ -1128,6 +1199,7 @@
       ],
       "epic": "10",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/watertemple/splash-burst.webp"
     }
   ],
@@ -1141,6 +1213,7 @@
       ],
       "epic": "1",
       "tier": "C",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/hello.webp"
     },
     {
@@ -1154,6 +1227,7 @@
       ],
       "epic": "3",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/advected-noise.webp"
     },
     {
@@ -1166,6 +1240,7 @@
       ],
       "epic": "3",
       "tier": "C",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/blackbody.webp"
     },
     {
@@ -1179,6 +1254,7 @@
       ],
       "epic": "3",
       "tier": "A",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/bloom-tuning.webp"
     },
     {
@@ -1192,6 +1268,7 @@
       ],
       "epic": "3",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/compositing.webp"
     },
     {
@@ -1208,6 +1285,7 @@
       ],
       "epic": "3",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/fire-light.webp"
     },
     {
@@ -1220,6 +1298,7 @@
       ],
       "epic": "3",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/flame-ramps.webp"
     },
     {
@@ -1233,6 +1312,7 @@
       ],
       "epic": "3",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/flame-shape.webp"
     },
     {
@@ -1246,6 +1326,7 @@
       ],
       "epic": "3",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/flicker.webp"
     },
     {
@@ -1259,6 +1340,7 @@
       ],
       "epic": "3",
       "tier": "B",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/heat-haze.webp"
     },
     {
@@ -1273,6 +1355,7 @@
       ],
       "epic": "3",
       "tier": "C",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/smoke-shading.webp"
     },
     {
@@ -1287,6 +1370,7 @@
       ],
       "epic": "3",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/soft-sprites.webp"
     },
     {
@@ -1301,6 +1385,7 @@
       ],
       "epic": "3",
       "tier": "C",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/volume-march.webp"
     },
     {
@@ -1316,6 +1401,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/candle.webp"
     },
     {
@@ -1331,6 +1417,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/ember-bed.webp"
     },
     {
@@ -1346,6 +1433,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/fire-ring.webp"
     },
     {
@@ -1360,6 +1448,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/firelight-background.webp"
     },
     {
@@ -1376,6 +1465,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/fireplace.webp"
     },
     {
@@ -1391,6 +1481,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/flame-strip.webp"
     },
     {
@@ -1407,6 +1498,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/gas-jet.webp"
     },
     {
@@ -1422,6 +1514,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/haze-overlay.webp"
     },
     {
@@ -1436,6 +1529,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/noise-flame.webp"
     },
     {
@@ -1451,6 +1545,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "demo",
       "image": "/images/catalogues/firetemple/sparks.webp"
     },
     {
@@ -1466,6 +1561,7 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/toon-fire.webp"
     },
     {
@@ -1482,7 +1578,181 @@
       ],
       "epic": "4",
       "tier": "A",
+      "status": "ready",
       "image": "/images/catalogues/firetemple/torch.webp"
+    },
+    {
+      "id": "burn-front",
+      "title": "Burn front on a fuel map",
+      "summary": "Burning paper: a sheet over the page that a tap or a stray ember lights. A thin glowing front crosses it, char follows and crumbles, the page shows through the hole, and the sheet grows back.",
+      "tags": [
+        "simulation",
+        "overlay",
+        "paper",
+        "interactive",
+        "transition"
+      ],
+      "epic": "5",
+      "tier": "A",
+      "status": "ready",
+      "image": "/images/catalogues/firetemple/burn-front.webp"
+    },
+    {
+      "id": "combustion-front",
+      "title": "Reaction–diffusion combustion",
+      "summary": "Fire as a travelling front in two continuous fields, temperature and fuel. Heat diffuses into unburnt fuel, the fuel ignites and releases heat; the speed and thickness of the front follow from the physical constants. Tap or drag to light it.",
+      "tags": [
+        "simulation",
+        "overlay",
+        "interactive",
+        "front",
+        "blackbody"
+      ],
+      "epic": "5",
+      "tier": "A",
+      "status": "ready",
+      "image": "/images/catalogues/firetemple/combustion-front.webp"
+    },
+    {
+      "id": "dom-fuel",
+      "title": "DOM as fuel",
+      "summary": "The page is the fuel: the rounded rectangles of marked elements are drawn into a fuel map, so fire climbs cards and headings, stops at the gaps between them, leaves a scorch that fades, and the fuel returns.",
+      "tags": [
+        "simulation",
+        "overlay",
+        "dom",
+        "interactive"
+      ],
+      "epic": "5",
+      "tier": "A",
+      "status": "ready",
+      "image": "/images/catalogues/firetemple/dom-fuel.webp"
+    },
+    {
+      "id": "doom-fire",
+      "title": "Doom fire",
+      "summary": "The PSX Doom heat automaton on a small grid of its own: a bottom row held hot, heat climbing one cell a step. Draw fire with a pointer, let it die and relight it, drive it from scroll or sound.",
+      "tags": [
+        "flame",
+        "overlay",
+        "simulation",
+        "cellular",
+        "interactive",
+        "retro"
+      ],
+      "epic": "5",
+      "tier": "A",
+      "status": "ready",
+      "image": "/images/catalogues/firetemple/doom-fire.webp"
+    },
+    {
+      "id": "forest-fire",
+      "title": "Forest-fire automaton",
+      "summary": "A landscape that burns, regrows and burns again: the Drossel–Schwabl forest-fire automaton on a small grid, with wind, lightning and smoke. Tap or drag to start a fire.",
+      "tags": [
+        "simulation",
+        "cellular",
+        "background",
+        "interactive",
+        "wind",
+        "top-down"
+      ],
+      "epic": "5",
+      "tier": "A",
+      "status": "ready",
+      "image": "/images/catalogues/firetemple/forest-fire.webp"
+    },
+    {
+      "id": "fire-3d",
+      "title": "3D combustion",
+      "summary": "Fuel, heat and smoke carried by a 3D stable-fluids solver, burning above an ignition temperature, and ray-marched as blackbody flame and fire-lit smoke over a small scene.",
+      "tags": [
+        "simulation",
+        "compute",
+        "fluid",
+        "volumetric",
+        "3d",
+        "scene",
+        "smoke",
+        "interactive"
+      ],
+      "epic": "6",
+      "tier": "C",
+      "status": "demo",
+      "image": null
+    },
+    {
+      "id": "fire-fluid",
+      "title": "Fluid fire",
+      "summary": "Fire as a fluid: fuel, temperature and soot carried by an incompressible flow, burning above an ignition temperature, lifting by buoyancy and expanding where it burns. Burners, a torch you draw with (press and drag), wood, gas and chemical colours, and the three ways to keep a coarse grid lively side by side.",
+      "tags": [
+        "simulation",
+        "fire",
+        "smoke",
+        "interactive",
+        "overlay",
+        "compute",
+        "fluid"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "status": "demo",
+      "image": null
+    },
+    {
+      "id": "fire-haze",
+      "title": "Fire as page distortion",
+      "summary": "A hidden heat source below the frame sends a plume of hot gas up through a fluid simulation, and the gas bends the picture behind it: the shimmer rises, curls and fades with the gas instead of scrolling on its own. The pointer is a torch. Drop a photo or a video file on it to try your own.",
+      "tags": [
+        "simulation",
+        "fluid",
+        "compute",
+        "refraction",
+        "distortion",
+        "haze",
+        "image",
+        "video",
+        "interactive"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "status": "demo",
+      "image": null
+    },
+    {
+      "id": "fire-obstacles",
+      "title": "Fire round obstacles",
+      "summary": "Hot gas from a burner under the page rises through a fluid simulation and meets the page as solid walls: the marked cards, headings and buttons. The plume splits round them, curls over their top edges and leaves smoke pooled under overhangs. Press to add heat.",
+      "tags": [
+        "simulation",
+        "fluid",
+        "compute",
+        "overlay",
+        "dom",
+        "interactive",
+        "smoke"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "status": "demo",
+      "image": null
+    },
+    {
+      "id": "stable-fluids",
+      "title": "Stable fluids",
+      "summary": "The validation scene of the grid-fluid solver ported from Water Temple: smoke and ember glow rising from a smouldering bed, carried by an incompressible velocity field on a staggered grid. Drag to stir it; the controls switch the advection scheme, the pressure solver, vorticity confinement and the grid size.",
+      "tags": [
+        "simulation",
+        "smoke",
+        "interactive",
+        "overlay",
+        "compute",
+        "fluid"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "status": "demo",
+      "image": null
     }
   ],
   "lighttemple": [
@@ -1499,6 +1769,7 @@
       ],
       "category": "Interface lighting",
       "background": "radial-gradient(circle at 62% 38%, #ffe2bd 0%, #c9b9a5 22%, #6c625a 58%, #2a2623 100%)",
+      "status": "research",
       "image": "/images/pointer-light.jpg"
     },
     {
@@ -1514,6 +1785,7 @@
       ],
       "category": "Shadows",
       "background": "linear-gradient(160deg, #c9c5bf 0%, #b9b1a7 45%, #7d7268 46%, #a79c90 70%, #d6cfc6 100%)",
+      "status": "research",
       "image": "/images/animated/lighttemple/shadow-map-pcf.avif",
       "imageStatic": "/images/animated/lighttemple/shadow-map-pcf.jpg"
     },
@@ -1530,6 +1802,7 @@
       ],
       "category": "Global illumination",
       "background": "radial-gradient(ellipse at 50% 35%, #fff3e0 0%, #9c8b78 30%, #2b2622 70%, #141210 100%)",
+      "status": "research",
       "image": "/images/animated/lighttemple/studio-ibl.avif",
       "imageStatic": "/images/animated/lighttemple/studio-ibl.jpg"
     },
@@ -1546,6 +1819,7 @@
       ],
       "category": "Interface lighting",
       "background": "radial-gradient(ellipse at 40% 40%, #f4efe6 0%, #d9d0c2 30%, #4a372b 62%, #22180f 100%)",
+      "status": "research",
       "image": "/images/animated/lighttemple/embossed-card.avif",
       "imageStatic": "/images/animated/lighttemple/embossed-card.jpg"
     },
@@ -1562,6 +1836,7 @@
       ],
       "category": "Interface lighting",
       "background": "conic-gradient(from 210deg at 55% 45%, #ff7ab8, #ffd36e, #7affc8, #6ec3ff, #b98bff, #ff7ab8)",
+      "status": "research",
       "image": "/images/holo-card.jpg"
     },
     {
@@ -1577,6 +1852,7 @@
       ],
       "category": "Interface lighting",
       "background": "radial-gradient(circle at 30% 40%, #ff8a3d 0%, transparent 45%), radial-gradient(circle at 75% 35%, #d83cc0 0%, transparent 40%), radial-gradient(circle at 55% 80%, #2a7dff 0%, transparent 45%), #0b0b18",
+      "status": "research",
       "image": "/images/animated/lighttemple/glass-panels.avif",
       "imageStatic": "/images/animated/lighttemple/glass-panels.jpg"
     },
@@ -1593,6 +1869,7 @@
       ],
       "category": "Interface lighting",
       "background": "radial-gradient(circle at 25% 35%, #ffb36b 0%, transparent 30%), radial-gradient(circle at 75% 30%, #4cc3ff 0%, transparent 28%), radial-gradient(circle at 50% 85%, #ff4fc8 0%, transparent 30%), #0a0b10",
+      "status": "research",
       "image": "/images/animated/lighttemple/radiance-cascades.avif",
       "imageStatic": "/images/animated/lighttemple/radiance-cascades.jpg"
     },
@@ -1608,6 +1885,7 @@
       ],
       "category": "Interface lighting",
       "background": "linear-gradient(135deg, #f4a259 0%, #f4a259 48%, #c97d42 48%, #c97d42 100%)",
+      "status": "research",
       "image": "/images/animated/lighttemple/long-shadows.avif",
       "imageStatic": "/images/animated/lighttemple/long-shadows.jpg"
     },
@@ -1624,6 +1902,7 @@
       ],
       "category": "Interface lighting",
       "background": "radial-gradient(ellipse at 45% 50%, #ff3d8b 0%, #5a1030 30%, #170a10 65%), #0e0b0d",
+      "status": "research",
       "image": "/images/neon-sign.jpg"
     },
     {
@@ -1639,6 +1918,7 @@
       ],
       "category": "Interface lighting",
       "background": "linear-gradient(160deg, #e2d9cc 0%, #d0c4b3 55%, #b89c6a 56%, #e9c27a 70%, #c9b49a 100%)",
+      "status": "research",
       "image": "/images/animated/lighttemple/lit-type.avif",
       "imageStatic": "/images/animated/lighttemple/lit-type.jpg"
     }
@@ -1647,45 +1927,55 @@
     {
       "id": "mipgen",
       "title": "2D and cube mip generation",
+      "summary": "Does GPU mip generation average every source texel, including odd dimensions, across 2D textures and all six cube faces?",
       "tags": [
         "compute",
         "texture",
         "mipmap",
         "cube"
       ],
-      "summary": "Explore compute, texture, mipmap, cube with live parameters and shader source.",
+      "family": "primitives",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/mipgen.avif",
       "imageStatic": "/images/animated/hologpu/mipgen.jpg"
     },
     {
       "id": "radiance-cascades",
       "title": "2D radiance cascades",
+      "summary": "Can a distance/angular hierarchy provide immediate 2D indirect light with inspectable memory and merge behavior?",
       "tags": [
         "radiance",
         "global-illumination",
         "hierarchy",
         "distance"
       ],
-      "summary": "Explore radiance, global illumination, hierarchy, distance with live parameters and shader source.",
+      "family": "lighting",
+      "tier": "T4",
+      "status": "research",
       "image": "/images/animated/hologpu/radiance-cascades.avif",
       "imageStatic": "/images/animated/hologpu/radiance-cascades.jpg"
     },
     {
       "id": "color-grade",
       "title": "3D LUT and tone mapping",
+      "summary": "What does a real 3D texture buy over an analytic colour transform?",
       "tags": [
         "filter",
         "colour",
         "3d-texture",
         "hdr"
       ],
-      "summary": "Explore filter, colour, 3d texture, hdr with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/color-grade.avif",
       "imageStatic": "/images/animated/hologpu/color-grade.jpg"
     },
     {
       "id": "product-sheen",
       "title": "Alpha-masked product sheen",
+      "summary": "A T1 front-layer light band clipped by the bound product image's alpha. It adds only the highlight; the real product image remains beneath it in the light DOM. A missing image produces a transparent field instead of a rectangular sheen.",
       "tags": [
         "product",
         "image",
@@ -1694,25 +1984,31 @@
         "progress",
         "launch-page"
       ],
-      "summary": "Explore product, image, sheen, css with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/product-sheen.png"
     },
     {
       "id": "audio-spectrum",
       "title": "Audio FFT, oscilloscope and terrain",
+      "summary": "Does the visual respond to actual analyser amplitudes and signed waveform samples?",
       "tags": [
         "audio",
         "fft",
         "waveform",
         "terrain"
       ],
-      "summary": "Explore audio, fft, waveform, terrain with live parameters and shader source.",
+      "family": "input",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/audio-spectrum.avif",
       "imageStatic": "/images/animated/hologpu/audio-spectrum.jpg"
     },
     {
       "id": "section-wipe",
       "title": "Authored image section wipe",
+      "summary": "This baseline T4 transition reveals a second authored image through a directional soft front, a still noise field, or the destination's linear luminance. Bind the source as image and the destination as next. No page pixels or View Transitions snapshots are captured. Missing next preserves the source. Progress 0 and 1 return the corresponding image exactly; intermediate pixels interpolate premultiplied linear RGBA, including alpha, without tinting the images. Reduced motion uses a hard cut: source below 0.5 and destination at or above 0.5.",
       "tags": [
         "image",
         "transition",
@@ -1720,25 +2016,31 @@
         "css",
         "launch-page"
       ],
-      "summary": "Explore image, transition, scroll, css with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/section-wipe.png"
     },
     {
       "id": "boids",
       "title": "Boids with sorted spatial neighbors",
+      "summary": "Can a GPU sort and prefix-sum uniform grid reduce neighbor candidates while preserving every periodic boid interaction and the resulting steering update?",
       "tags": [
         "flocking",
         "spatial-hash",
         "prefix-sum",
         "radix-sort"
       ],
-      "summary": "Explore flocking, spatial hash, prefix sum, radix sort with live parameters and shader source.",
+      "family": "particles",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/boids.avif",
       "imageStatic": "/images/animated/hologpu/boids.jpg"
     },
     {
       "id": "smoke",
       "title": "Buoyant smoke and self-shadow",
+      "summary": "How do advected temperature and density change a projected fluid, and what is the extra cost of a bounded self-shadow display?",
       "tags": [
         "compute",
         "stable-fluids",
@@ -1746,13 +2048,16 @@
         "temperature",
         "self-shadow"
       ],
-      "summary": "Explore compute, stable fluids, buoyancy, temperature with live parameters and shader source.",
+      "family": "fluids",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/smoke.avif",
       "imageStatic": "/images/animated/hologpu/smoke.jpg"
     },
     {
       "id": "text-outline-glow",
       "title": "Cached text outline and glow",
+      "summary": "Attach this decorative transparent layer over a real DOM heading. A text mask seeds the existing baseline JFA+1 helper once; a single steady fragment pass reads the cached signed distance and paints an exterior exponential halo, crisp outline, or both. Glyph interiors remain transparent so the light-DOM text supplies the content. Intensity defaults to 0.18. Colour, intensity, width, and falloff support CSS bindings.",
       "tags": [
         "text",
         "outline",
@@ -1760,64 +2065,79 @@
         "cached-distance",
         "css"
       ],
-      "summary": "Explore text, outline, glow, cached distance with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/text-outline-glow.png"
     },
     {
       "id": "scroll-scene",
       "title": "CSS scroll timeline scene",
+      "summary": "Can normalized CSS scroll progress scrub a GPU scene reversibly without advancing simulation time?",
       "tags": [
         "dom",
         "scroll",
         "css",
         "timeline"
       ],
-      "summary": "Explore dom, scroll, css, timeline with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/scroll-scene.avif",
       "imageStatic": "/images/animated/hologpu/scroll-scene.jpg"
     },
     {
       "id": "lattice-boltzmann",
       "title": "D2Q9 lattice Boltzmann",
+      "summary": "Can a second flow solver conserve mass in periodic mode while producing a driven cylinder wake?",
       "tags": [
         "lbm",
         "bgk",
         "vortex-shedding",
         "bounce-back"
       ],
-      "summary": "Explore lbm, bgk, vortex shedding, bounce back with live parameters and shader source.",
+      "family": "fluids",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/lattice-boltzmann.avif",
       "imageStatic": "/images/animated/hologpu/lattice-boltzmann.jpg"
     },
     {
       "id": "caustics",
       "title": "Derivative water caustics",
+      "summary": "Can fragment derivatives turn a seeded procedural water surface into stable, bounded focusing patterns without a simulation or an extra render pass?",
       "tags": [
         "water",
         "derivatives",
         "refraction",
         "jacobian"
       ],
-      "summary": "Explore water, derivatives, refraction, jacobian with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/caustics.avif",
       "imageStatic": "/images/animated/hologpu/caustics.jpg"
     },
     {
       "id": "backdrop-glass",
       "title": "Experimental DOM backdrop glass",
+      "summary": "Can HTML-in-canvas copy real DOM paint into a refracting WebGPU effect, and what happens without the experiment?",
       "tags": [
         "html-in-canvas",
         "experimental",
         "refraction",
         "dom-capture"
       ],
-      "summary": "Explore html in canvas, experimental, refraction, dom capture with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/backdrop-glass.avif",
       "imageStatic": "/images/animated/hologpu/backdrop-glass.jpg"
     },
     {
       "id": "fluid-obstacles",
       "title": "Fluid around DOM rectangles",
+      "summary": "Can a projected fluid interact with accessible page headings through their browser bounding boxes, without rasterizing the page or hiding the content in a canvas?",
       "tags": [
         "compute",
         "stable-fluids",
@@ -1826,13 +2146,16 @@
         "obstacles",
         "staggered-grid"
       ],
-      "summary": "Explore compute, stable fluids, dom, pressure with live parameters and shader source.",
+      "family": "fluids",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/fluid-obstacles.avif",
       "imageStatic": "/images/animated/hologpu/fluid-obstacles.jpg"
     },
     {
       "id": "attractors",
       "title": "Four additive HDR attractors",
+      "summary": "Can differential and iterated-map chaotic systems share particle storage and additive HDR presentation without hiding their numerical differences?",
       "tags": [
         "lorenz",
         "aizawa",
@@ -1840,13 +2163,16 @@
         "dejong",
         "hdr"
       ],
-      "summary": "Explore lorenz, aizawa, clifford, dejong with live parameters and shader source.",
+      "family": "particles",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/attractors.avif",
       "imageStatic": "/images/animated/hologpu/attractors.jpg"
     },
     {
       "id": "panel-refraction",
       "title": "Frosted hero refraction panel",
+      "summary": "A frosted card samples another HoloGPU field's premultiplied linear output. It cannot refract arbitrary DOM content: no HTML capture, screenshot, or experimental browser flag is involved. The demo places three draggable cards over an aurora-veil hero.",
       "tags": [
         "card",
         "glass",
@@ -1855,25 +2181,31 @@
         "hero",
         "css"
       ],
-      "summary": "Explore card, glass, refraction, blur with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/panel-refraction.png"
     },
     {
       "id": "blur",
       "title": "Gaussian / dual Kawase / box blur",
+      "summary": "How do exact separable kernels compare with a compact dual Kawase pyramid?",
       "tags": [
         "filter",
         "blur",
         "separable",
         "pyramid"
       ],
-      "summary": "Explore filter, blur, separable, pyramid with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/blur.avif",
       "imageStatic": "/images/animated/hologpu/blur.jpg"
     },
     {
       "id": "pointer-map",
       "title": "Gaussian pointer normal / flow map",
+      "summary": "A baseline T1 data texture renders a Gaussian lens centred on the pointer. Its circular footprint uses the host aspect ratio and radius as a standard deviation normalized to host height. It has no time-driven grain, swirl or animation: unchanged frames submit no GPU work.",
       "tags": [
         "map",
         "normal",
@@ -1882,12 +2214,15 @@
         "product",
         "lcd"
       ],
-      "summary": "Explore map, normal, flow, pointer with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/pointer-map.png"
     },
     {
       "id": "wave-divider",
       "title": "Gentle section wave divider",
+      "summary": "One baseline T1 fragment pass fills the lower side of a gently moving two-sine edge. amplitude is measured in CSS pixels through the effective frame DPR, so DPR and resolution scale leave its geometry unchanged. The default amplitude is 18 px, baseline is half the host height, primary frequency is 1.15 cycles across the width, and speed is 0.12 radians per second. The second term has 0.35 amplitude, twice the frequency, and a fixed 1.3-radian phase offset. No texture input, feedback, history, or additional allocation is needed.",
       "tags": [
         "divider",
         "section",
@@ -1895,12 +2230,15 @@
         "css",
         "launch-page"
       ],
-      "summary": "Explore divider, section, wave, css with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/wave-divider.png"
     },
     {
       "id": "material-ball",
       "title": "GGX material and prefiltered cube lighting",
+      "summary": "Can the minimal mesh runtime provide convincing roughness-dependent image-based lighting without an asset pipeline?",
       "tags": [
         "pbr",
         "cube-map",
@@ -1909,63 +2247,78 @@
         "depth",
         "msaa"
       ],
-      "summary": "Explore pbr, cube map, texture array, prefiltered mips with live parameters and shader source.",
+      "family": "geometry",
+      "tier": "T5",
+      "status": "research",
       "image": "/images/catalogues/hologpu/material-ball.png"
     },
     {
       "id": "splats",
       "title": "GPU sorted anisotropic Gaussian splats",
+      "summary": "Does the GPU sort primitive produce correct transparency on projected anisotropic 3D data?",
       "tags": [
         "gaussian",
         "covariance",
         "radix-sort",
         "alpha-compositing"
       ],
-      "summary": "Explore gaussian, covariance, radix sort, alpha compositing with live parameters and shader source.",
+      "family": "geometry",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/splats.avif",
       "imageStatic": "/images/animated/hologpu/splats.jpg"
     },
     {
       "id": "reaction-diffusion",
       "title": "Gray–Scott reaction diffusion",
+      "summary": "Can a fixed-step, floating-point stencil reproduce reaction fronts without reading a target being written?",
       "tags": [
         "gray-scott",
         "chemistry",
         "parameter-map"
       ],
-      "summary": "Explore gray scott, chemistry, parameter map with live parameters and shader source.",
+      "family": "feedback",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/reaction-diffusion.avif",
       "imageStatic": "/images/animated/hologpu/reaction-diffusion.jpg"
     },
     {
       "id": "halftone-ascii",
       "title": "Halftone dots and glyph atlas",
+      "summary": "Can image density map to real glyph coverage instead of procedural pseudo-text?",
       "tags": [
         "filter",
         "halftone",
         "ascii",
         "atlas"
       ],
-      "summary": "Explore filter, halftone, ascii, atlas with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/halftone-ascii.avif",
       "imageStatic": "/images/animated/hologpu/halftone-ascii.jpg"
     },
     {
       "id": "bloom",
       "title": "HDR mip-pyramid bloom",
+      "summary": "Can a chain preserve HDR energy until tone mapping and expose each bloom level?",
       "tags": [
         "filter",
         "hdr",
         "bloom",
         "pyramid"
       ],
-      "summary": "Explore filter, hdr, bloom, pyramid with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/bloom.avif",
       "imageStatic": "/images/animated/hologpu/bloom.jpg"
     },
     {
       "id": "image-hover",
       "title": "Image hover and scroll transition",
+      "summary": "Can CSS hover or scroll interpolate two actual image textures while the field preserves their owners?",
       "tags": [
         "dom",
         "image",
@@ -1973,13 +2326,16 @@
         "css",
         "transition"
       ],
-      "summary": "Explore dom, image, hover, css with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/image-hover.avif",
       "imageStatic": "/images/animated/hologpu/image-hover.jpg"
     },
     {
       "id": "terrain",
       "title": "Indexed height field and moving camera",
+      "summary": "How much terrain detail can vertex-stage noise displacement provide with a minimal camera and index buffer?",
       "tags": [
         "index-buffer",
         "vertex-displacement",
@@ -1987,85 +2343,106 @@
         "msaa",
         "fog"
       ],
-      "summary": "Explore index buffer, vertex displacement, depth, msaa with live parameters and shader source.",
+      "family": "geometry",
+      "tier": "T5",
+      "status": "research",
       "image": "/images/catalogues/hologpu/terrain.png"
     },
     {
       "id": "emitters",
       "title": "Indirect fireworks and spark emitters",
+      "summary": "Can lifetime-driven births and deaths remain reproducible while live GPU counts drive rendering without a CPU count round trip?",
       "tags": [
         "free-list",
         "stream-compaction",
         "indirect-draw"
       ],
-      "summary": "Explore free list, stream compaction, indirect draw with live parameters and shader source.",
+      "family": "particles",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/emitters.avif",
       "imageStatic": "/images/animated/hologpu/emitters.jpg"
     },
     {
       "id": "fractal",
       "title": "Julia / Mandelbrot explorer",
+      "summary": "When does f32 lose deep-zoom detail, and what can paired f32 arithmetic preserve?",
       "tags": [
         "fractal",
         "precision",
         "double-single"
       ],
-      "summary": "Explore fractal, precision, double single with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/fractal.avif",
       "imageStatic": "/images/animated/hologpu/fractal.jpg"
     },
     {
       "id": "jump-flood",
       "title": "Jump-flood distance fields",
+      "summary": "Can a reusable GPU mask-to-distance transform serve outlines, Voronoi inspection and 2D lighting without readback?",
       "tags": [
         "distance",
         "mask",
         "outline",
         "voronoi"
       ],
-      "summary": "Explore distance, mask, outline, voronoi with live parameters and shader source.",
+      "family": "lighting",
+      "tier": "T2",
+      "status": "demo",
       "image": "/images/animated/hologpu/jump-flood.avif",
       "imageStatic": "/images/animated/hologpu/jump-flood.jpg"
     },
     {
       "id": "lenia",
       "title": "Lenia continuous cellular automaton",
+      "summary": "How costly is a continuous neighborhood rule when its radial kernel is stored in a LUT instead of recomputed for every sample?",
       "tags": [
         "lenia",
         "convolution",
         "kernel-lut"
       ],
-      "summary": "Explore lenia, convolution, kernel lut with live parameters and shader source.",
+      "family": "feedback",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/lenia.avif",
       "imageStatic": "/images/animated/hologpu/lenia.jpg"
     },
     {
       "id": "lens",
       "title": "Lens and film stack",
+      "summary": "How much optical character fits into one bounded sampling pass?",
       "tags": [
         "filter",
         "lens",
         "grain"
       ],
-      "summary": "Explore filter, lens, grain with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/lens.avif",
       "imageStatic": "/images/animated/hologpu/lens.jpg"
     },
     {
       "id": "life",
       "title": "Life and life-like rules",
+      "summary": "Can synchronous integer cellular rules remain exact across reset, batching and storage-texture access modes?",
       "tags": [
         "cellular-automata",
         "integer",
         "life"
       ],
-      "summary": "Explore cellular automata, integer, life with live parameters and shader source.",
+      "family": "feedback",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/life.avif",
       "imageStatic": "/images/animated/hologpu/life.jpg"
     },
     {
       "id": "bright-pass",
       "title": "Luminance-selected screenshot highlights",
+      "summary": "A T4 highlight extractor for screenshot glow. Selection uses unpremultiplied linear Rec.709 luminance, not maximum RGB: a saturated red pixel and equally bright green pixel can fall on opposite sides of the threshold. The default threshold is 0.65, softness 0.1 and intensity 0.25. softness: 0 selects values at or above the threshold exactly. HDR input values above one remain HDR; extraction does not tone-map them.",
       "tags": [
         "filter",
         "product",
@@ -2074,24 +2451,30 @@
         "mask",
         "launch-page"
       ],
-      "summary": "Explore filter, product, image, luminance with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/bright-pass.png"
     },
     {
       "id": "falling-sand",
       "title": "Margolus sand, water and fire",
+      "summary": "Can moving materials remain race-free while their block neighborhood changes every subiteration?",
       "tags": [
         "margolus",
         "block-ca",
         "integer"
       ],
-      "summary": "Explore margolus, block ca, integer with live parameters and shader source.",
+      "family": "feedback",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/falling-sand.avif",
       "imageStatic": "/images/animated/hologpu/falling-sand.jpg"
     },
     {
       "id": "text-shimmer",
       "title": "Masked OKLCH headline shimmer",
+      "summary": "One T1 fragment pass gates a three-stop OKLCH gradient with the real headline's alpha mask. A soft Gaussian highlight travels horizontally once in 1.2 seconds, then the overlay becomes transparent. Real text remains in the light DOM beneath the front canvas, preserving selection and accessibility. Default opacity is 0.25; palette stops and intensity accept CSS custom properties.",
       "tags": [
         "text",
         "mask",
@@ -2100,12 +2483,15 @@
         "css",
         "typography"
       ],
-      "summary": "Explore text, mask, gradient, oklch with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/text-shimmer.png"
     },
     {
       "id": "masked-composite",
       "title": "Masked original / filtered composite",
+      "summary": "Mix an original image with a filtered output through an authored coverage mask. Both colour inputs use linear premultiplied RGBA; the filter interpolates all four channels together, so translucent edges retain correct colour and alpha.",
       "tags": [
         "filter",
         "mask",
@@ -2113,25 +2499,31 @@
         "product",
         "lcd"
       ],
-      "summary": "Explore filter, mask, composite, product with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/masked-composite.png"
     },
     {
       "id": "mpm",
       "title": "Material point transfers",
+      "summary": "Can portable WebGPU run particle/grid material transfers without float atomics?",
       "tags": [
         "mpm",
         "apic",
         "particle-grid",
         "elasticity"
       ],
-      "summary": "Explore mpm, apic, particle grid, elasticity with live parameters and shader source.",
+      "family": "particles",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/mpm.avif",
       "imageStatic": "/images/animated/hologpu/mpm.jpg"
     },
     {
       "id": "glass",
       "title": "Mesh refraction and chromatic dispersion",
+      "summary": "Can a small multi-pass graph refract a captured background through actual geometry with chromatic dispersion?",
       "tags": [
         "refraction",
         "dispersion",
@@ -2139,63 +2531,78 @@
         "depth",
         "msaa"
       ],
-      "summary": "Explore refraction, dispersion, scene capture, depth with live parameters and shader source.",
+      "family": "geometry",
+      "tier": "T5",
+      "status": "research",
       "image": "/images/catalogues/hologpu/glass.png"
     },
     {
       "id": "sdf-2d",
       "title": "Metaballs and Boolean shapes",
+      "summary": "Can analytic distance fields create smooth moving unions and crisp Boolean cuts without geometry?",
       "tags": [
         "sdf",
         "boolean",
         "metaballs",
         "derivatives"
       ],
-      "summary": "Explore sdf, boolean, metaballs, derivatives with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/sdf-2d.avif",
       "imageStatic": "/images/animated/hologpu/sdf-2d.jpg"
     },
     {
       "id": "flow-particles",
       "title": "Million curl-noise particles",
+      "summary": "Can one million independently advected storage particles sustain a usable visual update, and how much do points and instanced quads change rendering cost?",
       "tags": [
         "compute",
         "curl-noise",
         "million-particles",
         "trails"
       ],
-      "summary": "Explore compute, curl noise, million particles, trails with live parameters and shader source.",
+      "family": "particles",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/flow-particles.avif",
       "imageStatic": "/images/animated/hologpu/flow-particles.jpg"
     },
     {
       "id": "voronoi",
       "title": "Moving Voronoi cells",
+      "summary": "How do distance metrics change moving cellular boundaries?",
       "tags": [
         "cellular",
         "distance",
         "fragment-loops"
       ],
-      "summary": "Explore cellular, distance, fragment loops with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/voronoi.avif",
       "imageStatic": "/images/animated/hologpu/voronoi.jpg"
     },
     {
       "id": "noise-lab",
       "title": "Noise laboratory",
+      "summary": "How do interpolation, lattice geometry, cellular distance, curl, octaves, and domain warp change a procedural field?",
       "tags": [
         "noise",
         "fbm",
         "domain-warp",
         "curl"
       ],
-      "summary": "Explore noise, fbm, domain warp, curl with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/noise-lab.avif",
       "imageStatic": "/images/animated/hologpu/noise-lab.jpg"
     },
     {
       "id": "instances",
       "title": "Noise-displaced instanced meshes",
+      "summary": "Can a reusable render bundle draw a large depth-tested field while changing noise displacement without re-encoding its draw commands?",
       "tags": [
         "instancing",
         "depth",
@@ -2203,12 +2610,15 @@
         "render-bundles",
         "occlusion-queries"
       ],
-      "summary": "Explore instancing, depth, msaa, render bundles with live parameters and shader source.",
+      "family": "geometry",
+      "tier": "T5",
+      "status": "research",
       "image": "/images/catalogues/hologpu/instances.png"
     },
     {
       "id": "heading-reveal",
       "title": "Noise-eroded heading reveal",
+      "summary": "One T1 fragment pass lays a flat page-colour cover over masked glyphs. Stable seeded noise perturbs a left-to-right progress boundary, eroding that cover to uncover the original DOM heading. The default progress is 1, leaving ordinary text fully visible. Explicit zero covers the glyphs, halfway progress reveals approximately half, and final progress is exactly transparent. Reduced motion always forces the final visible heading regardless of CSS or timeline position.",
       "tags": [
         "text",
         "mask",
@@ -2217,74 +2627,92 @@
         "css",
         "typography"
       ],
-      "summary": "Explore text, mask, noise, reveal with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/heading-reveal.png"
     },
     {
       "id": "displace",
       "title": "Normal / flow refraction and ripple",
+      "summary": "Can a filter consume another effect’s physical state or rendered colour without rebinding code?",
       "tags": [
         "filter",
         "displace",
         "flow-map",
         "refraction"
       ],
-      "summary": "Explore filter, displace, flow map, refraction with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/displace.avif",
       "imageStatic": "/images/animated/hologpu/displace.jpg"
     },
     {
       "id": "gradient-oklch",
       "title": "OKLCH mesh gradient",
+      "summary": "Can three moving colour stops remain perceptually balanced while avoiding SDR banding?",
       "tags": [
         "colour",
         "mesh",
         "dither"
       ],
-      "summary": "Explore colour, mesh, dither with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/gradient-oklch.avif",
       "imageStatic": "/images/animated/hologpu/gradient-oklch.jpg"
     },
     {
       "id": "dither",
       "title": "Ordered / blue-noise / palette / CRT",
+      "summary": "Can generated noise reduce banding while preserving average binary brightness?",
       "tags": [
         "filter",
         "quantisation",
         "blue-noise",
         "crt"
       ],
-      "summary": "Explore filter, quantisation, blue noise, crt with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/dither.avif",
       "imageStatic": "/images/animated/hologpu/dither.jpg"
     },
     {
       "id": "starfield",
       "title": "Parallax stars and nebula",
+      "summary": "Can layered, stateless stars remain stable while crossing lattice boundaries, and how does coordinate hashing affect their spatial distribution?",
       "tags": [
         "parallax",
         "hash",
         "noise",
         "temporal-stability"
       ],
-      "summary": "Explore parallax, hash, noise, temporal stability with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/starfield.png"
     },
     {
       "id": "physarum",
       "title": "Physarum agents and atomic trail",
+      "summary": "Can independent agents sense a diffusing trail and deposit into shared cells without order-dependent write races?",
       "tags": [
         "agents",
         "storage-buffer",
         "atomics"
       ],
-      "summary": "Explore agents, storage buffer, atomics with live parameters and shader source.",
+      "family": "feedback",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/physarum.avif",
       "imageStatic": "/images/animated/hologpu/physarum.jpg"
     },
     {
       "id": "ink",
       "title": "Pigment deposition on paper",
+      "summary": "Can a stationary paper deposit preserve the history of a moving fluid wash, and how much extra state and work does that material model cost?",
       "tags": [
         "compute",
         "stable-fluids",
@@ -2292,13 +2720,16 @@
         "paper",
         "absorption"
       ],
-      "summary": "Explore compute, stable fluids, pigment, paper with live parameters and shader source.",
+      "family": "fluids",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/ink.avif",
       "imageStatic": "/images/animated/hologpu/ink.jpg"
     },
     {
       "id": "progress-line",
       "title": "Polyline progress rule",
+      "summary": "A thin transparent rule reveals a polyline by its actual length in CSS pixels. Edit p0 through p7 as normalized [x, y] coordinates and set pointCount to 2…8. Unequal horizontal, vertical and diagonal segments consume progress in proportion to their visible length, rather than one equal interval per segment. Resizing recomputes the length in the new aspect ratio.",
       "tags": [
         "progress",
         "polyline",
@@ -2306,49 +2737,58 @@
         "css",
         "scroll"
       ],
-      "summary": "Explore progress, polyline, divider, css with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/progress-line.png"
     },
     {
       "id": "pbf-fluid",
       "title": "Position based fluid constraints",
+      "summary": "How much work does rebuilding exact sorted neighbors add to each density constraint iteration?",
       "tags": [
         "pbf",
         "sph",
         "spatial-hash",
         "jacobi"
       ],
-      "summary": "Explore pbf, sph, spatial hash, jacobi with live parameters and shader source.",
+      "family": "particles",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/pbf-fluid.avif",
       "imageStatic": "/images/animated/hologpu/pbf-fluid.jpg"
     },
     {
       "id": "prefix-sum",
-      "title": "Prefix sum and stream compaction",
-      "tags": [
-        "compute",
-        "primitives"
-      ],
-      "summary": "Explore compute, primitives with live parameters and shader source.",
+      "title": "prefix-sum",
+      "summary": "Can an exclusive scan retain exact unsigned offsets across workgroup boundaries and provide deterministic particle allocation?",
+      "tags": [],
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/prefix-sum.avif",
       "imageStatic": "/images/animated/hologpu/prefix-sum.jpg"
     },
     {
       "id": "path-tracer",
       "title": "Progressive BVH path tracer",
+      "summary": "How does compute-only progressive rendering fit the fixed-step contract and paused DOM surfaces?",
       "tags": [
         "bvh",
         "path-tracing",
         "progressive",
         "compute-rendering"
       ],
-      "summary": "Explore bvh, path tracing, progressive, compute rendering with live parameters and shader source.",
+      "family": "geometry",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/path-tracer.avif",
       "imageStatic": "/images/animated/hologpu/path-tracer.jpg"
     },
     {
       "id": "fluid",
       "title": "Projected fluid and dye",
+      "summary": "How much pressure convergence can a reference multi-pass fluid solver buy per frame at an actual 1024×1024 simulation grid, while a DOM page continues to render?",
       "tags": [
         "compute",
         "stable-fluids",
@@ -2356,13 +2796,16 @@
         "vorticity",
         "staggered-grid"
       ],
-      "summary": "Explore compute, stable fluids, pressure, vorticity with live parameters and shader source.",
+      "family": "fluids",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/fluid.avif",
       "imageStatic": "/images/animated/hologpu/fluid.jpg"
     },
     {
       "id": "particle-drift",
       "title": "Quiet bokeh dust drift",
+      "summary": "A local T3 overlay of 256–2048 Gaussian dust quads. The default is 512 records, 4 CSS-pixel nominal diameter and 0.18 intensity, with warm ember, pearl and rose presets. Its default resolution scale is 0.5: the bilinear upscale softly blends the small Gaussian sprites while reducing the draw and resolve area. Explicit resolutionScale: 1 remains available. Effective DPR retains every geometry and interaction measurement in CSS pixels at either scale. --hgpu-tint and --hgpu-intensity drive the brand appearance. Dust has no meaning; keep the native page content in the light DOM.",
       "tags": [
         "dust",
         "bokeh",
@@ -2370,36 +2813,45 @@
         "ambient",
         "launch-page"
       ],
-      "summary": "Explore dust, bokeh, pointer, ambient with live parameters and shader source.",
+      "family": "particles",
+      "tier": "T3",
+      "status": "research",
       "image": "/images/catalogues/hologpu/particle-drift.png"
     },
     {
       "id": "dot-matrix-field",
       "title": "Quiet CSS-pixel dot matrix",
+      "summary": "A transparent technical backdrop with a regular CSS-pixel lattice. The default 24 px pitch and 1.15 px dot radius stay constant at DPR 1 and 2 and when resolution scale changes: the shader divides target resolution by the effective frame DPR. A signed-distance circle uses an analytic half-pixel edge. The shared value-noise chunk gently modulates radius and opacity by at most ±15%.",
       "tags": [
         "background",
         "launch-page",
         "dots",
         "pointer"
       ],
-      "summary": "Explore background, launch page, dots, pointer with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/dot-matrix-field.png"
     },
     {
       "id": "grain-overlay",
       "title": "Quiet film grain",
+      "summary": "A transparent T1 layer adds fine seeded film grain over an existing light or dark page background. Use attach(host, grain, { layer: 'front' }); light DOM content remains interactive. Default opacity is 4%. The image input is optional and only weights grain by image luminance; it does not paint the image itself.",
       "tags": [
         "launch-page",
         "grain",
         "transparent",
         "rate-limited"
       ],
-      "summary": "Explore launch page, grain, transparent, rate limited with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/grain-overlay.png"
     },
     {
       "id": "constellation",
       "title": "Quiet linked constellation",
+      "summary": "A transparent, faint network for a launch-page section. Each seeded grid cell holds one point and connects only to its eight immediate neighbours. The 88 CSS-pixel default pitch, 1.5 px point radius and 0.7 px stroke remain stable across DPR and resolution scale. Shorter connections fade in more strongly; linkDistance is expressed in lattice pitches. The default 0.22 point opacity and relative 0.28 connection opacity keep copy dominant.",
       "tags": [
         "ambient",
         "particles",
@@ -2407,112 +2859,139 @@
         "launch-page",
         "network"
       ],
-      "summary": "Explore ambient, particles, background, launch page with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/constellation.png"
     },
     {
       "id": "topographic-lines",
       "title": "Quiet topographic contours",
+      "summary": "One T1 fragment pass evaluates a two-octave value-noise height field and draws isolines with fract and derivative antialiasing. Both stroke edges are integrated over a derivative pixel footprint, so subpixel lines fade with their coverage rather than keeping full brightness. Height amplitude is limited to 0.2 times the terrain wavelength: the bounded value-noise slope stays below one, so the height interval also supplies a lower bound on adjacent-line separation. spacing is clamped to at least 12 CSS pixels to control moiré. No textures, feedback, or optional WebGPU features are required.",
       "tags": [
         "background",
         "contours",
         "noise",
         "derivatives"
       ],
-      "summary": "Explore background, contours, noise, derivatives with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/topographic-lines.png"
     },
     {
       "id": "border-energy",
       "title": "Rounded rectangle border energy",
+      "summary": "Can an effect follow the geometry of a real element without a tessellated border mesh?",
       "tags": [
         "dom",
         "sdf",
         "border",
         "glow"
       ],
-      "summary": "Explore dom, sdf, border, glow with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/border-energy.avif",
       "imageStatic": "/images/animated/hologpu/border-energy.jpg"
     },
     {
       "id": "shadows-2d",
       "title": "SDF soft shadows",
+      "summary": "Can the same text/image distance field support bounded 2D shadow rays and a useful penumbra diagnostic?",
       "tags": [
         "distance",
         "lighting",
         "shadows",
         "rects"
       ],
-      "summary": "Explore distance, lighting, shadows, rects with live parameters and shader source.",
+      "family": "lighting",
+      "tier": "T4",
+      "status": "research",
       "image": "/images/animated/hologpu/shadows-2d.avif",
       "imageStatic": "/images/animated/hologpu/shadows-2d.jpg"
     },
     {
       "id": "spotlight",
       "title": "Shared page spotlight reveal",
+      "summary": "Can independently attached canvases display one page light with continuous coordinates?",
       "tags": [
         "dom",
         "pointer",
         "multiple-surfaces",
         "light"
       ],
-      "summary": "Explore dom, pointer, multiple surfaces, light with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/spotlight.avif",
       "imageStatic": "/images/animated/hologpu/spotlight.jpg"
     },
     {
       "id": "edges",
       "title": "Sobel / toon / Kuwahara",
+      "summary": "How does neighbourhood cost change between edge extraction and painterly smoothing?",
       "tags": [
         "filter",
         "edges",
         "neighbourhood",
         "painterly"
       ],
-      "summary": "Explore filter, edges, neighbourhood, painterly with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/edges.avif",
       "imageStatic": "/images/animated/hologpu/edges.jpg"
     },
     {
       "id": "aurora-veil",
       "title": "Soft aurora veil",
+      "summary": "One T1 fragment pass uses two-octave value-noise fBm from the shared noise chunk, warped by two additional noise channels. The field bends three wide, softly overlapping bands. Colour stops interpolate in OKLCH with chroma-weighted circular hue; a flat base keeps contrast low. Static display-code-value dither reduces SDR banding. There are no optional WebGPU features or persistent simulation resources.",
       "tags": [
         "background",
         "brand",
         "oklch",
         "domain-warp"
       ],
-      "summary": "Explore background, brand, oklch, domain warp with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/aurora-veil.png"
     },
     {
       "id": "hover-lift-shadow",
       "title": "Soft coloured card contact shadow",
+      "summary": "A T1 Gaussian contact shadow outside a rounded card. The default tint is blue-grey at 0.2 intensity. elevation is a CSS-driven 0…1 value: it spreads the shadow and moves its centre down by 3…15 CSS pixels. There is no time-driven motion; reduced motion keeps the same finished pose. Unchanged frames submit no GPU work.",
       "tags": [
         "card",
         "shadow",
         "css",
         "launch-page"
       ],
-      "summary": "Explore card, shadow, css, launch page with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/hover-lift-shadow.png"
     },
     {
       "id": "grid-horizon",
       "title": "Soft perspective floor grid",
+      "summary": "A transparent, low-alpha perspective floor. Rays from a fixed camera intersect a horizontal plane. The plane coordinates form a regular grid, with line coverage derived from fwidth so the projected line weight is expressed in CSS pixels. High-frequency lines fade before they become unresolved; exponential distance fog and a soft horizon gate prevent a bright or shimmering vanishing point. Derivatives execute uniformly across the fragment pass.",
       "tags": [
         "background",
         "launch-page",
         "perspective",
         "grid"
       ],
-      "summary": "Explore background, launch page, perspective, grid with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/grid-horizon.png"
     },
     {
       "id": "press-ripple",
       "title": "Soft press wavefront",
+      "summary": "A T1 circular wavefront after a button or card press. Four oldest-first event slots store normalized canvas position, start time and an active flag in one 64-byte uniform buffer, with a separate 16-byte interaction-clock uniform. A fifth press replaces the oldest slot. Every wave expires after 600 ms; initial and settled frames are transparent. There is no simulation or feedback texture. Idle fields do not submit GPU work.",
       "tags": [
         "button",
         "card",
@@ -2520,12 +2999,15 @@
         "interaction",
         "launch-page"
       ],
-      "summary": "Explore button, card, press, interaction with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/press-ripple.png"
     },
     {
       "id": "light-sweep",
       "title": "Soft specular light sweep",
+      "summary": "A single T1 fullscreen fragment pass evaluates an angled Gaussian band. The default intensity is 0.22; tint and intensity accept CSS tokens. Output is premultiplied linear colour, so attach it front over the real hero or image. The effect carries no information and leaves the underlying page visible.",
       "tags": [
         "background",
         "sheen",
@@ -2533,36 +3015,53 @@
         "css",
         "image"
       ],
-      "summary": "Explore background, sheen, progress, css with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/light-sweep.png"
+    },
+    {
+      "id": "sort",
+      "title": "sort",
+      "summary": "Can both sorting algorithms preserve arbitrary associated values and original order for equal full-width unsigned keys?",
+      "tags": [],
+      "family": "procedural",
+      "tier": "T1",
+      "status": "research",
+      "image": "/images/animated/hologpu/sort.avif",
+      "imageStatic": "/images/animated/hologpu/sort.jpg"
+    },
+    {
+      "id": "spatial-hash",
+      "title": "spatial-hash",
+      "summary": "Can a uniform grid construct stable neighbor ranges without dropping particles at cell boundaries or in empty cells?",
+      "tags": [],
+      "family": "procedural",
+      "tier": "T1",
+      "status": "research",
+      "image": "/images/animated/hologpu/spatial-hash.avif",
+      "imageStatic": "/images/animated/hologpu/spatial-hash.jpg"
     },
     {
       "id": "raymarch",
       "title": "Sphere-traced sculpture",
+      "summary": "How much 3D form can a single fullscreen fragment pass convey with soft shadows and ambient occlusion?",
       "tags": [
         "raymarch",
         "sdf-3d",
         "shadows",
         "ao"
       ],
-      "summary": "Explore raymarch, sdf 3d, shadows, ao with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/raymarch.avif",
       "imageStatic": "/images/animated/hologpu/raymarch.jpg"
     },
     {
-      "id": "sort",
-      "title": "Stable radix and bitonic sorting",
-      "tags": [
-        "compute",
-        "primitives"
-      ],
-      "summary": "Explore compute, primitives with live parameters and shader source.",
-      "image": "/images/animated/hologpu/sort.avif",
-      "imageStatic": "/images/animated/hologpu/sort.jpg"
-    },
-    {
       "id": "depth-parallax",
       "title": "Subtle product image depth parallax",
+      "summary": "This baseline T4 filter shifts a product image using an aligned, authored grayscale depth map. White represents near content and black leaves far content fixed. The effect owns no simulation or history: pointer, progress and image/depth changes drive one fragment pass, which settles between changes. The default amount is 0.015 of the displayed image width with intensity 0.25, giving at most 0.375% of width (2.25 CSS px on a 600 px image). Increasing intensity strengthens this motion, with an absolute vector displacement limit of 2% of image width even in combined mode. Reduced motion returns the original image with zero offset; amount or intensity 0 also preserves the image.",
       "tags": [
         "image",
         "depth",
@@ -2571,25 +3070,31 @@
         "progress",
         "css"
       ],
-      "summary": "Explore image, depth, parallax, pointer with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T1",
+      "status": "ready",
       "image": "/images/catalogues/hologpu/depth-parallax.png"
     },
     {
       "id": "morph-particles",
       "title": "Text and image particle morph",
+      "summary": "Can local text and image masks define useful particle targets while GPU springs and pointer repulsion remain independent of future general input bindings?",
       "tags": [
         "text",
         "image",
         "spring",
         "pointer"
       ],
-      "summary": "Explore text, image, spring, pointer with live parameters and shader source.",
+      "family": "particles",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/morph-particles.avif",
       "imageStatic": "/images/animated/hologpu/morph-particles.jpg"
     },
     {
       "id": "text-dissolve",
       "title": "Text mask particle dissolve and reform",
+      "summary": "Can text become real particle primitives while its accessible light-DOM text remains intact?",
       "tags": [
         "dom",
         "text",
@@ -2597,55 +3102,55 @@
         "mask",
         "css"
       ],
-      "summary": "Explore dom, text, particles, mask with live parameters and shader source.",
+      "family": "dom",
+      "tier": "T3",
+      "status": "research",
       "image": "/images/animated/hologpu/text-dissolve.avif",
       "imageStatic": "/images/animated/hologpu/text-dissolve.jpg"
     },
     {
       "id": "n-body",
       "title": "Tiled and grid-accelerated gravity",
+      "summary": "How do exact workgroup-tiled gravitational forces compare with a GPU grid that resolves nearby bodies individually and approximates distant cells by their center of mass?",
       "tags": [
         "gravity",
         "workgroup-tiling",
         "spatial-hash"
       ],
-      "summary": "Explore gravity, workgroup tiling, spatial hash with live parameters and shader source.",
+      "family": "particles",
+      "tier": "T1",
+      "status": "research",
       "image": "/images/animated/hologpu/n-body.avif",
       "imageStatic": "/images/animated/hologpu/n-body.jpg"
     },
     {
       "id": "truchet",
       "title": "Truchet, hex and quasi-crystal contours",
+      "summary": "Can signed cell coordinates, unsigned bit operations, and a seed create connected tile motifs without a texture or topology buffer? How does a quasiperiodic contour field differ from an actual aperiodic tiling?",
       "tags": [
         "tiling",
         "integer-hash",
         "bit-operations",
         "quasiperiodic"
       ],
-      "summary": "Explore tiling, integer hash, bit operations, quasiperiodic with live parameters and shader source.",
+      "family": "procedural",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/truchet.avif",
       "imageStatic": "/images/animated/hologpu/truchet.jpg"
     },
     {
-      "id": "spatial-hash",
-      "title": "Uniform spatial grid",
-      "tags": [
-        "compute",
-        "primitives"
-      ],
-      "summary": "Explore compute, primitives with live parameters and shader source.",
-      "image": "/images/animated/hologpu/spatial-hash.avif",
-      "imageStatic": "/images/animated/hologpu/spatial-hash.jpg"
-    },
-    {
       "id": "wave",
       "title": "Wave history and refraction",
+      "summary": "Can two time levels support a stable two-dimensional wave update and an interactive refracted display?",
       "tags": [
         "wave-equation",
         "history",
         "refraction"
       ],
-      "summary": "Explore wave equation, history, refraction with live parameters and shader source.",
+      "family": "feedback",
+      "tier": "T1",
+      "status": "demo",
       "image": "/images/animated/hologpu/wave.avif",
       "imageStatic": "/images/animated/hologpu/wave.jpg"
     }

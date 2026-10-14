@@ -16,7 +16,7 @@
   "scripts": {
     "bootstrap": "node scripts/bootstrap.mjs",
     "build:labs": "node scripts/build-labs.mjs",
-    "build:catalogue": "npm --prefix site run catalogue",
+    "build:catalogue": "node scripts/build-catalogues.mjs && npm --prefix site run catalogue",
     "build:site": "npm --prefix site run build",
     "build": "npm run build:labs && npm run build:catalogue && npm run build:site",
     "catalogue": "npm --prefix site run catalogue",
