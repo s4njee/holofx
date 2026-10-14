@@ -1,8 +1,8 @@
 // Capture real bundled demos and encode short looping AVIF card previews.
 // node scripts/capture-animated-previews.cjs [project/id ...]
-// Requires local ffmpeg/avifenc and the research workspace's Playwright.
+// Requires local ffmpeg/avifenc and the site's own Playwright.
 const fs=require('node:fs');const path=require('node:path');const {spawn}=require('node:child_process');
-const root=path.resolve(__dirname,'..');const research=path.resolve(root,'../../..');const {chromium}=require(path.join(research,'hologpu/node_modules/@playwright/test'));
+const root=path.resolve(__dirname,'..');const {chromium}=require('@playwright/test');
 const catalogue=JSON.parse(fs.readFileSync(path.join(root,'src/catalogues.json')));
 const manifestPath=path.join(root,'src/animated-previews.json');const manifest=fs.existsSync(manifestPath)?JSON.parse(fs.readFileSync(manifestPath)):{version:1,width:480,height:300,fps:8,frames:20,items:{}};
 const targets=Object.entries(catalogue).flatMap(([project,effects])=>effects.filter(e=>!e.image||manifest.items[`${project}/${e.id}`]).map(effect=>({project,effect})));
