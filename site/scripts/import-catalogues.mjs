@@ -74,6 +74,18 @@ catalogues.hologpu = readCatalogue('hologpu').effects.map((e) => ({
   image: copyPoster('hologpu', e.id, e.poster),
 }));
 
+catalogues.eightfoldpath = readCatalogue('eightfoldpath').effects.map((e) => ({
+  id: e.id,
+  title: e.title,
+  summary: e.summary,
+  tags: e.tags,
+  epic: e.epic,
+  tier: e.tier,
+  status: e.status,
+  image: copyPoster('eightfoldpath', e.id, e.poster),
+  scorecard: e.scorecard ?? null,
+}));
+
 const animationManifest = 'src/animated-previews.json';
 if (fs.existsSync(animationManifest)) {
   const { items } = JSON.parse(fs.readFileSync(animationManifest));

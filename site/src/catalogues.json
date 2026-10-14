@@ -5165,5 +5165,359 @@
       "image": "/images/animated/hologpu/wave.avif",
       "imageStatic": "/images/animated/hologpu/wave.jpg"
     }
+  ],
+  "eightfoldpath": [
+    {
+      "id": "hello",
+      "title": "Hello, diorama",
+      "summary": "One pixel-art sprite standing on one tile, lit by an orbiting lantern, through the HDR tail. Exists to exercise the foundation end to end.",
+      "tags": [
+        "foundation",
+        "sprite",
+        "lighting"
+      ],
+      "epic": "1",
+      "tier": "C",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/hello.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "unmeasured",
+        "lightPage": "untested",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of the sprite on its tile, or a dark CSS gradient.",
+        "depth": true,
+        "pixelStability": "untested",
+        "useCases": [
+          "Smoke test for asset loading, the sprite and tile path, depth, lighting and the HDR tail",
+          "The starting point for the sprite, lighting and diorama stories in Epics 3 and 4"
+        ]
+      }
+    },
+    {
+      "id": "bitmap-text",
+      "title": "Bitmap text",
+      "summary": "An original 5×7 pixel font built into an atlas at load, laid out in whole texels so it stays crisp at any integer scale, typed out in a nine-slice dialogue box.",
+      "tags": [
+        "building block",
+        "text",
+        "ui",
+        "font"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/bitmap-text.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "low",
+        "lightPage": "no",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of the dialogue box with its text fully shown, or the same text as HTML.",
+        "depth": false,
+        "pixelStability": "stable",
+        "useCases": [
+          "Dialogue boxes, signs and title cards in a pixel-art scene",
+          "Damage numbers and labels drawn in the same pass as the sprites"
+        ]
+      }
+    },
+    {
+      "id": "low-res-path",
+      "title": "Low-resolution path",
+      "summary": "The diorama drawn at a fixed virtual resolution of one texel per pixel, with the camera snapped to whole virtual pixels and the remainder put back as an offset while scaling up, so it scrolls smoothly without a texel ever changing shape.",
+      "tags": [
+        "building block",
+        "pixel art",
+        "upscale",
+        "camera",
+        "low resolution"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/low-res-path.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "low",
+        "lightPage": "no",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of the scene, which looks the same as the live one would at rest.",
+        "depth": true,
+        "pixelStability": "stable",
+        "paletteAdherence": 0.63,
+        "useCases": [
+          "A cheaper, chunkier take on the diorama: everything on one pixel grid",
+          "Hero sections that want the retro look with smooth scrolling"
+        ]
+      }
+    },
+    {
+      "id": "outlines",
+      "title": "Outlines",
+      "summary": "One-pixel lines where depth, surface angle or object changes, found in a post pass over a small G-buffer, and a selection outline that shows through whatever hides the selected sprite.",
+      "tags": [
+        "building block",
+        "post",
+        "outline",
+        "selection",
+        "g-buffer"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/outlines.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "low",
+        "lightPage": "no",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of the diorama with its outlines and one character selected.",
+        "depth": true,
+        "pixelStability": "untested",
+        "useCases": [
+          "Hover and selection highlights for sprites in an interactive diorama",
+          "Ink lines that separate terrain steps and overlapping props at a distance",
+          "A reusable post pass for any effect that can write normals and object IDs"
+        ]
+      }
+    },
+    {
+      "id": "palette-cycling",
+      "title": "Palette cycling",
+      "summary": "A waterfall and a lava flow animated the 16-bit way: the art is stored as palette indices and a fragment shader rotates a run of palette entries, so the bands move without a single pixel being redrawn.",
+      "tags": [
+        "building block",
+        "palette",
+        "animation",
+        "indexed colour"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/palette-cycling.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "low",
+        "flashPresets": [
+          "uncapped (flashes)"
+        ],
+        "lightPage": "no",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of both images, or a short looped video of the cycle.",
+        "depth": false,
+        "pixelStability": "stable",
+        "useCases": [
+          "Water, lava, waterfalls and glowing runes in pixel-art scenes, at almost no cost",
+          "Animated backgrounds for a page header that must stay cheap and crisp"
+        ]
+      }
+    },
+    {
+      "id": "palette-mapping",
+      "title": "Palette mapping",
+      "summary": "Any picture forced into the 48-colour project palette: nearest colour in OKLab through a 32³ lookup table, with Bayer or blue-noise dither, and lighting shaded through palette ramps.",
+      "tags": [
+        "building block",
+        "palette",
+        "dither",
+        "oklab",
+        "post"
+      ],
+      "epic": "3",
+      "tier": "C",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/palette-mapping.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "none",
+        "lightPage": "no",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of the mapped illustration.",
+        "depth": false,
+        "pixelStability": "stable",
+        "useCases": [
+          "Holding a lit scene, a painted backdrop or a photo to the project palette",
+          "The palette lookup, dither and ramps that the low-resolution path and sprite lighting reuse"
+        ]
+      }
+    },
+    {
+      "id": "sprite-batch",
+      "title": "Sprite batcher",
+      "summary": "Nine pixel-art sprites and two ground tiles in one instanced draw, with an animated flipbook, a hit flash, three sampling modes and alpha-to-coverage cut-outs.",
+      "tags": [
+        "building block",
+        "sprite",
+        "sampling",
+        "msaa"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/sprite-batch.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "unmeasured",
+        "lightPage": "no",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of the scene from the default camera.",
+        "depth": true,
+        "pixelStability": "untested",
+        "useCases": [
+          "The way every later effect puts sprites into a scene",
+          "A reference for how sampling and cut-out choices look under a moving camera"
+        ]
+      }
+    },
+    {
+      "id": "sprite-lighting",
+      "title": "Sprite lighting",
+      "summary": "Flat, relief-mapped and automatic normals side by side under the same moving lights: normals generated from each sprite’s alpha, a rim light, and light quantised into bands or snapped to the palette.",
+      "tags": [
+        "building block",
+        "sprite",
+        "lighting",
+        "normals",
+        "palette"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/sprite-lighting.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "low",
+        "lightPage": "no",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of the three columns from the default camera.",
+        "depth": true,
+        "pixelStability": "untested",
+        "useCases": [
+          "The lighting every lit sprite in later scenes uses",
+          "Giving existing sprite art a normal map without painting one",
+          "A pointer-lit portrait or avatar (story 9.2)"
+        ]
+      }
+    },
+    {
+      "id": "sprite-shadows",
+      "title": "Sprite shadows",
+      "summary": "Four ways to give a flat sprite a shadow under a moving sun: a blob, a billboard turned toward the light in the shadow pass, crossed quads, and the silhouette projected onto the ground, received with PCF.",
+      "tags": [
+        "building block",
+        "sprite",
+        "shadows",
+        "shadow map",
+        "pcf"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/sprite-shadows.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "none",
+        "lightPage": "no",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of the diorama with the default light-facing shadows.",
+        "depth": true,
+        "pixelStability": "untested",
+        "useCases": [
+          "The shadow every sprite in a lit diorama casts (Epics 4, 6 and 11)",
+          "Choosing a cheaper shadow where a shadow map is too much (blobs on phones)"
+        ]
+      }
+    },
+    {
+      "id": "texel-lighting",
+      "title": "Texel-snapped lighting",
+      "summary": "A floating lantern circling a few sprites on cobbles and grass, its light and shadow evaluated at the centre of each texel rather than each pixel, so every light edge follows the pixel-art grid.",
+      "tags": [
+        "building block",
+        "lighting",
+        "shadows",
+        "pixel art"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/texel-lighting.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "low",
+        "lightPage": "no",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of the lamp-lit scene.",
+        "depth": true,
+        "pixelStability": "untested",
+        "useCases": [
+          "Lighting pixel art so light and shadow edges stay on the art’s grid",
+          "Any lit sprite or tile scene in later epics, as a shade chunk for the sprite batcher"
+        ]
+      }
+    },
+    {
+      "id": "texel-sampling",
+      "title": "Texel sampling",
+      "summary": "The same panning diorama three times, side by side: nearest, bilinear and sharp sampling of the pixel art, with or without mipmaps. Measured for shimmer and blur at four pixel ratios; sharp sampling is the default for every later effect.",
+      "tags": [
+        "building block",
+        "sampling",
+        "pixel art",
+        "mipmaps",
+        "study"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/eightfoldpath/texel-sampling.webp",
+      "scorecard": {
+        "compute": false,
+        "mobile": "untested",
+        "flash": "none",
+        "lightPage": "no",
+        "features": {
+          "required": []
+        },
+        "fallback": "A still of the three columns, which shows the difference without motion.",
+        "depth": true,
+        "pixelStability": "shimmers",
+        "useCases": [
+          "Deciding how a pixel-art scene samples its textures, with numbers behind the choice",
+          "Showing why nearest sampling crawls and bilinear blurs once the camera moves"
+        ]
+      }
+    }
   ]
 }

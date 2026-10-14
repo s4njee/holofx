@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
-for (const project of ['hologpu', 'firetemple', 'watertemple', 'lighttemple']) {
+for (const project of ['hologpu', 'firetemple', 'watertemple', 'lighttemple', 'eightfoldpath']) {
   const cwd = path.join(root, project);
   console.log(`\n=== catalogue: ${project} ===`);
   const result = spawnSync('node', ['scripts/catalogue.mjs'], { cwd, stdio: 'inherit' });

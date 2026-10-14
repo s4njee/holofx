@@ -22,8 +22,10 @@ const projects = {
   firetemple:{name:'Fire Temple',mode:3,kicker:'WARMTH, ENERGY, AND A LITTLE DRAMA.',headline:'Set your next<br>idea <em>alight.</em>',description:'Fire-looking WebGPU effects for expressive websites. Explore dancing flames, glowing rings, drifting sparks, and the atmosphere that ties them together.',note:'A study in emission and atmosphere.',art:'EMBER FORM',collection:'Keep the glow.<br>Turn up the feeling.',collectionDescription:'From a warm accent to a vivid focal point. Every experiment has a live demo, readable source, and notes on how it might fit a real website.',bottom:'A spark of inspiration. An experiment worth opening.',cards:[
     {title:'Fire Ring',description:'A seamless ring of flame, with a transparent center and a controllable progress arc.',tag:'ELEMENTAL UI',meta:'POLAR FLAME / PROGRESS',image:'fire.webp',effect:'fire-ring'},
     {title:'Sparks',description:'Explore glowing particles, animated trails, and the small details that make fire feel alive.',tag:'PARTICLES',meta:'EMBERS / MOTION',image:'sparks.webp',effect:'sparks'},
-    {title:'Candle',description:'A quieter kind of fire. A small flame brings focus and warmth to a scene.',tag:'ATMOSPHERE',meta:'FLAME / FLICKER',image:'candle.webp',effect:'candle'}]}
+    {title:'Candle',description:'A quieter kind of fire. A small flame brings focus and warmth to a scene.',tag:'ATMOSPHERE',meta:'FLAME / FLICKER',image:'candle.webp',effect:'candle'}]},
+  eightfoldpath:{name:'Eightfold Path',mode:4,kicker:'PIXEL ART, LIT LIKE A SCENE.',headline:'A little world,<br>lit <em>just right.</em>',description:'WebGPU effects in the HD-2D style: pixel-art sprites and tiles lit like a modern 3D scene, seen through a tilt-shift lens, with bloom, light shafts, weather and battle effects.',note:'A study in light, depth and small worlds.',art:'DIORAMA',collection:'',collectionDescription:'',bottom:'',cards:[]}
 };
+const HERO_ART=['images/holo.svg','images/light.svg','images/water.webp','images/fire.webp','images/eightfold.svg'];
 let current = 'hologpu';
 let field;
 let heroVisible = false;
@@ -98,7 +100,7 @@ function selectSite(key, push=true){
  $('experiments-title').textContent=`All ${p.name} experiments`;
  $('experiments-description').textContent=`The complete collection: ${catalogues[key].length} experiments. Scroll to explore every experiment. Previews load as they come into view; open any card to try its live demo.`;
  gallery.reset();
- $('hero-art').querySelector('.hero-fallback').src=`${BASE}images/${['holo.svg','light.svg','water.webp','fire.webp'][p.mode]}`;
+ $('hero-art').querySelector('.hero-fallback').src=`${BASE}${HERO_ART[p.mode] ?? HERO_ART[0]}`;
  $('hero-art').querySelector('.hero-fallback').alt=`${p.name} elemental effect preview`;
  $('source-button').textContent=key==='hologpu'?'Explore the implementation ↗':'Explore source & notes ↗';
  if(field){field.params.mode=p.mode;field.invalidate();}
@@ -116,7 +118,7 @@ const gallery = createGallery({ catalogues, getProject:()=>current, labUrl, open
 $('site-select').addEventListener('change',event=>selectSite(event.target.value));
 addEventListener('popstate',()=>selectSite(new URLSearchParams(location.search).get('site'),false));
 document.querySelectorAll('.open-lab').forEach(button=>button.addEventListener('click',()=>openLab()));
-$('source-button').addEventListener('click',()=>openLab(current,current==='lighttemple'?'pointer-light-2d':current==='watertemple'?'liquid-chrome':current==='firetemple'?'fire-ring':'gradient-oklch','source'));
+$('source-button').addEventListener('click',()=>openLab(current,current==='lighttemple'?'pointer-light-2d':current==='watertemple'?'liquid-chrome':current==='firetemple'?'fire-ring':current==='eightfoldpath'?'hello':'gradient-oklch','source'));
 $('lab-close').addEventListener('click',closeLab);
 $('lab-dialog').addEventListener('click',event=>{if(event.target===$('lab-dialog')){const r=$('lab-dialog').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeLab();}});
 $('lab-dialog').addEventListener('close',()=>{ $('lab-frame').contentWindow.location.replace('about:blank');suspendPreviews(false);gallery.resume();motionState(); });

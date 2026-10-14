@@ -19,7 +19,7 @@ function run(command, args, cwd) {
   }
 }
 
-const projects = ['firetemple', 'watertemple', 'lighttemple'];
+const projects = ['firetemple', 'watertemple', 'lighttemple', 'eightfoldpath'];
 const requested = process.argv.slice(2);
 const names = requested.length ? requested : projects;
 for (const name of names) {

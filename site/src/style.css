@@ -368,3 +368,7 @@ dialog { border-color: var(--accent); }
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Eightfold Path: HD-2D pixel art, lit amber. */
+body[data-site="eightfoldpath"]{--accent:#e8b04b}
+body[data-site="eightfoldpath"] .closing{background:#1c1a11}

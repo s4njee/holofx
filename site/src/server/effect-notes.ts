@@ -15,6 +15,7 @@ const NOTES: Record<string, (id: string) => string> = {
   hologpu: (id) => `hologpu/docs/notes/${id}.md`,
   firetemple: (id) => `firetemple/src/effects/${id}/notes.md`,
   watertemple: (id) => `watertemple/src/effects/${id}/notes.md`,
+  eightfoldpath: (id) => `eightfoldpath/src/effects/${id}/notes.md`,
 };
 
 // Where each project's notes live, so their relative links can be pointed at GitHub.
@@ -22,6 +23,7 @@ const REPO: Record<string, { repo: string; dir: (id: string) => string }> = {
   hologpu: { repo: 'hologpu', dir: () => 'docs/notes' },
   firetemple: { repo: 'firetemple', dir: (id) => `src/effects/${id}` },
   watertemple: { repo: 'watertemple', dir: (id) => `src/effects/${id}` },
+  eightfoldpath: { repo: 'eightfoldpath', dir: (id) => `src/effects/${id}` },
 };
 
 /** Point the notes' relative links at the project's GitHub copy, so no link dangles on the site. */
@@ -43,6 +45,8 @@ const SOURCE: Record<string, (id: string) => string> = {
     `https://github.com/s4njee/watertemple/blob/main/src/effects/${id}/index.ts`,
   lighttemple: (id) =>
     `https://github.com/s4njee/lighttemple/blob/main/src/experiments/${id}/index.ts`,
+  eightfoldpath: (id) =>
+    `https://github.com/s4njee/eightfoldpath/blob/main/src/effects/${id}/index.ts`,
 };
 
 /** The effect's research notes, rendered to HTML, or an empty string. */
@@ -68,4 +72,5 @@ export const PACKAGES: Record<string, { package: string; api: string }> = {
   firetemple: { package: '@mk7s/firetemple', api: 'mount' },
   watertemple: { package: '@mk7s/watertemple', api: 'mount' },
   lighttemple: { package: '@mk7s/lighttemple', api: 'mountExperiment' },
+  eightfoldpath: { package: '@mk7s/eightfoldpath', api: 'mount' },
 };

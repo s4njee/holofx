@@ -11,6 +11,7 @@ const labels: Record<string, string> = {
   firetemple: 'Fire Temple',
   watertemple: 'Water Temple',
   lighttemple: 'Light Temple',
+  eightfoldpath: 'Eightfold Path',
 };
 
 type Effect = (typeof catalogues)['hologpu'][number] & {
@@ -180,11 +181,13 @@ const notes = notesHtml(project, effect.id);
     firetemple: import.meta.glob('../../../../../firetemple/lib/effects/*/index.js'),
     watertemple: import.meta.glob('../../../../../watertemple/lib/effects/*/index.js'),
     lighttemple: import.meta.glob('../../../../../lighttemple/lib/effects/*/index.js'),
+    eightfoldpath: import.meta.glob('../../../../../eightfoldpath/lib/effects/*/index.js'),
   };
   const templeLibs: Record<string, () => Promise<Record<string, any>>> = {
     firetemple: () => import('../../../../../firetemple/lib/index.js'),
     watertemple: () => import('../../../../../watertemple/lib/index.js'),
     lighttemple: () => import('../../../../../lighttemple/lib/index.js'),
+    eightfoldpath: () => import('../../../../../eightfoldpath/lib/index.js'),
   };
 
   const root = document.getElementById('demo') as HTMLElement | null;
@@ -200,7 +203,7 @@ const notes = notesHtml(project, effect.id);
     const closeButton = document.getElementById('demo-close') as HTMLButtonElement;
     const copyButton = document.getElementById('snippet-copy') as HTMLButtonElement;
 
-    const pkg = { hologpu: '@mk7s/hologpu', firetemple: '@mk7s/firetemple', watertemple: '@mk7s/watertemple', lighttemple: '@mk7s/lighttemple' }[project] ?? '@mk7s/hologpu';
+    const pkg = { hologpu: '@mk7s/hologpu', firetemple: '@mk7s/firetemple', watertemple: '@mk7s/watertemple', lighttemple: '@mk7s/lighttemple', eightfoldpath: '@mk7s/eightfoldpath' }[project] ?? '@mk7s/hologpu';
     const subpath = project === 'lighttemple' ? `effects/${id}` : `effects/${id}`;
     let preset = '';
 
