@@ -1,0 +1,2653 @@
+{
+  "watertemple": [
+    {
+      "id": "hello",
+      "title": "Hello, water",
+      "summary": "Domain-warped noise. Exists to exercise the foundation end to end.",
+      "tags": [
+        "foundation"
+      ],
+      "epic": "1",
+      "tier": "A",
+      "image": "/images/animated/watertemple/hello.avif",
+      "imageStatic": "/images/animated/watertemple/hello.jpg"
+    },
+    {
+      "id": "depth-absorption",
+      "title": "Depth absorption",
+      "summary": "Beer-Lambert tint and scattering fog by water depth: a sloping basin with a drop-off and submerged objects, shown through colour alone.",
+      "tags": [
+        "building-block",
+        "absorption",
+        "beer-lambert",
+        "depth",
+        "color"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/animated/watertemple/depth-absorption.avif",
+      "imageStatic": "/images/animated/watertemple/depth-absorption.jpg"
+    },
+    {
+      "id": "detail-normals",
+      "title": "Detail normals",
+      "summary": "Two or three scrolling layers of a baked, tileable ripple normal map, blended five ways so the classic flattening is visible.",
+      "tags": [
+        "building-block",
+        "normals",
+        "shading",
+        "water"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/animated/watertemple/detail-normals.avif",
+      "imageStatic": "/images/animated/watertemple/detail-normals.jpg"
+    },
+    {
+      "id": "flow-map",
+      "title": "Flow maps",
+      "summary": "A top-down river: a baked flow field steers two cross-faded phases of a ripple normal map around the rocks.",
+      "tags": [
+        "building-block",
+        "flow",
+        "river",
+        "water"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/animated/watertemple/flow-map.avif",
+      "imageStatic": "/images/animated/watertemple/flow-map.jpg"
+    },
+    {
+      "id": "fresnel-sky",
+      "title": "Fresnel and sky reflection",
+      "summary": "Open water reflecting a procedural sky, weighted by Schlick Fresnel over a deep-water body colour. Proves fresnel.wgsl, sky.wgsl and the cubemap helper.",
+      "tags": [
+        "building-block",
+        "optics",
+        "reflection",
+        "ocean"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/animated/watertemple/fresnel-sky.avif",
+      "imageStatic": "/images/animated/watertemple/fresnel-sky.jpg"
+    },
+    {
+      "id": "hdr-bloom",
+      "title": "HDR bloom and tonemapping",
+      "summary": "Dark water with sun glints, lantern reflections and caustic lines whose radiance runs far above 1, rendered into rgba16float, bloomed and tonemapped. Proves the post chain and the opt-in HDR canvas.",
+      "tags": [
+        "building-block",
+        "hdr",
+        "bloom",
+        "tonemapping",
+        "post-process"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "image": "/images/animated/watertemple/hdr-bloom.avif",
+      "imageStatic": "/images/animated/watertemple/hdr-bloom.jpg"
+    },
+    {
+      "id": "reflections",
+      "title": "Reflection strategies",
+      "summary": "Planar reflection against screen-space reflection on a calm pool, side by side: what each costs and where each one breaks.",
+      "tags": [
+        "optics",
+        "3d",
+        "reflection",
+        "multi-pass",
+        "comparison"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "image": "/images/animated/watertemple/reflections.avif",
+      "imageStatic": "/images/animated/watertemple/reflections.jpg"
+    },
+    {
+      "id": "refraction",
+      "title": "Screen-space refraction",
+      "summary": "Looks through animated water at a backdrop texture: a normal-driven uv offset (Snell or the cheap form), chromatic dispersion, mip blur and safe edges.",
+      "tags": [
+        "building-block",
+        "refraction",
+        "dispersion",
+        "texture",
+        "pointer"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/animated/watertemple/refraction.avif",
+      "imageStatic": "/images/animated/watertemple/refraction.jpg"
+    },
+    {
+      "id": "shore-foam",
+      "title": "Shore foam and edge fade",
+      "summary": "Top-down beach: waves lap in and out, foam dissolves along the waterline and around rocks, and the water fades in softly where it meets the sand.",
+      "tags": [
+        "building-block",
+        "foam",
+        "shoreline",
+        "depth",
+        "soft-edge"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/animated/watertemple/shore-foam.avif",
+      "imageStatic": "/images/animated/watertemple/shore-foam.jpg"
+    },
+    {
+      "id": "sun-glint",
+      "title": "Sun glint and sparkle",
+      "summary": "A low sun over open water: a tight GGX sun lobe plus hashed-cell glitter that twinkles with the waves and stays stable under camera motion. Proves specular.wgsl.",
+      "tags": [
+        "building-block",
+        "optics",
+        "specular",
+        "ocean"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/animated/watertemple/sun-glint.avif",
+      "imageStatic": "/images/animated/watertemple/sun-glint.jpg"
+    },
+    {
+      "id": "crest-sss",
+      "title": "Wave-crest subsurface scattering",
+      "summary": "Big, backlit waves where the tall, thin crests glow green-blue as the sun shines through them. One view- and light-dependent term; proves sss.wgsl.",
+      "tags": [
+        "building-block",
+        "optics",
+        "subsurface",
+        "ocean"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/animated/watertemple/crest-sss.avif",
+      "imageStatic": "/images/animated/watertemple/crest-sss.jpg"
+    },
+    {
+      "id": "ink-wash",
+      "title": "Ink wash background",
+      "summary": "A very slow watercolour field: soft blooms of pigment with darker pooled edges, granulation and paper fibres, rendered at a quarter of the resolution and upsampled.",
+      "tags": [
+        "background",
+        "watercolour",
+        "ink",
+        "fbm",
+        "low-contrast",
+        "paper",
+        "transparent"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/animated/watertemple/ink-wash.avif",
+      "imageStatic": "/images/animated/watertemple/ink-wash.jpg"
+    },
+    {
+      "id": "wave-divider",
+      "title": "Layered wave divider",
+      "summary": "Two to five layers of wave silhouettes with scroll parallax and a foam line, transparent above and filled with the next section’s colour below.",
+      "tags": [
+        "divider",
+        "overlay",
+        "scroll",
+        "parallax",
+        "sdf",
+        "section-break",
+        "transparent"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/animated/watertemple/wave-divider.avif",
+      "imageStatic": "/images/animated/watertemple/wave-divider.jpg"
+    },
+    {
+      "id": "mist",
+      "title": "Mist and steam layer",
+      "summary": "A translucent overlay of drifting mist or rising steam in three depth layers that shift at different rates as the page scrolls, with a hard cap on its opacity.",
+      "tags": [
+        "overlay",
+        "mist",
+        "steam",
+        "fog",
+        "scroll",
+        "parallax",
+        "fbm",
+        "transparent"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/animated/watertemple/mist.avif",
+      "imageStatic": "/images/animated/watertemple/mist.jpg"
+    },
+    {
+      "id": "pool-floor",
+      "title": "Pool floor",
+      "summary": "A swimming pool seen from above: tiles refracted through moving water, lit by caustics, tinted by depth. Every optics chunk in one cheap pass.",
+      "tags": [
+        "background",
+        "hero",
+        "pointer",
+        "caustics",
+        "refraction",
+        "absorption",
+        "composition"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/animated/watertemple/pool-floor.avif",
+      "imageStatic": "/images/animated/watertemple/pool-floor.jpg"
+    },
+    {
+      "id": "caustics",
+      "title": "Procedural caustics",
+      "summary": "The light pattern at the bottom of a pool as a transparent, tileable overlay. Two procedural constructions (warped Voronoi and iterated sine) and a baked one- or two-tap version, compared on cost and look.",
+      "tags": [
+        "overlay",
+        "background",
+        "caustics",
+        "building-block",
+        "tileable",
+        "comparison"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/animated/watertemple/caustics.avif",
+      "imageStatic": "/images/animated/watertemple/caustics.jpg"
+    },
+    {
+      "id": "puddles",
+      "title": "Puddles and wet surfaces",
+      "summary": "Rain-soaked ground seen at an angle: puddles fill the low spots and mirror a dusk city through rain ripple rings, and the damp stone around them is darker and glossier.",
+      "tags": [
+        "background",
+        "weather",
+        "rain",
+        "reflection",
+        "ripples",
+        "wetness",
+        "ground"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/animated/watertemple/puddles.avif",
+      "imageStatic": "/images/animated/watertemple/puddles.jpg"
+    },
+    {
+      "id": "rain-glass",
+      "title": "Rain on glass",
+      "summary": "A rainy window at night: every drop is a tiny lens showing a sharp, flipped piece of the street while the misted glass around it is out of focus, and running drops wipe clean trails.",
+      "tags": [
+        "background",
+        "weather",
+        "rain",
+        "glass",
+        "droplets",
+        "refraction",
+        "blur"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/animated/watertemple/rain-glass.avif",
+      "imageStatic": "/images/animated/watertemple/rain-glass.jpg"
+    },
+    {
+      "id": "toon-water",
+      "title": "Toon water",
+      "summary": "Cel-shaded water in one cheap pass: flat depth bands, crisp animated cell-noise foam, a breathing shore ring, ink outlines and hard-edged glints around a little island.",
+      "tags": [
+        "stylised",
+        "foam",
+        "voronoi",
+        "illustrative",
+        "cheap"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/animated/watertemple/toon-water.avif",
+      "imageStatic": "/images/animated/watertemple/toon-water.jpg"
+    },
+    {
+      "id": "underwater",
+      "title": "Underwater ambience",
+      "summary": "Looking up from below the surface: slow light shafts, drifting marine snow in two layers, depth fog and a gentle wobble, with an optional caustic seabed. Calm enough to put text over.",
+      "tags": [
+        "background",
+        "hero",
+        "ambient",
+        "caustics",
+        "depth-fog",
+        "particles"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/animated/watertemple/underwater.avif",
+      "imageStatic": "/images/animated/watertemple/underwater.jpg"
+    },
+    {
+      "id": "media-distortion",
+      "title": "Water over image or video",
+      "summary": "Looks at a picture or a video through moving water: baked-normal refraction, a light highlight, optional colour fringing, safe edges and a ripple under the pointer. Drop your own file on it.",
+      "tags": [
+        "image",
+        "video",
+        "refraction",
+        "dispersion",
+        "pointer",
+        "hero",
+        "texture"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/animated/watertemple/media-distortion.avif",
+      "imageStatic": "/images/animated/watertemple/media-distortion.jpg"
+    },
+    {
+      "id": "pool-3d",
+      "title": "3D pool",
+      "summary": "A pool in perspective with an orbiting camera, a ball you can drag through the water, ripples that make real caustics on the floor and walls, and refraction and reflection ray-traced against the pool box and the ball.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "caustics",
+        "3d",
+        "heightfield",
+        "ray-tracing",
+        "showpiece"
+      ],
+      "epic": "5",
+      "tier": "B",
+      "image": "/images/animated/watertemple/pool-3d.avif",
+      "imageStatic": "/images/animated/watertemple/pool-3d.jpg"
+    },
+    {
+      "id": "ripples",
+      "title": "Interactive ripples",
+      "summary": "The classic touch-the-water surface: a 2D wave equation on the GPU, stirred by mouse, pen and fingers, falling rain and a faint idle swell, refracting a backdrop. Runs as render passes or compute passes, same maths.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "pointer",
+        "heightfield",
+        "refraction",
+        "background"
+      ],
+      "epic": "5",
+      "tier": "A",
+      "image": "/images/animated/watertemple/ripples.avif",
+      "imageStatic": "/images/animated/watertemple/ripples.jpg"
+    },
+    {
+      "id": "ripple-caustics",
+      "title": "Ripple caustics",
+      "summary": "Real caustics computed from the live ripple surface: a drop sends a ring of focused light sweeping across a tiled pool floor. Two methods (a projected light mesh and a per-pixel Jacobian estimate) and a side-by-side against the procedural fake.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "caustics",
+        "heightfield",
+        "refraction",
+        "comparison"
+      ],
+      "epic": "5",
+      "tier": "B",
+      "image": "/images/animated/watertemple/ripple-caustics.avif",
+      "imageStatic": "/images/animated/watertemple/ripple-caustics.jpg"
+    },
+    {
+      "id": "ripple-dom",
+      "title": "Ripples around page elements",
+      "summary": "Water behind a real page where the page itself is solid: elements marked data-wt-obstacle are measured every frame and become walls of the wave solver, so ripples bend around a card, bounce off a headline and are pushed by a card that moves.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "dom",
+        "pointer",
+        "heightfield",
+        "refraction",
+        "background"
+      ],
+      "epic": "5",
+      "tier": "A",
+      "image": "/images/animated/watertemple/ripple-dom.avif",
+      "imageStatic": "/images/animated/watertemple/ripple-dom.jpg"
+    },
+    {
+      "id": "ripple-reactive",
+      "title": "Ripples driven by scroll and sound",
+      "summary": "A heightfield surface that answers the page instead of the pointer: scrolling feeds waves in from the leading edge and sloshes on a hard stop, and a built-in synthesised beat (or a dropped audio or video file) turns bass into broad swells, mids and highs into fine rain and onsets into drops. Silent and calm until the first click.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "scroll",
+        "audio",
+        "heightfield",
+        "refraction",
+        "background"
+      ],
+      "epic": "5",
+      "tier": "A",
+      "image": "/images/animated/watertemple/ripple-reactive.avif",
+      "imageStatic": "/images/animated/watertemple/ripple-reactive.jpg"
+    },
+    {
+      "id": "aurora",
+      "title": "Aurora ribbons",
+      "summary": "Slow emerald, cyan and violet ribbons flowing around page elements, with fine luminous folds and soft rising curtains. A separate variation of ink orbit using the same obstacle-aware fluid simulation.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "dom",
+        "aurora",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/aurora.avif",
+      "imageStatic": "/images/animated/watertemple/aurora.jpg"
+    },
+    {
+      "id": "bioluminescent-currents",
+      "title": "Bioluminescent currents",
+      "summary": "Cyan and green organisms flash on sharp turns or pointer proximity, leaving delicate wakes.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "dom",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/bioluminescent-currents.avif",
+      "imageStatic": "/images/animated/watertemple/bioluminescent-currents.jpg"
+    },
+    {
+      "id": "dichroic-glass",
+      "title": "Dichroic glass",
+      "summary": "Refractive teal and magenta ribbons with thin-film colour, crisp highlights and overlapping depth.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "dom",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/dichroic-glass.avif",
+      "imageStatic": "/images/animated/watertemple/dichroic-glass.jpg"
+    },
+    {
+      "id": "eclipse-halos",
+      "title": "Eclipse halos",
+      "summary": "Narrow moving rings around page outlines, with quiet fluid arcs escaping into the dark.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "dom",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/eclipse-halos.avif",
+      "imageStatic": "/images/animated/watertemple/eclipse-halos.jpg"
+    },
+    {
+      "id": "fluid-warp",
+      "title": "Fluid-pushed image and type",
+      "summary": "Drag across a picture, a video or a headline and the content is pushed around by a real incompressible fluid: it smears and swirls like wet paint, then springs back at a rate you choose. A displacement field is carried by the flow of the stable-fluids solver and the content is sampled through it.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "pointer",
+        "image",
+        "video",
+        "text",
+        "hero",
+        "texture"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/fluid-warp.avif",
+      "imageStatic": "/images/animated/watertemple/fluid-warp.jpg"
+    },
+    {
+      "id": "game-of-life",
+      "title": "Game of Life",
+      "summary": "Conway’s B3/S23 automaton, with luminous cells and fading echoes behind a real page.",
+      "tags": [
+        "cellular automata",
+        "compute",
+        "background",
+        "interactive"
+      ],
+      "epic": "6",
+      "tier": "A",
+      "image": "/images/animated/watertemple/game-of-life.avif",
+      "imageStatic": "/images/animated/watertemple/game-of-life.jpg"
+    },
+    {
+      "id": "fluid-dye",
+      "title": "Ink in a stable fluid",
+      "summary": "Drag to push a real incompressible fluid and paint dye that curls into vortices and fades. A stable-fluids solver in compute shaders (advection, pressure projection, vorticity confinement, MacCormack or BFECC), a coarse velocity grid carrying a fine dye grid.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "pointer",
+        "ink",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/fluid-dye.avif",
+      "imageStatic": "/images/animated/watertemple/fluid-dye.jpg"
+    },
+    {
+      "id": "fluid-3d",
+      "title": "Ink in a tank (3D fluid)",
+      "summary": "A drop of ink released in a glass tank of water sinks, rolls up into a vortex ring and breaks into tendrils. A volumetric stable-fluids solve (48 to 96 cells, multigrid pressure, vorticity confinement, MacCormack ink) in compute shaders, drawn by a ray march with coloured absorption and a precomputed light volume. Tap to release a drop, drag to push the water, drag the background to orbit.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "3d",
+        "volumetric",
+        "showpiece",
+        "ink"
+      ],
+      "epic": "6",
+      "tier": "C",
+      "image": "/images/animated/watertemple/fluid-3d.avif",
+      "imageStatic": "/images/animated/watertemple/fluid-3d.jpg"
+    },
+    {
+      "id": "ink-water",
+      "title": "Ink in water and on paper",
+      "summary": "Paint pigment into a stable-fluids solver and watch it bloom, feather along the paper fibres, pool darker at the edge of a wash and dry. Diffusion, a deposited layer that stays when the water stops, wetness, granulation and subtractive colour on top of the dye solver.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "ink",
+        "watercolour",
+        "paper"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/ink-water.avif",
+      "imageStatic": "/images/animated/watertemple/ink-water.jpg"
+    },
+    {
+      "id": "ink-orbit",
+      "title": "Ink orbiting page elements",
+      "summary": "Luminous RGB trails in a stable fluid on a dark background, with heads smoothly cycling through red, green and blue together while their tails keep the colours they were laid with. Drawn into loose orbits round the page: elements marked data-wt-obstacle are measured every frame and become solid, and the heads of the trails are pulled to each outline and swung round it, never quite settling. Drag a card and the trails follow. On an HDR display the glow is brighter than SDR white.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "dom",
+        "pointer",
+        "ink",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/ink-orbit.avif",
+      "imageStatic": "/images/animated/watertemple/ink-orbit.jpg"
+    },
+    {
+      "id": "liquid-chrome",
+      "title": "Liquid chrome",
+      "summary": "Black and silver fluid ribbons reflecting moving studio lights with tiny spectral glints.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "dom",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/liquid-chrome.avif",
+      "imageStatic": "/images/animated/watertemple/liquid-chrome.jpg"
+    },
+    {
+      "id": "neon-calligraphy",
+      "title": "Neon calligraphy",
+      "summary": "Glowing ink blots, tapering luminous lines and faint afterimages.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "dom",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/neon-calligraphy.avif",
+      "imageStatic": "/images/animated/watertemple/neon-calligraphy.jpg"
+    },
+    {
+      "id": "neon-mycelium",
+      "title": "Neon mycelium",
+      "summary": "Self-organizing neon networks grow around the page’s headings and cards.",
+      "tags": [
+        "physarum",
+        "agents",
+        "compute",
+        "dom",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/neon-mycelium.avif",
+      "imageStatic": "/images/animated/watertemple/neon-mycelium.jpg"
+    },
+    {
+      "id": "shallow-water",
+      "title": "Shallow water: dam break and flow",
+      "summary": "Water that actually flows: a shallow-water solver on the GPU moves a depth and a velocity over terrain. A dam breaks and the surge rushes around pillars, a spring runs down a hillside into a lake, a tide fills and drains rock pools. Pour water, push it, dig channels.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "fluid",
+        "terrain",
+        "3d",
+        "compute",
+        "showpiece"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/shallow-water.avif",
+      "imageStatic": "/images/animated/watertemple/shallow-water.jpg"
+    },
+    {
+      "id": "silk-embers",
+      "title": "Silk embers",
+      "summary": "Copper, crimson and gold filaments that cool as detached sparks drift upward.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "dom",
+        "background"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/silk-embers.avif",
+      "imageStatic": "/images/animated/watertemple/silk-embers.jpg"
+    },
+    {
+      "id": "fluid-obstacles",
+      "title": "Wind tunnel: flow round obstacles",
+      "summary": "A steady wind carries rows of dye past solid shapes drawn from signed distance fields, or past the real cards and headline of the page. The stable-fluids solver makes the flow go round them: a bluff body sheds an alternating vortex street. Drag a shape to push the water, stir where there is none.",
+      "tags": [
+        "interactive",
+        "simulation",
+        "compute",
+        "fluid",
+        "pointer",
+        "dom",
+        "background",
+        "ink"
+      ],
+      "epic": "6",
+      "tier": "B",
+      "image": "/images/animated/watertemple/fluid-obstacles.avif",
+      "imageStatic": "/images/animated/watertemple/fluid-obstacles.jpg"
+    },
+    {
+      "id": "pbf-2d",
+      "title": "2D position-based fluids",
+      "summary": "A tank of water as particles solved with position-based fluids (Macklin and Mueller): incompressibility is a constraint on positions, relaxed by a few parallel iterations per sub-step, so a big time step cannot blow the water up. A dam break that collapses and sloshes, a stream pouring onto a shelf, a wave-maker, drops falling into a calm pool. Drag to push the water, tap to drop a blob. Colour the particles by speed, by density error (how well the constraint holds) or by neighbour count; change the particle spacing and the same parameters give the same water.",
+      "tags": [
+        "particles",
+        "simulation",
+        "compute",
+        "fluid",
+        "interactive",
+        "2d"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/pbf-2d.webp"
+    },
+    {
+      "id": "sph-2d",
+      "title": "2D SPH liquid",
+      "summary": "A tank of water as thousands of particles: weakly compressible smoothed-particle hydrodynamics in compute shaders, drawn as one liquid body (soft blobs, a threshold, a rim, a highlight, refraction) instead of discs. A dam break that collapses and sloshes back, a stream pouring onto a shelf and an obstacle, two zero-gravity blobs that merge under surface tension. Drag to push the water, tap to drop a block of it.",
+      "tags": [
+        "particles",
+        "simulation",
+        "compute",
+        "fluid",
+        "interactive",
+        "2d"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/sph-2d.webp"
+    },
+    {
+      "id": "mpm-3d",
+      "title": "MLS-MPM water tank",
+      "summary": "A tank of water simulated with the moving-least-squares material point method: 100 000 particles carry the fluid, a background grid does the physics, and there is no neighbour search. A wall pushes in and out and sends waves down the tank to break on a beach; or let a dam burst around pillars, or pour a stream into a pool. Drag through the water to push it, tap to drop a blob, drag empty space to orbit. Drawn as a refracting liquid by the screen-space fluid surface, or as the spheres, speed or density it is made of.",
+      "tags": [
+        "particles",
+        "simulation",
+        "compute",
+        "fluid",
+        "interactive",
+        "3d",
+        "showpiece"
+      ],
+      "epic": "7",
+      "tier": "C",
+      "image": "/images/catalogues/watertemple/mpm-3d.webp"
+    },
+    {
+      "id": "particles",
+      "title": "Particle field and neighbour grid",
+      "summary": "A fountain of up to a million spray particles carried by a curl-noise flow, drawn as instanced billboards. The foundation of the particle fluids: a GPU particle system, a fixed-step integrator, and a uniform-grid neighbour search built by a counting sort and prefix sum every frame. Colour the cloud by its neighbour counts, or light up the neighbours of the particle under the pointer, to see the search at work. Move the pointer to aim the nozzle, drag to orbit.",
+      "tags": [
+        "particles",
+        "compute",
+        "simulation",
+        "interactive",
+        "3d",
+        "spray"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/particles.webp"
+    },
+    {
+      "id": "pbf-3d",
+      "title": "Position-based fluid tank (3D)",
+      "summary": "Water as ten thousand particles by default in a glass tank, solved with position-based fluids (Macklin and Mueller 2013) on the GPU and drawn as a refracting liquid surface. Three restartable scenes: a dam break with two pillars, a pour that fills the tank, and a wave tank with an oscillating wall. Drag empty space to orbit, drag through the water to push it, tap to drop a blob. Secondary spray, foam and bubbles follow the live water. Choose container mode to drag or shake the vessel, or enable device tilt. The particle count, solver iterations and sub-steps, viscosity, vorticity and the renderer quality are live.",
+      "tags": [
+        "particles",
+        "simulation",
+        "compute",
+        "fluid",
+        "interactive",
+        "3d",
+        "showpiece"
+      ],
+      "epic": "7",
+      "tier": "C",
+      "image": "/images/catalogues/watertemple/pbf-3d.webp"
+    },
+    {
+      "id": "fluid-surface",
+      "title": "Screen-space fluid surface",
+      "summary": "A cloud of particles turned into a continuous, refracting liquid: sphere impostors, depth smoothing (bilateral against narrow-range), thickness, normals and a composite with absorption, reflection and a sun highlight. Three synthetic sources (a ball that splits and merges, a wave, a pouring stream) stand in for a solver; one control swaps between the finished surface, the bag of marbles it replaces and each intermediate image.",
+      "tags": [
+        "particles",
+        "rendering",
+        "3d",
+        "refraction",
+        "showpiece"
+      ],
+      "epic": "7",
+      "tier": "C",
+      "image": "/images/catalogues/watertemple/fluid-surface.webp"
+    },
+    {
+      "id": "waterline",
+      "title": "Across the waterline",
+      "summary": "A moving wave meniscus separates air and water with underwater tint and attenuation.",
+      "tags": [
+        "3d",
+        "open-water",
+        "shader"
+      ],
+      "epic": "8",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/waterline.webp"
+    },
+    {
+      "id": "shoreline",
+      "title": "Breaking shoreline",
+      "summary": "Shoaling wave crests wash across a sloping beach with depth foam and reflective wet sand.",
+      "tags": [
+        "3d",
+        "open-water",
+        "shader"
+      ],
+      "epic": "8",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/shoreline.webp"
+    },
+    {
+      "id": "calm-lake",
+      "title": "Calm lake",
+      "summary": "A mirrored camera pass reflects distant ridges and trees through light wind ripples.",
+      "tags": [
+        "3d",
+        "open-water",
+        "shader"
+      ],
+      "epic": "8",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/calm-lake.webp"
+    },
+    {
+      "id": "gerstner-ocean",
+      "title": "Gerstner ocean",
+      "summary": "Six analytic waves, projected and clipmap meshes, and floating buoys with CPU or GPU sampling.",
+      "tags": [
+        "3d",
+        "open-water",
+        "shader"
+      ],
+      "epic": "8",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/gerstner-ocean.webp"
+    },
+    {
+      "id": "river",
+      "title": "River current",
+      "summary": "A signed flow map diverts two-phase water detail around rocks and trails foam downstream.",
+      "tags": [
+        "3d",
+        "open-water",
+        "shader"
+      ],
+      "epic": "8",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/river.webp"
+    },
+    {
+      "id": "fft-ocean",
+      "title": "Spectral ocean",
+      "summary": "Three band-limited Phillips cascades, compute inverse FFT and persistent folding foam.",
+      "tags": [
+        "3d",
+        "open-water",
+        "compute"
+      ],
+      "epic": "8",
+      "tier": "C",
+      "image": "/images/catalogues/watertemple/fft-ocean.webp"
+    },
+    {
+      "id": "waterfall",
+      "title": "Waterfall and mist",
+      "summary": "Scrolling water sheets, a foamy plunge pool and bounded GPU particle spray.",
+      "tags": [
+        "3d",
+        "open-water",
+        "compute"
+      ],
+      "epic": "8",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/waterfall.webp"
+    },
+    {
+      "id": "ui-droplets",
+      "title": "Droplets on UI",
+      "summary": "Condensation droplets grow, coalesce with conserved volume, and slide down a card under gravity.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/ui-droplets.webp"
+    },
+    {
+      "id": "fill-level",
+      "title": "Fill-level components",
+      "summary": "A tank, progress bar and round loader share a sloshing liquid level.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/fill-level.webp"
+    },
+    {
+      "id": "gooey-metaballs",
+      "title": "Gooey metaballs",
+      "summary": "Smooth SDF unions join navigation pills to an animated or pointer-driven liquid follower.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/gooey-metaballs.webp"
+    },
+    {
+      "id": "liquid-buttons",
+      "title": "Liquid buttons",
+      "summary": "Hover or focus to stretch a spring-driven button; press it to launch a surface ripple.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/liquid-buttons.webp"
+    },
+    {
+      "id": "liquid-glass",
+      "title": "Liquid glass panels",
+      "summary": "Rounded glass lenses refract a designed backdrop with blur, colour dispersion and a specular rim.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/liquid-glass.webp"
+    },
+    {
+      "id": "liquid-image-hover",
+      "title": "Liquid image hover",
+      "summary": "Move across a coastal image to bend it with ripples and a subtle colour split.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/liquid-image-hover.webp"
+    },
+    {
+      "id": "liquid-transitions",
+      "title": "Liquid transitions",
+      "summary": "Drip wipes, wave reveals and displacement dissolves switch between two designed sections.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/liquid-transitions.webp"
+    },
+    {
+      "id": "liquid-typography",
+      "title": "Liquid typography",
+      "summary": "An Anton MSDF atlas keeps liquid lettering sharp as it ripples, melts and fills with water.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/liquid-typography.webp"
+    },
+    {
+      "id": "liquid-blob",
+      "title": "Ray-marched liquid blob",
+      "summary": "A three-dimensional smooth metaball lens refracts the environment through an exit surface.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/liquid-blob.webp"
+    },
+    {
+      "id": "scroll-water",
+      "title": "Scroll-linked water level",
+      "summary": "The backdrop submerges with page or nested-container scrolling.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/scroll-water.webp"
+    },
+    {
+      "id": "water-cursor",
+      "title": "Water cursor trail",
+      "summary": "Pointer movement leaves a persistent wet streak that spreads and dries.",
+      "tags": [
+        "ui",
+        "web-native",
+        "interactive"
+      ],
+      "epic": "9",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/water-cursor.webp"
+    },
+    {
+      "id": "bubbles",
+      "title": "Bubbles",
+      "summary": "Rising, wobbling underwater lenses and iridescent soap-film bubbles.",
+      "tags": [
+        "weather",
+        "water",
+        "ambient",
+        "particles"
+      ],
+      "epic": "10",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/bubbles.webp"
+    },
+    {
+      "id": "fogged-glass",
+      "title": "Fogged glass",
+      "summary": "Persistent condensation can be wiped with a pointer and slowly refogs.",
+      "tags": [
+        "weather",
+        "water",
+        "interactive",
+        "glass"
+      ],
+      "epic": "10",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/fogged-glass.webp"
+    },
+    {
+      "id": "frost-melt",
+      "title": "Frost and melt",
+      "summary": "Dendritic ice spreads over glass, thaws into refracting beads and drains downward.",
+      "tags": [
+        "weather",
+        "water",
+        "interactive",
+        "glass"
+      ],
+      "epic": "10",
+      "tier": "B",
+      "image": "/images/catalogues/watertemple/frost-melt.webp"
+    },
+    {
+      "id": "rain-rings",
+      "title": "Rain ripple rings",
+      "summary": "Expanding wave rings refract a tiled water surface after procedural rain impacts.",
+      "tags": [
+        "weather",
+        "water",
+        "ambient",
+        "ripples"
+      ],
+      "epic": "10",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/rain-rings.webp"
+    },
+    {
+      "id": "rain-streaks",
+      "title": "Rain streaks and splashes",
+      "summary": "Depth-layered instanced rain, wind, ground rings and ballistic splash droplets.",
+      "tags": [
+        "weather",
+        "water",
+        "ambient",
+        "particles"
+      ],
+      "epic": "10",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/rain-streaks.webp"
+    },
+    {
+      "id": "splash-burst",
+      "title": "Splash burst",
+      "summary": "Bounded ballistic droplet bursts on click or tap, with optional ambient fountains.",
+      "tags": [
+        "weather",
+        "water",
+        "interactive",
+        "particles"
+      ],
+      "epic": "10",
+      "tier": "A",
+      "image": "/images/catalogues/watertemple/splash-burst.webp"
+    }
+  ],
+  "firetemple": [
+    {
+      "id": "hello",
+      "title": "Hello, fire",
+      "summary": "Rising warped noise through the HDR tail. Exists to exercise the foundation end to end.",
+      "tags": [
+        "foundation"
+      ],
+      "epic": "1",
+      "tier": "C",
+      "image": "/images/catalogues/firetemple/hello.webp"
+    },
+    {
+      "id": "advected-noise",
+      "title": "Advected noise",
+      "summary": "Ways to make noise look carried by rising gas instead of sliding past as one texture, side by side on the same heat field: scroll, domain warp, flow noise, curl displacement, a two-phase flow blend, and the combination that measures best.",
+      "tags": [
+        "building-block",
+        "noise",
+        "motion"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "image": "/images/catalogues/firetemple/advected-noise.webp"
+    },
+    {
+      "id": "blackbody",
+      "title": "Blackbody colour",
+      "summary": "Temperature to colour three ways (Planck integral, polynomial fit, lookup texture) with their error, and a brightness mapping tamed enough to use.",
+      "tags": [
+        "building-block",
+        "colour"
+      ],
+      "epic": "3",
+      "tier": "C",
+      "image": "/images/catalogues/firetemple/blackbody.webp"
+    },
+    {
+      "id": "bloom-tuning",
+      "title": "Bloom tuned for fire",
+      "summary": "A chart of hot shapes at known radiance, to find how little bloom still reads as heat: threshold, knee, radius, levels, and half against full resolution.",
+      "tags": [
+        "building-block",
+        "post",
+        "bloom"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/bloom-tuning.webp"
+    },
+    {
+      "id": "compositing",
+      "title": "Compositing over the page",
+      "summary": "One flame, smoke and logs written to a see-through canvas five ways: what an overlay effect has to put in alpha to read on a dark page and a light one.",
+      "tags": [
+        "building-block",
+        "overlay",
+        "compositing"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "image": "/images/catalogues/firetemple/compositing.webp"
+    },
+    {
+      "id": "fire-light",
+      "title": "Fire as a light source",
+      "summary": "Wandering flames light a stone page and the cards on it: windowed inverse-square falloff, normal-mapped relief and analytic soft shadows from rounded rectangles.",
+      "tags": [
+        "building-block",
+        "lighting",
+        "shadows",
+        "sdf",
+        "normal-map",
+        "2d"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "image": "/images/catalogues/firetemple/fire-light.webp"
+    },
+    {
+      "id": "flame-ramps",
+      "title": "Flame colour ramps",
+      "summary": "One flame through eight colour ramps: blackbody, an authored fire gradient, a banded toon ramp, a blue gas flame and four chemical tints, each as a formula and as a baked texture.",
+      "tags": [
+        "building-block",
+        "colour"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "image": "/images/catalogues/firetemple/flame-ramps.webp"
+    },
+    {
+      "id": "flame-shape",
+      "title": "Flame shaping",
+      "summary": "One flame at three stages: a teardrop or taper distance field, the heat left after turbulence and erosion, and that heat through the fire ramp.",
+      "tags": [
+        "building-block",
+        "flame",
+        "sdf"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "image": "/images/catalogues/firetemple/flame-shape.webp"
+    },
+    {
+      "id": "flicker",
+      "title": "Flicker signals",
+      "summary": "The shared flicker signal driving three candles, with a scrolling trace of each against the 10% band that defines a flash. Capped by default; the uncapped path is an explicit switch.",
+      "tags": [
+        "building-block",
+        "flicker",
+        "accessibility"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/flicker.webp"
+    },
+    {
+      "id": "heat-haze",
+      "title": "Heat haze",
+      "summary": "Rising hot air bends what is behind it: a noise-driven refraction of a backdrop texture, masked by heat, with a faint colour fringe and softening where it is hottest.",
+      "tags": [
+        "building-block",
+        "refraction",
+        "distortion"
+      ],
+      "epic": "3",
+      "tier": "B",
+      "image": "/images/catalogues/firetemple/heat-haze.webp"
+    },
+    {
+      "id": "smoke-shading",
+      "title": "Smoke shading",
+      "summary": "A ray-marched smoke plume lit from below by its fire and from above by a dim sky, comparing three ways to self-shadow it.",
+      "tags": [
+        "building-block",
+        "smoke",
+        "volumetric",
+        "overlay"
+      ],
+      "epic": "3",
+      "tier": "C",
+      "image": "/images/catalogues/firetemple/smoke-shading.webp"
+    },
+    {
+      "id": "soft-sprites",
+      "title": "Soft additive sprites",
+      "summary": "Embers, sparks and glow puffs as instanced additive quads: procedural shapes, velocity stretch, and the soft-particle depth fade that hides where a sprite cuts through geometry.",
+      "tags": [
+        "building-block",
+        "sprites",
+        "particles",
+        "depth"
+      ],
+      "epic": "3",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/soft-sprites.webp"
+    },
+    {
+      "id": "volume-march",
+      "title": "Volume ray-march kernel",
+      "summary": "An emissive flame and absorbing smoke integrated in one ray march, at reduced resolution, upsampled under the depth buffer so edges against geometry stay sharp.",
+      "tags": [
+        "building-block",
+        "volumetric",
+        "3d",
+        "smoke"
+      ],
+      "epic": "3",
+      "tier": "C",
+      "image": "/images/catalogues/firetemple/volume-march.webp"
+    },
+    {
+      "id": "candle",
+      "title": "Candle flame",
+      "summary": "One candle on the page: a teardrop flame with a blue foot, a dark wick and a soft halo over a wax body. It sways on its own and leans away from the pointer.",
+      "tags": [
+        "flame",
+        "overlay",
+        "pointer",
+        "2d",
+        "shader-only"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/candle.webp"
+    },
+    {
+      "id": "ember-bed",
+      "title": "Ember bed",
+      "summary": "A bed of glowing coals: dark crusts, cracks that breathe, and heat drifting slowly across it. The coal layout is baked once, so a frame is three texture fetches.",
+      "tags": [
+        "background",
+        "embers",
+        "voronoi",
+        "blackbody",
+        "calm"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/ember-bed.webp"
+    },
+    {
+      "id": "fire-ring",
+      "title": "Fire ring",
+      "summary": "A flame bent round a circle: tongues lick outward or inward from a ring, seamless all the way round, with a progress value that lights only part of it. Transparent in the middle.",
+      "tags": [
+        "flame",
+        "polar",
+        "overlay",
+        "loader",
+        "ui"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/fire-ring.webp"
+    },
+    {
+      "id": "firelight-background",
+      "title": "Firelight background",
+      "summary": "The warm, slowly shifting light of a fire that is just out of frame. No flames: an opaque, calm backdrop for a dark page, steady enough to sit behind text.",
+      "tags": [
+        "background",
+        "glow",
+        "ambient",
+        "firelight"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/firelight-background.webp"
+    },
+    {
+      "id": "fireplace",
+      "title": "Fireplace",
+      "summary": "A whole hearth in one fragment pass: three layers of flame behind charred logs with glowing undersides, firelight on the wall and floor, and embers rising, with no simulation state.",
+      "tags": [
+        "scene",
+        "hero",
+        "flame",
+        "logs",
+        "embers",
+        "stateless"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/fireplace.webp"
+    },
+    {
+      "id": "flame-strip",
+      "title": "Flame strip",
+      "summary": "A band of flame tongues along the bottom edge of a wide, short canvas. It repeats exactly once per canvas width, so it tiles at any width, and is see-through above the flames.",
+      "tags": [
+        "flame",
+        "overlay",
+        "divider",
+        "footer",
+        "tileable"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/flame-strip.webp"
+    },
+    {
+      "id": "gas-jet",
+      "title": "Gas jet",
+      "summary": "A blue directional flame: a tight cone with a pale inner cone, alone, in a row or as a stove burner seen from above, and with shock diamonds along it for an exhaust.",
+      "tags": [
+        "flame",
+        "overlay",
+        "gas",
+        "jet",
+        "2d",
+        "shader-only"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/gas-jet.webp"
+    },
+    {
+      "id": "haze-overlay",
+      "title": "Heat-haze overlay",
+      "summary": "Hot air on its own: an image or a video shimmering in a band, a plume or all over, with no flame in sight. Drop a photo or a video file on it to try your own.",
+      "tags": [
+        "refraction",
+        "distortion",
+        "image",
+        "video",
+        "haze"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/haze-overlay.webp"
+    },
+    {
+      "id": "noise-flame",
+      "title": "Scrolling-noise flame",
+      "summary": "The classic: noise scrolled upward, shaped by a height gradient, through a fire ramp. A wall of flame along the bottom edge, with five noise sources to compare.",
+      "tags": [
+        "flame",
+        "overlay",
+        "noise",
+        "hero"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/noise-flame.webp"
+    },
+    {
+      "id": "sparks",
+      "title": "Stateless sparks",
+      "summary": "Sparks that rise, wobble, cool and die with no buffers and no particle state: each pixel finds its spark from two hashes, in a few depth layers.",
+      "tags": [
+        "overlay",
+        "sparks",
+        "embers",
+        "stateless",
+        "hash-grid"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/sparks.webp"
+    },
+    {
+      "id": "toon-fire",
+      "title": "Toon fire",
+      "summary": "Cartoon fire: three or four flat bands of colour with hard edges and an ink outline, redrawn ten times a second like a hand-animated cel. Opaque paint, so it sits on a light page.",
+      "tags": [
+        "flame",
+        "stylised",
+        "overlay",
+        "ui",
+        "sdf"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/toon-fire.webp"
+    },
+    {
+      "id": "torch",
+      "title": "Torch and brazier",
+      "summary": "Up to 48 small flames in one canvas, each on a torch or in a brazier and each with its own seed, in a loop that closes exactly. Built to find out what many small flames cost.",
+      "tags": [
+        "flame",
+        "overlay",
+        "icons",
+        "loop",
+        "2d",
+        "shader-only"
+      ],
+      "epic": "4",
+      "tier": "A",
+      "image": "/images/catalogues/firetemple/torch.webp"
+    }
+  ],
+  "lighttemple": [
+    {
+      "id": "pointer-light-2d",
+      "title": "Pointer Light",
+      "summary": "A cursor-following area light casting soft, finite shadows from extruded 2D shapes.",
+      "tags": [
+        "sdf",
+        "soft shadows",
+        "pointer",
+        "text",
+        "fullscreen"
+      ],
+      "category": "Interface lighting",
+      "background": "radial-gradient(circle at 62% 38%, #ffe2bd 0%, #c9b9a5 22%, #6c625a 58%, #2a2623 100%)",
+      "image": "/images/pointer-light.jpg"
+    },
+    {
+      "id": "shadow-map-pcf",
+      "title": "Sun & Soft Shadows",
+      "summary": "Directional shadow mapping with hard, PCF, Poisson and contact-hardening PCSS filters side by side.",
+      "tags": [
+        "shadow map",
+        "pcf",
+        "pcss",
+        "3d",
+        "msaa"
+      ],
+      "category": "Shadows",
+      "background": "linear-gradient(160deg, #c9c5bf 0%, #b9b1a7 45%, #7d7268 46%, #a79c90 70%, #d6cfc6 100%)",
+      "image": "/images/animated/lighttemple/shadow-map-pcf.avif",
+      "imageStatic": "/images/animated/lighttemple/shadow-map-pcf.jpg"
+    },
+    {
+      "id": "studio-ibl",
+      "title": "Studio Lighting",
+      "summary": "A glTF product shot lit only by its environment, with a soft shadow catcher that melts into the page.",
+      "tags": [
+        "ibl",
+        "pbr",
+        "gltf",
+        "shadow catcher",
+        "hdr"
+      ],
+      "category": "Global illumination",
+      "background": "radial-gradient(ellipse at 50% 35%, #fff3e0 0%, #9c8b78 30%, #2b2622 70%, #141210 100%)",
+      "image": "/images/animated/lighttemple/studio-ibl.avif",
+      "imageStatic": "/images/animated/lighttemple/studio-ibl.jpg"
+    },
+    {
+      "id": "embossed-card",
+      "title": "Embossed Card",
+      "summary": "A letterpress, embossed or foil-stamped business card on paper, steel or leather, raked by your cursor.",
+      "tags": [
+        "parallax occlusion",
+        "normal mapping",
+        "procedural materials",
+        "foil",
+        "pointer"
+      ],
+      "category": "Interface lighting",
+      "background": "radial-gradient(ellipse at 40% 40%, #f4efe6 0%, #d9d0c2 30%, #4a372b 62%, #22180f 100%)",
+      "image": "/images/animated/lighttemple/embossed-card.avif",
+      "imageStatic": "/images/animated/lighttemple/embossed-card.jpg"
+    },
+    {
+      "id": "holo-card",
+      "title": "Holographic Card",
+      "summary": "A foil trading card that tilts toward your cursor (or phone): diffraction rainbows, thin-film colour and brushed highlights.",
+      "tags": [
+        "iridescence",
+        "diffraction",
+        "thin film",
+        "anisotropic",
+        "gyro"
+      ],
+      "category": "Interface lighting",
+      "background": "conic-gradient(from 210deg at 55% 45%, #ff7ab8, #ffd36e, #7affc8, #6ec3ff, #b98bff, #ff7ab8)",
+      "image": "/images/holo-card.jpg"
+    },
+    {
+      "id": "glass-panels",
+      "title": "Glass Panels",
+      "summary": "Draggable frosted-glass UI cards: refraction at the bevels, real blur, colour fringing and rim light from your cursor.",
+      "tags": [
+        "glassmorphism",
+        "refraction",
+        "dispersion",
+        "blur",
+        "drag"
+      ],
+      "category": "Interface lighting",
+      "background": "radial-gradient(circle at 30% 40%, #ff8a3d 0%, transparent 45%), radial-gradient(circle at 75% 35%, #d83cc0 0%, transparent 40%), radial-gradient(circle at 55% 80%, #2a7dff 0%, transparent 45%), #0b0b18",
+      "image": "/images/animated/lighttemple/glass-panels.avif",
+      "imageStatic": "/images/animated/lighttemple/glass-panels.jpg"
+    },
+    {
+      "id": "radiance-cascades",
+      "title": "Radiance Cascades",
+      "summary": "Paint lights and walls and watch real-time 2D global illumination: soft shadows, colour bleeding and light leaking through gaps.",
+      "tags": [
+        "global illumination",
+        "radiance cascades",
+        "jump flood",
+        "compute",
+        "paint"
+      ],
+      "category": "Interface lighting",
+      "background": "radial-gradient(circle at 25% 35%, #ffb36b 0%, transparent 30%), radial-gradient(circle at 75% 30%, #4cc3ff 0%, transparent 28%), radial-gradient(circle at 50% 85%, #ff4fc8 0%, transparent 30%), #0a0b10",
+      "image": "/images/animated/lighttemple/radiance-cascades.avif",
+      "imageStatic": "/images/animated/lighttemple/radiance-cascades.jpg"
+    },
+    {
+      "id": "long-shadows",
+      "title": "Long Shadows",
+      "summary": "Flat-design long shadows for icons and type, cast in real time from your cursor using SDF sweeps.",
+      "tags": [
+        "flat design",
+        "sdf sweep",
+        "text",
+        "pointer"
+      ],
+      "category": "Interface lighting",
+      "background": "linear-gradient(135deg, #f4a259 0%, #f4a259 48%, #c97d42 48%, #c97d42 100%)",
+      "image": "/images/animated/lighttemple/long-shadows.avif",
+      "imageStatic": "/images/animated/lighttemple/long-shadows.jpg"
+    },
+    {
+      "id": "neon-sign",
+      "title": "Neon Sign",
+      "summary": "A flickering neon sign from any text: glass tubes, white-hot cores and coloured light spilling across brick.",
+      "tags": [
+        "emissive",
+        "bloom",
+        "flicker",
+        "text",
+        "light spill"
+      ],
+      "category": "Interface lighting",
+      "background": "radial-gradient(ellipse at 45% 50%, #ff3d8b 0%, #5a1030 30%, #170a10 65%), #0e0b0d",
+      "image": "/images/neon-sign.jpg"
+    },
+    {
+      "id": "lit-type",
+      "title": "Lit Typography",
+      "summary": "A real, editable HTML heading rendered as lit 3D extruded letters, with per-letter metals and shadows from your cursor.",
+      "tags": [
+        "text",
+        "ray marching",
+        "dom",
+        "oblique projection",
+        "ibl"
+      ],
+      "category": "Interface lighting",
+      "background": "linear-gradient(160deg, #e2d9cc 0%, #d0c4b3 55%, #b89c6a 56%, #e9c27a 70%, #c9b49a 100%)",
+      "image": "/images/animated/lighttemple/lit-type.avif",
+      "imageStatic": "/images/animated/lighttemple/lit-type.jpg"
+    }
+  ],
+  "hologpu": [
+    {
+      "id": "mipgen",
+      "title": "2D and cube mip generation",
+      "tags": [
+        "compute",
+        "texture",
+        "mipmap",
+        "cube"
+      ],
+      "summary": "Explore compute, texture, mipmap, cube with live parameters and shader source.",
+      "image": "/images/animated/hologpu/mipgen.avif",
+      "imageStatic": "/images/animated/hologpu/mipgen.jpg"
+    },
+    {
+      "id": "radiance-cascades",
+      "title": "2D radiance cascades",
+      "tags": [
+        "radiance",
+        "global-illumination",
+        "hierarchy",
+        "distance"
+      ],
+      "summary": "Explore radiance, global illumination, hierarchy, distance with live parameters and shader source.",
+      "image": "/images/animated/hologpu/radiance-cascades.avif",
+      "imageStatic": "/images/animated/hologpu/radiance-cascades.jpg"
+    },
+    {
+      "id": "color-grade",
+      "title": "3D LUT and tone mapping",
+      "tags": [
+        "filter",
+        "colour",
+        "3d-texture",
+        "hdr"
+      ],
+      "summary": "Explore filter, colour, 3d texture, hdr with live parameters and shader source.",
+      "image": "/images/animated/hologpu/color-grade.avif",
+      "imageStatic": "/images/animated/hologpu/color-grade.jpg"
+    },
+    {
+      "id": "product-sheen",
+      "title": "Alpha-masked product sheen",
+      "tags": [
+        "product",
+        "image",
+        "sheen",
+        "css",
+        "progress",
+        "launch-page"
+      ],
+      "summary": "Explore product, image, sheen, css with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/product-sheen.png"
+    },
+    {
+      "id": "audio-spectrum",
+      "title": "Audio FFT, oscilloscope and terrain",
+      "tags": [
+        "audio",
+        "fft",
+        "waveform",
+        "terrain"
+      ],
+      "summary": "Explore audio, fft, waveform, terrain with live parameters and shader source.",
+      "image": "/images/animated/hologpu/audio-spectrum.avif",
+      "imageStatic": "/images/animated/hologpu/audio-spectrum.jpg"
+    },
+    {
+      "id": "section-wipe",
+      "title": "Authored image section wipe",
+      "tags": [
+        "image",
+        "transition",
+        "scroll",
+        "css",
+        "launch-page"
+      ],
+      "summary": "Explore image, transition, scroll, css with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/section-wipe.png"
+    },
+    {
+      "id": "boids",
+      "title": "Boids with sorted spatial neighbors",
+      "tags": [
+        "flocking",
+        "spatial-hash",
+        "prefix-sum",
+        "radix-sort"
+      ],
+      "summary": "Explore flocking, spatial hash, prefix sum, radix sort with live parameters and shader source.",
+      "image": "/images/animated/hologpu/boids.avif",
+      "imageStatic": "/images/animated/hologpu/boids.jpg"
+    },
+    {
+      "id": "smoke",
+      "title": "Buoyant smoke and self-shadow",
+      "tags": [
+        "compute",
+        "stable-fluids",
+        "buoyancy",
+        "temperature",
+        "self-shadow"
+      ],
+      "summary": "Explore compute, stable fluids, buoyancy, temperature with live parameters and shader source.",
+      "image": "/images/animated/hologpu/smoke.avif",
+      "imageStatic": "/images/animated/hologpu/smoke.jpg"
+    },
+    {
+      "id": "text-outline-glow",
+      "title": "Cached text outline and glow",
+      "tags": [
+        "text",
+        "outline",
+        "glow",
+        "cached-distance",
+        "css"
+      ],
+      "summary": "Explore text, outline, glow, cached distance with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/text-outline-glow.png"
+    },
+    {
+      "id": "scroll-scene",
+      "title": "CSS scroll timeline scene",
+      "tags": [
+        "dom",
+        "scroll",
+        "css",
+        "timeline"
+      ],
+      "summary": "Explore dom, scroll, css, timeline with live parameters and shader source.",
+      "image": "/images/animated/hologpu/scroll-scene.avif",
+      "imageStatic": "/images/animated/hologpu/scroll-scene.jpg"
+    },
+    {
+      "id": "lattice-boltzmann",
+      "title": "D2Q9 lattice Boltzmann",
+      "tags": [
+        "lbm",
+        "bgk",
+        "vortex-shedding",
+        "bounce-back"
+      ],
+      "summary": "Explore lbm, bgk, vortex shedding, bounce back with live parameters and shader source.",
+      "image": "/images/animated/hologpu/lattice-boltzmann.avif",
+      "imageStatic": "/images/animated/hologpu/lattice-boltzmann.jpg"
+    },
+    {
+      "id": "caustics",
+      "title": "Derivative water caustics",
+      "tags": [
+        "water",
+        "derivatives",
+        "refraction",
+        "jacobian"
+      ],
+      "summary": "Explore water, derivatives, refraction, jacobian with live parameters and shader source.",
+      "image": "/images/animated/hologpu/caustics.avif",
+      "imageStatic": "/images/animated/hologpu/caustics.jpg"
+    },
+    {
+      "id": "backdrop-glass",
+      "title": "Experimental DOM backdrop glass",
+      "tags": [
+        "html-in-canvas",
+        "experimental",
+        "refraction",
+        "dom-capture"
+      ],
+      "summary": "Explore html in canvas, experimental, refraction, dom capture with live parameters and shader source.",
+      "image": "/images/animated/hologpu/backdrop-glass.avif",
+      "imageStatic": "/images/animated/hologpu/backdrop-glass.jpg"
+    },
+    {
+      "id": "fluid-obstacles",
+      "title": "Fluid around DOM rectangles",
+      "tags": [
+        "compute",
+        "stable-fluids",
+        "dom",
+        "pressure",
+        "obstacles",
+        "staggered-grid"
+      ],
+      "summary": "Explore compute, stable fluids, dom, pressure with live parameters and shader source.",
+      "image": "/images/animated/hologpu/fluid-obstacles.avif",
+      "imageStatic": "/images/animated/hologpu/fluid-obstacles.jpg"
+    },
+    {
+      "id": "attractors",
+      "title": "Four additive HDR attractors",
+      "tags": [
+        "lorenz",
+        "aizawa",
+        "clifford",
+        "dejong",
+        "hdr"
+      ],
+      "summary": "Explore lorenz, aizawa, clifford, dejong with live parameters and shader source.",
+      "image": "/images/animated/hologpu/attractors.avif",
+      "imageStatic": "/images/animated/hologpu/attractors.jpg"
+    },
+    {
+      "id": "panel-refraction",
+      "title": "Frosted hero refraction panel",
+      "tags": [
+        "card",
+        "glass",
+        "refraction",
+        "blur",
+        "hero",
+        "css"
+      ],
+      "summary": "Explore card, glass, refraction, blur with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/panel-refraction.png"
+    },
+    {
+      "id": "blur",
+      "title": "Gaussian / dual Kawase / box blur",
+      "tags": [
+        "filter",
+        "blur",
+        "separable",
+        "pyramid"
+      ],
+      "summary": "Explore filter, blur, separable, pyramid with live parameters and shader source.",
+      "image": "/images/animated/hologpu/blur.avif",
+      "imageStatic": "/images/animated/hologpu/blur.jpg"
+    },
+    {
+      "id": "pointer-map",
+      "title": "Gaussian pointer normal / flow map",
+      "tags": [
+        "map",
+        "normal",
+        "flow",
+        "pointer",
+        "product",
+        "lcd"
+      ],
+      "summary": "Explore map, normal, flow, pointer with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/pointer-map.png"
+    },
+    {
+      "id": "wave-divider",
+      "title": "Gentle section wave divider",
+      "tags": [
+        "divider",
+        "section",
+        "wave",
+        "css",
+        "launch-page"
+      ],
+      "summary": "Explore divider, section, wave, css with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/wave-divider.png"
+    },
+    {
+      "id": "material-ball",
+      "title": "GGX material and prefiltered cube lighting",
+      "tags": [
+        "pbr",
+        "cube-map",
+        "texture-array",
+        "prefiltered-mips",
+        "depth",
+        "msaa"
+      ],
+      "summary": "Explore pbr, cube map, texture array, prefiltered mips with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/material-ball.png"
+    },
+    {
+      "id": "splats",
+      "title": "GPU sorted anisotropic Gaussian splats",
+      "tags": [
+        "gaussian",
+        "covariance",
+        "radix-sort",
+        "alpha-compositing"
+      ],
+      "summary": "Explore gaussian, covariance, radix sort, alpha compositing with live parameters and shader source.",
+      "image": "/images/animated/hologpu/splats.avif",
+      "imageStatic": "/images/animated/hologpu/splats.jpg"
+    },
+    {
+      "id": "reaction-diffusion",
+      "title": "Gray–Scott reaction diffusion",
+      "tags": [
+        "gray-scott",
+        "chemistry",
+        "parameter-map"
+      ],
+      "summary": "Explore gray scott, chemistry, parameter map with live parameters and shader source.",
+      "image": "/images/animated/hologpu/reaction-diffusion.avif",
+      "imageStatic": "/images/animated/hologpu/reaction-diffusion.jpg"
+    },
+    {
+      "id": "halftone-ascii",
+      "title": "Halftone dots and glyph atlas",
+      "tags": [
+        "filter",
+        "halftone",
+        "ascii",
+        "atlas"
+      ],
+      "summary": "Explore filter, halftone, ascii, atlas with live parameters and shader source.",
+      "image": "/images/animated/hologpu/halftone-ascii.avif",
+      "imageStatic": "/images/animated/hologpu/halftone-ascii.jpg"
+    },
+    {
+      "id": "bloom",
+      "title": "HDR mip-pyramid bloom",
+      "tags": [
+        "filter",
+        "hdr",
+        "bloom",
+        "pyramid"
+      ],
+      "summary": "Explore filter, hdr, bloom, pyramid with live parameters and shader source.",
+      "image": "/images/animated/hologpu/bloom.avif",
+      "imageStatic": "/images/animated/hologpu/bloom.jpg"
+    },
+    {
+      "id": "image-hover",
+      "title": "Image hover and scroll transition",
+      "tags": [
+        "dom",
+        "image",
+        "hover",
+        "css",
+        "transition"
+      ],
+      "summary": "Explore dom, image, hover, css with live parameters and shader source.",
+      "image": "/images/animated/hologpu/image-hover.avif",
+      "imageStatic": "/images/animated/hologpu/image-hover.jpg"
+    },
+    {
+      "id": "terrain",
+      "title": "Indexed height field and moving camera",
+      "tags": [
+        "index-buffer",
+        "vertex-displacement",
+        "depth",
+        "msaa",
+        "fog"
+      ],
+      "summary": "Explore index buffer, vertex displacement, depth, msaa with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/terrain.png"
+    },
+    {
+      "id": "emitters",
+      "title": "Indirect fireworks and spark emitters",
+      "tags": [
+        "free-list",
+        "stream-compaction",
+        "indirect-draw"
+      ],
+      "summary": "Explore free list, stream compaction, indirect draw with live parameters and shader source.",
+      "image": "/images/animated/hologpu/emitters.avif",
+      "imageStatic": "/images/animated/hologpu/emitters.jpg"
+    },
+    {
+      "id": "fractal",
+      "title": "Julia / Mandelbrot explorer",
+      "tags": [
+        "fractal",
+        "precision",
+        "double-single"
+      ],
+      "summary": "Explore fractal, precision, double single with live parameters and shader source.",
+      "image": "/images/animated/hologpu/fractal.avif",
+      "imageStatic": "/images/animated/hologpu/fractal.jpg"
+    },
+    {
+      "id": "jump-flood",
+      "title": "Jump-flood distance fields",
+      "tags": [
+        "distance",
+        "mask",
+        "outline",
+        "voronoi"
+      ],
+      "summary": "Explore distance, mask, outline, voronoi with live parameters and shader source.",
+      "image": "/images/animated/hologpu/jump-flood.avif",
+      "imageStatic": "/images/animated/hologpu/jump-flood.jpg"
+    },
+    {
+      "id": "lenia",
+      "title": "Lenia continuous cellular automaton",
+      "tags": [
+        "lenia",
+        "convolution",
+        "kernel-lut"
+      ],
+      "summary": "Explore lenia, convolution, kernel lut with live parameters and shader source.",
+      "image": "/images/animated/hologpu/lenia.avif",
+      "imageStatic": "/images/animated/hologpu/lenia.jpg"
+    },
+    {
+      "id": "lens",
+      "title": "Lens and film stack",
+      "tags": [
+        "filter",
+        "lens",
+        "grain"
+      ],
+      "summary": "Explore filter, lens, grain with live parameters and shader source.",
+      "image": "/images/animated/hologpu/lens.avif",
+      "imageStatic": "/images/animated/hologpu/lens.jpg"
+    },
+    {
+      "id": "life",
+      "title": "Life and life-like rules",
+      "tags": [
+        "cellular-automata",
+        "integer",
+        "life"
+      ],
+      "summary": "Explore cellular automata, integer, life with live parameters and shader source.",
+      "image": "/images/animated/hologpu/life.avif",
+      "imageStatic": "/images/animated/hologpu/life.jpg"
+    },
+    {
+      "id": "bright-pass",
+      "title": "Luminance-selected screenshot highlights",
+      "tags": [
+        "filter",
+        "product",
+        "image",
+        "luminance",
+        "mask",
+        "launch-page"
+      ],
+      "summary": "Explore filter, product, image, luminance with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/bright-pass.png"
+    },
+    {
+      "id": "falling-sand",
+      "title": "Margolus sand, water and fire",
+      "tags": [
+        "margolus",
+        "block-ca",
+        "integer"
+      ],
+      "summary": "Explore margolus, block ca, integer with live parameters and shader source.",
+      "image": "/images/animated/hologpu/falling-sand.avif",
+      "imageStatic": "/images/animated/hologpu/falling-sand.jpg"
+    },
+    {
+      "id": "text-shimmer",
+      "title": "Masked OKLCH headline shimmer",
+      "tags": [
+        "text",
+        "mask",
+        "gradient",
+        "oklch",
+        "css",
+        "typography"
+      ],
+      "summary": "Explore text, mask, gradient, oklch with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/text-shimmer.png"
+    },
+    {
+      "id": "masked-composite",
+      "title": "Masked original / filtered composite",
+      "tags": [
+        "filter",
+        "mask",
+        "composite",
+        "product",
+        "lcd"
+      ],
+      "summary": "Explore filter, mask, composite, product with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/masked-composite.png"
+    },
+    {
+      "id": "mpm",
+      "title": "Material point transfers",
+      "tags": [
+        "mpm",
+        "apic",
+        "particle-grid",
+        "elasticity"
+      ],
+      "summary": "Explore mpm, apic, particle grid, elasticity with live parameters and shader source.",
+      "image": "/images/animated/hologpu/mpm.avif",
+      "imageStatic": "/images/animated/hologpu/mpm.jpg"
+    },
+    {
+      "id": "glass",
+      "title": "Mesh refraction and chromatic dispersion",
+      "tags": [
+        "refraction",
+        "dispersion",
+        "scene-capture",
+        "depth",
+        "msaa"
+      ],
+      "summary": "Explore refraction, dispersion, scene capture, depth with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/glass.png"
+    },
+    {
+      "id": "sdf-2d",
+      "title": "Metaballs and Boolean shapes",
+      "tags": [
+        "sdf",
+        "boolean",
+        "metaballs",
+        "derivatives"
+      ],
+      "summary": "Explore sdf, boolean, metaballs, derivatives with live parameters and shader source.",
+      "image": "/images/animated/hologpu/sdf-2d.avif",
+      "imageStatic": "/images/animated/hologpu/sdf-2d.jpg"
+    },
+    {
+      "id": "flow-particles",
+      "title": "Million curl-noise particles",
+      "tags": [
+        "compute",
+        "curl-noise",
+        "million-particles",
+        "trails"
+      ],
+      "summary": "Explore compute, curl noise, million particles, trails with live parameters and shader source.",
+      "image": "/images/animated/hologpu/flow-particles.avif",
+      "imageStatic": "/images/animated/hologpu/flow-particles.jpg"
+    },
+    {
+      "id": "voronoi",
+      "title": "Moving Voronoi cells",
+      "tags": [
+        "cellular",
+        "distance",
+        "fragment-loops"
+      ],
+      "summary": "Explore cellular, distance, fragment loops with live parameters and shader source.",
+      "image": "/images/animated/hologpu/voronoi.avif",
+      "imageStatic": "/images/animated/hologpu/voronoi.jpg"
+    },
+    {
+      "id": "noise-lab",
+      "title": "Noise laboratory",
+      "tags": [
+        "noise",
+        "fbm",
+        "domain-warp",
+        "curl"
+      ],
+      "summary": "Explore noise, fbm, domain warp, curl with live parameters and shader source.",
+      "image": "/images/animated/hologpu/noise-lab.avif",
+      "imageStatic": "/images/animated/hologpu/noise-lab.jpg"
+    },
+    {
+      "id": "instances",
+      "title": "Noise-displaced instanced meshes",
+      "tags": [
+        "instancing",
+        "depth",
+        "msaa",
+        "render-bundles",
+        "occlusion-queries"
+      ],
+      "summary": "Explore instancing, depth, msaa, render bundles with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/instances.png"
+    },
+    {
+      "id": "heading-reveal",
+      "title": "Noise-eroded heading reveal",
+      "tags": [
+        "text",
+        "mask",
+        "noise",
+        "reveal",
+        "css",
+        "typography"
+      ],
+      "summary": "Explore text, mask, noise, reveal with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/heading-reveal.png"
+    },
+    {
+      "id": "displace",
+      "title": "Normal / flow refraction and ripple",
+      "tags": [
+        "filter",
+        "displace",
+        "flow-map",
+        "refraction"
+      ],
+      "summary": "Explore filter, displace, flow map, refraction with live parameters and shader source.",
+      "image": "/images/animated/hologpu/displace.avif",
+      "imageStatic": "/images/animated/hologpu/displace.jpg"
+    },
+    {
+      "id": "gradient-oklch",
+      "title": "OKLCH mesh gradient",
+      "tags": [
+        "colour",
+        "mesh",
+        "dither"
+      ],
+      "summary": "Explore colour, mesh, dither with live parameters and shader source.",
+      "image": "/images/animated/hologpu/gradient-oklch.avif",
+      "imageStatic": "/images/animated/hologpu/gradient-oklch.jpg"
+    },
+    {
+      "id": "dither",
+      "title": "Ordered / blue-noise / palette / CRT",
+      "tags": [
+        "filter",
+        "quantisation",
+        "blue-noise",
+        "crt"
+      ],
+      "summary": "Explore filter, quantisation, blue noise, crt with live parameters and shader source.",
+      "image": "/images/animated/hologpu/dither.avif",
+      "imageStatic": "/images/animated/hologpu/dither.jpg"
+    },
+    {
+      "id": "starfield",
+      "title": "Parallax stars and nebula",
+      "tags": [
+        "parallax",
+        "hash",
+        "noise",
+        "temporal-stability"
+      ],
+      "summary": "Explore parallax, hash, noise, temporal stability with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/starfield.png"
+    },
+    {
+      "id": "physarum",
+      "title": "Physarum agents and atomic trail",
+      "tags": [
+        "agents",
+        "storage-buffer",
+        "atomics"
+      ],
+      "summary": "Explore agents, storage buffer, atomics with live parameters and shader source.",
+      "image": "/images/animated/hologpu/physarum.avif",
+      "imageStatic": "/images/animated/hologpu/physarum.jpg"
+    },
+    {
+      "id": "ink",
+      "title": "Pigment deposition on paper",
+      "tags": [
+        "compute",
+        "stable-fluids",
+        "pigment",
+        "paper",
+        "absorption"
+      ],
+      "summary": "Explore compute, stable fluids, pigment, paper with live parameters and shader source.",
+      "image": "/images/animated/hologpu/ink.avif",
+      "imageStatic": "/images/animated/hologpu/ink.jpg"
+    },
+    {
+      "id": "progress-line",
+      "title": "Polyline progress rule",
+      "tags": [
+        "progress",
+        "polyline",
+        "divider",
+        "css",
+        "scroll"
+      ],
+      "summary": "Explore progress, polyline, divider, css with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/progress-line.png"
+    },
+    {
+      "id": "pbf-fluid",
+      "title": "Position based fluid constraints",
+      "tags": [
+        "pbf",
+        "sph",
+        "spatial-hash",
+        "jacobi"
+      ],
+      "summary": "Explore pbf, sph, spatial hash, jacobi with live parameters and shader source.",
+      "image": "/images/animated/hologpu/pbf-fluid.avif",
+      "imageStatic": "/images/animated/hologpu/pbf-fluid.jpg"
+    },
+    {
+      "id": "prefix-sum",
+      "title": "Prefix sum and stream compaction",
+      "tags": [
+        "compute",
+        "primitives"
+      ],
+      "summary": "Explore compute, primitives with live parameters and shader source.",
+      "image": "/images/animated/hologpu/prefix-sum.avif",
+      "imageStatic": "/images/animated/hologpu/prefix-sum.jpg"
+    },
+    {
+      "id": "path-tracer",
+      "title": "Progressive BVH path tracer",
+      "tags": [
+        "bvh",
+        "path-tracing",
+        "progressive",
+        "compute-rendering"
+      ],
+      "summary": "Explore bvh, path tracing, progressive, compute rendering with live parameters and shader source.",
+      "image": "/images/animated/hologpu/path-tracer.avif",
+      "imageStatic": "/images/animated/hologpu/path-tracer.jpg"
+    },
+    {
+      "id": "fluid",
+      "title": "Projected fluid and dye",
+      "tags": [
+        "compute",
+        "stable-fluids",
+        "pressure",
+        "vorticity",
+        "staggered-grid"
+      ],
+      "summary": "Explore compute, stable fluids, pressure, vorticity with live parameters and shader source.",
+      "image": "/images/animated/hologpu/fluid.avif",
+      "imageStatic": "/images/animated/hologpu/fluid.jpg"
+    },
+    {
+      "id": "particle-drift",
+      "title": "Quiet bokeh dust drift",
+      "tags": [
+        "dust",
+        "bokeh",
+        "pointer",
+        "ambient",
+        "launch-page"
+      ],
+      "summary": "Explore dust, bokeh, pointer, ambient with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/particle-drift.png"
+    },
+    {
+      "id": "dot-matrix-field",
+      "title": "Quiet CSS-pixel dot matrix",
+      "tags": [
+        "background",
+        "launch-page",
+        "dots",
+        "pointer"
+      ],
+      "summary": "Explore background, launch page, dots, pointer with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/dot-matrix-field.png"
+    },
+    {
+      "id": "grain-overlay",
+      "title": "Quiet film grain",
+      "tags": [
+        "launch-page",
+        "grain",
+        "transparent",
+        "rate-limited"
+      ],
+      "summary": "Explore launch page, grain, transparent, rate limited with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/grain-overlay.png"
+    },
+    {
+      "id": "constellation",
+      "title": "Quiet linked constellation",
+      "tags": [
+        "ambient",
+        "particles",
+        "background",
+        "launch-page",
+        "network"
+      ],
+      "summary": "Explore ambient, particles, background, launch page with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/constellation.png"
+    },
+    {
+      "id": "topographic-lines",
+      "title": "Quiet topographic contours",
+      "tags": [
+        "background",
+        "contours",
+        "noise",
+        "derivatives"
+      ],
+      "summary": "Explore background, contours, noise, derivatives with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/topographic-lines.png"
+    },
+    {
+      "id": "border-energy",
+      "title": "Rounded rectangle border energy",
+      "tags": [
+        "dom",
+        "sdf",
+        "border",
+        "glow"
+      ],
+      "summary": "Explore dom, sdf, border, glow with live parameters and shader source.",
+      "image": "/images/animated/hologpu/border-energy.avif",
+      "imageStatic": "/images/animated/hologpu/border-energy.jpg"
+    },
+    {
+      "id": "shadows-2d",
+      "title": "SDF soft shadows",
+      "tags": [
+        "distance",
+        "lighting",
+        "shadows",
+        "rects"
+      ],
+      "summary": "Explore distance, lighting, shadows, rects with live parameters and shader source.",
+      "image": "/images/animated/hologpu/shadows-2d.avif",
+      "imageStatic": "/images/animated/hologpu/shadows-2d.jpg"
+    },
+    {
+      "id": "spotlight",
+      "title": "Shared page spotlight reveal",
+      "tags": [
+        "dom",
+        "pointer",
+        "multiple-surfaces",
+        "light"
+      ],
+      "summary": "Explore dom, pointer, multiple surfaces, light with live parameters and shader source.",
+      "image": "/images/animated/hologpu/spotlight.avif",
+      "imageStatic": "/images/animated/hologpu/spotlight.jpg"
+    },
+    {
+      "id": "edges",
+      "title": "Sobel / toon / Kuwahara",
+      "tags": [
+        "filter",
+        "edges",
+        "neighbourhood",
+        "painterly"
+      ],
+      "summary": "Explore filter, edges, neighbourhood, painterly with live parameters and shader source.",
+      "image": "/images/animated/hologpu/edges.avif",
+      "imageStatic": "/images/animated/hologpu/edges.jpg"
+    },
+    {
+      "id": "aurora-veil",
+      "title": "Soft aurora veil",
+      "tags": [
+        "background",
+        "brand",
+        "oklch",
+        "domain-warp"
+      ],
+      "summary": "Explore background, brand, oklch, domain warp with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/aurora-veil.png"
+    },
+    {
+      "id": "hover-lift-shadow",
+      "title": "Soft coloured card contact shadow",
+      "tags": [
+        "card",
+        "shadow",
+        "css",
+        "launch-page"
+      ],
+      "summary": "Explore card, shadow, css, launch page with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/hover-lift-shadow.png"
+    },
+    {
+      "id": "grid-horizon",
+      "title": "Soft perspective floor grid",
+      "tags": [
+        "background",
+        "launch-page",
+        "perspective",
+        "grid"
+      ],
+      "summary": "Explore background, launch page, perspective, grid with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/grid-horizon.png"
+    },
+    {
+      "id": "press-ripple",
+      "title": "Soft press wavefront",
+      "tags": [
+        "button",
+        "card",
+        "press",
+        "interaction",
+        "launch-page"
+      ],
+      "summary": "Explore button, card, press, interaction with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/press-ripple.png"
+    },
+    {
+      "id": "light-sweep",
+      "title": "Soft specular light sweep",
+      "tags": [
+        "background",
+        "sheen",
+        "progress",
+        "css",
+        "image"
+      ],
+      "summary": "Explore background, sheen, progress, css with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/light-sweep.png"
+    },
+    {
+      "id": "raymarch",
+      "title": "Sphere-traced sculpture",
+      "tags": [
+        "raymarch",
+        "sdf-3d",
+        "shadows",
+        "ao"
+      ],
+      "summary": "Explore raymarch, sdf 3d, shadows, ao with live parameters and shader source.",
+      "image": "/images/animated/hologpu/raymarch.avif",
+      "imageStatic": "/images/animated/hologpu/raymarch.jpg"
+    },
+    {
+      "id": "sort",
+      "title": "Stable radix and bitonic sorting",
+      "tags": [
+        "compute",
+        "primitives"
+      ],
+      "summary": "Explore compute, primitives with live parameters and shader source.",
+      "image": "/images/animated/hologpu/sort.avif",
+      "imageStatic": "/images/animated/hologpu/sort.jpg"
+    },
+    {
+      "id": "depth-parallax",
+      "title": "Subtle product image depth parallax",
+      "tags": [
+        "image",
+        "depth",
+        "parallax",
+        "pointer",
+        "progress",
+        "css"
+      ],
+      "summary": "Explore image, depth, parallax, pointer with live parameters and shader source.",
+      "image": "/images/catalogues/hologpu/depth-parallax.png"
+    },
+    {
+      "id": "morph-particles",
+      "title": "Text and image particle morph",
+      "tags": [
+        "text",
+        "image",
+        "spring",
+        "pointer"
+      ],
+      "summary": "Explore text, image, spring, pointer with live parameters and shader source.",
+      "image": "/images/animated/hologpu/morph-particles.avif",
+      "imageStatic": "/images/animated/hologpu/morph-particles.jpg"
+    },
+    {
+      "id": "text-dissolve",
+      "title": "Text mask particle dissolve and reform",
+      "tags": [
+        "dom",
+        "text",
+        "particles",
+        "mask",
+        "css"
+      ],
+      "summary": "Explore dom, text, particles, mask with live parameters and shader source.",
+      "image": "/images/animated/hologpu/text-dissolve.avif",
+      "imageStatic": "/images/animated/hologpu/text-dissolve.jpg"
+    },
+    {
+      "id": "n-body",
+      "title": "Tiled and grid-accelerated gravity",
+      "tags": [
+        "gravity",
+        "workgroup-tiling",
+        "spatial-hash"
+      ],
+      "summary": "Explore gravity, workgroup tiling, spatial hash with live parameters and shader source.",
+      "image": "/images/animated/hologpu/n-body.avif",
+      "imageStatic": "/images/animated/hologpu/n-body.jpg"
+    },
+    {
+      "id": "truchet",
+      "title": "Truchet, hex and quasi-crystal contours",
+      "tags": [
+        "tiling",
+        "integer-hash",
+        "bit-operations",
+        "quasiperiodic"
+      ],
+      "summary": "Explore tiling, integer hash, bit operations, quasiperiodic with live parameters and shader source.",
+      "image": "/images/animated/hologpu/truchet.avif",
+      "imageStatic": "/images/animated/hologpu/truchet.jpg"
+    },
+    {
+      "id": "spatial-hash",
+      "title": "Uniform spatial grid",
+      "tags": [
+        "compute",
+        "primitives"
+      ],
+      "summary": "Explore compute, primitives with live parameters and shader source.",
+      "image": "/images/animated/hologpu/spatial-hash.avif",
+      "imageStatic": "/images/animated/hologpu/spatial-hash.jpg"
+    },
+    {
+      "id": "wave",
+      "title": "Wave history and refraction",
+      "tags": [
+        "wave-equation",
+        "history",
+        "refraction"
+      ],
+      "summary": "Explore wave equation, history, refraction with live parameters and shader source.",
+      "image": "/images/animated/hologpu/wave.avif",
+      "imageStatic": "/images/animated/hologpu/wave.jpg"
+    }
+  ]
+}

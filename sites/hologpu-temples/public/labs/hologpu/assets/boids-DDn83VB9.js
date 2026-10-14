@@ -1,0 +1,1 @@
+import{t as e}from"./boids--iwJ8kgs.js";export{e as default};

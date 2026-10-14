@@ -1,0 +1,1 @@
+import{t as e}from"./ink-4FoF00Gs.js";export{e as default};

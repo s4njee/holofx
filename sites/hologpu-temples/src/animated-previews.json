@@ -1,0 +1,1757 @@
+{
+  "version": 1,
+  "width": 480,
+  "height": 300,
+  "fps": 8,
+  "frames": 20,
+  "items": {
+    "watertemple/depth-absorption": {
+      "image": "/images/animated/watertemple/depth-absorption.avif",
+      "still": "/images/animated/watertemple/depth-absorption.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=depth-absorption&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 22787,
+      "settings": {
+        "pointer": "one circular drag",
+        "reusedCapturedFrames": true
+      },
+      "capturedAt": "2026-10-14T01:23:13.682Z"
+    },
+    "watertemple/hello": {
+      "image": "/images/animated/watertemple/hello.avif",
+      "still": "/images/animated/watertemple/hello.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=hello&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 48919,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:23:13.693Z"
+    },
+    "watertemple/detail-normals": {
+      "image": "/images/animated/watertemple/detail-normals.avif",
+      "still": "/images/animated/watertemple/detail-normals.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=detail-normals&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 133323,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:23:20.146Z"
+    },
+    "watertemple/flow-map": {
+      "image": "/images/animated/watertemple/flow-map.avif",
+      "still": "/images/animated/watertemple/flow-map.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=flow-map&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 375749,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:23:26.524Z"
+    },
+    "watertemple/fresnel-sky": {
+      "image": "/images/animated/watertemple/fresnel-sky.avif",
+      "still": "/images/animated/watertemple/fresnel-sky.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=fresnel-sky&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 33126,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:23:32.852Z"
+    },
+    "watertemple/hdr-bloom": {
+      "image": "/images/animated/watertemple/hdr-bloom.avif",
+      "still": "/images/animated/watertemple/hdr-bloom.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=hdr-bloom&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 320602,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:23:39.363Z"
+    },
+    "watertemple/reflections": {
+      "image": "/images/animated/watertemple/reflections.avif",
+      "still": "/images/animated/watertemple/reflections.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=reflections&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 81020,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:23:45.007Z"
+    },
+    "watertemple/refraction": {
+      "image": "/images/animated/watertemple/refraction.avif",
+      "still": "/images/animated/watertemple/refraction.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=refraction&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 127996,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:23:51.311Z"
+    },
+    "watertemple/shore-foam": {
+      "image": "/images/animated/watertemple/shore-foam.avif",
+      "still": "/images/animated/watertemple/shore-foam.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=shore-foam&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 52639,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:23:57.652Z"
+    },
+    "watertemple/sun-glint": {
+      "image": "/images/animated/watertemple/sun-glint.avif",
+      "still": "/images/animated/watertemple/sun-glint.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=sun-glint&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 53536,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:24:04.006Z"
+    },
+    "watertemple/crest-sss": {
+      "image": "/images/animated/watertemple/crest-sss.avif",
+      "still": "/images/animated/watertemple/crest-sss.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=crest-sss&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 62720,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:24:10.187Z"
+    },
+    "watertemple/ink-wash": {
+      "image": "/images/animated/watertemple/ink-wash.avif",
+      "still": "/images/animated/watertemple/ink-wash.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=ink-wash&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 15613,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:24:16.764Z"
+    },
+    "watertemple/wave-divider": {
+      "image": "/images/animated/watertemple/wave-divider.avif",
+      "still": "/images/animated/watertemple/wave-divider.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=wave-divider&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 21035,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:24:23.424Z"
+    },
+    "watertemple/mist": {
+      "image": "/images/animated/watertemple/mist.avif",
+      "still": "/images/animated/watertemple/mist.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=mist&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 5480,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:24:29.508Z"
+    },
+    "watertemple/pool-floor": {
+      "image": "/images/animated/watertemple/pool-floor.avif",
+      "still": "/images/animated/watertemple/pool-floor.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=pool-floor&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 207823,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:24:36.069Z"
+    },
+    "watertemple/caustics": {
+      "image": "/images/animated/watertemple/caustics.avif",
+      "still": "/images/animated/watertemple/caustics.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=caustics&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 241629,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:24:42.093Z"
+    },
+    "watertemple/puddles": {
+      "image": "/images/animated/watertemple/puddles.avif",
+      "still": "/images/animated/watertemple/puddles.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=puddles&hud=0&resolution=0.5&p.rain=1&p.rippleStrength=2.5&p.lamps=1&p.sunElevation=30&p.waterLevel=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 85290,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": [],
+        "parameterScrub": null
+      },
+      "capturedAt": "2026-10-14T01:42:13.351Z"
+    },
+    "watertemple/rain-glass": {
+      "image": "/images/animated/watertemple/rain-glass.avif",
+      "still": "/images/animated/watertemple/rain-glass.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=rain-glass&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 91872,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:24:55.270Z"
+    },
+    "watertemple/toon-water": {
+      "image": "/images/animated/watertemple/toon-water.avif",
+      "still": "/images/animated/watertemple/toon-water.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=toon-water&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 191509,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:25:01.442Z"
+    },
+    "watertemple/underwater": {
+      "image": "/images/animated/watertemple/underwater.avif",
+      "still": "/images/animated/watertemple/underwater.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=underwater&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 15535,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:25:07.349Z"
+    },
+    "watertemple/media-distortion": {
+      "image": "/images/animated/watertemple/media-distortion.avif",
+      "still": "/images/animated/watertemple/media-distortion.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=media-distortion&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 113998,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:25:14.054Z"
+    },
+    "watertemple/pool-3d": {
+      "image": "/images/animated/watertemple/pool-3d.avif",
+      "still": "/images/animated/watertemple/pool-3d.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=pool-3d&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 86717,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:25:21.958Z"
+    },
+    "watertemple/ripples": {
+      "image": "/images/animated/watertemple/ripples.avif",
+      "still": "/images/animated/watertemple/ripples.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=ripples&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 91546,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:25:28.032Z"
+    },
+    "watertemple/ripple-caustics": {
+      "image": "/images/animated/watertemple/ripple-caustics.avif",
+      "still": "/images/animated/watertemple/ripple-caustics.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=ripple-caustics&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 113943,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:25:34.395Z"
+    },
+    "watertemple/ripple-dom": {
+      "image": "/images/animated/watertemple/ripple-dom.avif",
+      "still": "/images/animated/watertemple/ripple-dom.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=ripple-dom&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 135122,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:25:40.643Z"
+    },
+    "watertemple/ripple-reactive": {
+      "image": "/images/animated/watertemple/ripple-reactive.avif",
+      "still": "/images/animated/watertemple/ripple-reactive.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=ripple-reactive&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 151592,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:25:47.253Z"
+    },
+    "watertemple/aurora": {
+      "image": "/images/animated/watertemple/aurora.avif",
+      "still": "/images/animated/watertemple/aurora.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=aurora&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 50787,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:25:53.645Z"
+    },
+    "watertemple/bioluminescent-currents": {
+      "image": "/images/animated/watertemple/bioluminescent-currents.avif",
+      "still": "/images/animated/watertemple/bioluminescent-currents.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=bioluminescent-currents&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 25548,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:25:59.582Z"
+    },
+    "watertemple/dichroic-glass": {
+      "image": "/images/animated/watertemple/dichroic-glass.avif",
+      "still": "/images/animated/watertemple/dichroic-glass.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=dichroic-glass&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 36188,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:26:06.035Z"
+    },
+    "watertemple/eclipse-halos": {
+      "image": "/images/animated/watertemple/eclipse-halos.avif",
+      "still": "/images/animated/watertemple/eclipse-halos.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=eclipse-halos&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 22943,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:26:11.971Z"
+    },
+    "watertemple/fluid-warp": {
+      "image": "/images/animated/watertemple/fluid-warp.avif",
+      "still": "/images/animated/watertemple/fluid-warp.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=fluid-warp&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 135162,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:26:19.702Z"
+    },
+    "watertemple/game-of-life": {
+      "image": "/images/animated/watertemple/game-of-life.avif",
+      "still": "/images/animated/watertemple/game-of-life.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=game-of-life&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 129231,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:26:26.306Z"
+    },
+    "watertemple/fluid-dye": {
+      "image": "/images/animated/watertemple/fluid-dye.avif",
+      "still": "/images/animated/watertemple/fluid-dye.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=fluid-dye&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 96297,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:26:32.700Z"
+    },
+    "watertemple/fluid-3d": {
+      "image": "/images/animated/watertemple/fluid-3d.avif",
+      "still": "/images/animated/watertemple/fluid-3d.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=fluid-3d&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 29230,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:26:43.634Z"
+    },
+    "watertemple/ink-water": {
+      "image": "/images/animated/watertemple/ink-water.avif",
+      "still": "/images/animated/watertemple/ink-water.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=ink-water&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 15773,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:26:51.167Z"
+    },
+    "watertemple/ink-orbit": {
+      "image": "/images/animated/watertemple/ink-orbit.avif",
+      "still": "/images/animated/watertemple/ink-orbit.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=ink-orbit&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 112787,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:26:58.085Z"
+    },
+    "watertemple/liquid-chrome": {
+      "image": "/images/animated/watertemple/liquid-chrome.avif",
+      "still": "/images/animated/watertemple/liquid-chrome.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=liquid-chrome&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 109058,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:27:04.875Z"
+    },
+    "watertemple/neon-calligraphy": {
+      "image": "/images/animated/watertemple/neon-calligraphy.avif",
+      "still": "/images/animated/watertemple/neon-calligraphy.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=neon-calligraphy&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 34453,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:27:11.907Z"
+    },
+    "watertemple/neon-mycelium": {
+      "image": "/images/animated/watertemple/neon-mycelium.avif",
+      "still": "/images/animated/watertemple/neon-mycelium.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=neon-mycelium&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 61175,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:27:19.456Z"
+    },
+    "watertemple/shallow-water": {
+      "image": "/images/animated/watertemple/shallow-water.avif",
+      "still": "/images/animated/watertemple/shallow-water.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=shallow-water&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 149683,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:27:28.404Z"
+    },
+    "watertemple/silk-embers": {
+      "image": "/images/animated/watertemple/silk-embers.avif",
+      "still": "/images/animated/watertemple/silk-embers.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=silk-embers&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 33901,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:27:34.341Z"
+    },
+    "lighttemple/shadow-map-pcf": {
+      "image": "/images/animated/lighttemple/shadow-map-pcf.avif",
+      "still": "/images/animated/lighttemple/shadow-map-pcf.jpg",
+      "source": "http://127.0.0.1:5188/labs/lighttemple/#/x/shadow-map-pcf",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 41810,
+      "settings": {
+        "pointer": "one circular drag",
+        "reusedCapturedFrames": true
+      },
+      "capturedAt": "2026-10-14T01:27:41.375Z"
+    },
+    "watertemple/fluid-obstacles": {
+      "image": "/images/animated/watertemple/fluid-obstacles.avif",
+      "still": "/images/animated/watertemple/fluid-obstacles.jpg",
+      "source": "http://127.0.0.1:5188/labs/watertemple/?effect=fluid-obstacles&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 104153,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:27:41.422Z"
+    },
+    "lighttemple/studio-ibl": {
+      "image": "/images/animated/lighttemple/studio-ibl.avif",
+      "still": "/images/animated/lighttemple/studio-ibl.jpg",
+      "source": "http://127.0.0.1:5188/labs/lighttemple/#/x/studio-ibl",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 24397,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:27:48.464Z"
+    },
+    "lighttemple/embossed-card": {
+      "image": "/images/animated/lighttemple/embossed-card.avif",
+      "still": "/images/animated/lighttemple/embossed-card.jpg",
+      "source": "http://127.0.0.1:5188/labs/lighttemple/#/x/embossed-card",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 41173,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:27:55.434Z"
+    },
+    "lighttemple/glass-panels": {
+      "image": "/images/animated/lighttemple/glass-panels.avif",
+      "still": "/images/animated/lighttemple/glass-panels.jpg",
+      "source": "http://127.0.0.1:5188/labs/lighttemple/#/x/glass-panels",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 36216,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:28:01.918Z"
+    },
+    "lighttemple/radiance-cascades": {
+      "image": "/images/animated/lighttemple/radiance-cascades.avif",
+      "still": "/images/animated/lighttemple/radiance-cascades.jpg",
+      "source": "http://127.0.0.1:5188/labs/lighttemple/#/x/radiance-cascades",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 16982,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:28:08.405Z"
+    },
+    "lighttemple/long-shadows": {
+      "image": "/images/animated/lighttemple/long-shadows.avif",
+      "still": "/images/animated/lighttemple/long-shadows.jpg",
+      "source": "http://127.0.0.1:5188/labs/lighttemple/#/x/long-shadows",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 24301,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:28:14.965Z"
+    },
+    "lighttemple/lit-type": {
+      "image": "/images/animated/lighttemple/lit-type.avif",
+      "still": "/images/animated/lighttemple/lit-type.jpg",
+      "source": "http://127.0.0.1:5188/labs/lighttemple/#/x/lit-type",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 61234,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "demo default",
+        "errors": []
+      },
+      "capturedAt": "2026-10-14T01:28:21.951Z"
+    },
+    "hologpu/mipgen": {
+      "image": "/images/animated/hologpu/mipgen.avif",
+      "still": "/images/animated/hologpu/mipgen.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=mipgen&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 19,
+      "bytes": 38293,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:37:25.689Z"
+    },
+    "hologpu/radiance-cascades": {
+      "image": "/images/animated/hologpu/radiance-cascades.avif",
+      "still": "/images/animated/hologpu/radiance-cascades.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=radiance-cascades&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 27532,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:31:10.854Z"
+    },
+    "hologpu/color-grade": {
+      "image": "/images/animated/hologpu/color-grade.avif",
+      "still": "/images/animated/hologpu/color-grade.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=color-grade&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 28899,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:31:16.542Z"
+    },
+    "hologpu/audio-spectrum": {
+      "image": "/images/animated/hologpu/audio-spectrum.avif",
+      "still": "/images/animated/hologpu/audio-spectrum.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=audio-spectrum&hud=0&resolution=0.5&preset=scope",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 23374,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:37:31.596Z"
+    },
+    "hologpu/boids": {
+      "image": "/images/animated/hologpu/boids.avif",
+      "still": "/images/animated/hologpu/boids.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=boids&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 33690,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:31:29.376Z"
+    },
+    "hologpu/smoke": {
+      "image": "/images/animated/hologpu/smoke.avif",
+      "still": "/images/animated/hologpu/smoke.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=smoke&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 29309,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:31:38.951Z"
+    },
+    "hologpu/scroll-scene": {
+      "image": "/images/animated/hologpu/scroll-scene.avif",
+      "still": "/images/animated/hologpu/scroll-scene.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=scroll-scene&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 18859,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:31:44.669Z"
+    },
+    "hologpu/lattice-boltzmann": {
+      "image": "/images/animated/hologpu/lattice-boltzmann.avif",
+      "still": "/images/animated/hologpu/lattice-boltzmann.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=lattice-boltzmann&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 8860,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:31:50.499Z"
+    },
+    "hologpu/caustics": {
+      "image": "/images/animated/hologpu/caustics.avif",
+      "still": "/images/animated/hologpu/caustics.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=caustics&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 99584,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:31:57.505Z"
+    },
+    "hologpu/backdrop-glass": {
+      "image": "/images/animated/hologpu/backdrop-glass.avif",
+      "still": "/images/animated/hologpu/backdrop-glass.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=backdrop-glass&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 27452,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:32:03.189Z"
+    },
+    "hologpu/fluid-obstacles": {
+      "image": "/images/animated/hologpu/fluid-obstacles.avif",
+      "still": "/images/animated/hologpu/fluid-obstacles.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=fluid-obstacles&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 20134,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:32:12.840Z"
+    },
+    "hologpu/attractors": {
+      "image": "/images/animated/hologpu/attractors.avif",
+      "still": "/images/animated/hologpu/attractors.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=attractors&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 56625,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:32:19.802Z"
+    },
+    "hologpu/blur": {
+      "image": "/images/animated/hologpu/blur.avif",
+      "still": "/images/animated/hologpu/blur.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=blur&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 21911,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:32:26.093Z"
+    },
+    "hologpu/splats": {
+      "image": "/images/animated/hologpu/splats.avif",
+      "still": "/images/animated/hologpu/splats.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=splats&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 11006,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:32:31.776Z"
+    },
+    "hologpu/reaction-diffusion": {
+      "image": "/images/animated/hologpu/reaction-diffusion.avif",
+      "still": "/images/animated/hologpu/reaction-diffusion.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=reaction-diffusion&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 26743,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:32:37.912Z"
+    },
+    "hologpu/halftone-ascii": {
+      "image": "/images/animated/hologpu/halftone-ascii.avif",
+      "still": "/images/animated/hologpu/halftone-ascii.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=halftone-ascii&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 32271,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:32:43.837Z"
+    },
+    "hologpu/bloom": {
+      "image": "/images/animated/hologpu/bloom.avif",
+      "still": "/images/animated/hologpu/bloom.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=bloom&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 25530,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:32:49.957Z"
+    },
+    "hologpu/image-hover": {
+      "image": "/images/animated/hologpu/image-hover.avif",
+      "still": "/images/animated/hologpu/image-hover.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=image-hover&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 36742,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:32:55.900Z"
+    },
+    "hologpu/emitters": {
+      "image": "/images/animated/hologpu/emitters.avif",
+      "still": "/images/animated/hologpu/emitters.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=emitters&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 91378,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:33:02.376Z"
+    },
+    "hologpu/fractal": {
+      "image": "/images/animated/hologpu/fractal.avif",
+      "still": "/images/animated/hologpu/fractal.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=fractal&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 84093,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:37:37.540Z"
+    },
+    "hologpu/jump-flood": {
+      "image": "/images/animated/hologpu/jump-flood.avif",
+      "still": "/images/animated/hologpu/jump-flood.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=jump-flood&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 24254,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:33:14.004Z"
+    },
+    "hologpu/lenia": {
+      "image": "/images/animated/hologpu/lenia.avif",
+      "still": "/images/animated/hologpu/lenia.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=lenia&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 82231,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:33:20.414Z"
+    },
+    "hologpu/lens": {
+      "image": "/images/animated/hologpu/lens.avif",
+      "still": "/images/animated/hologpu/lens.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=lens&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 103734,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:33:26.840Z"
+    },
+    "hologpu/life": {
+      "image": "/images/animated/hologpu/life.avif",
+      "still": "/images/animated/hologpu/life.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=life&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 253035,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:33:32.968Z"
+    },
+    "hologpu/falling-sand": {
+      "image": "/images/animated/hologpu/falling-sand.avif",
+      "still": "/images/animated/hologpu/falling-sand.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=falling-sand&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 32768,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:33:39.442Z"
+    },
+    "hologpu/mpm": {
+      "image": "/images/animated/hologpu/mpm.avif",
+      "still": "/images/animated/hologpu/mpm.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=mpm&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 41560,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:33:45.543Z"
+    },
+    "hologpu/sdf-2d": {
+      "image": "/images/animated/hologpu/sdf-2d.avif",
+      "still": "/images/animated/hologpu/sdf-2d.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=sdf-2d&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 10593,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:33:51.056Z"
+    },
+    "hologpu/flow-particles": {
+      "image": "/images/animated/hologpu/flow-particles.avif",
+      "still": "/images/animated/hologpu/flow-particles.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=flow-particles&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 51270,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:33:57.785Z"
+    },
+    "hologpu/voronoi": {
+      "image": "/images/animated/hologpu/voronoi.avif",
+      "still": "/images/animated/hologpu/voronoi.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=voronoi&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 121812,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:34:03.584Z"
+    },
+    "hologpu/noise-lab": {
+      "image": "/images/animated/hologpu/noise-lab.avif",
+      "still": "/images/animated/hologpu/noise-lab.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=noise-lab&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 17154,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:34:09.786Z"
+    },
+    "hologpu/gradient-oklch": {
+      "image": "/images/animated/hologpu/gradient-oklch.avif",
+      "still": "/images/animated/hologpu/gradient-oklch.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=gradient-oklch&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 4929,
+      "settings": {
+        "pointer": "one circular drag",
+        "reusedCapturedFrames": true
+      },
+      "capturedAt": "2026-10-14T01:34:15.397Z"
+    },
+    "hologpu/displace": {
+      "image": "/images/animated/hologpu/displace.avif",
+      "still": "/images/animated/hologpu/displace.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=displace&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 45238,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:34:15.432Z"
+    },
+    "hologpu/dither": {
+      "image": "/images/animated/hologpu/dither.avif",
+      "still": "/images/animated/hologpu/dither.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=dither&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 142636,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:34:21.594Z"
+    },
+    "hologpu/physarum": {
+      "image": "/images/animated/hologpu/physarum.avif",
+      "still": "/images/animated/hologpu/physarum.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=physarum&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 19855,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:34:28.044Z"
+    },
+    "hologpu/ink": {
+      "image": "/images/animated/hologpu/ink.avif",
+      "still": "/images/animated/hologpu/ink.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=ink&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 12528,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:34:37.458Z"
+    },
+    "hologpu/pbf-fluid": {
+      "image": "/images/animated/hologpu/pbf-fluid.avif",
+      "still": "/images/animated/hologpu/pbf-fluid.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=pbf-fluid&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 33284,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:34:43.520Z"
+    },
+    "hologpu/prefix-sum": {
+      "image": "/images/animated/hologpu/prefix-sum.avif",
+      "still": "/images/animated/hologpu/prefix-sum.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=prefix-sum&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 21419,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:34:49.147Z"
+    },
+    "hologpu/path-tracer": {
+      "image": "/images/animated/hologpu/path-tracer.avif",
+      "still": "/images/animated/hologpu/path-tracer.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=path-tracer&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 31615,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:37:43.410Z"
+    },
+    "hologpu/fluid": {
+      "image": "/images/animated/hologpu/fluid.avif",
+      "still": "/images/animated/hologpu/fluid.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=fluid&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 20178,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:35:03.649Z"
+    },
+    "hologpu/border-energy": {
+      "image": "/images/animated/hologpu/border-energy.avif",
+      "still": "/images/animated/hologpu/border-energy.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=border-energy&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 6779,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:35:09.074Z"
+    },
+    "hologpu/shadows-2d": {
+      "image": "/images/animated/hologpu/shadows-2d.avif",
+      "still": "/images/animated/hologpu/shadows-2d.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=shadows-2d&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 40851,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:35:15.693Z"
+    },
+    "hologpu/spotlight": {
+      "image": "/images/animated/hologpu/spotlight.avif",
+      "still": "/images/animated/hologpu/spotlight.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=spotlight&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 20300,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:35:21.538Z"
+    },
+    "hologpu/edges": {
+      "image": "/images/animated/hologpu/edges.avif",
+      "still": "/images/animated/hologpu/edges.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=edges&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 33042,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:35:27.206Z"
+    },
+    "hologpu/raymarch": {
+      "image": "/images/animated/hologpu/raymarch.avif",
+      "still": "/images/animated/hologpu/raymarch.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=raymarch&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 11516,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:35:32.750Z"
+    },
+    "hologpu/sort": {
+      "image": "/images/animated/hologpu/sort.avif",
+      "still": "/images/animated/hologpu/sort.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=sort&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 155160,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:35:38.876Z"
+    },
+    "hologpu/morph-particles": {
+      "image": "/images/animated/hologpu/morph-particles.avif",
+      "still": "/images/animated/hologpu/morph-particles.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=morph-particles&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 18761,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:35:44.967Z"
+    },
+    "hologpu/text-dissolve": {
+      "image": "/images/animated/hologpu/text-dissolve.avif",
+      "still": "/images/animated/hologpu/text-dissolve.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=text-dissolve&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 65455,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:35:51.180Z"
+    },
+    "hologpu/n-body": {
+      "image": "/images/animated/hologpu/n-body.avif",
+      "still": "/images/animated/hologpu/n-body.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=n-body&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 113186,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:35:57.636Z"
+    },
+    "hologpu/truchet": {
+      "image": "/images/animated/hologpu/truchet.avif",
+      "still": "/images/animated/hologpu/truchet.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=truchet&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 39803,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:36:03.465Z"
+    },
+    "hologpu/spatial-hash": {
+      "image": "/images/animated/hologpu/spatial-hash.avif",
+      "still": "/images/animated/hologpu/spatial-hash.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=spatial-hash&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 233212,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:42:19.434Z"
+    },
+    "hologpu/wave": {
+      "image": "/images/animated/hologpu/wave.avif",
+      "still": "/images/animated/hologpu/wave.jpg",
+      "source": "http://127.0.0.1:5188/labs/hologpu/?effect=wave&hud=0&resolution=0.5",
+      "frames": 20,
+      "fps": 8,
+      "width": 480,
+      "height": 300,
+      "uniqueFrames": 20,
+      "bytes": 75466,
+      "settings": {
+        "pointer": "one circular drag",
+        "input": "animated canvas or text where applicable",
+        "errors": [],
+        "parameterScrub": "progress, light position, or primitive workload where applicable"
+      },
+      "capturedAt": "2026-10-14T01:36:16.593Z"
+    }
+  }
+}

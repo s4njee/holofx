@@ -1,0 +1,1 @@
+export{t as default}from"./trail-BqgaGaH5.js";

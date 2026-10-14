@@ -1,0 +1,1 @@
+export{t as default}from"./life-Ct6mx23i.js";

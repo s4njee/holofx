@@ -1,0 +1,1 @@
+import{t as e}from"./fluid-obstacles-D6ToffAS.js";export{e as default};

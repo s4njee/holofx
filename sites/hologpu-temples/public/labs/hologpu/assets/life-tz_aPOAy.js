@@ -1,0 +1,1 @@
+import{t as e}from"./life-DGmLU5QL.js";export{e as default};

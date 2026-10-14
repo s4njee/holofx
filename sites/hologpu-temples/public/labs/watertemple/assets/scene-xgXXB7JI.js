@@ -1,0 +1,1 @@
+export{t as default}from"./scene-bJTn4WNc.js";

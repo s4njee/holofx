@@ -1,0 +1,1 @@
+import{t as e}from"./meta-BlO8x0i7.js";import{t}from"./material-DJAQOYnw.js";var n=t(e,`bioluminescent-currents`);export{n as effect};

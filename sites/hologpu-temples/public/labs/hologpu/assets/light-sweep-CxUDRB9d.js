@@ -1,0 +1,15 @@
+import{n as e,t}from"./effect-DJnwN9gs.js";import{a as n,n as r}from"./filters-C6g91LiE.js";import{n as i}from"./common-DDMx69ab.js";var a=`
+fn effect(uv:vec2f)->vec4f {
+  var progress=params.progress;
+  if(progress<0.0) {progress=clamp(frame.time/params.duration,0.0,1.0);}
+  if(frame.reducedMotion>0.5) {progress=1.0;}
+  // A settled sheen is invisible: a Gaussian's tails must not linger at the edges.
+  if(progress<=0.0 || progress>=1.0) {return vec4f(0);}
+  let direction=vec2f(cos(params.angle),sin(params.angle));
+  let span=dot(abs(direction),vec2f(0.5))+params.width*4.0;
+  let distance=dot(uv-0.5,direction)-mix(-span,span,progress);
+  let band=exp(-0.5*distance*distance/(params.width*params.width));
+  let envelope=smoothstep(0.0,0.08,progress)*(1.0-smoothstep(0.92,1.0,progress));
+  let alpha=clamp(band*envelope*params.intensity*params.tint.a*sample_image(uv).a,0.0,1.0);
+  return vec4f(params.tint.rgb*alpha,alpha);
+}`,o=e({id:`light-sweep`,budget:{expectedMs:.3,referenceSize:[640,400]},title:`Soft specular light sweep`,family:`procedural`,tags:[`background`,`sheen`,`progress`,`css`,`image`],inputs:[`time`,`css`,`image`],params:{progress:{...i(-1,-1,1,`Use -1 for the once-on-load sweep; explicit 0…1 progress overrides the clock.`,`Motion`),css:!0},duration:{...i(1.2,.1,10,`Duration of the automatic sweep; use 1 for a normalized timeline.`,`Motion`),unit:`s`},width:i(.08,.01,.25,`Gaussian band standard deviation in normalized host coordinates.`,`Light`),angle:{...i(-.35,-3.14,3.14,`Band travel angle in radians.`,`Light`),unit:`rad`},intensity:{...i(.22,0,1,`Peak sheen opacity.`,`Light`),css:!0},tint:{type:`color`,default:`#ffffff`,css:!0,group:`Palette`,description:`Sheen colour, parsed to linear RGB.`}},presets:{pearl:{tint:`#e7edff`,width:.1,intensity:.2},warm:{tint:`#ffe3bc`,width:.065,intensity:.25},timeline:{progress:-1,duration:1}},quality:{resolutionScale:[.25,1]},reducedMotion:{time:1.2},fallback:`transparent`,poster:new URL(`/labs/hologpu/assets/poster-C0Bua_cR.png`,``+import.meta.url).href,wgsl:a}),s=t({...o,async create(e){let t=e.device.createTexture({label:`light-sweep-opaque-mask`,size:[1,1],format:`rgba8unorm`,usage:GPUTextureUsage.TEXTURE_BINDING|GPUTextureUsage.COPY_DST});e.device.queue.writeTexture({texture:t},new Uint8Array([255,255,255,255]),{bytesPerRow:4},[1,1]);let i={texture:t,width:1,height:1,format:`rgba8unorm`,kind:`float`};try{let o=await r(e,a,`hgpu-light-sweep`),s=i,c=n(e,o,s),l=!1,u,d=t=>{let n=e.params.values.progress;return Math.max(0,Math.min(1,n<0?t/e.params.values.duration:n))};return{resize(){},update(){},reset(){u=void 0},shouldRender(e){return u===void 0||d(e.time)!==u},render(t,r,a){let l=e.inputs?.get(`image`)??i;(l.texture!==s.texture||l.mipLevel!==s.mipLevel||l.arrayLayer!==s.arrayLayer)&&(s=l,c=n(e,o,s)),o.draw(r,a,[c]),u=d(t.time)},dispose(){l||(l=!0,o.dispose(),t.destroy())},sources:{fragment:o.source},diagnostics:o.diagnostics,memory(){return{textureBytes:l?0:4,bufferBytes:0}}}}catch(e){throw t.destroy(),e}}});export{s as t};

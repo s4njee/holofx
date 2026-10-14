@@ -1,0 +1,625 @@
+{
+  "required": 100,
+  "verified": 100,
+  "items": {
+    "watertemple/hello": {
+      "maxDifference": 14.55833333333343,
+      "visibleChange": 0.7717592592592593,
+      "brightness": 179.59791666666655,
+      "bytes": 48919
+    },
+    "watertemple/depth-absorption": {
+      "maxDifference": 8.612268518518722,
+      "visibleChange": 0.3840277777777778,
+      "brightness": 128.18865740740745,
+      "bytes": 22787
+    },
+    "watertemple/detail-normals": {
+      "maxDifference": 1.9388888888888907,
+      "visibleChange": 0.1550925925925926,
+      "brightness": 163.03124999999983,
+      "bytes": 133323
+    },
+    "watertemple/flow-map": {
+      "maxDifference": 4.782870370370453,
+      "visibleChange": 0.3277777777777778,
+      "brightness": 98.70856481481472,
+      "bytes": 375749
+    },
+    "watertemple/fresnel-sky": {
+      "maxDifference": 21.005324074074107,
+      "visibleChange": 0.5006944444444444,
+      "brightness": 167.950925925927,
+      "bytes": 33126
+    },
+    "watertemple/hdr-bloom": {
+      "maxDifference": 32.71527777777792,
+      "visibleChange": 0.8782407407407408,
+      "brightness": 79.64930555555544,
+      "bytes": 320602
+    },
+    "watertemple/reflections": {
+      "maxDifference": 36.59027777777768,
+      "visibleChange": 0.8861111111111111,
+      "brightness": 160.91412037036903,
+      "bytes": 81020
+    },
+    "watertemple/refraction": {
+      "maxDifference": 9.847685185185309,
+      "visibleChange": 0.5729166666666666,
+      "brightness": 147.74675925925973,
+      "bytes": 127996
+    },
+    "watertemple/shore-foam": {
+      "maxDifference": 12.85092592592599,
+      "visibleChange": 0.6263888888888889,
+      "brightness": 144.17106481481466,
+      "bytes": 52639
+    },
+    "watertemple/sun-glint": {
+      "maxDifference": 22.473611111111076,
+      "visibleChange": 0.48842592592592593,
+      "brightness": 166.4391203703708,
+      "bytes": 53536
+    },
+    "watertemple/crest-sss": {
+      "maxDifference": 49.94606481481467,
+      "visibleChange": 0.5282407407407408,
+      "brightness": 148.06087962962903,
+      "bytes": 62720
+    },
+    "watertemple/ink-wash": {
+      "maxDifference": 8.439351851852013,
+      "visibleChange": 0.45208333333333334,
+      "brightness": 229.21111111110656,
+      "bytes": 15613
+    },
+    "watertemple/wave-divider": {
+      "maxDifference": 14.860185185185284,
+      "visibleChange": 0.3476851851851852,
+      "brightness": 230.79652777776718,
+      "bytes": 21035
+    },
+    "watertemple/mist": {
+      "maxDifference": 5.666666666666719,
+      "visibleChange": 0.43472222222222223,
+      "brightness": 253.41782407406504,
+      "bytes": 5480
+    },
+    "watertemple/pool-floor": {
+      "maxDifference": 14.628240740740878,
+      "visibleChange": 0.7881944444444444,
+      "brightness": 134.31296296296307,
+      "bytes": 207823
+    },
+    "watertemple/caustics": {
+      "maxDifference": 54.12986111111097,
+      "visibleChange": 0.9523148148148148,
+      "brightness": 136.74953703703721,
+      "bytes": 241629
+    },
+    "watertemple/puddles": {
+      "maxDifference": 21.969675925926182,
+      "visibleChange": 0.8435185185185186,
+      "brightness": 68.09328703703682,
+      "bytes": 85290
+    },
+    "watertemple/rain-glass": {
+      "maxDifference": 3.074305555555611,
+      "visibleChange": 0.21157407407407408,
+      "brightness": 114.19421296296288,
+      "bytes": 91872
+    },
+    "watertemple/toon-water": {
+      "maxDifference": 8.248379629629733,
+      "visibleChange": 0.5043981481481481,
+      "brightness": 165.31041666666695,
+      "bytes": 191509
+    },
+    "watertemple/underwater": {
+      "maxDifference": 10.639351851851952,
+      "visibleChange": 0.7307870370370371,
+      "brightness": 136.8254629629628,
+      "bytes": 15535
+    },
+    "watertemple/media-distortion": {
+      "maxDifference": 8.928935185185308,
+      "visibleChange": 0.5233796296296296,
+      "brightness": 131.29097222222288,
+      "bytes": 113998
+    },
+    "watertemple/pool-3d": {
+      "maxDifference": 23.834259259259692,
+      "visibleChange": 0.5504629629629629,
+      "brightness": 192.129629629627,
+      "bytes": 86717
+    },
+    "watertemple/ripples": {
+      "maxDifference": 2.6761574074074588,
+      "visibleChange": 0.16574074074074074,
+      "brightness": 148.08402777777783,
+      "bytes": 91546
+    },
+    "watertemple/ripple-caustics": {
+      "maxDifference": 6.304861111111209,
+      "visibleChange": 0.3900462962962963,
+      "brightness": 134.09629629629637,
+      "bytes": 113943
+    },
+    "watertemple/ripple-dom": {
+      "maxDifference": 11.114351851852192,
+      "visibleChange": 0.25462962962962965,
+      "brightness": 165.99027777777644,
+      "bytes": 135122
+    },
+    "watertemple/ripple-reactive": {
+      "maxDifference": 7.199768518518641,
+      "visibleChange": 0.4773148148148148,
+      "brightness": 148.1185185185183,
+      "bytes": 151592
+    },
+    "watertemple/aurora": {
+      "maxDifference": 32.06481481481488,
+      "visibleChange": 0.4354166666666667,
+      "brightness": 60.3761574074065,
+      "bytes": 50787
+    },
+    "watertemple/bioluminescent-currents": {
+      "maxDifference": 20.882638888889204,
+      "visibleChange": 0.2423611111111111,
+      "brightness": 54.062499999999446,
+      "bytes": 25548
+    },
+    "watertemple/dichroic-glass": {
+      "maxDifference": 24.910185185185604,
+      "visibleChange": 0.4335648148148148,
+      "brightness": 67.47361111111147,
+      "bytes": 36188
+    },
+    "watertemple/eclipse-halos": {
+      "maxDifference": 22.241203703704088,
+      "visibleChange": 0.25069444444444444,
+      "brightness": 54.34652777777996,
+      "bytes": 22943
+    },
+    "watertemple/fluid-warp": {
+      "maxDifference": 28.094444444444637,
+      "visibleChange": 0.8173611111111111,
+      "brightness": 133.51435185185213,
+      "bytes": 135162
+    },
+    "watertemple/game-of-life": {
+      "maxDifference": 59.128009259258725,
+      "visibleChange": 0.8747685185185186,
+      "brightness": 50.11504629629624,
+      "bytes": 129231
+    },
+    "watertemple/fluid-dye": {
+      "maxDifference": 23.171990740740934,
+      "visibleChange": 0.5263888888888889,
+      "brightness": 44.839120370370125,
+      "bytes": 96297
+    },
+    "watertemple/fluid-3d": {
+      "maxDifference": 4.296064814814864,
+      "visibleChange": 0.20300925925925925,
+      "brightness": 79.39606481481496,
+      "bytes": 29230
+    },
+    "watertemple/ink-water": {
+      "maxDifference": 12.820370370370473,
+      "visibleChange": 0.2761574074074074,
+      "brightness": 224.22870370370353,
+      "bytes": 15773
+    },
+    "watertemple/ink-orbit": {
+      "maxDifference": 46.39421296296239,
+      "visibleChange": 0.6136574074074074,
+      "brightness": 88.38217592592558,
+      "bytes": 112787
+    },
+    "watertemple/liquid-chrome": {
+      "maxDifference": 37.103472222221576,
+      "visibleChange": 0.47199074074074077,
+      "brightness": 60.57361111111113,
+      "bytes": 109058
+    },
+    "watertemple/neon-calligraphy": {
+      "maxDifference": 23.475462962963338,
+      "visibleChange": 0.29444444444444445,
+      "brightness": 53.271064814816,
+      "bytes": 34453
+    },
+    "watertemple/neon-mycelium": {
+      "maxDifference": 9.569907407407571,
+      "visibleChange": 0.5456018518518518,
+      "brightness": 24.045370370370648,
+      "bytes": 61175
+    },
+    "watertemple/shallow-water": {
+      "maxDifference": 29.375462962963045,
+      "visibleChange": 0.48680555555555555,
+      "brightness": 166.94629629629605,
+      "bytes": 149683
+    },
+    "watertemple/silk-embers": {
+      "maxDifference": 22.12222222222257,
+      "visibleChange": 0.27152777777777776,
+      "brightness": 52.154861111111934,
+      "bytes": 33901
+    },
+    "watertemple/fluid-obstacles": {
+      "maxDifference": 31.761342592592854,
+      "visibleChange": 0.6905092592592592,
+      "brightness": 54.0462962962956,
+      "bytes": 104153
+    },
+    "lighttemple/shadow-map-pcf": {
+      "maxDifference": 31.33009259259182,
+      "visibleChange": 0.8152777777777778,
+      "brightness": 163.86967592592723,
+      "bytes": 41810
+    },
+    "lighttemple/studio-ibl": {
+      "maxDifference": 51.973611111111104,
+      "visibleChange": 0.9983796296296297,
+      "brightness": 49.09699074074127,
+      "bytes": 24397
+    },
+    "lighttemple/embossed-card": {
+      "maxDifference": 20.553240740740872,
+      "visibleChange": 0.7368055555555556,
+      "brightness": 107.17847222222228,
+      "bytes": 41173
+    },
+    "lighttemple/glass-panels": {
+      "maxDifference": 16.77777777777815,
+      "visibleChange": 0.6912037037037037,
+      "brightness": 123.60925925925916,
+      "bytes": 36216
+    },
+    "lighttemple/radiance-cascades": {
+      "maxDifference": 30.290740740740834,
+      "visibleChange": 0.856712962962963,
+      "brightness": 91.38472222222211,
+      "bytes": 16982
+    },
+    "lighttemple/long-shadows": {
+      "maxDifference": 10.025925925926002,
+      "visibleChange": 0.4960648148148148,
+      "brightness": 161.38726851852044,
+      "bytes": 24301
+    },
+    "lighttemple/lit-type": {
+      "maxDifference": 22.350925925926422,
+      "visibleChange": 0.9180555555555555,
+      "brightness": 177.2000000000004,
+      "bytes": 61234
+    },
+    "hologpu/mipgen": {
+      "maxDifference": 31.74490740740741,
+      "visibleChange": 0.4930555555555556,
+      "brightness": 124.57777777777856,
+      "bytes": 38293
+    },
+    "hologpu/radiance-cascades": {
+      "maxDifference": 34.63819444444451,
+      "visibleChange": 0.9537037037037037,
+      "brightness": 111.16712962962947,
+      "bytes": 27532
+    },
+    "hologpu/color-grade": {
+      "maxDifference": 32.47291666666651,
+      "visibleChange": 0.4101851851851852,
+      "brightness": 53.00324074073913,
+      "bytes": 28899
+    },
+    "hologpu/audio-spectrum": {
+      "maxDifference": 13.464583333333428,
+      "visibleChange": 0.15856481481481483,
+      "brightness": 31.92708333333486,
+      "bytes": 23374
+    },
+    "hologpu/boids": {
+      "maxDifference": 112.67800925925854,
+      "visibleChange": 0.7409722222222223,
+      "brightness": 137.38680555555507,
+      "bytes": 33690
+    },
+    "hologpu/smoke": {
+      "maxDifference": 74.65370370370329,
+      "visibleChange": 0.8951388888888889,
+      "brightness": 71.58425925925954,
+      "bytes": 29309
+    },
+    "hologpu/scroll-scene": {
+      "maxDifference": 28.46458333333343,
+      "visibleChange": 0.32199074074074074,
+      "brightness": 57.42106481481444,
+      "bytes": 18859
+    },
+    "hologpu/lattice-boltzmann": {
+      "maxDifference": 4.206712962963068,
+      "visibleChange": 0.2537037037037037,
+      "brightness": 101.3157407407406,
+      "bytes": 8860
+    },
+    "hologpu/caustics": {
+      "maxDifference": 61.95648148148139,
+      "visibleChange": 0.9613425925925926,
+      "brightness": 131.8101851851855,
+      "bytes": 99584
+    },
+    "hologpu/backdrop-glass": {
+      "maxDifference": 29.390740740741066,
+      "visibleChange": 0.3993055555555556,
+      "brightness": 57.79884259259392,
+      "bytes": 27452
+    },
+    "hologpu/fluid-obstacles": {
+      "maxDifference": 18.241203703703828,
+      "visibleChange": 0.3212962962962963,
+      "brightness": 42.69189814814915,
+      "bytes": 20134
+    },
+    "hologpu/attractors": {
+      "maxDifference": 58.789583333333084,
+      "visibleChange": 0.6247685185185186,
+      "brightness": 86.46898148148264,
+      "bytes": 56625
+    },
+    "hologpu/blur": {
+      "maxDifference": 31.659259259259535,
+      "visibleChange": 0.4775462962962963,
+      "brightness": 60.31018518518625,
+      "bytes": 21911
+    },
+    "hologpu/splats": {
+      "maxDifference": 6.835879629629662,
+      "visibleChange": 0.19189814814814815,
+      "brightness": 56.49768518518265,
+      "bytes": 11006
+    },
+    "hologpu/reaction-diffusion": {
+      "maxDifference": 12.194444444444509,
+      "visibleChange": 0.33449074074074076,
+      "brightness": 50.02824074074167,
+      "bytes": 26743
+    },
+    "hologpu/halftone-ascii": {
+      "maxDifference": 7.301620370370438,
+      "visibleChange": 0.25046296296296294,
+      "brightness": 30.99351851851889,
+      "bytes": 32271
+    },
+    "hologpu/bloom": {
+      "maxDifference": 28.473611111111513,
+      "visibleChange": 0.4048611111111111,
+      "brightness": 58.64259259259301,
+      "bytes": 25530
+    },
+    "hologpu/image-hover": {
+      "maxDifference": 78.03472222222194,
+      "visibleChange": 0.9916666666666667,
+      "brightness": 70.40393518518539,
+      "bytes": 36742
+    },
+    "hologpu/emitters": {
+      "maxDifference": 39.30624999999994,
+      "visibleChange": 0.7148148148148148,
+      "brightness": 70.6365740740742,
+      "bytes": 91378
+    },
+    "hologpu/fractal": {
+      "maxDifference": 68.40509259259264,
+      "visibleChange": 0.9298611111111111,
+      "brightness": 110.12916666666663,
+      "bytes": 84093
+    },
+    "hologpu/jump-flood": {
+      "maxDifference": 31.227777777777945,
+      "visibleChange": 0.6465277777777778,
+      "brightness": 42.69282407407479,
+      "bytes": 24254
+    },
+    "hologpu/lenia": {
+      "maxDifference": 19.96365740740753,
+      "visibleChange": 0.7548611111111111,
+      "brightness": 83.88703703703715,
+      "bytes": 82231
+    },
+    "hologpu/lens": {
+      "maxDifference": 24.895370370370923,
+      "visibleChange": 0.38981481481481484,
+      "brightness": 51.21319444444449,
+      "bytes": 103734
+    },
+    "hologpu/life": {
+      "maxDifference": 18.32060185185201,
+      "visibleChange": 0.7932870370370371,
+      "brightness": 41.74120370370372,
+      "bytes": 253035
+    },
+    "hologpu/falling-sand": {
+      "maxDifference": 27.028472222222312,
+      "visibleChange": 0.3784722222222222,
+      "brightness": 67.20486111111092,
+      "bytes": 32768
+    },
+    "hologpu/mpm": {
+      "maxDifference": 24.79768518518529,
+      "visibleChange": 0.3347222222222222,
+      "brightness": 50.556249999999366,
+      "bytes": 41560
+    },
+    "hologpu/sdf-2d": {
+      "maxDifference": 13.069907407407532,
+      "visibleChange": 0.1625,
+      "brightness": 65.37291666666556,
+      "bytes": 10593
+    },
+    "hologpu/flow-particles": {
+      "maxDifference": 28.277083333333923,
+      "visibleChange": 0.5743055555555555,
+      "brightness": 179.99421296296407,
+      "bytes": 51270
+    },
+    "hologpu/voronoi": {
+      "maxDifference": 34.799768518518604,
+      "visibleChange": 0.8881944444444444,
+      "brightness": 138.3458333333333,
+      "bytes": 121812
+    },
+    "hologpu/noise-lab": {
+      "maxDifference": 12.29884259259267,
+      "visibleChange": 0.7824074074074074,
+      "brightness": 138.02777777777786,
+      "bytes": 17154
+    },
+    "hologpu/displace": {
+      "maxDifference": 33.91574074074064,
+      "visibleChange": 0.4666666666666667,
+      "brightness": 60.880555555556214,
+      "bytes": 45238
+    },
+    "hologpu/gradient-oklch": {
+      "maxDifference": 24.235416666666914,
+      "visibleChange": 0.7743055555555556,
+      "brightness": 173.63518518518566,
+      "bytes": 4929
+    },
+    "hologpu/dither": {
+      "maxDifference": 32.35300925925915,
+      "visibleChange": 0.39652777777777776,
+      "brightness": 35.52083333333335,
+      "bytes": 142636
+    },
+    "hologpu/physarum": {
+      "maxDifference": 31.531944444444623,
+      "visibleChange": 0.580787037037037,
+      "brightness": 81.24583333333358,
+      "bytes": 19855
+    },
+    "hologpu/ink": {
+      "maxDifference": 20.224537037037184,
+      "visibleChange": 0.3351851851851852,
+      "brightness": 186.03009259259164,
+      "bytes": 12528
+    },
+    "hologpu/pbf-fluid": {
+      "maxDifference": 6.511574074074079,
+      "visibleChange": 0.18078703703703702,
+      "brightness": 47.43935185185201,
+      "bytes": 33284
+    },
+    "hologpu/prefix-sum": {
+      "maxDifference": 29.872453703703673,
+      "visibleChange": 0.9631944444444445,
+      "brightness": 108.41342592592584,
+      "bytes": 21419
+    },
+    "hologpu/path-tracer": {
+      "maxDifference": 4.441898148148195,
+      "visibleChange": 0.1849537037037037,
+      "brightness": 156.86319444444445,
+      "bytes": 31615
+    },
+    "hologpu/fluid": {
+      "maxDifference": 29.700231481481616,
+      "visibleChange": 0.3974537037037037,
+      "brightness": 48.3629629629641,
+      "bytes": 20178
+    },
+    "hologpu/border-energy": {
+      "maxDifference": 2.971064814814844,
+      "visibleChange": 0.13564814814814816,
+      "brightness": 37.42337962962953,
+      "bytes": 6779
+    },
+    "hologpu/shadows-2d": {
+      "maxDifference": 103.45416666666628,
+      "visibleChange": 0.9449074074074074,
+      "brightness": 133.1425925925925,
+      "bytes": 40851
+    },
+    "hologpu/spotlight": {
+      "maxDifference": 65.8168981481468,
+      "visibleChange": 0.6233796296296297,
+      "brightness": 86.74212962962953,
+      "bytes": 20300
+    },
+    "hologpu/edges": {
+      "maxDifference": 35.48564814814811,
+      "visibleChange": 0.30833333333333335,
+      "brightness": 18.08680555555558,
+      "bytes": 33042
+    },
+    "hologpu/raymarch": {
+      "maxDifference": 11.993287037037081,
+      "visibleChange": 0.40185185185185185,
+      "brightness": 95.29907407407364,
+      "bytes": 11516
+    },
+    "hologpu/sort": {
+      "maxDifference": 17.286574074074117,
+      "visibleChange": 0.8379629629629629,
+      "brightness": 136.77384259259256,
+      "bytes": 155160
+    },
+    "hologpu/morph-particles": {
+      "maxDifference": 35.62662037037016,
+      "visibleChange": 0.8636574074074074,
+      "brightness": 63.930092592592594,
+      "bytes": 18761
+    },
+    "hologpu/text-dissolve": {
+      "maxDifference": 5.162500000000107,
+      "visibleChange": 0.33773148148148147,
+      "brightness": 37.532407407406566,
+      "bytes": 65455
+    },
+    "hologpu/n-body": {
+      "maxDifference": 68.91342592592571,
+      "visibleChange": 0.8861111111111111,
+      "brightness": 74.42013888888997,
+      "bytes": 113186
+    },
+    "hologpu/truchet": {
+      "maxDifference": 28.196527777777884,
+      "visibleChange": 0.8680555555555556,
+      "brightness": 93.71018518518537,
+      "bytes": 39803
+    },
+    "hologpu/spatial-hash": {
+      "maxDifference": 15.459722222222299,
+      "visibleChange": 0.8240740740740741,
+      "brightness": 138.21967592592574,
+      "bytes": 233212
+    },
+    "hologpu/wave": {
+      "maxDifference": 18.55949074074092,
+      "visibleChange": 0.7712962962962963,
+      "brightness": 134.23888888888945,
+      "bytes": 75466
+    }
+  },
+  "verifiedAt": "2026-10-14T01:45:17.185805+00:00",
+  "sequenceChecks": {
+    "frames": 20,
+    "fps": 8,
+    "width": 480,
+    "height": 300,
+    "repeat": "infinite",
+    "decoder": "avifdec / dav1d, every frame"
+  },
+  "browserChecks": [
+    "No offscreen AVIF requests on initial gallery load",
+    "Animated card playback in Chromium for HoloGPU, Water Temple and Light Temple",
+    "Reduced motion switches playing clips to stable JPEG first frames",
+    "Offscreen images drop their source",
+    "Restoring motion selects animated AVIF again",
+    "Mobile gallery fits 390 px viewport",
+    "AVIF request failure falls back to a decoded still",
+    "All 100 originally text-only ids map to AVIF and still assets"
+  ]
+}

@@ -1,0 +1,1 @@
+import{t as e}from"./lenia-AcOSLDKp.js";export{e as default};

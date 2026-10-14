@@ -1,0 +1,1 @@
+export{t as default}from"./paper-3zxp3Ela.js";

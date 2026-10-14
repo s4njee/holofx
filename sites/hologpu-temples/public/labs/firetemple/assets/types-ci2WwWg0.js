@@ -1,0 +1,1 @@
+function e(e){return e}function t(e){let t={};for(let[n,r]of Object.entries(e))t[n]=r.type===`color`?[...r.default]:r.default;return t}export{e as n,t};

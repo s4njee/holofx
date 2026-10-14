@@ -1,0 +1,1 @@
+export{t as default}from"./color-DJti51Mr.js";

@@ -1,0 +1,1 @@
+export{t as default}from"./scene-Byi3Sw6N.js";

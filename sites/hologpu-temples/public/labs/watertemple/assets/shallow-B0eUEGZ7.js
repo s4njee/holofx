@@ -1,0 +1,1 @@
+export{t as default}from"./shallow-B9ZyvJrI.js";

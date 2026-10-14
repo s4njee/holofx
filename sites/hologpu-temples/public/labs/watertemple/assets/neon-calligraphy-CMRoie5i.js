@@ -1,0 +1,1 @@
+import{t as e}from"./meta-BGbRfPAX.js";import{t}from"./material-DJAQOYnw.js";var n=t(e,`neon-calligraphy`);export{n as effect};

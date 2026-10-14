@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#11141b" />
+    <title>HoloGPU · Effects research</title>
+    <script type="module" crossorigin src="/labs/hologpu/assets/index-CFOwy5gm.js"></script>
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/measure-6bLV0fmp.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/effect-DJnwN9gs.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/compute-BDNIjA0G.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/mipgen-Dlud2Fhy.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/runtime-BrEJMgBn.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/filters-C6g91LiE.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/feedback-CkBwRjOP.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/common-CckXpC73.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/material-ball-dULhak70.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/hash-7TJvDAm4.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/particles-CPPRki3G.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/common-DBHpLS-b.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/backdrop-glass-DncATR7O.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/noise-Cg4SSfI6.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/render-Cq8Ng6Vq.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/basic-C5Zqg9mj.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/attractors-CNiXSQEh.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/common-DDMx69ab.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/common-DrxnLO2g.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/audio-spectrum-C3DLBnEK.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/aurora-veil-mSEVMf_G.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/bloom-BJQ0v_Ej.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/blur-BcoSPB2s.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/prefix-sum-CFbO6ILc.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/sort-G3xc7HKC.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/spatial-hash-CxtsiEN_.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/program-Bnoq7CVD.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/boids--iwJ8kgs.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/card-geometry-Nu_q2mLt.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/border-energy-CazHeeGO.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/bright-pass-DuPDy0gq.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/caustics-D3eS1cs8.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/color-grade-C3dVFrV-.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/constellation-CkbQdHgb.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/depth-parallax-MBmkMJRm.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/displace-CieL_guj.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/dither-CPVrJQIs.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/sdf-DK6WxqMj.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/dot-matrix-field-COnUb6kY.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/edges-B7pNCRol.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/emitters-BI1138DC.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/grid-BwN36iYK.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/falling-sand-1t5KnF5x.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/flow-particles-Oqzo34kw.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/params-3V1aTucM.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/fluid-CFfk1Rgk.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/fluid-obstacles-D6ToffAS.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/fractal-CfGmR_O4.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/glass-CF7gMLlB.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/gradient-oklch-crgyOdMS.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/grain-overlay-BdbXGNpG.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/grid-horizon-FudORcKN.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/halftone-ascii-DjOn77Jt.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/common-BLsYxTJE.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/heading-reveal-CkF_EQoG.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/hover-lift-shadow-ZLJzsOeM.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/image-hover-BK86c6hd.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/ink-4FoF00Gs.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/instances-CbIrLKsu.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/distance-fields--Vmiyl7B.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/program-C04-vmCk.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/jump-flood-DPOyqdKH.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/lattice-boltzmann-C6f5UI7L.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/lenia-AcOSLDKp.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/lens-B4soW2aP.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/life-DGmLU5QL.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/light-sweep-CxUDRB9d.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/masked-composite-BCxGtD5N.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/mipgen-BL4cSLzO.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/morph-particles-Ds-XVy66.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/mpm-UeX6EPlA.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/n-body-nHnf4lYc.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/noise-lab-Dfb12bkX.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/panel-refraction-nT0TKd1J.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/particle-drift-DDqpgtrc.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/path-tracer-CqOn4h8O.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/pbf-fluid-C5kLx-GV.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/physarum-E-dx4H89.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/pointer-map-DoXupgm4.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/demo-C_Cm9CqE.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/prefix-sum-DyMCW440.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/press-ripple-Dh_gyAq6.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/product-sheen-KIcpHuQt.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/progress-line-C8R2pCfK.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/radiance-cascades-Na-3_i74.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/raymarch-F0NnqBgL.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/reaction-diffusion-DhGCqqE-.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/scroll-scene-Cp1FICYW.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/sdf-2d-DJQg10W2.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/section-wipe-BuFJXdPm.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/shadows-2d-aZ6G7_vC.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/smoke-6Yw3eOgC.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/sort-wE0SG859.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/spatial-hash-CsjpFJhN.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/splats-CL_mRn-m.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/spotlight-DFWJFMBx.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/starfield-BA5I2Ir1.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/terrain-DnL6Sv4y.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/text-dissolve-BSpnGwqR.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/text-outline-glow-DTBhCG-Z.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/text-shimmer-B0NFWTTo.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/topographic-lines-Vqjahbqn.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/truchet-IEp6mDuC.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/voronoi-BmVnPQKC.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/wave-B5srx6dx.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/wave-divider-C-5VtWZE.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/dom-rects-BOzaqXnw.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/attach-DskW5D3O.js">
+    <link rel="stylesheet" crossorigin href="/labs/hologpu/assets/index-CGYn5tgH.css">
+    <link rel="stylesheet" crossorigin href="/labs/hologpu/assets/properties-keesvdIE.css">
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/">HOLOGPU <span>RESEARCH LAB</span></a>
+      <nav>
+        <a href="/launch.html">Signal launch page ↗</a> ·
+        <a href="/device-check.html">Device checks ↗</a> ·
+        <a href="/noir.html">Noir newspaper demo ↗</a> ·
+        <a href="/cards.html">Cards &amp; controls demo ↗</a> ·
+        <a href="/products.html">Product imagery demo ↗</a> ·
+        <a href="/transitions.html">Transitions &amp; dividers demo ↗</a> ·
+        <a href="/ambient.html">Ambient particles demo ↗</a> ·
+        <a href="/fluid-dom.html">DOM fluid demo ↗</a> ·
+        <a href="/fireworks-dom.html">DOM fireworks demo ↗</a> ·
+        <a href="/ink-paper.html">Invisible ink demo ↗</a> ·
+        <a href="/attractor-dom.html">DOM attractor demo ↗</a> ·
+        <a href="/lcd.html">LCD refraction demo ↗</a> · <a href="/m0.html">Foundations lab ↗</a>
+      </nav>
+    </header>
+    <main>
+      <aside class="browser">
+        <p class="eyebrow">01 / EFFECTS</p>
+        <h1>Effects research</h1>
+        <p class="muted">Fields, simulations, particles, filters and light.</p>
+        <input
+          id="search"
+          type="search"
+          placeholder="Search effects or techniques"
+          aria-label="Search effects"
+        /><label class="filter"
+          >Family<select id="family">
+            <option value="all">All families</option>
+          </select></label
+        >
+        <nav id="effects" aria-label="Effects"></nav>
+      </aside>
+      <section class="workspace">
+        <div class="stage-heading">
+          <div>
+            <p class="eyebrow">02 / FULL STAGE</p>
+            <h2 id="title">Loading…</h2>
+          </div>
+          <span id="tier">T1 / FRAGMENT</span>
+        </div>
+        <div id="stage">
+          <canvas id="canvas" aria-label="Effect preview"></canvas>
+          <p id="fallback" hidden></p>
+        </div>
+        <div class="transport">
+          <label
+            >Mode<select id="stage-mode">
+              <option value="full">Full</option>
+              <option value="compare">Compare</option>
+              <option value="in-page">In page</option>
+              <option value="grid">Grid</option>
+            </select></label
+          >
+          <button id="play">Pause</button><button id="step" title="Single step (.)">Step</button
+          ><button id="reset" title="Reset (r)">Reset</button
+          ><label>Seed <input id="seed" type="number" value="7" min="0" max="4294967295" /></label
+          ><label
+            >Resolution
+            <select id="resolution">
+              <option value="1">100%</option>
+              <option value="0.75">75%</option>
+              <option value="0.5">50%</option>
+              <option value="0.25">25%</option>
+            </select></label
+          ><label
+            >Time scale<select id="time-scale">
+              <option value="0.25">¼×</option>
+              <option value="0.5">½×</option>
+              <option value="1" selected>1×</option>
+              <option value="2">2×</option>
+            </select></label
+          ><label><input id="adaptive-quality" type="checkbox" />Adaptive quality</label
+          ><label><input id="motion" type="checkbox" />Reduced motion</label>
+          <button id="screenshot">Save PNG</button><button id="record">Record video</button
+          ><span id="capture-status" role="status"></span>
+        </div>
+        <div class="readout">
+          <p id="status" role="status" data-state="loading">Requesting WebGPU…</p>
+          <span id="meter">CPU encode —</span>
+        </div>
+        <section class="drawer">
+          <div role="tablist" aria-label="Research drawers">
+            <button role="tab" aria-selected="true" data-drawer="notes">Notes</button
+            ><button role="tab" aria-selected="false" data-drawer="source-panel">Source</button
+            ><button role="tab" aria-selected="false" data-drawer="passes">Passes</button
+            ><button role="tab" aria-selected="false" data-drawer="profiler">Profiler</button
+            ><button role="tab" aria-selected="false" data-drawer="capabilities">
+              Capabilities
+            </button>
+          </div>
+          <div id="notes" class="drawer-panel"></div>
+          <div id="source-panel" class="drawer-panel" hidden><pre id="source"></pre></div>
+          <div id="passes" class="drawer-panel" hidden></div>
+          <div id="profiler" class="drawer-panel" hidden></div>
+          <pre id="capabilities" class="drawer-panel" hidden></pre>
+        </section>
+      </section>
+      <aside class="inspector">
+        <p class="eyebrow">03 / PARAMETERS</p>
+        <label
+          >Preset<select id="presets">
+            <option value="">Defaults</option>
+          </select></label
+        >
+        <div id="effect-inputs" hidden></div>
+        <details id="media-inputs">
+          <summary>Input sources</summary>
+          <div id="media-input-controls"></div>
+        </details>
+        <div id="controls"></div>
+        <details id="compare-panel" open hidden>
+          <summary>Right parameters</summary>
+          <div id="compare-panel-controls"></div>
+        </details>
+        <details id="m5-tools" open>
+          <summary>Page conditions</summary>
+          <label
+            >Grid copies<select id="grid-count">
+              <option value="4">4</option>
+              <option value="6" selected>6</option>
+              <option value="12">12</option>
+              <option value="24">24</option>
+            </select></label
+          >
+          <label><input id="force-fallback" type="checkbox" />Force fallback</label>
+          <label
+            >Quality<select id="quality-tier">
+              <option value="auto">Automatic</option>
+              <option value="high" selected>High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select></label
+          >
+          <label><input id="overlay-mode" type="checkbox" />Fixed overlay experiment</label>
+          <button id="device-loss" type="button">Simulate device loss</button>
+          <button id="timeline-demo" type="button">Run timeline</button>
+          <button id="dom-audio" type="button">Start silent audio source</button>
+          <p id="m5-stage-status" role="status">Choose In page or Grid to study attached fields.</p>
+        </details>
+        <button id="defaults">Reset parameters</button>
+        <p class="muted">
+          Every control comes from the effect schema. Your state is saved in the URL.
+        </p>
+      </aside>
+    </main>
+    <footer>
+      Linear colour · Float targets · One shared device · CPU timing excludes GPU execution
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+import{t as e}from"./product-sheen-KIcpHuQt.js";export{e as default};

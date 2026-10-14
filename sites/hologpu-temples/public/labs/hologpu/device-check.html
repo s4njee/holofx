@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HoloGPU · Device check</title>
+    <style>body{color:#eee0d2;background:#17120f;max-width:1100px;margin:28px auto;padding:0 20px;font:15px Arial}a{color:#d99a63}button,input,textarea{font:inherit}button{margin:8px 8px 8px 0;padding:12px 18px}input{max-width:100%}#surfaces{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;display:grid}.sample{border:1px solid #866c56;border-radius:12px;height:180px;position:relative;overflow:hidden}.sample h2{margin:40px 16px;font-size:32px}.sample img{object-fit:cover;width:100%;height:100%}.sample[data-hgpu-state=ready] img{opacity:0}.sample svg{width:100%;height:100%}.sample[data-hgpu-state=ready] svg{visibility:hidden}textarea{box-sizing:border-box;color:#eee0d2;background:#211913;width:100%;min-height:260px}label{margin:20px 0 8px;display:block}#progress{accent-color:#d99a63;width:280px}</style>
+    <script type="module" crossorigin src="/labs/hologpu/assets/device-check-D8yJHk86.js"></script>
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/measure-6bLV0fmp.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/effect-DJnwN9gs.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/hash-7TJvDAm4.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/noise-Cg4SSfI6.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/aurora-veil-mSEVMf_G.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/filters-C6g91LiE.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/common-DDMx69ab.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/common-DrxnLO2g.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/card-geometry-Nu_q2mLt.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/border-energy-CazHeeGO.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/depth-parallax-MBmkMJRm.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/sdf-DK6WxqMj.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/dot-matrix-field-COnUb6kY.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/grain-overlay-BdbXGNpG.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/grid-horizon-FudORcKN.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/light-sweep-CxUDRB9d.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/spotlight-DFWJFMBx.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/common-BLsYxTJE.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/text-shimmer-B0NFWTTo.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/wave-divider-C-5VtWZE.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/compute-BDNIjA0G.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/mipgen-Dlud2Fhy.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/runtime-BrEJMgBn.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/dom-rects-BOzaqXnw.js">
+    <link rel="modulepreload" crossorigin href="/labs/hologpu/assets/attach-DskW5D3O.js">
+  </head>
+  <body>
+    <h1>Device check</h1>
+    <p>
+      Run this page in the browser being tested. It checks the launch effects, settled motion,
+      canvas output, cleanup, and first-frame completion. The report stays in this browser until you
+      download it.
+    </p>
+    <p>
+      <a href="/launch.html">View the launch page ↗</a> ·
+      <a href="?fallback=1">Force native fallbacks</a>
+    </p>
+    <label for="device">Device and browser version</label
+    ><input id="device" placeholder="e.g. iPhone 16, iOS 26, Safari 26" size="48" />
+    <div>
+      <button id="run">Run checks</button><button id="save" disabled>Download report</button
+      ><button id="native">Test native button</button><output id="clicks">0</output>
+    </div>
+    <label for="progress">Test native slider</label
+    ><input id="progress" type="range" min="0" max="100" value="50" /><output id="value">50</output>
+    <p id="status" role="status">Ready to run.</p>
+    <div id="surfaces"></div>
+    <label for="report">Report</label><textarea id="report" readonly></textarea>
+  </body>
+</html>

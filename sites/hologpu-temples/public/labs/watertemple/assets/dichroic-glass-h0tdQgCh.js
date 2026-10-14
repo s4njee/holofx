@@ -1,0 +1,1 @@
+import{t as e}from"./meta-Bqdgh8Ez.js";import{t}from"./material-DJAQOYnw.js";var n=t(e,`dichroic-glass`);export{n as effect};

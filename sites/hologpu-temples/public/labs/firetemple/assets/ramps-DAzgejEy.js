@@ -1,0 +1,1 @@
+export{t as default}from"./ramps-Do2FIbUF.js";

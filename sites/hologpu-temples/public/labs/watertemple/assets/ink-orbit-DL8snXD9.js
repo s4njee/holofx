@@ -1,0 +1,1 @@
+export{r as effect}from"./ink-orbit-CKGQShui.js";

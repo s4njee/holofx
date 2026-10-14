@@ -1,0 +1,1 @@
+import{t as e}from"./demo-C_Cm9CqE.js";var t=e(`prefix-sum`,`Prefix sum and stream compaction`);export{t};

@@ -1,0 +1,1 @@
+export{t as default}from"./coals-BSy8ohdh.js";
