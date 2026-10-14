@@ -34,14 +34,14 @@ _Updated 2026-10-13 after M1. The review-time values this table originally held 
 | Tests | 21 vitest files, 73 Playwright specs | 41 vitest files on headless Dawn | 66 vitest files on headless Dawn | one Playwright smoke script |
 | Toolchain | pnpm 11, TS 6, Vite 8 | npm, TS 6, Vite 8 | npm, TS 6, Vite 8 | npm, TS 5.9, Vite 7, no lint or unit tests |
 
-The site (`sites/hologpu-temples/`) is a single marketing page with a searchable gallery of all 185 effects and an iframe dialog that loads each project's own gallery build. It has no install instructions, no code samples, no documentation and no per-effect URLs.
+The site (`site/`) is a single marketing page with a searchable gallery of all 185 effects and an iframe dialog that loads each project's own gallery build (built on demand by `scripts/build-labs.mjs`, not committed). It has no install instructions, no code samples, no documentation and no per-effect URLs.
 
-Four facts shape the rest of this document:
+Four facts shaped this work; M1 and M2 have since resolved two of them:
 
-- **There are three different effect contracts.** hologpu has `EffectDefinition` and `createEffect(canvas, def, options)`. firetemple and watertemple share `defineEffect({ meta, params, presets, create })` returning `{ resize, frame(time, encoder, target), destroy }`. lighttemple has a factory that returns `{ frame, resize?, dispose }` and declares parameters by calling a DOM-building panel. A user cannot learn one and use the others.
-- **firetemple and watertemple are one codebase copied twice.** About 40 files under `src/gpu`, `src/wgsl` and `src/shell` are byte-identical, and another 15 differ by 30 lines or fewer.
-- **The site consumes the projects by copying them.** `vendor/hologpu` and `vendor/lighttemple` are source snapshots, `public/labs/` is 1,440 committed build-output files (28 MB), `node_modules` is a tracked symlink to an absolute path on one machine, and the scripts reach into `../../..` for sibling repos and for hologpu's copy of TypeScript and Playwright.
-- **Every project's `plan.md` lists a published npm library as a non-goal**, and firetemple's also lists a shared package with watertemple as a non-goal (`firetemple/plan.md:15-18`, `watertemple/plan.md:14`, `hologpu/plan.md:38`). This backlog reverses both. Story 1.15 updates those plans so they stop contradicting it.
+- **There are three different effect contracts.** hologpu has `EffectDefinition` and `createEffect(canvas, def, options)`. firetemple and watertemple share `defineEffect({ meta, params, presets, create })` returning `{ resize, frame(time, encoder, target), destroy }`. lighttemple has a factory that returns `{ frame, resize?, dispose }` and declares parameters by calling a DOM-building panel. A user cannot learn one and use the others. _(M3 addresses this.)_
+- **firetemple and watertemple are one codebase copied twice.** About 40 files under `src/gpu`, `src/wgsl` and `src/shell` are byte-identical, and another 15 differ by 30 lines or fewer. _(M3, story 3.5, addresses this.)_
+- **The site used to consume the projects by copying them.** M2 removed this: the site imports the runtime from the `hologpu` submodule, reads metadata and posters from the submodules, builds the labs on demand into a git-ignored `public/labs/`, has its own dependencies and lockfile, and no longer reaches into `../../..`.
+- **Every project's `plan.md` listed a published npm library as a non-goal**, and firetemple's also listed a shared package with watertemple as a non-goal (`firetemple/plan.md:15-18`, `watertemple/plan.md:14`, `hologpu/plan.md:38`). This backlog reverses both; story 1.15 updated those plans.
 
 ## Decisions to make first
 
@@ -93,6 +93,8 @@ A submodule pins a commit that must exist on a remote. **Done 2026-10-13** for a
 
 ## M2. Build the superproject
 
+**M2 results (2026-10-13).** The superproject is built and its CI is green. The site moved to `site/` with fresh history; `vendor/` is gone and the site now consumes the submodules directly; the committed lab builds are replaced by `scripts/build-labs.mjs`; the root has `bootstrap`/`build`/`dev`/`check:links`; CI checks out the submodules, bootstraps, builds and link-checks; Dependabot bumps the pins; `CONTRIBUTING.md` documents the workflow. Verified locally and in CI: `npm run bootstrap`, `npm run build` (all four labs + catalogue + site) and `npm run check:links` from a clean checkout. `site/` is still plain JavaScript/Vite; the Astro move is 5.1.
+
 Target layout:
 
 ```
@@ -111,14 +113,14 @@ holofx/
 
 - [x] **2.1 `git init` holofx and create `s4njee/holofx`.** Keep it private until M1 is finished for all four. S. _Created private and pushed (it already had an initial commit). Still private: M1.10 (hologpu CI) is open._
 - [x] **2.2 Add the four submodules** at the top level, each tracking `main`. S, needs 1.10, 1.11, 1.13. _Added and pinned, then bumped to current `main` after the M1 pushes (`hologpu @ edaf9f6`, `firetemple @ 33e8501`, `watertemple @ 8f46393`, `lighttemple @ a8fbd91`)._
-- [ ] **2.3 Move the site to `site/` with fresh history.** The existing site repo's history is five generic commits carrying 22 MB of build output and the tracked `node_modules` symlink, so there is nothing worth preserving. Note that another process was committing to that repo during this review (animated-preview capture); let it finish and take its output across before moving. S, needs D6.
-- [ ] **2.4 Delete `site/vendor/`.** Point the `@mk7s/hologpu-core` alias in `vite.config.js` at `../hologpu/packages/core/src`, and later at the published package. The vendored copies currently match upstream apart from test files, so this is safe today and gets less safe every week. S.
-- [ ] **2.5 Replace committed lab builds with a build step.** `scripts/build-labs.mjs` builds each submodule with `--base /labs/<project>/` into a git-ignored `site/public/labs/`. Remove the 1,440 tracked files. The current build also ships things it should not, such as `labs/watertemple/output/` and `labs/watertemple/scripts/`; fix that at the source. M, needs D5.
-- [ ] **2.6 Give the site its own dependencies.** Remove the `node_modules` symlink; add TypeScript and Playwright as real devDependencies; remove every `../../..` path from `import-catalogues.mjs` and `capture-animated-previews.cjs`. S.
-- [ ] **2.7 Add root scripts**: `bootstrap` (init submodules, install each), `build` (labs, catalogue, site), `dev`. One command from a fresh clone to a running site. M.
-- [ ] **2.8 Add superproject CI**: checkout with `submodules: recursive`, bootstrap, build, link-check. M.
-- [ ] **2.9 Automate submodule bumps.** Dependabot's `gitsubmodule` ecosystem opens a PR when a submodule's `main` moves; CI on that PR is the integration test. S.
-- [ ] **2.10 Write `CONTRIBUTING.md`** covering the submodule workflow: where to make a change, how to bump a pin, how to work on a submodule branch from inside the superproject. S.
+- [x] **2.3 Move the site to `site/` with fresh history.** The existing site repo's history is five generic commits carrying 22 MB of build output and the tracked `node_modules` symlink, so there is nothing worth preserving. Note that another process was committing to that repo during this review (animated-preview capture); let it finish and take its output across before moving. S, needs D6. _Moved to `site/`; the site's own history and scratch runtime were dropped. The animated-preview commit was finished before the move and came across._
+- [x] **2.4 Delete `site/vendor/`.** Point the `@mk7s/hologpu-core` alias in `vite.config.js` at `../hologpu/packages/core/src`, and later at the published package. The vendored copies currently match upstream apart from test files, so this is safe today and gets less safe every week. S. _`vendor/` deleted (257 files). The alias and the product page now use the hologpu submodule; `import-catalogues.mjs` reads metadata and posters from the submodules._
+- [x] **2.5 Replace committed lab builds with a build step.** `scripts/build-labs.mjs` builds each submodule with `--base /labs/<project>/` into a git-ignored `site/public/labs/`. Remove the 1,440 tracked files. The current build also ships things it should not, such as `labs/watertemple/output/` and `labs/watertemple/scripts/`; fix that at the source. M, needs D5. _`scripts/build-labs.mjs` builds all four into git-ignored `site/public/labs/`; the 1,440 files (28 MB) were removed. The stale `output/` path was already fixed in Water Temple's build. Water Temple still emits `docs/` and `scripts/ui/` research artifacts that its notes link to; whether to keep them is a small follow-up._
+- [x] **2.6 Give the site its own dependencies.** Remove the `node_modules` symlink; add TypeScript and Playwright as real devDependencies; remove every `../../..` path from `import-catalogues.mjs` and `capture-animated-previews.cjs`. S. _Symlink removed, `typescript` and `@playwright/test` added with a committed lockfile, and both scripts now use site-relative submodule paths and the site's own Playwright. `src/catalogues.json` regenerates byte-identically._
+- [x] **2.7 Add root scripts**: `bootstrap` (init submodules, install each), `build` (labs, catalogue, site), `dev`. One command from a fresh clone to a running site. M. _`package.json` at the root: `bootstrap`, `build` (`build:labs` + `build:catalogue` + `build:site`), `dev`, `check:links`. Each project keeps its own lockfile; the root orchestrates (D5)._
+- [x] **2.8 Add superproject CI**: checkout with `submodules: recursive`, bootstrap, build, link-check. M. _`.github/workflows/ci.yml`; the first run is green._
+- [x] **2.9 Automate submodule bumps.** Dependabot's `gitsubmodule` ecosystem opens a PR when a submodule's `main` moves; CI on that PR is the integration test. S. _`.github/dependabot.yml` (weekly); update runs appeared as soon as it was pushed._
+- [x] **2.10 Write `CONTRIBUTING.md`** covering the submodule workflow: where to make a change, how to bump a pin, how to work on a submodule branch from inside the superproject. S. _Written._
 
 ## M3. One API for every effect
 
