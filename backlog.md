@@ -169,7 +169,7 @@ The site today sells the collection but does not help anyone use it. Its copy al
 
 - [x] **5.4 Quick start page**: install, the five-line example, the custom-element version, the CDN script-tag version, and what the user sees when WebGPU is missing. This is the most important page on the site. M. _Done: `/guides/getting-started/` covers install (and the `@webgpu/types` requirement), the five-line `attach` example, the `<hgpu-field>` custom element, a no-bundler CDN import-map example, the WebGPU-missing fallback, and the framework story, linking on to the effect pages and the other guides._
 - [x] **5.5 Put the install command and a working snippet on the landing page**, above the gallery. S. _Done: a "Get started" section sits just above the gallery with `npm install @mk7s/hologpu` (and a Copy button), the five-line `attach` snippet, and a link to the quick start._
-- [ ] **5.6 Framework guides**: React, Next.js, Vue, Svelte, Astro. Each one is a short page with a complete component. M.
+- [x] **5.6 Framework guides**: React, Next.js, Vue, Svelte, Astro. Each one is a short page with a complete component. M. _Done: five guides under `/guides/` (React, Next.js, Vue, Svelte, Astro), each with a complete component, the install line, and short notes on disposal, client-only mounting and the fallback, cross-linked from the guides index. The React and Next.js guides use `@mk7s/hologpu-react`; the others use `attach` directly._
 
 ### Effects
 
