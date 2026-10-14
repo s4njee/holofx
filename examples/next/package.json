@@ -1,0 +1,24 @@
+{
+  "name": "holofx-example-next",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A minimal Next.js consumer of @mk7s/hologpu, with server rendering on.",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "@mk7s/hologpu": "0.1.0",
+    "@mk7s/hologpu-react": "0.1.0",
+    "next": "^16.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@webgpu/types": "^0.1.74",
+    "typescript": "^6.0.3"
+  }
+}

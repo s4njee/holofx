@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>holofx example · cdn</title>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        background: #0b0d11;
+        color: #f0f2f5;
+        font: 15px/1.5 system-ui, sans-serif;
+      }
+      .hero {
+        display: grid;
+        place-items: center;
+        min-height: 70vh;
+        text-align: center;
+      }
+    </style>
+    <!--
+      No build step: an import map points the packages at a CDN. Bump the version to the published
+      one (the install test does this automatically once the packages are on npm). The dist bundles
+      only reference other @mk7s packages, so these three entries are enough.
+    -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@mk7s/hologpu-core": "https://unpkg.com/@mk7s/hologpu-core@0.1.0/dist/index.js",
+          "@mk7s/hologpu-dom": "https://unpkg.com/@mk7s/hologpu-dom@0.1.0/dist/index.js",
+          "@mk7s/hologpu-effects/gradient-oklch": "https://unpkg.com/@mk7s/hologpu-effects@0.1.0/dist/gradient-oklch/index.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="hero" id="hero">
+      <h1>A plain HTML consumer</h1>
+    </main>
+    <script type="module">
+      import { attach } from '@mk7s/hologpu-dom';
+      import gradient from '@mk7s/hologpu-effects/gradient-oklch';
+
+      const hero = document.getElementById('hero');
+      const field = await attach(hero, gradient, { preset: 'lagoon' });
+      // Exposed so the install test can confirm the mount without a bundler.
+      window.field = field;
+    </script>
+  </body>
+</html>

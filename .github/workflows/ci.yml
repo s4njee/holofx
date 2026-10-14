@@ -22,5 +22,7 @@ jobs:
       - run: npm run bootstrap
       # Build the four labs, regenerate the catalogue and build the site.
       - run: npm run build
+      # Pack the hologpu packages and build a real consumer app from each tarball (M4 story 4.7).
+      - run: npm run test:install
       # Fail if a local link in the built site does not resolve.
       - run: npm run check:links

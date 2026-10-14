@@ -1,0 +1,19 @@
+{
+  "name": "holofx-example-vanilla",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A minimal Vite + TypeScript consumer of @mk7s/hologpu.",
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@mk7s/hologpu": "0.1.0"
+  },
+  "devDependencies": {
+    "@webgpu/types": "^0.1.74",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.3"
+  }
+}

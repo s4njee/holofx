@@ -1,0 +1,5 @@
+# Build output and generated files for the consumer examples.
+**/node_modules/
+**/dist/
+**/.next/
+**/next-env.d.ts

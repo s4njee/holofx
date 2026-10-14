@@ -1,0 +1,21 @@
+{
+  "name": "holofx-example-webpack",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A minimal webpack 5 consumer of @mk7s/hologpu.",
+  "scripts": {
+    "build": "tsc --noEmit && webpack --mode production"
+  },
+  "dependencies": {
+    "@mk7s/hologpu": "0.1.0"
+  },
+  "devDependencies": {
+    "@webgpu/types": "^0.1.74",
+    "html-webpack-plugin": "^5.6.0",
+    "ts-loader": "^9.6.0",
+    "typescript": "^6.0.3",
+    "webpack": "^5.111.0",
+    "webpack-cli": "^7.0.0"
+  }
+}
