@@ -2,6 +2,8 @@ import './style.css';
 import catalogues from './catalogues.json';
 import { createGallery, watchPreview, suspendPreviews } from './gallery.js';
 import { createEffect, fragmentEffect } from '@mk7s/hologpu-core';
+// Astro/Vite base: '/' locally, '/holofx/' on GitHub Pages.
+const BASE = import.meta.env.BASE_URL;
 const $ = (id) => document.getElementById(id);
 const projects = {
   hologpu: {name:'HoloGPU',mode:0,kicker:'NATIVE WEBGPU. ENDLESS POSSIBILITIES.',headline:'Give the web<br>a little <em>wonder.</em>',description:'An expressive toolkit for the browser. Explore shaders, particles, fluid simulations, and the quiet details that make an interface feel alive.',note:'Small details. Extraordinary experiences.',art:'PRISMATIC FIELD',collection:'One toolkit.<br>Three elemental worlds.',collectionDescription:'A broad effects library, with focused experiments in the things that make a screen feel alive. Pick a temple. Follow your curiosity.',bottom:'Different directions. A shared love for the details.',cards:[
@@ -69,7 +71,7 @@ fn effect(uv: vec2f) -> vec4f {
 }`
 });
 function labUrl(project=current,effect='',tab='') {
- let url=`/labs/${project}/`;
+ let url=`${BASE}labs/${project}/`;
  if(effect){url+=project==='lighttemple'?`#/x/${encodeURIComponent(effect)}`:`?effect=${encodeURIComponent(effect)}`;}
  if(tab && project!=='lighttemple')url+=(url.includes('?')?'&':'?')+`tab=${tab}`;
  return url;
@@ -88,14 +90,14 @@ function selectSite(key, push=true){
  $('cards').replaceChildren(...projects.hologpu.cards.map(card=>{
  const el=document.createElement('a');el.className='effect-card temple-card';el.href=`?site=${card.project}`;
  el.innerHTML=`<div class="card-image"><img alt="${card.title} effect preview"><span class="image-tag">${card.tag}</span></div><div class="card-body"><div class="card-title"><h3>${card.title}</h3><span aria-hidden="true">↗</span></div><p>${card.description}</p><div class="card-bottom"><span>${card.meta}</span><span class="card-action">Enter temple ↗</span></div></div>`;
- watchPreview(el.querySelector('img'),`/images/${card.image}`);
+ watchPreview(el.querySelector('img'),`${BASE}images/${card.image}`);
  el.addEventListener('click',event=>{if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();selectSite(card.project);window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});});
  return el;
  }));
  $('experiments-title').textContent=`All ${p.name} experiments`;
  $('experiments-description').textContent=`The complete collection: ${catalogues[key].length} experiments. Scroll to explore every experiment. Previews load as they come into view; open any card to try its live demo.`;
  gallery.reset();
- $('hero-art').querySelector('.hero-fallback').src=`/images/${['holo.svg','light.svg','water.webp','fire.webp'][p.mode]}`;
+ $('hero-art').querySelector('.hero-fallback').src=`${BASE}images/${['holo.svg','light.svg','water.webp','fire.webp'][p.mode]}`;
  $('hero-art').querySelector('.hero-fallback').alt=`${p.name} elemental effect preview`;
  $('source-button').textContent=key==='hologpu'?'Explore the implementation ↗':'Explore source & notes ↗';
  if(field){field.params.mode=p.mode;field.invalidate();}
