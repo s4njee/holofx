@@ -4,7 +4,7 @@
 // itself, so the site is a real consumer of the library.
 import Doc from '../../../layouts/Doc.astro';
 import catalogues from '../../../catalogues.json';
-import { PACKAGES, notesHtml, sourceUrl } from '../../../server/effect-notes.ts';
+import { PACKAGES, notesHtml, ogImage, sourceUrl } from '../../../server/effect-notes.ts';
 
 const labels: Record<string, string> = {
   hologpu: 'HoloGPU',
@@ -63,6 +63,7 @@ const notes = notesHtml(project, effect.id);
 <Doc
   title={`${effect.title} · ${label} — HoloGPU`}
   description={effect.summary || `${effect.title}, a ${label} effect.`}
+  ogImage={ogImage(project, effect.id)}
 >
   <article class="effect-page">
     <p class="eyebrow">{label.toUpperCase()} / {effect.id}</p>

@@ -23,6 +23,8 @@
     "catalogue": "npm --prefix site run catalogue",
     "dev": "npm --prefix site run dev",
     "check:links": "node scripts/check-links.mjs",
-    "test:install": "node scripts/test-install.mjs"
+    "test:install": "node scripts/test-install.mjs",
+    "previews": "node scripts/capture-previews.mjs",
+    "publish:mk7s": "node scripts/publish-site-mk7s.mjs"
   }
 }

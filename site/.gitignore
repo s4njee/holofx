@@ -3,3 +3,4 @@ dist/
 .astro/
 .site-runtime/
 .openai/*.tar.gz
+public/images/og/

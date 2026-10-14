@@ -66,6 +66,14 @@ export function sourceUrl(project: string, id: string): string {
   return SOURCE[project]?.(id) ?? '';
 }
 
+/** A public path to the effect's Open Graph image, or the site default, or ''. */
+export function ogImage(project: string, id: string): string {
+  for (const rel of [`images/og/${project}/${id}.jpg`, 'images/og/default.jpg']) {
+    if (existsSync(at('site/public', rel))) return rel;
+  }
+  return '';
+}
+
 /** The npm package each project publishes, for the snippets. */
 export const PACKAGES: Record<string, { package: string; api: string }> = {
   hologpu: { package: '@mk7s/hologpu', api: 'createEffect' },
