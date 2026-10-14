@@ -1679,7 +1679,7 @@
       "epic": "6",
       "tier": "C",
       "status": "demo",
-      "image": null
+      "image": "/images/catalogues/firetemple/fire-3d.webp"
     },
     {
       "id": "fire-fluid",
@@ -1697,7 +1697,7 @@
       "epic": "6",
       "tier": "B",
       "status": "demo",
-      "image": null
+      "image": "/images/catalogues/firetemple/fire-fluid.webp"
     },
     {
       "id": "fire-haze",
@@ -1717,7 +1717,7 @@
       "epic": "6",
       "tier": "B",
       "status": "demo",
-      "image": null
+      "image": "/images/catalogues/firetemple/fire-haze.webp"
     },
     {
       "id": "fire-obstacles",
@@ -1735,7 +1735,7 @@
       "epic": "6",
       "tier": "B",
       "status": "demo",
-      "image": null
+      "image": "/images/catalogues/firetemple/fire-obstacles.webp"
     },
     {
       "id": "stable-fluids",
@@ -1752,7 +1752,161 @@
       "epic": "6",
       "tier": "B",
       "status": "demo",
-      "image": null
+      "image": "/images/catalogues/firetemple/stable-fluids.webp"
+    },
+    {
+      "id": "embers",
+      "title": "Embers",
+      "summary": "Flying embers as real particles: they rise off a hidden fire line, drift in curl-noise air, cool along the blackbody curve from yellow-orange to deep red and out, and twinkle each at its own pace. Press and drag to wave a torch through them.",
+      "tags": [
+        "overlay",
+        "embers",
+        "particles",
+        "compute",
+        "interactive",
+        "simulation"
+      ],
+      "epic": "7",
+      "tier": "A",
+      "status": "demo",
+      "image": "/images/catalogues/firetemple/embers.webp"
+    },
+    {
+      "id": "fire-jet",
+      "title": "Directed jet",
+      "summary": "A flamethrower or dragon breath: a nozzle drives fuel, heat and momentum into the 2D fire fluid, and burning droplets, flame sprites and embers ride its velocity field, spreading, curling into eddies and rising as the jet slows, under the smoke the fluid makes. The nozzle aims at the pointer.",
+      "tags": [
+        "overlay",
+        "particles",
+        "fluid",
+        "compute",
+        "interactive",
+        "simulation",
+        "smoke"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/firetemple/fire-jet.webp"
+    },
+    {
+      "id": "fireworks",
+      "title": "Fireworks",
+      "summary": "Aerial shells as multi-stage emitters, entirely on the GPU: a shell rises with a spark tail and breaks at its apogee into a peony, chrysanthemum, willow, ring, palm, crossette, crackle or glitter burst, in the colours of real emitter salts. Click or tap to send one up to the pointer.",
+      "tags": [
+        "overlay",
+        "particles",
+        "compute",
+        "interactive",
+        "simulation"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/firetemple/fireworks.webp"
+    },
+    {
+      "id": "particle-blending",
+      "title": "Sorting and blending",
+      "summary": "Fire and smoke puffs drawn four ways: all additive, alpha in buffer order, alpha after a GPU depth sort, and weighted blended order-independent transparency, side by side.",
+      "tags": [
+        "study",
+        "particles",
+        "compute",
+        "smoke",
+        "sorting",
+        "oit",
+        "overlay"
+      ],
+      "epic": "7",
+      "tier": "C",
+      "status": "demo",
+      "image": "/images/catalogues/firetemple/particle-blending.webp"
+    },
+    {
+      "id": "particle-flame",
+      "title": "Particle flame",
+      "summary": "The original particle-system fire: large soft sprites born hot at a base, lifted by their own heat, pulled into a taper, licked about by curl noise, cooling and shrinking until they overlap into a flame body, with embers thrown off the tips. Press to light a fire where you press.",
+      "tags": [
+        "flame",
+        "overlay",
+        "particles",
+        "compute",
+        "interactive",
+        "simulation"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/firetemple/particle-flame.webp"
+    },
+    {
+      "id": "particle-system",
+      "title": "GPU particle system",
+      "summary": "The Epic 7 particle framework laid bare: a pool of up to a million particles born, moved, collided and recycled entirely on the GPU, with every emitter shape, force and collider switchable and the live count in the HUD.",
+      "tags": [
+        "particles",
+        "compute",
+        "simulation",
+        "validation",
+        "overlay",
+        "3d"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/firetemple/particle-system.webp"
+    },
+    {
+      "id": "particle-trails",
+      "title": "Particle trails",
+      "summary": "Two ways to give a particle a trail, side by side on the same particles: ribbons built from each particle’s own history of positions, and an HDR buffer that fades a little every frame. Comets, a sparkler and embers in a vortex; press to throw sparks.",
+      "tags": [
+        "overlay",
+        "particles",
+        "compute",
+        "interactive",
+        "study"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/firetemple/particle-trails.webp"
+    },
+    {
+      "id": "spark-shower",
+      "title": "Spark shower",
+      "summary": "A grinder, welding or forge shower of sparks as GPU particles: white-hot streaks arc under gravity and drag, cool along the blackbody curve, bounce off the floor, an anvil and the page’s own cards, and split on impact into smaller, cooler sparks. Move the pointer to aim the grinder; press to bite harder.",
+      "tags": [
+        "overlay",
+        "sparks",
+        "particles",
+        "compute",
+        "interactive",
+        "simulation",
+        "collisions"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/firetemple/spark-shower.webp"
+    },
+    {
+      "id": "sparkler",
+      "title": "Sparkler",
+      "summary": "A hand-held sparkler as GPU particles: a white-hot core throws thousands of tiny sparks a second that live a fraction of a second and fork mid-flight into two or three, the branching look. The pointer is the hand; left alone, the tip traces a slow figure of eight and leaves an afterimage.",
+      "tags": [
+        "overlay",
+        "sparks",
+        "particles",
+        "compute",
+        "interactive",
+        "simulation"
+      ],
+      "epic": "7",
+      "tier": "B",
+      "status": "demo",
+      "image": "/images/catalogues/firetemple/sparkler.webp"
     }
   ],
   "lighttemple": [
