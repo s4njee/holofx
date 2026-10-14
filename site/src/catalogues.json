@@ -24,7 +24,11 @@
           "Smoke test for the shader pipeline, HDR tail, shell and shared WGSL library",
           "A warm abstract backdrop; it glows, but nothing about it has the shape of a flame yet"
         ]
-      }
+      },
+      "family": "Epic 1",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "advected-noise",
@@ -53,7 +57,11 @@
           "Seeing what a moving-noise trick costs in noise evaluations before spending it per pixel",
           "A warm abstract fire wall (the backdrop preset) where no flame shape is needed"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "blackbody",
@@ -81,7 +89,11 @@
           "Tinting lights, embers and sparks by temperature without a texture binding (blackbody_tint)",
           "Choosing between the fit and the lookup texture: this scene shows the error of each"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "bloom-tuning",
@@ -110,7 +122,11 @@
           "Checking that paper white does not glow and that thin, hot detail does",
           "The scene the bloom cost study sweeps `levels` and resolution over"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "compositing",
@@ -139,7 +155,11 @@
           "Checking a theme: switch presets over the dark and the light page to see what survives",
           "A small campfire or hearth decoration that sits on the page instead of in a box"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "fire-light",
@@ -171,7 +191,11 @@
           "Top-down 2D scenes: torches and camp fires lighting a normal-mapped floor",
           "The lighting half of any flame effect: the falloff, shadow and tint functions are a shared chunk"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "flame-ramps",
@@ -199,7 +223,11 @@
           "Themed fire: copper green, sodium yellow, potassium lilac, lithium crimson, blue gas",
           "Art-directed or banded gradients baked from colour stops into one small texture"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "flame-shape",
@@ -228,7 +256,11 @@
           "Tuning a silhouette (width, turbulence, erosion, falloff) before building a candle, torch or jet",
           "A single stylised flame for a hero or a card, using the full-frame \"flame\" view"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "flicker",
@@ -257,7 +289,11 @@
           "One signal shared by a WebGPU flame and the CSS glow around it, so the two stay in step",
           "Checking a flicker setting against the flash threshold before it ships: the trace shows what the cap does to it"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "heat-haze",
@@ -286,7 +322,11 @@
           "Shimmer over a hero image or a video frame uploaded as a texture",
           "Not over live page content: a canvas cannot read the pixels of the DOM behind it"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "smoke-shading",
@@ -316,7 +356,11 @@
           "A smoke column over a hero or a card, on a dark or a light page (it has real coverage)",
           "Choosing a self-shadowing method by eye: switch `shadowing` between none, gradient and march"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "soft-sprites",
@@ -347,7 +391,11 @@
           "The draw stage of a GPU particle system: the chunk and the renderer take any instance buffer",
           "As drawn here it is an opaque dark scene; additive sprites on their own add nothing to a white page and need a dark region behind them"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "volume-march",
@@ -377,7 +425,11 @@
           "A 3D fire that geometry can stand in front of, inside and behind",
           "Choosing step count, march resolution, jitter and upsample filter for a volumetric effect"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "candle",
@@ -408,7 +460,11 @@
           "A cursor toy on a landing page: the flame bends as the pointer passes and springs back",
           "A row of tea lights as a quiet footer or loading state, one small canvas each"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": true,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "ember-bed",
@@ -440,7 +496,11 @@
           "A loading or idle state that should feel warm without drawing the eye",
           "It is an opaque dark picture, so it works on a light page as an image does, in its own box"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "fire-ring",
@@ -471,7 +531,11 @@
           "A burning frame round an avatar or a badge",
           "A loader or a progress ring: `progress` lights the arc from twelve o’clock clockwise"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "firelight-background",
@@ -501,7 +565,11 @@
           "A warm fill behind a fire effect that is drawn on top of it",
           "A login or landing screen that should feel lit by a hearth without showing one"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "fireplace",
@@ -534,7 +602,11 @@
           "A \"low evening fire\" or \"dying embers\" idle state: the presets go down to a glow",
           "It is an opaque scene with its own dark room, so a light page shows it as a picture in a box"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "flame-strip",
@@ -565,7 +637,11 @@
           "The top edge of a footer, or the bottom edge of a hero, with the page showing above it",
           "A low ember line under a heading or along the bottom of a card"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "gas-jet",
@@ -597,7 +673,11 @@
           "Rocket, thruster and afterburner exhausts behind a logo, a ship or a launch button",
           "A blowtorch or welding flame as a cursor trail tip or a progress indicator head"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "haze-overlay",
@@ -628,7 +708,11 @@
           "The air above an exhaust, a chimney or an engine in a product shot or a video loop",
           "Not over live page content: a canvas can only distort an image, a video or what it draws itself"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "noise-flame",
@@ -658,7 +742,11 @@
           "A background for a dark landing page, with the flames kept below the headline",
           "Starting point for any 2D flame: the gradient-minus-noise recipe in its smallest form"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "sparks",
@@ -695,7 +783,11 @@
           "Any place a particle system would be overkill: it costs the same with ten sparks or a thousand",
           "The welding spray and grinder presets are over the flash threshold when they fill a large view: keep them small"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "toon-fire",
@@ -726,7 +818,11 @@
           "A flame icon or a streak badge that needs to read at 48 pixels and on a white background",
           "Coloured \"magic\" fire (the spirit and toxic palettes) where realism would look out of place"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "torch",
@@ -758,7 +854,11 @@
           "A row of wall torches or braziers along a header, a sidebar or a section edge",
           "A seamless loop to bake into a sprite sheet for places WebGPU does not reach"
         ]
-      }
+      },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "burn-front",
@@ -789,7 +889,11 @@
           "A page or route transition, lit from where the visitor clicked",
           "A card or panel that burns when dismissed and leaves the page showing through"
         ]
-      }
+      },
+      "family": "Epic 5",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "combustion-front",
@@ -820,7 +924,11 @@
           "Touch-to-ignite surfaces where the fire has to spread at a believable, tunable speed",
           "The reference model to compare a rule-based burn front against: speed, width and extinction come from constants"
         ]
-      }
+      },
+      "family": "Epic 5",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "dom-fuel",
@@ -850,7 +958,11 @@
           "Cards or headings that burn on a destructive action (delete, dismiss) and come back",
           "Ambient embers smouldering on a dark landing page without hiding its content"
         ]
-      }
+      },
+      "family": "Epic 5",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "doom-fire",
@@ -882,7 +994,11 @@
           "Retro and pixel-art pages: the original palette and blocky cells are one preset away",
           "A fire that answers the page: taller while the visitor scrolls, or in time with music"
         ]
-      }
+      },
+      "family": "Epic 5",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "forest-fire",
@@ -915,7 +1031,11 @@
           "Explaining self-organised criticality, fire regimes or wind-driven spread with something that runs",
           "It is an opaque map, so it works on a light page as an image does, in its own box"
         ]
-      }
+      },
+      "family": "Epic 5",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "fire-3d",
@@ -949,7 +1069,11 @@
           "Fire that reacts to the scene: wind, a burst of fuel, a burner turned up",
           "The upper bound of what a browser can simulate in 3D within a frame budget"
         ]
-      }
+      },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "fire-fluid",
@@ -982,7 +1106,11 @@
           "Burners as page furniture: a strip along the footer, a ring round an avatar, a gas jet",
           "The combustion layer later effects reuse (obstacles, heat haze over the page) and the reference for the cheaper fires"
         ]
-      }
+      },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "fire-haze",
@@ -1017,7 +1145,11 @@
           "A pointer that warms the page it passes over: text and images waver behind it and settle",
           "Not over live page content: a canvas can only bend an image, a video or what it draws itself"
         ]
-      }
+      },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "fire-obstacles",
@@ -1050,7 +1182,11 @@
           "Showing that a simulation knows where the page is: flow that parts round elements and pools under them",
           "Judging the solver against solids: the SDF test shapes (card row, circle, slanted plate) without a page"
         ]
-      }
+      },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "stable-fluids",
@@ -1082,7 +1218,11 @@
           "Smoke that a visitor can stir, over a dark or a light page",
           "The starting point for combustion: temperature, fuel and smoke in the dye, buoyancy and expansion built in"
         ]
-      }
+      },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "embers",
@@ -1116,7 +1256,11 @@
           "Scroll or music driven: the drive adds embers as a share of the calm rate, never speed",
           "Dark pages only: on a light page an ember is a few pale orange pixels"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "fire-jet",
@@ -1149,7 +1293,11 @@
           "A jet splashing against a page element (the wall preset): flame rolling along a surface",
           "Any particles that should be carried by a simulated flow rather than by noise"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "fireworks",
@@ -1181,7 +1329,11 @@
           "Scroll or music driven: the drive adds shells to the schedule, never speed",
           "Over a page as an overlay: on a dark page the bursts are light; on a light page they are confetti"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "particle-blending",
@@ -1214,7 +1366,11 @@
           "Seeing where each method fails: glowing smoke, wrong occlusion, popping, OIT colour bias",
           "A fire with a smoke column over a dark or a light page: the smoke has real coverage"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "particle-flame",
@@ -1247,7 +1403,11 @@
           "Several small flames in one canvas: the cost follows the sprites drawn, not the canvas area",
           "The building block for a scene that also wants embers and sparks from the same particle pool"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "particle-system",
@@ -1279,7 +1439,11 @@
           "The scene the particle scale study (7.10) sweeps: `count` sets the pool from 1 024 to 1 048 576 and the emission keeps it about `fill` full",
           "A reference for the 2D overlay space (canvas heights) and the 3D scene space side by side"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "particle-trails",
@@ -1311,7 +1475,11 @@
           "Embers caught in a vortex, where the trail shows the flow",
           "Choosing between ribbons and an accumulation buffer for a particle effect of your own"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "spark-shower",
@@ -1346,7 +1514,11 @@
           "Scroll or music driven: the drive adds sparks as a share of the calm rate, never speed",
           "Dark pages only: on a light page a spark is a thin pale streak"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "sparkler",
@@ -1380,7 +1552,11 @@
           "Scroll or music driven: the drive adds sparks as a share of the calm rate, never speed",
           "Dark pages only: on a light page the sparks are thin pale lines"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true
     }
   ],
   "watertemple": [
@@ -1407,6 +1583,10 @@
           "A quiet abstract backdrop; nothing about it reads as water yet"
         ]
       },
+      "family": "Epic 1",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/hello.jpg"
     },
     {
@@ -1436,6 +1616,10 @@
           "A drop-in term for any thin translucent surface with a height or thickness estimate"
         ]
       },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/crest-sss.jpg"
     },
     {
@@ -1466,6 +1650,10 @@
           "The absorption building block that later 3D effects feed with real depth-buffer values"
         ]
       },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/depth-absorption.jpg"
     },
     {
@@ -1495,6 +1683,10 @@
           "A cheap stand-in for per-pixel noise wherever a texture fetch is affordable"
         ]
       },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/detail-normals.jpg"
     },
     {
@@ -1524,6 +1716,10 @@
           "Foam, oil or leaves carried along a baked flow (swap the normal map for any texture)"
         ]
       },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/flow-map.jpg"
     },
     {
@@ -1553,6 +1749,10 @@
           "Reference for choosing between a procedural sky and a baked cubemap"
         ]
       },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/fresnel-sky.jpg"
     },
     {
@@ -1583,6 +1783,10 @@
           "Hero sections on HDR displays, as an opt-in extra over the same SDR picture"
         ]
       },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/hdr-bloom.jpg"
     },
     {
@@ -1616,6 +1820,10 @@
           "Ambient water behind UI: the sky-only strategy and a light normal wobble"
         ]
       },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/reflections.jpg"
     },
     {
@@ -1646,6 +1854,10 @@
           "Judging a refraction model: the tile lines must bend coherently, not wobble"
         ]
       },
+      "family": "Epic 3",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/refraction.jpg"
     },
     {
@@ -1676,6 +1888,10 @@
           "Any water surface that meets geometry and needs the hard contact line hidden"
         ]
       },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/shore-foam.jpg"
     },
     {
@@ -1705,6 +1921,10 @@
           "Reference for stable, non-aliasing glitter on any rough reflective surface"
         ]
       },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/sun-glint.jpg"
     },
     {
@@ -1736,6 +1956,10 @@
           "Choosing between a per-pixel and a baked caustic for your own scene"
         ]
       },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/caustics.jpg"
     },
     {
@@ -1768,6 +1992,10 @@
           "Transparent paper mode: an ink layer over a page colour or an image, so the section keeps its own background"
         ]
       },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/ink-wash.jpg"
     },
     {
@@ -1800,6 +2028,10 @@
           "Water or heat shimmer over a looping background video"
         ]
       },
+      "family": "Epic 4",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/media-distortion.jpg"
     },
     {
@@ -1833,6 +2065,10 @@
           "Depth for a long page: layers that move at their own rates as the visitor scrolls"
         ]
       },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/mist.jpg"
     },
     {
@@ -1865,6 +2101,10 @@
           "A reference for how refraction, absorption and caustics compose in one pass"
         ]
       },
+      "family": "Epic 4",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/pool-floor.jpg"
     },
     {
@@ -1897,6 +2137,10 @@
           "The rain ripple rings that story 10.2 turns into a standalone effect"
         ]
       },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/puddles.jpg"
     },
     {
@@ -1929,6 +2173,10 @@
           "The droplet field for rain on a camera lens or visor (story 10.5 builds on it)"
         ]
       },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/rain-glass.jpg"
     },
     {
@@ -1959,6 +2207,10 @@
           "Anywhere a cheap, resolution-independent look is wanted over a photoreal one"
         ]
       },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/toon-water.jpg"
     },
     {
@@ -1990,6 +2242,10 @@
           "The seabed caustic lighting from the baked map, in a scene instead of an overlay"
         ]
       },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/underwater.jpg"
     },
     {
@@ -2022,6 +2278,10 @@
           "Anywhere an SVG wave would do but you want per-pixel foam, five or more layers, or a response to scroll speed"
         ]
       },
+      "family": "Epic 4",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/wave-divider.jpg"
     },
     {
@@ -2054,6 +2314,10 @@
           "Reference for ray-tracing a few analytic shapes through a refracting surface inside a rasterised scene"
         ]
       },
+      "family": "Epic 5",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/pool-3d.jpg"
     },
     {
@@ -2085,6 +2349,10 @@
           "Any shallow-water floor (pond, fountain basin, aquarium) lit by the sun through a stirred surface"
         ]
       },
+      "family": "Epic 5",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/ripple-caustics.jpg"
     },
     {
@@ -2117,6 +2385,10 @@
           "Any backdrop where a draggable or animated element should visibly disturb the water"
         ]
       },
+      "family": "Epic 5",
+      "needsPointer": true,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/ripple-dom.jpg"
     },
     {
@@ -2149,6 +2421,10 @@
           "A visualiser for a dropped audio or video file that never leaves the browser"
         ]
       },
+      "family": "Epic 5",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/ripple-reactive.jpg"
     },
     {
@@ -2180,6 +2456,10 @@
           "The reference surface for the caustics, pool and obstacle effects built on the same solver"
         ]
       },
+      "family": "Epic 5",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/ripples.jpg"
     },
     {
@@ -2211,6 +2491,10 @@
           "A calm interactive background with luminous ribbons"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/aurora.jpg"
     },
     {
@@ -2240,6 +2524,10 @@
           "An interactive hero or atmospheric reading page"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/bioluminescent-currents.jpg"
     },
     {
@@ -2269,6 +2557,10 @@
           "An interactive hero or atmospheric reading page"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/dichroic-glass.jpg"
     },
     {
@@ -2298,6 +2590,10 @@
           "An interactive hero or atmospheric reading page"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/eclipse-halos.jpg"
     },
     {
@@ -2331,6 +2627,10 @@
           "The reference for a 3D grid solver, a multigrid pressure solve and a ray-marched volume on this site"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/fluid-3d.jpg"
     },
     {
@@ -2363,6 +2663,10 @@
           "The reference for fluid-driven page distortion, obstacles and ink-in-water built on the same solver"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/fluid-dye.jpg"
     },
     {
@@ -2396,6 +2700,10 @@
           "A playful page where visitors drag objects through a current"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": true,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/fluid-obstacles.jpg"
     },
     {
@@ -2431,6 +2739,10 @@
           "A page-transition or hover smear over an image or a looping video"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/fluid-warp.jpg"
     },
     {
@@ -2455,6 +2767,10 @@
           "Interactive backgrounds and playful editorial pages"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/game-of-life.jpg"
     },
     {
@@ -2488,6 +2804,10 @@
           "A light, paper-coloured background that stays readable because the ink keeps to the gaps between the content"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": true,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/ink-orbit.jpg"
     },
     {
@@ -2520,6 +2840,10 @@
           "The reference for pigment-on-paper behaviour (diffusion, absorption, edge darkening, back-runs) built as a layer on the fluid solver"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/ink-water.jpg"
     },
     {
@@ -2549,6 +2873,10 @@
           "An interactive hero or atmospheric reading page"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/liquid-chrome.jpg"
     },
     {
@@ -2578,6 +2906,10 @@
           "An interactive hero or atmospheric reading page"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/neon-calligraphy.jpg"
     },
     {
@@ -2603,6 +2935,10 @@
           "An atmospheric landing page or interactive reading surface"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/neon-mycelium.jpg"
     },
     {
@@ -2635,6 +2971,10 @@
           "Reference for a conservative, well-balanced shallow-water solver: wet/dry fronts, lakes at rest, mass bookkeeping"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/shallow-water.jpg"
     },
     {
@@ -2664,6 +3004,10 @@
           "An interactive hero or atmospheric reading page"
         ]
       },
+      "family": "Epic 6",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/watertemple/silk-embers.jpg"
     },
     {
@@ -2704,7 +3048,11 @@
           "The renderer behind any particle solver in Epic 7: SPH, position-based fluids or MLS-MPM hand over positions and get a liquid",
           "Not a background or a card: on a laptop it needs the whole GPU budget of a Tier C page"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "mpm-3d",
@@ -2746,7 +3094,11 @@
           "The reference for a particle fluid with no neighbour search, at counts the neighbour-search solvers (SPH, position-based fluids) cannot reach",
           "Not a background or a card, and not for phones: it needs a discrete or Apple Silicon GPU and most of a Tier C frame budget"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "particles",
@@ -2787,7 +3139,11 @@
           "A hero or landing-page set piece where the particles are the subject, on desktop-class GPUs",
           "The reference for a GPU neighbour search (cell ids, counting sort, prefix sum, reorder) that SPH, position-based fluids and collisions reuse"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "pbf-2d",
@@ -2828,7 +3184,11 @@
           "A loading or empty-state illustration: a stream filling a vessel, or drops falling into a pool",
           "The 2D stepping stone to the 3D position-based fluids: the same solver, the same parameters, a quarter of the particles per unit of detail"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "pbf-3d",
@@ -2870,7 +3230,11 @@
           "A game or toy where the player pushes real water around inside a container (drag, tilt, shake and wave-maker)",
           "The reference for the stable, large-time-step particle fluid: the solver, the neighbour grid and the screen-space renderer working together"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "sph-2d",
@@ -2911,7 +3275,11 @@
           "A loading or empty-state illustration: a stream filling a vessel, or a droplet that merges with another",
           "The reference for particle-based liquid in 2D: the same solver and renderer serve the position-based-fluids comparison"
         ]
-      }
+      },
+      "family": "Epic 7",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "calm-lake",
@@ -2947,7 +3315,11 @@
           "Immersive water hero scenes",
           "Water rendering and performance research"
         ]
-      }
+      },
+      "family": "Epic 8",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "fft-ocean",
@@ -2983,7 +3355,11 @@
           "Immersive water hero scenes",
           "Water rendering and performance research"
         ]
-      }
+      },
+      "family": "Epic 8",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "gerstner-ocean",
@@ -3019,7 +3395,11 @@
           "Immersive water hero scenes",
           "Water rendering and performance research"
         ]
-      }
+      },
+      "family": "Epic 8",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "river",
@@ -3055,7 +3435,11 @@
           "Immersive water hero scenes",
           "Water rendering and performance research"
         ]
-      }
+      },
+      "family": "Epic 8",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "shoreline",
@@ -3091,7 +3475,11 @@
           "Immersive water hero scenes",
           "Water rendering and performance research"
         ]
-      }
+      },
+      "family": "Epic 8",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "waterfall",
@@ -3127,7 +3515,11 @@
           "Immersive water hero scenes",
           "Water rendering and performance research"
         ]
-      }
+      },
+      "family": "Epic 8",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "waterline",
@@ -3163,7 +3555,11 @@
           "Immersive water hero scenes",
           "Water rendering and performance research"
         ]
-      }
+      },
+      "family": "Epic 8",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "fill-level",
@@ -3199,7 +3595,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "gooey-metaballs",
@@ -3235,7 +3635,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "liquid-blob",
@@ -3271,7 +3675,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "liquid-buttons",
@@ -3307,7 +3715,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "liquid-glass",
@@ -3343,7 +3755,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "liquid-image-hover",
@@ -3379,7 +3795,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "liquid-transitions",
@@ -3415,7 +3835,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "liquid-typography",
@@ -3451,7 +3875,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "scroll-water",
@@ -3487,7 +3915,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "ui-droplets",
@@ -3523,7 +3955,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "water-cursor",
@@ -3559,7 +3995,11 @@
           "Website components",
           "Liquid interface research"
         ]
-      }
+      },
+      "family": "Epic 9",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "bubbles",
@@ -3593,7 +4033,11 @@
         "useCases": [
           "Weather backdrops, hero decoration and interactive feedback"
         ]
-      }
+      },
+      "family": "Epic 10",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "fogged-glass",
@@ -3627,7 +4071,11 @@
         "useCases": [
           "Hero windows, cards and interactive glass panels"
         ]
-      }
+      },
+      "family": "Epic 10",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "frost-melt",
@@ -3661,7 +4109,11 @@
         "useCases": [
           "Hero windows, cards and interactive glass panels"
         ]
-      }
+      },
+      "family": "Epic 10",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "rain-rings",
@@ -3695,7 +4147,11 @@
         "useCases": [
           "Weather backdrops, hero decoration and interactive feedback"
         ]
-      }
+      },
+      "family": "Epic 10",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "rain-streaks",
@@ -3729,7 +4185,11 @@
         "useCases": [
           "Weather backdrops, hero decoration and interactive feedback"
         ]
-      }
+      },
+      "family": "Epic 10",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "splash-burst",
@@ -3763,7 +4223,11 @@
         "useCases": [
           "Weather backdrops, hero decoration and interactive feedback"
         ]
-      }
+      },
+      "family": "Epic 10",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     }
   ],
   "lighttemple": [
@@ -3781,7 +4245,11 @@
       "category": "Interface lighting",
       "background": "radial-gradient(circle at 62% 38%, #ffe2bd 0%, #c9b9a5 22%, #6c625a 58%, #2a2623 100%)",
       "status": "research",
-      "image": "/images/pointer-light.jpg"
+      "image": "/images/pointer-light.jpg",
+      "family": "Interface lighting",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "shadow-map-pcf",
@@ -3798,6 +4266,10 @@
       "background": "linear-gradient(160deg, #c9c5bf 0%, #b9b1a7 45%, #7d7268 46%, #a79c90 70%, #d6cfc6 100%)",
       "status": "research",
       "image": "/images/animated/lighttemple/shadow-map-pcf.avif",
+      "family": "Shadows",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/lighttemple/shadow-map-pcf.jpg"
     },
     {
@@ -3815,6 +4287,10 @@
       "background": "radial-gradient(ellipse at 50% 35%, #fff3e0 0%, #9c8b78 30%, #2b2622 70%, #141210 100%)",
       "status": "research",
       "image": "/images/animated/lighttemple/studio-ibl.avif",
+      "family": "Global illumination",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/lighttemple/studio-ibl.jpg"
     },
     {
@@ -3832,6 +4308,10 @@
       "background": "radial-gradient(ellipse at 40% 40%, #f4efe6 0%, #d9d0c2 30%, #4a372b 62%, #22180f 100%)",
       "status": "research",
       "image": "/images/animated/lighttemple/embossed-card.avif",
+      "family": "Interface lighting",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/lighttemple/embossed-card.jpg"
     },
     {
@@ -3848,7 +4328,11 @@
       "category": "Interface lighting",
       "background": "conic-gradient(from 210deg at 55% 45%, #ff7ab8, #ffd36e, #7affc8, #6ec3ff, #b98bff, #ff7ab8)",
       "status": "research",
-      "image": "/images/holo-card.jpg"
+      "image": "/images/holo-card.jpg",
+      "family": "Interface lighting",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "glass-panels",
@@ -3865,6 +4349,10 @@
       "background": "radial-gradient(circle at 30% 40%, #ff8a3d 0%, transparent 45%), radial-gradient(circle at 75% 35%, #d83cc0 0%, transparent 40%), radial-gradient(circle at 55% 80%, #2a7dff 0%, transparent 45%), #0b0b18",
       "status": "research",
       "image": "/images/animated/lighttemple/glass-panels.avif",
+      "family": "Interface lighting",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/lighttemple/glass-panels.jpg"
     },
     {
@@ -3882,6 +4370,10 @@
       "background": "radial-gradient(circle at 25% 35%, #ffb36b 0%, transparent 30%), radial-gradient(circle at 75% 30%, #4cc3ff 0%, transparent 28%), radial-gradient(circle at 50% 85%, #ff4fc8 0%, transparent 30%), #0a0b10",
       "status": "research",
       "image": "/images/animated/lighttemple/radiance-cascades.avif",
+      "family": "Interface lighting",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/lighttemple/radiance-cascades.jpg"
     },
     {
@@ -3898,6 +4390,10 @@
       "background": "linear-gradient(135deg, #f4a259 0%, #f4a259 48%, #c97d42 48%, #c97d42 100%)",
       "status": "research",
       "image": "/images/animated/lighttemple/long-shadows.avif",
+      "family": "Interface lighting",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/lighttemple/long-shadows.jpg"
     },
     {
@@ -3914,7 +4410,11 @@
       "category": "Interface lighting",
       "background": "radial-gradient(ellipse at 45% 50%, #ff3d8b 0%, #5a1030 30%, #170a10 65%), #0e0b0d",
       "status": "research",
-      "image": "/images/neon-sign.jpg"
+      "image": "/images/neon-sign.jpg",
+      "family": "Interface lighting",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "lit-type",
@@ -3931,6 +4431,10 @@
       "background": "linear-gradient(160deg, #e2d9cc 0%, #d0c4b3 55%, #b89c6a 56%, #e9c27a 70%, #c9b49a 100%)",
       "status": "research",
       "image": "/images/animated/lighttemple/lit-type.avif",
+      "family": "Interface lighting",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/lighttemple/lit-type.jpg"
     }
   ],
@@ -3949,6 +4453,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/mipgen.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/mipgen.jpg"
     },
     {
@@ -3965,6 +4472,9 @@
       "tier": "T4",
       "status": "research",
       "image": "/images/animated/hologpu/radiance-cascades.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/radiance-cascades.jpg"
     },
     {
@@ -3981,6 +4491,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/color-grade.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/color-grade.jpg"
     },
     {
@@ -3998,7 +4511,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/product-sheen.png"
+      "image": "/images/catalogues/hologpu/product-sheen.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": false
     },
     {
       "id": "audio-spectrum",
@@ -4014,6 +4530,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/audio-spectrum.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/audio-spectrum.jpg"
     },
     {
@@ -4030,7 +4549,10 @@
       "family": "dom",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/section-wipe.png"
+      "image": "/images/catalogues/hologpu/section-wipe.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "boids",
@@ -4046,6 +4568,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/boids.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/boids.jpg"
     },
     {
@@ -4063,6 +4588,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/smoke.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/smoke.jpg"
     },
     {
@@ -4079,7 +4607,10 @@
       "family": "dom",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/text-outline-glow.png"
+      "image": "/images/catalogues/hologpu/text-outline-glow.png",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "scroll-scene",
@@ -4095,6 +4626,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/scroll-scene.avif",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/scroll-scene.jpg"
     },
     {
@@ -4111,6 +4645,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/lattice-boltzmann.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/lattice-boltzmann.jpg"
     },
     {
@@ -4127,6 +4664,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/caustics.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/caustics.jpg"
     },
     {
@@ -4143,6 +4683,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/backdrop-glass.avif",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/backdrop-glass.jpg"
     },
     {
@@ -4161,6 +4704,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/fluid-obstacles.avif",
+      "needsPointer": true,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/fluid-obstacles.jpg"
     },
     {
@@ -4178,6 +4724,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/attractors.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/attractors.jpg"
     },
     {
@@ -4195,7 +4744,10 @@
       "family": "dom",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/panel-refraction.png"
+      "image": "/images/catalogues/hologpu/panel-refraction.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "blur",
@@ -4211,6 +4763,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/blur.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/blur.jpg"
     },
     {
@@ -4228,7 +4783,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/pointer-map.png"
+      "image": "/images/catalogues/hologpu/pointer-map.png",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "wave-divider",
@@ -4244,7 +4802,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/wave-divider.png"
+      "image": "/images/catalogues/hologpu/wave-divider.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "material-ball",
@@ -4261,7 +4822,10 @@
       "family": "geometry",
       "tier": "T5",
       "status": "research",
-      "image": "/images/catalogues/hologpu/material-ball.png"
+      "image": "/images/catalogues/hologpu/material-ball.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "splats",
@@ -4277,6 +4841,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/splats.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/splats.jpg"
     },
     {
@@ -4292,6 +4859,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/reaction-diffusion.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/reaction-diffusion.jpg"
     },
     {
@@ -4308,6 +4878,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/halftone-ascii.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/halftone-ascii.jpg"
     },
     {
@@ -4324,6 +4897,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/bloom.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/bloom.jpg"
     },
     {
@@ -4341,6 +4917,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/image-hover.avif",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/image-hover.jpg"
     },
     {
@@ -4357,7 +4936,10 @@
       "family": "geometry",
       "tier": "T5",
       "status": "research",
-      "image": "/images/catalogues/hologpu/terrain.png"
+      "image": "/images/catalogues/hologpu/terrain.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "emitters",
@@ -4372,6 +4954,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/emitters.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/emitters.jpg"
     },
     {
@@ -4387,6 +4972,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/fractal.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/fractal.jpg"
     },
     {
@@ -4403,6 +4991,9 @@
       "tier": "T2",
       "status": "demo",
       "image": "/images/animated/hologpu/jump-flood.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/jump-flood.jpg"
     },
     {
@@ -4418,6 +5009,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/lenia.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/lenia.jpg"
     },
     {
@@ -4433,6 +5027,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/lens.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/lens.jpg"
     },
     {
@@ -4448,6 +5045,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/life.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/life.jpg"
     },
     {
@@ -4465,7 +5065,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/bright-pass.png"
+      "image": "/images/catalogues/hologpu/bright-pass.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "falling-sand",
@@ -4480,6 +5083,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/falling-sand.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/falling-sand.jpg"
     },
     {
@@ -4497,7 +5103,10 @@
       "family": "dom",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/text-shimmer.png"
+      "image": "/images/catalogues/hologpu/text-shimmer.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": false
     },
     {
       "id": "masked-composite",
@@ -4513,7 +5122,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/masked-composite.png"
+      "image": "/images/catalogues/hologpu/masked-composite.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "mpm",
@@ -4529,6 +5141,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/mpm.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/mpm.jpg"
     },
     {
@@ -4545,7 +5160,10 @@
       "family": "geometry",
       "tier": "T5",
       "status": "research",
-      "image": "/images/catalogues/hologpu/glass.png"
+      "image": "/images/catalogues/hologpu/glass.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "sdf-2d",
@@ -4561,6 +5179,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/sdf-2d.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/sdf-2d.jpg"
     },
     {
@@ -4577,6 +5198,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/flow-particles.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/flow-particles.jpg"
     },
     {
@@ -4592,6 +5216,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/voronoi.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/voronoi.jpg"
     },
     {
@@ -4608,6 +5235,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/noise-lab.avif",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/noise-lab.jpg"
     },
     {
@@ -4624,7 +5254,10 @@
       "family": "geometry",
       "tier": "T5",
       "status": "research",
-      "image": "/images/catalogues/hologpu/instances.png"
+      "image": "/images/catalogues/hologpu/instances.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "heading-reveal",
@@ -4641,7 +5274,10 @@
       "family": "dom",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/heading-reveal.png"
+      "image": "/images/catalogues/hologpu/heading-reveal.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": false
     },
     {
       "id": "displace",
@@ -4657,6 +5293,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/displace.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/displace.jpg"
     },
     {
@@ -4672,6 +5311,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/gradient-oklch.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/gradient-oklch.jpg"
     },
     {
@@ -4688,6 +5330,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/dither.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/dither.jpg"
     },
     {
@@ -4703,7 +5348,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/starfield.png"
+      "image": "/images/catalogues/hologpu/starfield.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "physarum",
@@ -4718,6 +5366,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/physarum.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/physarum.jpg"
     },
     {
@@ -4735,6 +5386,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/ink.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/ink.jpg"
     },
     {
@@ -4751,7 +5405,10 @@
       "family": "dom",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/progress-line.png"
+      "image": "/images/catalogues/hologpu/progress-line.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "pbf-fluid",
@@ -4767,6 +5424,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/pbf-fluid.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/pbf-fluid.jpg"
     },
     {
@@ -4778,6 +5438,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/prefix-sum.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/prefix-sum.jpg"
     },
     {
@@ -4794,6 +5457,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/path-tracer.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/path-tracer.jpg"
     },
     {
@@ -4811,6 +5477,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/fluid.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/fluid.jpg"
     },
     {
@@ -4827,7 +5496,10 @@
       "family": "particles",
       "tier": "T3",
       "status": "research",
-      "image": "/images/catalogues/hologpu/particle-drift.png"
+      "image": "/images/catalogues/hologpu/particle-drift.png",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "dot-matrix-field",
@@ -4842,7 +5514,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/dot-matrix-field.png"
+      "image": "/images/catalogues/hologpu/dot-matrix-field.png",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "grain-overlay",
@@ -4857,7 +5532,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/grain-overlay.png"
+      "image": "/images/catalogues/hologpu/grain-overlay.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "constellation",
@@ -4873,7 +5551,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/constellation.png"
+      "image": "/images/catalogues/hologpu/constellation.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "topographic-lines",
@@ -4888,7 +5569,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/topographic-lines.png"
+      "image": "/images/catalogues/hologpu/topographic-lines.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "border-energy",
@@ -4904,6 +5588,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/border-energy.avif",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/border-energy.jpg"
     },
     {
@@ -4920,6 +5607,9 @@
       "tier": "T4",
       "status": "research",
       "image": "/images/animated/hologpu/shadows-2d.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/shadows-2d.jpg"
     },
     {
@@ -4936,6 +5626,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/spotlight.avif",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/spotlight.jpg"
     },
     {
@@ -4952,6 +5645,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/edges.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/edges.jpg"
     },
     {
@@ -4967,7 +5663,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/aurora-veil.png"
+      "image": "/images/catalogues/hologpu/aurora-veil.png",
+      "needsPointer": true,
+      "behindDom": true,
+      "reducedMotionSafe": true
     },
     {
       "id": "hover-lift-shadow",
@@ -4982,7 +5681,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/hover-lift-shadow.png"
+      "image": "/images/catalogues/hologpu/hover-lift-shadow.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "grid-horizon",
@@ -4997,7 +5699,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/grid-horizon.png"
+      "image": "/images/catalogues/hologpu/grid-horizon.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "press-ripple",
@@ -5013,7 +5718,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/press-ripple.png"
+      "image": "/images/catalogues/hologpu/press-ripple.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "light-sweep",
@@ -5029,7 +5737,10 @@
       "family": "procedural",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/light-sweep.png"
+      "image": "/images/catalogues/hologpu/light-sweep.png",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": false
     },
     {
       "id": "sort",
@@ -5040,6 +5751,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/sort.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/sort.jpg"
     },
     {
@@ -5051,6 +5765,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/spatial-hash.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/spatial-hash.jpg"
     },
     {
@@ -5067,6 +5784,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/raymarch.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/raymarch.jpg"
     },
     {
@@ -5084,7 +5804,10 @@
       "family": "dom",
       "tier": "T1",
       "status": "ready",
-      "image": "/images/catalogues/hologpu/depth-parallax.png"
+      "image": "/images/catalogues/hologpu/depth-parallax.png",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "morph-particles",
@@ -5100,6 +5823,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/morph-particles.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/morph-particles.jpg"
     },
     {
@@ -5117,6 +5843,9 @@
       "tier": "T3",
       "status": "research",
       "image": "/images/animated/hologpu/text-dissolve.avif",
+      "needsPointer": false,
+      "behindDom": true,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/text-dissolve.jpg"
     },
     {
@@ -5132,6 +5861,9 @@
       "tier": "T1",
       "status": "research",
       "image": "/images/animated/hologpu/n-body.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/n-body.jpg"
     },
     {
@@ -5148,6 +5880,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/truchet.avif",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/truchet.jpg"
     },
     {
@@ -5163,6 +5898,9 @@
       "tier": "T1",
       "status": "demo",
       "image": "/images/animated/hologpu/wave.avif",
+      "needsPointer": true,
+      "behindDom": false,
+      "reducedMotionSafe": true,
       "imageStatic": "/images/animated/hologpu/wave.jpg"
     }
   ],
@@ -5195,7 +5933,11 @@
           "Smoke test for asset loading, the sprite and tile path, depth, lighting and the HDR tail",
           "The starting point for the sprite, lighting and diorama stories in Epics 3 and 4"
         ]
-      }
+      },
+      "family": "Epic 1",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "bitmap-text",
@@ -5226,7 +5968,11 @@
           "Dialogue boxes, signs and title cards in a pixel-art scene",
           "Damage numbers and labels drawn in the same pass as the sprites"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "low-res-path",
@@ -5259,7 +6005,11 @@
           "A cheaper, chunkier take on the diorama: everything on one pixel grid",
           "Hero sections that want the retro look with smooth scrolling"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "outlines",
@@ -5292,7 +6042,11 @@
           "Ink lines that separate terrain steps and overlapping props at a distance",
           "A reusable post pass for any effect that can write normals and object IDs"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "palette-cycling",
@@ -5326,7 +6080,11 @@
           "Water, lava, waterfalls and glowing runes in pixel-art scenes, at almost no cost",
           "Animated backgrounds for a page header that must stay cheap and crisp"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "palette-mapping",
@@ -5358,7 +6116,11 @@
           "Holding a lit scene, a painted backdrop or a photo to the project palette",
           "The palette lookup, dither and ramps that the low-resolution path and sprite lighting reuse"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "sprite-batch",
@@ -5389,7 +6151,11 @@
           "The way every later effect puts sprites into a scene",
           "A reference for how sampling and cut-out choices look under a moving camera"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "sprite-lighting",
@@ -5422,7 +6188,11 @@
           "Giving existing sprite art a normal map without painting one",
           "A pointer-lit portrait or avatar (story 9.2)"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "sprite-shadows",
@@ -5454,7 +6224,11 @@
           "The shadow every sprite in a lit diorama casts (Epics 4, 6 and 11)",
           "Choosing a cheaper shadow where a shadow map is too much (blobs on phones)"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "texel-lighting",
@@ -5485,7 +6259,11 @@
           "Lighting pixel art so light and shadow edges stay on the art’s grid",
           "Any lit sprite or tile scene in later epics, as a shade chunk for the sprite batcher"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     },
     {
       "id": "texel-sampling",
@@ -5517,7 +6295,11 @@
           "Deciding how a pixel-art scene samples its textures, with numbers behind the choice",
           "Showing why nearest sampling crawls and bilinear blurs once the camera moves"
         ]
-      }
+      },
+      "family": "Epic 3",
+      "needsPointer": false,
+      "behindDom": false,
+      "reducedMotionSafe": true
     }
   ]
 }

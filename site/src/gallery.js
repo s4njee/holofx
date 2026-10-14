@@ -61,6 +61,83 @@ export function createGallery({ catalogues, getProject, labUrl, openLab }) {
   const sentinel = document.getElementById('gallery-sentinel');
   const more = document.getElementById('gallery-more');
   const status = document.getElementById('gallery-status');
+  const filtersEl = document.getElementById('gallery-filters');
+  const FACETS = [
+    ['family', 'Family'],
+    ['status', 'Status'],
+    ['tier', 'Tier'],
+  ];
+  const FLAGS = [
+    ['pointer', 'Needs pointer', (e) => e.needsPointer],
+    ['behindDom', 'Works behind DOM content', (e) => e.behindDom],
+    ['reducedMotion', 'Safe for reduced motion', (e) => e.reducedMotionSafe],
+  ];
+  let filterState = { family: '', status: '', tier: '', pointer: false, behindDom: false, reducedMotion: false };
+  let filtersActive = false;
+  let builtFor = null;
+
+  function buildFilters(effects) {
+    filterState = { family: '', status: '', tier: '', pointer: false, behindDom: false, reducedMotion: false };
+    filtersEl.replaceChildren();
+    if (!effects.length) return;
+    const group = document.createElement('div');
+    group.className = 'filter-group';
+    for (const [key, label] of FACETS) {
+      const values = [...new Set(effects.map((e) => e[key]).filter(Boolean))].sort();
+      if (!values.length) continue;
+      const wrap = document.createElement('label');
+      wrap.className = 'filter';
+      wrap.textContent = label;
+      const select = document.createElement('select');
+      const all = document.createElement('option');
+      all.value = '';
+      all.textContent = 'All';
+      select.append(all);
+      for (const value of values) {
+        const option = document.createElement('option');
+        option.value = value;
+        option.textContent = value;
+        select.append(option);
+      }
+      select.addEventListener('change', () => {
+        filterState[key] = select.value;
+        render();
+      });
+      wrap.append(select);
+      group.append(wrap);
+    }
+    filtersEl.append(group);
+
+    const flags = document.createElement('div');
+    flags.className = 'filter-group';
+    for (const [key, label, test] of FLAGS) {
+      const available = effects.some(test);
+      if (!available) continue;
+      const wrap = document.createElement('label');
+      wrap.className = 'filter filter-flag';
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.addEventListener('change', () => {
+        filterState[key] = input.checked;
+        render();
+      });
+      const text = document.createElement('span');
+      text.textContent = label;
+      wrap.append(input, text);
+      flags.append(wrap);
+    }
+    const clear = document.createElement('button');
+    clear.type = 'button';
+    clear.className = 'text-button filter-clear';
+    clear.textContent = 'Clear filters';
+    clear.addEventListener('click', () => {
+      search.value = '';
+      buildFilters(effects);
+      render();
+    });
+    flags.append(clear);
+    filtersEl.append(flags);
+  }
   let filtered = [];
   let rendered = 0;
   let generation = 0;
@@ -135,7 +212,7 @@ export function createGallery({ catalogues, getProject, labUrl, openLab }) {
     grid.append(fragment);
     const total = catalogues[project].length;
     const hasMore = rendered < filtered.length;
-    count.textContent = search.value.trim()
+    count.textContent = filtersActive
       ? `${filtered.length} of ${total} experiments · ${rendered} shown`
       : `${total} experiments · ${rendered} shown`;
     more.hidden = !hasMore;
@@ -153,9 +230,33 @@ export function createGallery({ catalogues, getProject, labUrl, openLab }) {
     resetPreviewObserver();
     grid.replaceChildren();
     rendered = 0;
+    const project = getProject();
+    const effects = catalogues[project];
+    if (project !== builtFor) {
+      builtFor = project;
+      buildFilters(effects);
+    }
     const query = search.value.trim().toLowerCase();
-    const effects = catalogues[getProject()];
-    filtered = effects.filter(effect => [effect.title, effect.summary, ...effect.tags].join(' ').toLowerCase().includes(query));
+    filtersActive = Boolean(
+      query ||
+        filterState.family ||
+        filterState.status ||
+        filterState.tier ||
+        filterState.pointer ||
+        filterState.behindDom ||
+        filterState.reducedMotion,
+    );
+    filtered = effects.filter(
+      (effect) =>
+        (!query ||
+          [effect.title, effect.summary, ...effect.tags].join(' ').toLowerCase().includes(query)) &&
+        (!filterState.family || effect.family === filterState.family) &&
+        (!filterState.status || effect.status === filterState.status) &&
+        (!filterState.tier || effect.tier === filterState.tier) &&
+        (!filterState.pointer || effect.needsPointer) &&
+        (!filterState.behindDom || effect.behindDom) &&
+        (!filterState.reducedMotion || effect.reducedMotionSafe),
+    );
     empty.hidden = filtered.length > 0;
     sentinel.hidden = filtered.length === 0;
     const revision = generation;
@@ -165,7 +266,7 @@ export function createGallery({ catalogues, getProject, labUrl, openLab }) {
     if (filtered.length) appendBatch();
     else { count.textContent = `0 of ${effects.length} experiments`; status.textContent = ''; more.hidden = true; }
   }
-  function reset() { search.value = ''; render(); }
+  function reset() { search.value = ''; builtFor = null; render(); }
   function resume() {
     if (rendered < filtered.length && !previewsSuspended) {
       batchObserver?.unobserve(sentinel);

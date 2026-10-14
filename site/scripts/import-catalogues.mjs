@@ -26,6 +26,12 @@ const lightImages = {
   'neon-sign': '/images/neon-sign.jpg',
 };
 
+// Filter facets derived from tags for the projects whose catalogue does not record them (M5 5.9).
+const tagFlags = (tags = []) => ({
+  needsPointer: tags.some((tag) => /pointer|cursor/i.test(tag)),
+  behindDom: tags.some((tag) => tag === 'overlay' || tag.startsWith('dom')),
+});
+
 const catalogues = {};
 
 catalogues.firetemple = readCatalogue('firetemple').effects.map((e) => ({
@@ -38,6 +44,9 @@ catalogues.firetemple = readCatalogue('firetemple').effects.map((e) => ({
   status: e.status,
   image: copyPoster('firetemple', e.id, e.poster),
   scorecard: e.scorecard ?? null,
+  family: e.epic ? `Epic ${e.epic}` : undefined,
+  ...tagFlags(e.tags),
+  reducedMotionSafe: true,
 }));
 
 catalogues.watertemple = readCatalogue('watertemple').effects.map((e) => ({
@@ -50,6 +59,9 @@ catalogues.watertemple = readCatalogue('watertemple').effects.map((e) => ({
   status: e.status,
   image: copyPoster('watertemple', e.id, e.poster),
   scorecard: e.scorecard ?? null,
+  family: e.epic ? `Epic ${e.epic}` : undefined,
+  ...tagFlags(e.tags),
+  reducedMotionSafe: true,
 }));
 
 catalogues.lighttemple = readCatalogue('lighttemple').experiments.map((e) => ({
@@ -61,6 +73,9 @@ catalogues.lighttemple = readCatalogue('lighttemple').experiments.map((e) => ({
   background: e.background,
   status: e.status,
   image: lightImages[e.id] ?? null,
+  family: e.category,
+  ...tagFlags(e.tags),
+  reducedMotionSafe: true,
 }));
 
 catalogues.hologpu = readCatalogue('hologpu').effects.map((e) => ({
@@ -72,6 +87,9 @@ catalogues.hologpu = readCatalogue('hologpu').effects.map((e) => ({
   tier: e.tier,
   status: e.status,
   image: copyPoster('hologpu', e.id, e.poster),
+  needsPointer: e.needsPointer ?? false,
+  behindDom: e.behindDom ?? false,
+  reducedMotionSafe: e.reducedMotionSafe ?? true,
 }));
 
 catalogues.eightfoldpath = readCatalogue('eightfoldpath').effects.map((e) => ({
@@ -84,6 +102,9 @@ catalogues.eightfoldpath = readCatalogue('eightfoldpath').effects.map((e) => ({
   status: e.status,
   image: copyPoster('eightfoldpath', e.id, e.poster),
   scorecard: e.scorecard ?? null,
+  family: e.epic ? `Epic ${e.epic}` : undefined,
+  ...tagFlags(e.tags),
+  reducedMotionSafe: true,
 }));
 
 const animationManifest = 'src/animated-previews.json';

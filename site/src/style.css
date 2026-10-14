@@ -382,3 +382,13 @@ body[data-site="eightfoldpath"] .closing{background:#1c1a11}
 .install-code code{font-family:monospace;font-size:12px;line-height:1.8;color:#c9d2c2;white-space:pre}
 .copy-install{color:#dfe6d6}
 .copy-install:hover{color:var(--accent)}
+
+/* Gallery filters (story 5.9). */
+.gallery-filters{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin:14px 0 26px}
+.filter-group{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center}
+.filter{display:flex;align-items:center;gap:8px;font-size:11px;color:#959e8f;letter-spacing:.3px}
+.filter select{appearance:none;background:#131615;color:#e7ecdf;border:1px solid var(--line);border-radius:4px;padding:7px 10px;font-size:11px;cursor:pointer}
+.filter-flag{color:#c3cbb8;cursor:pointer}
+.filter-flag input{accent-color:var(--accent);cursor:pointer}
+.filter-clear{margin-left:auto;color:#c3cbb8}
+.filter-clear:hover{color:var(--accent)}
