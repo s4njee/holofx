@@ -109,8 +109,8 @@ holofx/
   README.md  LICENSE  CONTRIBUTING.md  backlog.md
 ```
 
-- [ ] **2.1 `git init` holofx and create `s4njee/holofx`.** Keep it private until M1 is finished for all four. S.
-- [ ] **2.2 Add the four submodules** at the top level, each tracking `main`. S, needs 1.10, 1.11, 1.13.
+- [x] **2.1 `git init` holofx and create `s4njee/holofx`.** Keep it private until M1 is finished for all four. S. _Created private and pushed (it already had an initial commit). Still private: M1.10 (hologpu CI) is open._
+- [x] **2.2 Add the four submodules** at the top level, each tracking `main`. S, needs 1.10, 1.11, 1.13. _Added and pinned, then bumped to current `main` after the M1 pushes (`hologpu @ edaf9f6`, `firetemple @ 33e8501`, `watertemple @ 8f46393`, `lighttemple @ a8fbd91`)._
 - [ ] **2.3 Move the site to `site/` with fresh history.** The existing site repo's history is five generic commits carrying 22 MB of build output and the tracked `node_modules` symlink, so there is nothing worth preserving. Note that another process was committing to that repo during this review (animated-preview capture); let it finish and take its output across before moving. S, needs D6.
 - [ ] **2.4 Delete `site/vendor/`.** Point the `@mk7s/hologpu-core` alias in `vite.config.js` at `../hologpu/packages/core/src`, and later at the published package. The vendored copies currently match upstream apart from test files, so this is safe today and gets less safe every week. S.
 - [ ] **2.5 Replace committed lab builds with a build step.** `scripts/build-labs.mjs` builds each submodule with `--base /labs/<project>/` into a git-ignored `site/public/labs/`. Remove the 1,440 tracked files. The current build also ships things it should not, such as `labs/watertemple/output/` and `labs/watertemple/scripts/`; fix that at the source. M, needs D5.
