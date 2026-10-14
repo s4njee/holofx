@@ -23,8 +23,11 @@ const previewObserver = new IntersectionObserver(entries => {
 }, { rootMargin: '0px', threshold: 0 });
 
 export function watchPreview(image, src, still) {
-  if (src && src.startsWith('/')) src = import.meta.env.BASE_URL + src.slice(1);
-  if (still && still.startsWith('/')) still = import.meta.env.BASE_URL + still.slice(1);
+  const base = import.meta.env.BASE_URL.endsWith('/')
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`;
+  if (src && src.startsWith('/')) src = base + src.slice(1);
+  if (still && still.startsWith('/')) still = base + still.slice(1);
   image.dataset.previewSrc = src;
   if (still) image.dataset.previewStill = still;
   image.addEventListener('error', () => {

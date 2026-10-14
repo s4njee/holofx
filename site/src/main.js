@@ -2,8 +2,9 @@ import './style.css';
 import catalogues from './catalogues.json';
 import { createGallery, watchPreview, suspendPreviews } from './gallery.js';
 import { createEffect, fragmentEffect } from '@mk7s/hologpu-core';
-// Astro/Vite base: '/' locally, '/holofx/' on GitHub Pages.
-const BASE = import.meta.env.BASE_URL;
+// Astro/Vite base: '/' locally, '/holofx/' on GitHub Pages. Normalise to a trailing slash.
+const RAW_BASE = import.meta.env.BASE_URL;
+const BASE = RAW_BASE.endsWith('/') ? RAW_BASE : `${RAW_BASE}/`;
 const $ = (id) => document.getElementById(id);
 const projects = {
   hologpu: {name:'HoloGPU',mode:0,kicker:'NATIVE WEBGPU. ENDLESS POSSIBILITIES.',headline:'Give the web<br>a little <em>wonder.</em>',description:'An expressive toolkit for the browser. Explore shaders, particles, fluid simulations, and the quiet details that make an interface feel alive.',note:'Small details. Extraordinary experiences.',art:'PRISMATIC FIELD',collection:'One toolkit.<br>Three elemental worlds.',collectionDescription:'A broad effects library, with focused experiments in the things that make a screen feel alive. Pick a temple. Follow your curiosity.',bottom:'Different directions. A shared love for the details.',cards:[
