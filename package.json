@@ -1,0 +1,26 @@
+{
+  "name": "holofx",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The holofx superproject: hologpu, firetemple, watertemple and lighttemple, plus the site that teaches them.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s4njee/holofx.git"
+  },
+  "homepage": "https://github.com/s4njee/holofx",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "build:labs": "node scripts/build-labs.mjs",
+    "build:catalogue": "npm --prefix site run catalogue",
+    "build:site": "npm --prefix site run build",
+    "build": "npm run build:labs && npm run build:catalogue && npm run build:site",
+    "catalogue": "npm --prefix site run catalogue",
+    "dev": "npm --prefix site run dev",
+    "check:links": "node scripts/check-links.mjs"
+  }
+}
