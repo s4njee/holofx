@@ -1,6 +1,6 @@
 # Contributing to holofx
 
-holofx is a superproject: it holds four projects as git submodules and a site that
+holofx is a superproject: it holds five projects as git submodules and a site that
 documents and demonstrates them.
 
 ```
@@ -8,6 +8,7 @@ hologpu/       submodule — WebGPU runtime and effect library (@mk7s/hologpu)
 firetemple/    submodule — fire effects gallery
 watertemple/   submodule — liquid effects gallery
 lighttemple/   submodule — lighting and shadow experiments
+eightfoldpath/ submodule — effects in the HD-2D style
 site/          the marketing site and catalogue (content of this repo)
 scripts/       bootstrap, build-labs, catalogue orchestration, link check
 ```
@@ -31,7 +32,7 @@ lockfile; the superproject does not impose a single workspace.
 
 ```sh
 npm run dev            # the site at http://127.0.0.1:5188
-npm run build          # build the four labs, the catalogue and the site into site/dist
+npm run build          # build the five labs, the catalogue and the site into site/dist
 npm run check:links    # verify local links in the built site (after build)
 ```
 
@@ -45,7 +46,7 @@ built site.
 Each project lives in its own repository and is edited there, not in the
 superproject. A change normally looks like:
 
-1. `cd hologpu` (or `firetemple`, `watertemple`, `lighttemple`).
+1. `cd hologpu` (or `firetemple`, `watertemple`, `lighttemple`, `eightfoldpath`).
 2. Make the change on a branch, run that project's own checks, and open a pull
    request against that repository's `main`.
 3. After it merges, bump the pin in the superproject (below).

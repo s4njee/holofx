@@ -42,6 +42,12 @@ const projects = {
       BASE_PATH: '/labs/watertemple/',
     });
   },
+  eightfoldpath: () => {
+    const out = path.join(site, 'public/labs/eightfoldpath');
+    run('npm', ['exec', '--', 'vite', 'build', '--outDir', out, '--emptyOutDir'], path.join(root, 'eightfoldpath'), {
+      BASE_PATH: '/labs/eightfoldpath/',
+    });
+  },
   lighttemple: () => {
     const out = path.join(site, 'public/labs/lighttemple');
     // Light Temple's config uses a relative base, which resolves correctly under /labs/lighttemple/.

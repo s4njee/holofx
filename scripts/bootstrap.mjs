@@ -18,7 +18,7 @@ run('git', ['submodule', 'update', '--init', '--recursive'], root);
 
 // Each project keeps its own lockfile and package manager.
 run('pnpm', ['install'], path.join(root, 'hologpu'));
-for (const project of ['firetemple', 'watertemple', 'lighttemple']) {
+for (const project of ['firetemple', 'watertemple', 'lighttemple', 'eightfoldpath']) {
   run('npm', ['ci'], path.join(root, project));
 }
 run('npm', ['ci'], path.join(root, 'site'));

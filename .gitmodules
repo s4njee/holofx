@@ -14,3 +14,7 @@
 	path = lighttemple
 	url = https://github.com/s4njee/lighttemple.git
 	branch = main
+[submodule "eightfoldpath"]
+	path = eightfoldpath
+	url = https://github.com/s4njee/eightfoldpath.git
+	branch = main
