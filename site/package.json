@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
   "scripts": {
     "catalogue": "node scripts/import-catalogues.mjs",
     "dev": "vite --host 127.0.0.1 --port 5188",

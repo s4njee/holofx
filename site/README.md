@@ -6,7 +6,7 @@ The lab dialog loads the real project builds hosted at `/labs/hologpu/`, `/labs/
 
 ## Development
 
-Run `npm install`, then `npm run dev`. Run `npm run build` to produce `dist/`.
+Run `npm install`, then `npm run dev`. Run `npm run build` to produce `dist/`. Requires Node 22.12 or later (declared in `engines`).
 
 The product page imports the HoloGPU runtime from the `hologpu` submodule through the `@mk7s/hologpu-core` alias (`../hologpu/packages/core/src`). It reads effect metadata and posters directly from the submodules: `hologpu/packages/effects/src`, `firetemple/src/effects`, `watertemple/src/effects`, and `lighttemple/src/gallery/registry.ts`.
 
