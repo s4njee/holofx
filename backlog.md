@@ -161,7 +161,7 @@ The site today sells the collection but does not help anyone use it. Its copy al
 
 ### Foundation
 
-- [ ] **5.1 Move the site to a generator.** Three hand-written files will not scale to a page per effect. Port the existing design to Astro: the landing page as is, effect pages from the catalogue, guides from Markdown. M, needs D6.
+- [x] **5.1 Move the site to a generator.** Three hand-written files will not scale to a page per effect. Port the existing design to Astro: the landing page as is, effect pages from the catalogue, guides from Markdown. M, needs D6. _Done. `site/` is an Astro project (Astro 7, `astro.config.mjs`, replacing Vite). The landing page is `src/pages/index.astro` — the original markup with its behaviour in `src/main.js`/`src/gallery.js` imported as a client script, unchanged. Effect pages are generated from `src/catalogues.json` at `src/pages/effects/[project]/[id].astro` (204 pages; the live demo, parameter table and snippets come in 5.7). Guides are Markdown pages under `src/pages/guides/` sharing `src/layouts/Doc.astro`, with a Getting started page. `npm run build` emits 207 pages; the superproject build and a preview screenshot are verified._
 - [ ] **5.2 Deploy from GitHub Actions** on push to `main`, with a preview per pull request. S.
 - [ ] **5.3 Make the copy match reality.** Until M3 lands, the page should say what works today; after it lands, the framework-agnostic claims become true. S.
 

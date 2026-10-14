@@ -90,3 +90,117 @@ dialog { border-color: var(--accent); }
 .lab-bar { background: var(--accent-wash); border-bottom-color: var(--accent-line); }
 .lab-bar a, #lab-close { color: var(--accent); }
 .viewport-preview{opacity:0}.viewport-preview.is-loaded{opacity:1;transition:opacity .15s ease}.card-image:has(.viewport-preview){background:radial-gradient(ellipse at 70% 35%,color-mix(in srgb,var(--accent) 8%,#171b16),#111615 75%)}.gallery-sentinel{display:flex;align-items:center;justify-content:center;gap:22px;min-height:98px;padding:28px 0 0}.gallery-sentinel p{color:#98a28f;font-size:11px}.gallery-sentinel .button{font-size:11px;padding:12px 18px}@media(max-width:720px){.gallery-sentinel{flex-direction:column;gap:8px;padding-top:22px}.gallery-toolbar output{line-height:1.5;max-width:100px}}
+
+/* --- Generated pages (effect pages, guides) ---------------------------------------------------- */
+
+.doc-header .doc-brand {
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+}
+
+.doc-main {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem) 6rem;
+}
+
+.effect-page h1 {
+  margin: 0.4rem 0 1rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.effect-summary {
+  color: var(--muted, #9a9a94);
+  font-size: 1.1rem;
+  max-width: 46rem;
+}
+
+.effect-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+}
+
+.effect-badges .badge {
+  padding: 0.2rem 0.6rem;
+  border: 1px solid currentcolor;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+.effect-poster {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+.effect-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.effect-tags li {
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, currentcolor 10%, transparent);
+  font-size: 0.8rem;
+}
+
+.effect-note {
+  color: var(--muted, #9a9a94);
+  font-size: 0.95rem;
+  border-left: 2px solid currentcolor;
+  padding-left: 0.9rem;
+  opacity: 0.85;
+}
+
+.guides-list {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.guides-list a {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid color-mix(in srgb, currentcolor 22%, transparent);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.guides-list a:hover {
+  border-color: currentcolor;
+}
+
+.guides-list strong {
+  font-size: 1.05rem;
+}
+
+.guides-list span {
+  color: var(--muted, #9a9a94);
+  font-size: 0.9rem;
+}
+
+.doc-main :is(h2) {
+  margin-top: 2.5rem;
+}
+
+.doc-main pre,
+.doc-main code {
+  font-family: var(--mono, ui-monospace, monospace);
+}

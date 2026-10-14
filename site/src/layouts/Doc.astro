@@ -1,0 +1,53 @@
+---
+// Shared shell for the generated pages (effect pages and guides). The landing page keeps its own
+// bespoke, interactive document; everything else reuses this.
+import '../style.css';
+
+// A Markdown page with a `layout` passes its frontmatter; an .astro page passes props directly.
+const props = Astro.props as {
+  title?: string;
+  description?: string;
+  frontmatter?: { title?: string; description?: string };
+};
+const meta = props.frontmatter ?? props;
+const title = meta.title ?? 'HoloGPU';
+const description =
+  meta.description ?? 'HoloGPU and the Light, Water and Fire Temples: native WebGPU effects.';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#101111" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/mark.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header doc-header">
+      <div class="brand-switch">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <a class="doc-brand" href="/">HoloGPU</a>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="/#experiments">Experiments</a>
+        <a href="/guides/">Guides</a>
+        <a href="https://github.com/s4njee/holofx" rel="noopener">GitHub ↗</a>
+      </nav>
+    </header>
+    <main id="main" class="doc-main">
+      <slot />
+    </main>
+    <footer>
+      <div>
+        <span class="footer-brand">✳ HoloGPU</span>
+        <span>A collection of experiments for an expressive web.</span>
+      </div>
+      <a href="#main">Back to top ↑</a>
+      <span>LIGHT / WATER / FIRE</span>
+    </footer>
+  </body>
+</html>

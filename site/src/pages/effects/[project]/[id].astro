@@ -1,0 +1,70 @@
+---
+// One page per effect, generated from the catalogue (M5 stories 5.1 and, for the full content, 5.7).
+import Doc from '../../../layouts/Doc.astro';
+import catalogues from '../../../catalogues.json';
+
+const labels: Record<string, string> = {
+  hologpu: 'HoloGPU',
+  firetemple: 'Fire Temple',
+  watertemple: 'Water Temple',
+  lighttemple: 'Light Temple',
+};
+
+export function getStaticPaths() {
+  const paths: {
+    params: { project: string; id: string };
+    props: { project: string; effect: (typeof catalogues)['hologpu'][number] };
+  }[] = [];
+  for (const [project, effects] of Object.entries(catalogues)) {
+    for (const effect of effects) {
+      paths.push({ params: { project, id: effect.id }, props: { project, effect } });
+    }
+  }
+  return paths;
+}
+
+const { project, effect } = Astro.props as {
+  project: string;
+  effect: (typeof catalogues)['hologpu'][number];
+};
+const label = labels[project] ?? project;
+const lab = `/labs/${project}/`;
+---
+
+<Doc
+  title={`${effect.title} · ${label} — HoloGPU`}
+  description={effect.summary || `${effect.title}, a ${label} effect.`}
+>
+  <article class="effect-page">
+    <p class="eyebrow">{label.toUpperCase()} / {effect.id}</p>
+    <h1>{effect.title}</h1>
+    {effect.summary && <p class="effect-summary">{effect.summary}</p>}
+
+    <div class="effect-badges">
+      {effect.tier && <span class="badge">Tier {effect.tier}</span>}
+      {effect.status && <span class="badge">{effect.status}</span>}
+      {'family' in effect && effect.family && <span class="badge">{effect.family}</span>}
+    </div>
+
+    {effect.image && (
+      <img class="effect-poster" src={effect.image} alt={`${effect.title} preview`} loading="lazy" />
+    )}
+
+    {effect.tags && effect.tags.length > 0 && (
+      <ul class="effect-tags">
+        {effect.tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+    )}
+
+    <p class="effect-note">
+      The live demo, generated parameter table and copy-ready snippets arrive in story 5.7. Until
+      then, open the full lab below.
+    </p>
+
+    <p>
+      <a class="button primary" href={lab}>Open the {label} lab <span aria-hidden="true">↗</span></a>
+    </p>
+  </article>
+</Doc>

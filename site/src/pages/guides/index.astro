@@ -1,0 +1,33 @@
+---
+import Doc from '../../layouts/Doc.astro';
+
+// The guide list. Story 5.6 adds the framework guides; the pages themselves are Markdown.
+const guides = [
+  {
+    href: '/guides/getting-started/',
+    title: 'Getting started',
+    summary: 'Install HoloGPU and put your first effect on a page.',
+  },
+];
+---
+
+<Doc title="Guides — HoloGPU" description="Guides for using HoloGPU and the temples.">
+  <article class="effect-page">
+    <p class="eyebrow">GUIDES</p>
+    <h1>Guides</h1>
+    <p class="effect-summary">
+      Short, task-shaped pages. The quick start, framework guides and the reference pages move here
+      as they are written.
+    </p>
+    <ul class="guides-list">
+      {guides.map((guide) => (
+        <li>
+          <a href={guide.href}>
+            <strong>{guide.title}</strong>
+            <span>{guide.summary}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </article>
+</Doc>
