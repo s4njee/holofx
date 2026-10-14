@@ -1,0 +1,8 @@
+version: 2
+updates:
+  # Open a PR when a submodule's tracked branch (main) moves. CI on that PR is the
+  # integration test; see CONTRIBUTING.md.
+  - package-ecosystem: gitsubmodule
+    directory: /
+    schedule:
+      interval: weekly

@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.15.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      # Initialise the submodules and install every project and the site.
+      - run: npm run bootstrap
+      # Build the four labs, regenerate the catalogue and build the site.
+      - run: npm run build
+      # Fail if a local link in the built site does not resolve.
+      - run: npm run check:links
