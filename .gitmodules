@@ -1,0 +1,16 @@
+[submodule "hologpu"]
+	path = hologpu
+	url = https://github.com/s4njee/hologpu.git
+	branch = main
+[submodule "firetemple"]
+	path = firetemple
+	url = https://github.com/s4njee/firetemple.git
+	branch = main
+[submodule "watertemple"]
+	path = watertemple
+	url = https://github.com/s4njee/watertemple.git
+	branch = main
+[submodule "lighttemple"]
+	path = lighttemple
+	url = https://github.com/s4njee/lighttemple.git
+	branch = main
