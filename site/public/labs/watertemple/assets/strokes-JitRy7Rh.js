@@ -1,1 +1,0 @@
-export{t as default}from"./strokes-CvJq3ohq.js";

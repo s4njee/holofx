@@ -1,1 +1,0 @@
-export{t as default}from"./bed-space-CRj69Afu.js";

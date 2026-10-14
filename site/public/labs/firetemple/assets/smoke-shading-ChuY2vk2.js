@@ -1,1 +1,0 @@
-export{t as default}from"./smoke-shading-C5ATBKYp.js";

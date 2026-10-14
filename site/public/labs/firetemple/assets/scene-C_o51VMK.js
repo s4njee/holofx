@@ -1,1 +1,0 @@
-export{t as default}from"./scene-B2LItEeF.js";

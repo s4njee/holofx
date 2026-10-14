@@ -1,1 +1,0 @@
-export{t as effect}from"./particles-CxT3A4W7.js";

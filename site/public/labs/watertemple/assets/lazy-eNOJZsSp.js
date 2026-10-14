@@ -1,1 +1,0 @@
-function e(e,t,n){let r,i=!1;return n().then(e=>{i?e():r=e},n=>{if(console.error(`[watertemple] could not load ${t}:`,n),i)return;let a=document.createElement(`p`);a.className=`wt-muted`,a.textContent=`The ${t} panel failed to load.`,e.append(a),r=()=>a.remove()}),()=>{i=!0,r?.()}}export{e as t};

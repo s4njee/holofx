@@ -1,1 +1,0 @@
-export{t as default}from"./fire-light-BK7B2el5.js";

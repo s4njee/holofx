@@ -1,1 +1,0 @@
-import{t as e}from"./n-body-nHnf4lYc.js";export{e as default};

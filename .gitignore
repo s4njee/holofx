@@ -4,3 +4,4 @@
 **/.site-runtime/
 **/.git/
 **/.openai/*.tar.gz
+site/public/labs/

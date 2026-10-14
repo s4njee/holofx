@@ -1,1 +1,0 @@
-import{t as e}from"./meta-Dp35561y.js";import{t}from"./material-DJAQOYnw.js";var n=t(e,`silk-embers`);export{n as effect};

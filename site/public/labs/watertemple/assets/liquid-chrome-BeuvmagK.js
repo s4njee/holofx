@@ -1,1 +1,0 @@
-import{t as e}from"./meta-19hbyCH6.js";import{t}from"./material-DJAQOYnw.js";var n=t(e,`liquid-chrome`);export{n as effect};

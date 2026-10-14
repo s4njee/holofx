@@ -1,1 +1,0 @@
-import{t as e}from"./meta-2fxTaNeg.js";import{t}from"./material-DJAQOYnw.js";var n=t(e,`eclipse-halos`);export{n as effect};

@@ -1,1 +1,0 @@
-import{t as e}from"./gradient-oklch-crgyOdMS.js";export{e as default};

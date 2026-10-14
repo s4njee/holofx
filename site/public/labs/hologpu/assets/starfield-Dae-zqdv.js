@@ -1,1 +1,0 @@
-import{t as e}from"./starfield-BA5I2Ir1.js";export{e as default};

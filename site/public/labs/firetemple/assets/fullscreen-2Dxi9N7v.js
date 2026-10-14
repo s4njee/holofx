@@ -1,1 +1,0 @@
-export{t as default}from"./fullscreen-BDXEFvdz.js";

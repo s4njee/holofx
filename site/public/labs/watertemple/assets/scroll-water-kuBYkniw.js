@@ -1,1 +1,0 @@
-import{t as e}from"./meta-D0mo6-1O.js";import{t}from"./effect-B_3aabUu.js";var n=t(e,9);export{n as effect};

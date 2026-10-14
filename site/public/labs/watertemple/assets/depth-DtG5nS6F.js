@@ -1,1 +1,0 @@
-import{n as e}from"./targets-Dcl181Ey.js";function t(t,n){let{sampled:r=!0}=n;return e(t,{label:n.label,format:n.format??`depth32float`,width:n.width,height:n.height,usage:GPUTextureUsage.RENDER_ATTACHMENT|(r?GPUTextureUsage.TEXTURE_BINDING:0)|(n.readback?GPUTextureUsage.COPY_SRC:0)})}export{t};

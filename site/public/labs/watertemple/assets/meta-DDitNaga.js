@@ -1,1 +1,0 @@
-var e={id:`game-of-life`,title:`Game of Life`,epic:`6`,tier:`A`,tags:[`cellular automata`,`compute`,`background`,`interactive`],summary:`Conway’s B3/S23 automaton, with luminous cells and fading echoes behind a real page.`,scorecard:{compute:!0,mobile:`untested`,fallback:`A still cellular pattern.`,useCases:[`Interactive backgrounds and playful editorial pages`]}};export{e as t};
