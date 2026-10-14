@@ -1,0 +1,25 @@
+---
+import Doc from '../../layouts/Doc.astro';
+import { recipes } from '../../recipes.js';
+---
+
+<Doc title="Recipes — HoloGPU" description="Effect recipes by what you are building: hero backgrounds, card hovers, text treatments, page transitions, loading states.">
+  <article class="effect-page">
+    <p class="eyebrow">RECIPES</p>
+    <h1>By use case</h1>
+    <p class="effect-summary">
+      Search by what you are building. Each recipe names the job, lists the effects that do it, and
+      shows one snippet to start from.
+    </p>
+    <ul class="guides-list">
+      {recipes.map((recipe) => (
+        <li>
+          <a href={`/recipes/${recipe.slug}/`}>
+            <strong>{recipe.title}</strong>
+            <span>{recipe.blurb}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </article>
+</Doc>

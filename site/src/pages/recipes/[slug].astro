@@ -1,0 +1,46 @@
+---
+// One page per recipe (M5 story 5.12), listing the effects that fit a job and a starting snippet.
+import Doc from '../../layouts/Doc.astro';
+import catalogues from '../../catalogues.json';
+import { recipes } from '../../recipes.js';
+
+export function getStaticPaths() {
+  return recipes.map((recipe) => ({ params: { slug: recipe.slug }, props: { recipe } }));
+}
+
+const { recipe } = Astro.props as { recipe: (typeof recipes)[number] };
+const byId = Object.fromEntries(catalogues.hologpu.map((effect) => [effect.id, effect]));
+const picks = recipe.effects.map((id) => byId[id]).filter(Boolean);
+const snippet = `import { attach } from '@mk7s/hologpu/dom';
+import effect from '@mk7s/hologpu/effects/${recipe.featured}';
+
+await attach(document.querySelector('${recipe.host}')!, effect);`;
+---
+
+<Doc title={`${recipe.title} — HoloGPU recipes`} description={recipe.blurb}>
+  <article class="effect-page">
+    <p class="eyebrow">RECIPE / {recipe.slug}</p>
+    <h1>{recipe.title}</h1>
+    <p class="effect-summary">{recipe.blurb}</p>
+
+    <section class="snippets">
+      <pre><code set:html={snippet}></code></pre>
+    </section>
+
+    <h2>Effects that do this</h2>
+    <ul class="guides-list">
+      {picks.map((effect) => (
+        <li>
+          <a href={`/effects/hologpu/${effect.id}/`}>
+            <strong>{effect.title}</strong>
+            <span>{effect.summary}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <p>
+      <a class="text-button" href="/recipes/">All recipes <span aria-hidden="true">→</span></a>
+    </p>
+  </article>
+</Doc>
