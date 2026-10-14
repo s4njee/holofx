@@ -15,10 +15,11 @@
   },
   "scripts": {
     "bootstrap": "node scripts/bootstrap.mjs",
+    "build:libs": "node scripts/build-libs.mjs",
     "build:labs": "node scripts/build-labs.mjs",
     "build:catalogue": "node scripts/build-catalogues.mjs && npm --prefix site run catalogue",
     "build:site": "npm --prefix site run build",
-    "build": "npm run build:labs && npm run build:catalogue && npm run build:site",
+    "build": "npm run build:libs && npm run build:labs && npm run build:catalogue && npm run build:site",
     "catalogue": "npm --prefix site run catalogue",
     "dev": "npm --prefix site run dev",
     "check:links": "node scripts/check-links.mjs",

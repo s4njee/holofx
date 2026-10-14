@@ -174,6 +174,18 @@ const notes = notesHtml(project, effect.id);
   // Every hologpu effect, lazily code-split. Temple effects mount through their own library entry
   // (see src/effect-runtime.js) once it is wired in.
   const modules = import.meta.glob('../../../../../hologpu/packages/effects/src/*/index.ts');
+  // The temples mount through their built library entries (story 4.4), which inline WGSL and keep
+  // only @mk7s/hologpu-temple-core and wgpu-matrix external — both installed here.
+  const templeModules: Record<string, Record<string, () => Promise<Record<string, unknown>>>> = {
+    firetemple: import.meta.glob('../../../../../firetemple/lib/effects/*/index.js'),
+    watertemple: import.meta.glob('../../../../../watertemple/lib/effects/*/index.js'),
+    lighttemple: import.meta.glob('../../../../../lighttemple/lib/effects/*/index.js'),
+  };
+  const templeLibs: Record<string, () => Promise<Record<string, any>>> = {
+    firetemple: () => import('../../../../../firetemple/lib/index.js'),
+    watertemple: () => import('../../../../../watertemple/lib/index.js'),
+    lighttemple: () => import('../../../../../lighttemple/lib/index.js'),
+  };
 
   const root = document.getElementById('demo') as HTMLElement | null;
   if (root) {
@@ -232,8 +244,209 @@ const notes = notesHtml(project, effect.id);
     });
 
     if (project !== 'hologpu') {
-      status.textContent = 'Live demos for this project mount through its library entry; open the lab for now.';
-      closeButton.hidden = true;
+      // --- Fire / Water / Light: mount through the project's built library -----------------------
+      const srgb = (c: number) => (c <= 0.0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - 0.055);
+      const linear = (c: number) => (c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4));
+      const toHex = (rgb: readonly number[]) =>
+        '#' +
+        rgb
+          .map((c) => Math.round(Math.max(0, Math.min(1, srgb(c))) * 255).toString(16).padStart(2, '0'))
+          .join('');
+      const fromHex = (hex: string) => {
+        const n = parseInt(hex.slice(1), 16);
+        return [linear(((n >> 16) & 255) / 255), linear(((n >> 8) & 255) / 255), linear((n & 255) / 255)];
+      };
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const templeControl = (name: string, spec: any, read: () => any, write: (v: any) => void) => {
+        const row = document.createElement('label');
+        row.className = 'param';
+        const label = document.createElement('span');
+        label.textContent = spec.label ?? name;
+        row.append(label);
+        if (spec.type === 'boolean') {
+          const input = document.createElement('input');
+          input.type = 'checkbox';
+          input.checked = Boolean(read());
+          input.addEventListener('change', () => write(input.checked));
+          row.append(input);
+        } else if (spec.type === 'color') {
+          const input = document.createElement('input');
+          input.type = 'color';
+          input.value = toHex(read() ?? spec.default);
+          input.addEventListener('input', () => write(fromHex(input.value)));
+          row.append(input);
+        } else if (spec.type === 'select') {
+          const select = document.createElement('select');
+          for (const option of spec.options ?? []) {
+            const opt = document.createElement('option');
+            opt.value = option;
+            opt.textContent = option;
+            select.append(opt);
+          }
+          select.value = String(read() ?? spec.default);
+          select.addEventListener('change', () => write(select.value));
+          row.append(select);
+        } else {
+          const input = document.createElement('input');
+          input.type = 'range';
+          input.min = String(spec.min);
+          input.max = String(spec.max);
+          input.step = String(spec.step ?? (spec.max - spec.min) / 100);
+          input.value = String(read() ?? spec.default);
+          input.addEventListener('input', () => write(Number(input.value)));
+          row.append(input);
+        }
+        return row;
+      };
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const lightControl = (name: string, def: any, read: () => any, write: (v: any) => void) => {
+        const row = document.createElement('label');
+        row.className = 'param';
+        const label = document.createElement('span');
+        label.textContent = def.label ?? name;
+        row.append(label);
+        if ('options' in def) {
+          const select = document.createElement('select');
+          for (const [optionLabel, value] of Object.entries(def.options as Record<string, unknown>)) {
+            const opt = document.createElement('option');
+            opt.value = String(value);
+            opt.textContent = optionLabel;
+            select.append(opt);
+          }
+          select.value = String(read());
+          select.addEventListener('change', () => {
+            const found = Object.values(def.options as Record<string, unknown>).find(
+              (value) => String(value) === select.value,
+            );
+            write(found);
+          });
+          row.append(select);
+        } else if (def.type === 'color') {
+          const input = document.createElement('input');
+          input.type = 'color';
+          input.value = String(read());
+          input.addEventListener('input', () => write(input.value));
+          row.append(input);
+        } else if (typeof def.value === 'boolean') {
+          const input = document.createElement('input');
+          input.type = 'checkbox';
+          input.checked = Boolean(read());
+          input.addEventListener('change', () => write(input.checked));
+          row.append(input);
+        } else {
+          const input = document.createElement('input');
+          input.type = 'range';
+          input.min = String(def.min);
+          input.max = String(def.max);
+          input.step = String(def.step ?? (def.max - def.min) / 100);
+          input.value = String(read());
+          input.addEventListener('input', () => write(Number(input.value)));
+          row.append(input);
+        }
+        return row;
+      };
+
+      // Light Temple declares parameters imperatively; this sink records the groups and lets the
+      // controls write back into the same live values the experiment reads.
+      const boxSink = () => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const groups: { title?: string; schema: Record<string, any> }[] = [];
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const owner = new Map<string, Record<string, unknown>>();
+        return {
+          groups,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          add(schema: Record<string, any>, title?: string) {
+            const values: Record<string, unknown> = {};
+            for (const [key, def] of Object.entries(schema)) {
+              values[key] = def.value;
+              owner.set(key, values);
+            }
+            groups.push({ title, schema });
+            return values;
+          },
+          button() {},
+          onChange() {
+            return () => {};
+          },
+          set(name: string, value: unknown) {
+            const values = owner.get(name);
+            if (values) values[name] = value;
+          },
+          get(name: string) {
+            return owner.get(name)?.[name];
+          },
+        };
+      };
+
+      void (async () => {
+        try {
+          const lib = await templeLibs[project]();
+          const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (project === 'lighttemple') {
+            const key = `../../../../../lighttemple/lib/effects/${id}/index.js`;
+            const mod = (await templeModules.lighttemple[key]()) as { default: unknown };
+            const sink = boxSink();
+            const handle = await lib.mountExperiment(canvas, mod.default, { sink, reducedMotion: reduced });
+            poster?.setAttribute('hidden', '');
+            status.hidden = true;
+            closeButton.hidden = false;
+            closeButton.addEventListener('click', () => handle.pause());
+            for (const group of sink.groups) {
+              for (const [name, def] of Object.entries(group.schema)) {
+                if ('type' in def && def.type === 'text') continue;
+                controls.append(lightControl(name, def, () => sink.get(name), (value) => sink.set(name, value)));
+              }
+            }
+          } else {
+            const session = await lib.createGpuSession();
+            const key = `../../../../../${project}/lib/effects/${id}/index.js`;
+            const mod = (await templeModules[project][key]()) as Record<string, unknown>;
+            const effectModule = (mod.effect ?? mod.default) as Record<string, any>;
+            const host = lib.mount(session, canvas, effectModule, {});
+            const loaded = await new Promise<{ params: Record<string, unknown> }>((resolve) => {
+              const off = host.onLoad((value: { params: Record<string, unknown> }) => {
+                off();
+                resolve(value);
+              });
+              if (host.loaded) {
+                off();
+                resolve(host.loaded);
+              }
+            });
+            poster?.setAttribute('hidden', '');
+            status.hidden = true;
+            closeButton.hidden = false;
+            closeButton.addEventListener('click', () => {
+              if (typeof host.pause === 'function') host.pause();
+              else host.destroy();
+            });
+            const values = loaded.params;
+            for (const [name, spec] of Object.entries(effectModule.params as Record<string, unknown>)) {
+              controls.append(
+                templeControl(name, spec, () => values[name], (value) => (values[name] = value)),
+              );
+            }
+            for (const name of Object.keys((effectModule.presets ?? {}) as Record<string, unknown>)) {
+              const button = document.createElement('button');
+              button.type = 'button';
+              button.className = 'button outline';
+              button.textContent = name;
+              button.addEventListener('click', () => {
+                preset = name;
+                Object.assign(values, (effectModule.presets as Record<string, unknown>)[name]);
+                renderSnippet(format);
+              });
+              presetsEl.append(button);
+            }
+          }
+        } catch (error) {
+          status.textContent = 'Showing the fallback preview.';
+          console.info('Temple demo fell back to the poster:', (error as Error).message);
+        }
+      })();
     } else {
       const load = modules[`../../../../../hologpu/packages/effects/src/${id}/index.ts`];
       if (!load) {
@@ -320,7 +533,7 @@ const notes = notesHtml(project, effect.id);
               presetsEl.append(button);
             }
           } catch (error) {
-            status.textContent = 'WebGPU unavailable — showing the fallback preview.';
+            status.textContent = 'Showing the fallback preview.';
             console.info('Effect demo fell back to the poster:', (error as Error).message);
           }
         })();
