@@ -5,3 +5,4 @@
 **/.git/
 **/.openai/*.tar.gz
 site/public/labs/
+spikes/**/shot.png
