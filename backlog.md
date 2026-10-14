@@ -182,12 +182,12 @@ The site today sells the collection but does not help anyone use it. Its copy al
 
 ### Guides and reference
 
-- [ ] **5.13 Fallback and progressive enhancement guide**: what happens without WebGPU, on insecure origins (LAN HTTP on a phone gets the fallback), and on Firefox, where stable WebGPU is limited to Windows and Apple-silicon macOS. M.
-- [ ] **5.14 Performance guide**: the tier system, resolution scale, DPR caps, adaptive quality, pausing off-screen, how many effects per page is reasonable. M.
-- [ ] **5.15 Accessibility guide**: reduced motion, the flash ratings and what they mean, pause controls, contrast over animated backgrounds. S.
-- [ ] **5.16 "Write your own effect" guide**, from `fragmentEffect` upward. Both temples already have a `docs/effect-authoring.md` to draw on. M.
-- [ ] **5.17 Generated API reference** from the hologpu packages with TypeDoc. S.
-- [ ] **5.18 Browser support page**, built from hologpu's `docs/compatibility.md` and the temples' `support-matrix.md`. Call out that `backdrop-glass` needs a Chrome flag for HTML-in-canvas. S.
+- [x] **5.13 Fallback and progressive enhancement guide**: what happens without WebGPU, on insecure origins (LAN HTTP on a phone gets the fallback), and on Firefox, where stable WebGPU is limited to Windows and Apple-silicon macOS. M. _Done: `/guides/fallback/`._
+- [x] **5.14 Performance guide**: the tier system, resolution scale, DPR caps, adaptive quality, pausing off-screen, how many effects per page is reasonable. M. _Done: `/guides/performance/`._
+- [x] **5.15 Accessibility guide**: reduced motion, the flash ratings and what they mean, pause controls, contrast over animated backgrounds. S. _Done: `/guides/accessibility/`._
+- [x] **5.16 "Write your own effect" guide**, from `fragmentEffect` upward. Both temples already have a `docs/effect-authoring.md` to draw on. M. _Done: `/guides/authoring/` covers `fragmentEffect`, the temple `defineEffect` contract, the metadata/scorecard every effect needs, and how testing works._
+- [x] **5.17 Generated API reference** from the hologpu packages with TypeDoc. S. _Done: hologpu gains `typedoc` + `typedoc.json` and a `docs:api` script (core, dom, hologpu and react entry points); `scripts/build-api.mjs` runs it and stages the HTML at `site/public/api`, and the site's `/guides/api/` links to it. It builds on every `npm run build`._
+- [x] **5.18 Browser support page**, built from hologpu's `docs/compatibility.md` and the temples' `support-matrix.md`. Call out that `backdrop-glass` needs a Chrome flag for HTML-in-canvas. S. _Done: `/guides/browser-support/`, including the `backdrop-glass` flag note and the per-effect optional-feature gates._
 - [ ] **5.19 "Open in StackBlitz" on each effect page**, using the starter from 6.2. S.
 
 ### Site quality

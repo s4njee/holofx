@@ -4,3 +4,4 @@ dist/
 .site-runtime/
 .openai/*.tar.gz
 public/images/og/
+public/api/

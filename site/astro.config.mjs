@@ -30,11 +30,11 @@ function prefixAbsoluteUrls() {
       'astro:build:done': ({ dir }) => {
         if (!prefix) return;
         const out = fileURLToPath(dir);
-        const labs = path.join(out, 'labs') + path.sep;
+        const generated = [path.join(out, 'labs') + path.sep, path.join(out, 'api') + path.sep];
         const base = siteBase.slice(1); // "holofx"
         const pattern = new RegExp(`(href|src)="/(?!/|${base}/)`, 'g');
         for (const file of collectHtml(out)) {
-          if (file.startsWith(labs)) continue;
+          if (generated.some((prefix) => file.startsWith(prefix))) continue;
           const html = readFileSync(file, 'utf8');
           const next = html.replace(pattern, `$1="${prefix}`);
           if (next !== html) writeFileSync(file, next);
