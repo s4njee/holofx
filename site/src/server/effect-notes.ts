@@ -17,6 +17,25 @@ const NOTES: Record<string, (id: string) => string> = {
   watertemple: (id) => `watertemple/src/effects/${id}/notes.md`,
 };
 
+// Where each project's notes live, so their relative links can be pointed at GitHub.
+const REPO: Record<string, { repo: string; dir: (id: string) => string }> = {
+  hologpu: { repo: 'hologpu', dir: () => 'docs/notes' },
+  firetemple: { repo: 'firetemple', dir: (id) => `src/effects/${id}` },
+  watertemple: { repo: 'watertemple', dir: (id) => `src/effects/${id}` },
+};
+
+/** Point the notes' relative links at the project's GitHub copy, so no link dangles on the site. */
+function rewriteRelativeLinks(html: string, project: string, id: string): string {
+  const repo = REPO[project];
+  if (!repo) return html;
+  const dir = repo.dir(id);
+  return html.replace(/(href|src)="([^"]+)"/g, (match, attr, value) => {
+    if (/^(https?:|\/\/|#|mailto:|data:|\/)/.test(value)) return match;
+    const target = path.posix.normalize(path.posix.join(dir, value));
+    return `${attr}="https://github.com/s4njee/${repo.repo}/blob/main/${target}"`;
+  });
+}
+
 const SOURCE: Record<string, (id: string) => string> = {
   hologpu: (id) => `https://github.com/s4njee/hologpu/blob/main/packages/effects/src/${id}/index.ts`,
   firetemple: (id) => `https://github.com/s4njee/firetemple/blob/main/src/effects/${id}/index.ts`,
@@ -34,7 +53,8 @@ export function notesHtml(project: string, id: string): string {
   if (!existsSync(file)) return '';
   const markdown = readFileSync(file, 'utf8');
   // Drop a leading H1 so the page's own heading is the only title.
-  return marked.parse(markdown.replace(/^#\s+.*\n/, ''), { async: false });
+  const html = marked.parse(markdown.replace(/^#\s+.*\n/, ''), { async: false });
+  return rewriteRelativeLinks(html, project, id);
 }
 
 /** A link to the effect's source file on GitHub. */
