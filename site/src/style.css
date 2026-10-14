@@ -372,3 +372,13 @@ dialog { border-color: var(--accent); }
 /* Eightfold Path: HD-2D pixel art, lit amber. */
 body[data-site="eightfoldpath"]{--accent:#e8b04b}
 body[data-site="eightfoldpath"] .closing{background:#1c1a11}
+
+/* Get started (story 5.5). */
+.install-section{border-top:1px solid var(--line)}
+.install-body{display:grid;gap:18px;max-width:720px}
+.install-command{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:14px 18px;border:1px solid var(--line);border-radius:5px;background:#131615}
+.install-command .mono{font-family:monospace;font-size:13px;color:#e7ecdf}
+.install-code{margin:0;padding:18px;border:1px solid var(--line);border-radius:5px;background:#0e110f;overflow:auto}
+.install-code code{font-family:monospace;font-size:12px;line-height:1.8;color:#c9d2c2;white-space:pre}
+.copy-install{color:#dfe6d6}
+.copy-install:hover{color:var(--accent)}

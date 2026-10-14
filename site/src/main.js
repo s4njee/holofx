@@ -123,6 +123,7 @@ $('lab-close').addEventListener('click',closeLab);
 $('lab-dialog').addEventListener('click',event=>{if(event.target===$('lab-dialog')){const r=$('lab-dialog').getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeLab();}});
 $('lab-dialog').addEventListener('close',()=>{ $('lab-frame').contentWindow.location.replace('about:blank');suspendPreviews(false);gallery.resume();motionState(); });
 $('motion').addEventListener('click',()=>{paused=!paused;motionState();});
+document.querySelectorAll('.copy-install').forEach(button=>button.addEventListener('click',async()=>{try{await navigator.clipboard?.writeText(button.dataset.copy||'');const label=button.textContent;button.textContent='Copied';setTimeout(()=>{button.textContent=label;},1200);}catch{}}));
 matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',event=>{paused=event.matches;motionState();});
 selectSite(new URLSearchParams(location.search).get('site'),false);motionState();
 async function bootHero(){
