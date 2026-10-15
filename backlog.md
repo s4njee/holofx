@@ -106,7 +106,7 @@ holofx/
   watertemple/      submodule: s4njee/watertemple
   site/             the site, moved from sites/hologpu-temples
   examples/         starter projects (M6)
-  scripts/          bootstrap, build-labs, build-catalogue, capture-previews
+  scripts/          bootstrap, build-labs, build-catalogue, update-site (the whole site, with animated previews)
   .github/workflows/
   README.md  LICENSE  CONTRIBUTING.md  backlog.md
 ```

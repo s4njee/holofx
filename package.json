@@ -25,7 +25,8 @@
     "dev": "npm --prefix site run dev",
     "check:links": "node scripts/check-links.mjs",
     "test:install": "node scripts/test-install.mjs",
-    "previews": "node scripts/capture-previews.mjs",
-    "publish:mk7s": "node scripts/publish-site-mk7s.mjs"
+    "previews": "node scripts/update-site.mjs --capture-only",
+    "publish:mk7s": "node scripts/publish-site-mk7s.mjs",
+    "site:update": "node scripts/update-site.mjs"
   }
 }

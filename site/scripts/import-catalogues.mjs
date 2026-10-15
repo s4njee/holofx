@@ -109,9 +109,10 @@ catalogues.eightfoldpath = readCatalogue('eightfoldpath').effects.map((e) => ({
 
 const animationManifest = 'src/animated-previews.json';
 if (fs.existsSync(animationManifest)) {
-  const { items } = JSON.parse(fs.readFileSync(animationManifest));
+  const { items, posterPreferred = {} } = JSON.parse(fs.readFileSync(animationManifest));
   for (const [project, effects] of Object.entries(catalogues))
     for (const effect of effects) {
+      if (posterPreferred[`${project}/${effect.id}`]) continue;
       const preview = items[`${project}/${effect.id}`];
       if (preview && fs.existsSync(root + '/public' + preview.image)) {
         effect.image = preview.image;

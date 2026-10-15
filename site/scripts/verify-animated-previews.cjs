@@ -1,5 +1,8 @@
 const fs=require('node:fs');const {spawnSync}=require('node:child_process');
-const targets=JSON.parse(fs.readFileSync('src/animated-preview-targets.json')).required;
+// Every catalogue experiment should have an animated preview; --partial only checks the ones that do.
+const catalogue=JSON.parse(fs.readFileSync('src/catalogues.json'));
+const preferred=JSON.parse(fs.readFileSync('src/animated-previews.json')).posterPreferred??{};
+const targets=Object.entries(catalogue).flatMap(([project,effects])=>effects.map(e=>`${project}/${e.id}`)).filter(key=>!preferred[key]);
 const manifest=JSON.parse(fs.readFileSync('src/animated-previews.json'));const partial=process.argv.includes('--partial');let failures=[];let warnings=[];const report={required:targets.length,verified:0,items:{}};
 for(const key of targets){const m=manifest.items[key];if(!m){if(!partial)failures.push(`${key}: missing`);continue;}
  const file='public'+m.image;const still='public'+m.still;if(!fs.existsSync(file)||!fs.existsSync(still)){failures.push(`${key}: missing file`);continue;}
@@ -11,4 +14,4 @@ for(const key of targets){const m=manifest.items[key];if(!m){if(!partial)failure
  report.items[key]={maxDifference,visibleChange,brightness,bytes:fs.statSync(file).size};report.verified++;
  if(maxDifference<0.6)warnings.push(`${key}: low motion ${maxDifference.toFixed(2)}`);if(brightness<1)warnings.push(`${key}: nearly black`);
 }
-fs.writeFileSync('.site-runtime/animated-preview-audit.json',JSON.stringify(report,null,2));console.log(JSON.stringify({required:targets.length,verified:report.verified,failures,warnings},null,2));if(failures.length||warnings.length)process.exitCode=1;
+fs.mkdirSync('.site-runtime',{recursive:true});fs.writeFileSync('.site-runtime/animated-preview-audit.json',JSON.stringify(report,null,2));console.log(JSON.stringify({required:targets.length,verified:report.verified,failures,warnings},null,2));if(failures.length||warnings.length)process.exitCode=1;
