@@ -1,6 +1,6 @@
 # holofx research: effect families to explore next
 
-Written 2026-10-13. This lists effect families that the four projects do not cover yet. Two are committed: **lightning** and **HD-2D pixel art**. Eight more are candidates, ranked at the end.
+Written 2026-10-13. This lists effect families that the four projects do not cover yet. Two are committed: **lightning** and **HD-2D pixel art**. A third, **space**, is explored in the same depth. Seven more are candidates, ranked at the end.
 
 How the list was chosen: every idea here was checked against the 185 effects in the current catalogue and against the unbuilt stories in each project's `plan.md`. Where something nearby already exists or is already planned, the entry says so.
 
@@ -193,9 +193,132 @@ This family needs art, and the review already found three images across the repo
 
 ---
 
-## 3. Other candidates
+## 3. Space
 
-### 3.1 Retro displays and signal
+Working name: Star Temple. This replaces the short "Cosmos" candidate that was here before.
+
+Several pieces exist already, so this family starts further along than the other two:
+
+- **Built:** hologpu has `starfield` (layered parallax stars and nebula), `n-body`, `constellation` (a generative network, not real constellations) and `aurora-veil`. watertemple has `aurora` and `eclipse-halos`, both stylised.
+- **Planned elsewhere:** firetemple's unbuilt stories 11.4 (solar surface) and 11.6 (meteor trail), and lighttemple's unbuilt E5-S6 (atmospheric sky). The first two would move here, as the plasma globe moved to lightning; the sky story should be built once and shared.
+- **Reusable:** firetemple's `blackbody.wgsl` gives star colours from temperature, and its volume ray-march kernel (`volume.wgsl`, `src/gpu/volume/`) is most of a nebula renderer. Both are now in the shared temple core.
+
+### Looks to cover
+
+- **Stars.** Starfields that hold up under motion, with real colours and a realistic spread of brightness; diffraction spikes; long-exposure star trails; a map of the actual sky.
+- **Nebulae.** Glowing gas clouds with dark dust lanes, flat and volumetric.
+- **Galaxies.** Spirals with arms, a bulge and dust; colliding galaxies.
+- **Black holes.** Gravitational lensing of everything behind them, with a glowing accretion disc.
+- **Planets and moons.** Rocky worlds with oceans, clouds, atmospheres and city lights on the night side; banded gas giants with storms and rings; moon phases.
+- **The Sun and other stars up close.** Granulation, prominences, corona, eclipses.
+- **Small bodies.** Comets with two tails; meteor showers.
+- **Motion through space.** Warp and hyperspace streaks; orbits and a scrollable solar system.
+
+### Techniques by subject
+
+**Stars.** Getting them right is mostly about point sources:
+
+- *Draw each star as a small light spread, never a single pixel.* A Gaussian or Airy-like spot whose total energy stays constant, at least a pixel or two wide, so stars do not flicker in and out as the camera moves by fractions of a pixel. This is the most common failure in web starfields.
+- *Colour from temperature* through the blackbody fit, and *brightness from a magnitude distribution*: many faint stars, very few bright ones.
+- *Diffraction spikes* as an optional telescope look: four spikes for a Hubble-style image, six plus two for a JWST-style one.
+- *Twinkle only near a horizon.* Stars scintillate because of the atmosphere; in space they hold still.
+- *Real sky.* Position stars from a catalogue for the visitor's time and place: the Yale Bright Star Catalogue is about 9,000 stars and small enough to ship; larger catalogues cost megabytes. Precession and refraction can be ignored at this scale; sidereal time and the observer's latitude cannot.
+
+**Nebulae.** Two levels:
+
+- *Flat*: layers of domain-warped noise as emission, multiplied by a separate noise field for dust, with parallax between layers. Tier A.
+- *Volumetric*: an emission–absorption ray march through 3D noise, at reduced resolution with temporal reprojection, which is exactly what the volume kernel already does for fire. Tier B or C.
+- *Colour* by emission line: hydrogen-alpha red, oxygen teal, sulphur deep red, or the false-colour "Hubble palette" mapping of the three to RGB.
+
+**Galaxies.** The density-wave approach: put stars on elliptical orbits whose ellipses rotate a little more with each step outward. Spiral arms appear where the ellipses crowd together, and the arms stay coherent while every star keeps moving. A million stars in compute is a modest load. Add a bulge, dust lanes drawn as absorption, and HII regions as small pink emission spots along the arms. Colliding galaxies reuse hologpu's `n-body`.
+
+**Black holes.** Three levels:
+
+- *Thin-lens distortion*: bend the background toward the hole by an amount proportional to 1/r in screen space, with an Einstein ring at the right radius. Tier A, and it works on any image, including captured page content.
+- *Geodesic ray march*: integrate each light ray through the Schwarzschild metric. There is a compact form in Cartesian coordinates where each step adds an acceleration proportional to h²/r⁵, which keeps the shader short. Rays that fall in are black; rays that cross the disc plane pick up disc colour; the rest sample the starfield. Tier C, or B at half resolution with temporal accumulation.
+- *Disc shading*: temperature falling with radius, Doppler beaming that brightens the side moving toward the viewer, and gravitational redshift near the hole. A spinning (Kerr) hole is a research spike, not a story.
+
+**Planets.**
+
+- *Surface*: noise on a sphere, built from a cube projected to a sphere to avoid pole pinching; ocean below a height threshold with a sun glint; ice caps by latitude.
+- *Atmosphere*: Rayleigh and Mie scattering, either a short analytic single-scatter march or Hillaire's lookup-table method. This is lighttemple's planned sky story seen from orbit, and the two should share code.
+- *Clouds* as a second shell with their own shadows on the surface; *city lights* as an emissive mask that fades in past the day–night line.
+- *Gas giants*: noise advected along latitude bands at alternating speeds, with vortex storms. watertemple's flow advection does most of this.
+- *Rings*: a radial density profile, the planet's shadow on the rings and the rings' shadow on the planet, and forward scattering when back-lit.
+- *Moons*: a terminator with a soft edge and earthshine on the dark side. A moon phase is a one-pass effect.
+
+**The Sun.** Granulation is Voronoi-like convection cells; sunspots are dark umbra and penumbra; limb darkening makes the disc dimmer toward its edge; prominences are emissive arcs along magnetic loops; the corona is a radial, streaky glow. Total eclipses add the diamond ring and Baily's beads.
+
+**Comets and meteors.** A comet has a bright coma, a straight blue ion tail pointing directly away from the Sun, and a curved, yellowish dust tail. A meteor shower is streaks that all trace back to one point in the sky, which is what makes it read as a shower rather than random lines.
+
+**Motion.**
+
+- *Warp*: stars stretched into streaks along their motion. At near-light speeds, relativistic aberration bunches stars toward the direction of travel and Doppler shift turns them blue ahead and red behind. Few web effects do this, and the physics makes it look better than the usual tunnel.
+- *Orbits*: planet positions from published Keplerian elements, accurate enough for any website; orbit lines; a solar system that stays legible at any scale by scrolling through a logarithmic distance.
+
+### Rendering concerns
+
+- **Dynamic range.** Stars are points thousands of times brighter than the sky around them. HDR targets, bloom and tonemapping are required, so every effect ends in the temple-core HDR tail.
+- **Precision.** 32-bit floats cannot hold a solar system at metre precision. Render relative to the camera, keep a floating origin, and use reversed depth.
+- **Dark pages.** Like fire, space is dark by nature. On a light page it works as a contained card or panel, not as a full background.
+- **Motion sickness.** The hazard here is not flashing but motion. Forward flight, warp and zooming starfields are the kind of animation WCAG 2.3.3 warns about. Under reduced motion they become a still frame or a slow cross-fade, and none of them should start without a user action.
+- **Data and image licences.** Star catalogues and orbital elements are generally free to use, but check each source. NASA imagery is mostly public domain; ESA and ESO imagery is usually CC BY and needs credit. None is needed if everything is procedural.
+
+### Web motifs
+
+- A hero nebula with parallax stars that shift with the pointer and scroll.
+- The pointer as a small black hole that lenses the page behind it.
+- "The sky above you tonight": a star map for the visitor's location and time, from the timezone by default and from geolocation only if they grant it.
+- Moon phases as a progress bar or loader.
+- A planet that turns from day to night as the page scrolls.
+- A warp jump between routes, with a cross-fade under reduced motion.
+- A galaxy renderer for data: thousands of points, such as an embedding or a user base, drawn as a galaxy.
+- An eclipse or comet as a countdown to a launch.
+
+### Candidate effects
+
+| Id | What | Tier |
+|---|---|---|
+| `star-splat` | Building block: energy-conserving star spots, blackbody colour, magnitude distribution, diffraction spikes | n/a |
+| `deep-field` | Parallax starfield that does not shimmer, with a flat nebula | A |
+| `real-sky` | Star map of the visitor's sky from a catalogue | B |
+| `nebula-volume` | Ray-marched emission and dust | B or C |
+| `spiral-galaxy` | Density-wave galaxy in compute, with dust lanes | B |
+| `lens-cursor` | Thin-lens gravitational distortion of page content around the pointer | A |
+| `black-hole` | Geodesic ray march with Doppler-beamed accretion disc | C |
+| `planet` | Terrain, ocean glint, clouds, atmosphere, night lights | B |
+| `gas-giant` | Banded flow, storms, shadowed rings | B |
+| `moon-phase` | Terminator and earthshine as a progress indicator | A |
+| `solar-surface` | Granulation, spots, limb darkening, prominences, corona (moved from firetemple 11.4) | B |
+| `comet` | Coma with ion and dust tails | A |
+| `meteor-shower` | Streaks from a radiant (absorbs firetemple 11.6) | A |
+| `warp` | Streaks with relativistic aberration and Doppler colour | A |
+| `star-trails` | Long-exposure rotation around a celestial pole | A |
+| `orbits` | Solar system from Keplerian elements, logarithmic scroll | B |
+
+### Open questions
+
+- At what star count does drawing each star as a quad stop being cheap, and does a compute splat into a buffer beat instanced quads?
+- Can the geodesic black hole reach Tier B at half resolution with temporal accumulation, or is it Tier C only?
+- Does a shipped catalogue of 9,000 stars cost more in bundle size than it earns over a procedural sky?
+- What is the minimum star spot size that stays stable when panning at DPR 1?
+- Is a warp effect acceptable at all as page decoration, or only behind a user's explicit click?
+
+### References
+
+- Lin and Shu, "On the Spiral Structure of Disk Galaxies", 1964 — density-wave theory. Ingo Berg's write-up on rendering a galaxy with it is a practical starting point.
+- James, von Tunzelmann, Franklin and Thorne, "Gravitational Lensing by Spinning Black Holes in Astrophysics, and in the Movie Interstellar", 2015.
+- Riccardo Antonelli, "Starless" and its accompanying notes on real-time black hole rendering — the Cartesian form of the Schwarzschild ray step.
+- Sean O'Neil, "Accurate Atmospheric Scattering", GPU Gems 2, chapter 16; Bruneton and Neyret, "Precomputed Atmospheric Scattering", 2008; Hillaire, "A Scalable and Production Ready Sky and Atmosphere Rendering Technique", 2020.
+- Hoffleit and Warren, the Yale Bright Star Catalogue.
+- E. M. Standish, "Keplerian Elements for Approximate Positions of the Major Planets", JPL.
+- Jean Meeus, "Astronomical Algorithms", 1991 — sidereal time, Sun and Moon positions, moon phase.
+
+---
+
+## 4. Other candidates
+
+### 4.1 Retro displays and signal
 
 - **Pitch:** make content look like it is shown on a physical display or carried over a bad signal.
 - **Effects:** CRT with shadow mask, scanlines, curvature and phosphor persistence; VHS tracking and chroma bleed; oscilloscope and vector display; LED wall; e-ink refresh; film projector gate weave and dust.
@@ -204,7 +327,7 @@ This family needs art, and the review already found three images across the repo
 - **Why now:** it is mostly tier A, and a CRT pass is the natural last stage for the pixel-art family.
 - **Reference:** Timothy Lottes' CRT shader.
 
-### 3.2 Energy and magic
+### 4.2 Energy and magic
 
 - **Pitch:** game-feel feedback for interfaces.
 - **Effects:** hexagonal shield with ripple on impact; portal that shows another view through it; beams and lasers; rune circles; auras; charge-up and release; hit sparks.
@@ -212,7 +335,7 @@ This family needs art, and the review already found three images across the repo
 - **Existing or planned:** hologpu `border-energy`, `press-ripple`; firetemple `sparks`.
 - **Why now:** it shares the bolt, stroke renderer and glow with lightning, so most of the cost is already paid.
 
-### 3.3 Shatter and destruction
+### 4.3 Shatter and destruction
 
 - **Pitch:** break things, mainly as transitions and as feedback for dismissing or deleting.
 - **Effects:** Voronoi fracture of an image or captured DOM element with tumbling shards; glass that cracks from the click point; crumble; slice along a drawn line; disintegrate into particles.
@@ -220,7 +343,7 @@ This family needs art, and the review already found three images across the repo
 - **Existing or planned:** hologpu `text-dissolve`, `voronoi`, `morph-particles`; firetemple's unbuilt burn-front epic.
 - **Risk:** depends on capturing DOM content into a texture, which hologpu supports but which is the least portable part of the stack.
 
-### 3.4 Wind and growth
+### 4.4 Wind and growth
 
 - **Pitch:** living, moving surfaces. The obvious next elemental temple.
 - **Effects:** grass field that parts around the cursor; foliage sway; falling leaves and petals; flags, banners and curtains; vines that grow along element borders; fur on text or a logo that can be stroked.
@@ -228,15 +351,7 @@ This family needs art, and the review already found three images across the repo
 - **Existing or planned:** hologpu's unbuilt `cloth` and `ribbons` stretches.
 - **References:** Wohllaib, "Procedural Grass in Ghost of Tsushima", GDC 2021; Müller et al., "Position Based Dynamics", 2007; Runions, Lane and Prusinkiewicz, "Modeling Trees with a Space Colonization Algorithm", 2007.
 
-### 3.5 Cosmos
-
-- **Pitch:** dark-theme hero backgrounds with real depth.
-- **Effects:** black hole with gravitational lensing and an accretion disc; nebula volume; planet with atmospheric scattering; spiral galaxy; warp tunnel.
-- **New techniques:** ray bending through a gravitational field; volumetric emission with temporal reprojection.
-- **Existing or planned:** hologpu `starfield`, `n-body`, `constellation`; lighttemple's unbuilt E5-S6 atmospheric sky.
-- **Reference:** James et al., "Gravitational Lensing by Spinning Black Holes in Astrophysics, and in the Movie Interstellar", 2015.
-
-### 3.6 Snow, ice and crystal
+### 4.5 Snow, ice and crystal
 
 - **Pitch:** the cold counterpart to fire and water.
 - **Effects:** snowfall with depth; snow that settles on the top edges of page elements; a cursor trail pressed into snow; ice with internal cracks and refraction; frost creeping across glass; gems with dispersion.
@@ -244,14 +359,14 @@ This family needs art, and the review already found three images across the repo
 - **Existing or planned:** watertemple `frost-melt` and `fogged-glass`; lighttemple `glass-panels`.
 - **Reference:** "Deformable Snow Rendering in Batman: Arkham Origins", GDC 2014.
 
-### 3.7 Paper and print
+### 4.6 Paper and print
 
 - **Pitch:** tactile, editorial effects for content-heavy sites.
 - **Effects:** page curl and fold transitions; torn edges; layered cut paper with soft shadows; risograph misregistration; ink bleeding into fibre; origami unfolds.
 - **New techniques:** developable-surface deformation for curls and folds; fibre-direction-driven diffusion.
 - **Existing or planned:** lighttemple `embossed-card`; watertemple `ink-wash`; lighttemple's unbuilt E6 hatching and Kuwahara stories.
 
-### 3.8 Fields and forces
+### 4.7 Fields and forces
 
 - **Pitch:** make invisible physics visible. Good for science, data and audio sites.
 - **Effects:** magnetic field lines and iron filings; ferrofluid spikes; Chladni figures driven by audio; electric field lines around charges the user places; a grid warped by gravity wells.
@@ -261,7 +376,7 @@ This family needs art, and the review already found three images across the repo
 
 ---
 
-## 4. Ranking
+## 5. Ranking
 
 | Family | New to the collection | Use on real pages | Reuses existing code | Cost and risk |
 |---|---|---|---|---|
@@ -271,14 +386,14 @@ This family needs art, and the review already found three images across the repo
 | Energy and magic | Medium | Medium | High, after lightning | Low |
 | Shatter | High | High for transitions | Medium | Medium; depends on DOM capture |
 | Wind and growth | High | Medium | Low | High; new geometry and simulation |
-| Cosmos | Medium | Medium, backgrounds only | Medium | Medium |
+| Space | Medium to high: stars, n-body and aurora exist; black holes, planets and galaxies do not | Medium: heroes, loaders, data | High: blackbody, volume kernel, HDR tail, n-body | Medium; black hole and volumes are costly; motion sensitivity |
 | Snow, ice, crystal | Medium | Medium | Medium | Medium |
 | Paper and print | Medium | High for editorial | Low | Medium |
 | Fields and forces | Medium | Low, niche | Medium | Low |
 
-Suggested order after the two committed families: retro displays, because it is cheap and completes the pixel-art look; then energy and magic, because lightning will have built most of it; then shatter.
+Suggested order after the two committed families: retro displays, because it is cheap and completes the pixel-art look; then energy and magic, because lightning will have built most of it; then shatter. Space can start at any point: it depends on nothing the other families build, and more of its pieces already exist than for any of them.
 
-## 5. Shared pieces worth building once
+## 6. Shared pieces worth building once
 
 Several families need the same primitives. Building them as shared code first makes each later family cheaper:
 
@@ -287,4 +402,6 @@ Several families need the same primitives. Building them as shared code first ma
 - **A stroke renderer.** Thick, joined, HDR lines for bolts, beams, trails, vines and vector displays.
 - **Distance-field glow.** Analytic halo from a jump-flood field, as an alternative to wide bloom.
 - **A potential solver.** Lightning, electric field lines and the existing fluid pressure solves share it.
+- **Point-source rendering.** Energy-conserving spots that never shimmer: stars, sparks, fireflies, dust motes and bokeh highlights.
+- **The volume ray-march kernel.** Already in temple-core for fire; nebulae, storm clouds and fog use the same integration.
 - **Tilt-shift depth of field and palette quantisation.** Built for pixel art, useful as general filters over any effect.
